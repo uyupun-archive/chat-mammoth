@@ -1,3 +1,5 @@
+## How to use
+
 ```
 $ cp .env.example .env
 $ composer install
