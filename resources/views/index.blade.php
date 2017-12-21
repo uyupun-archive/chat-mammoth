@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Hello Vue</title>
+    <title>chat mammoth</title>
     <link rel="stylesheet" href="css/app.css"/>
     <script type="text/javascript">
         window.Laravel = window.Laravel || {};
