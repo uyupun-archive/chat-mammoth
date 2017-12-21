@@ -10,9 +10,6 @@
     </script>
 </head>
 <body>
-<div id="app">
-    <example-component></example-component>
-</div>
-<script src="js/app.js"></script>
+    <h1>chat-mammoth</h1>
 </body>
 </html>
