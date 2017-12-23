@@ -9,6 +9,10 @@
             <label for="screen-name" class="">スクリーンネーム</label><!-- ラベル -->
             <input id="screen-name" type="text" name="screen_name" value="{{ old('screen-name') }}" class="" required autofocus><!-- テキストボックス -->
         </div>
+        <div class=""><!-- ID -->
+            <label for="id" class="">ID</label><!-- ラベル -->
+            <input id="id" type="text" name="id" value="{{ old('id') }}" class="" required autofocus><!-- テキストボックス -->
+        </div>
         <div class=""><!-- メールアドレス -->
             <label for="email" class="">メールアドレス</label><!-- ラベル -->
             <input id="email" type="email" name="email" value="{{ old('email') }}" class="" required><!-- テキストボックス -->
