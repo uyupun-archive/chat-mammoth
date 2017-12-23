@@ -1,10 +1,6 @@
-<!doctype html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>chat mammoth</title>
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
     <div class=""><!-- wrapper -->
         <div class=""><!-- container -->
             <div class=""><!-- キャッチフレーズ -->
@@ -31,5 +27,4 @@
             </div>
         </div>
     </div>
-</body>
-</html>
+@endsection
