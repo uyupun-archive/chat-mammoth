@@ -3,10 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>chat mammoth</title>
-    <script type="text/javascript">
-        window.Laravel = window.Laravel || {};
-        window.Laravel.csrfToken = "{{csrf_token()}}";
-    </script>
 </head>
 <body>
     <div class=""><!-- wrapper -->
