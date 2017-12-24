@@ -30,9 +30,7 @@
                 </div>
             </div>
             <div class=""><!-- コンテンツ -->
-                <div class=""><!-- container -->
-                    @yield('content')
-                </div>
+                @yield('content')
             </div>
         </div>
     </body>
