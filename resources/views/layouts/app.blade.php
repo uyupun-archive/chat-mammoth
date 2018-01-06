@@ -9,27 +9,27 @@
     </head>
     <body>
         <div id="app">
-            <div class=""><!-- ナビゲーションバー -->
-                <div class=""><!-- container -->
-                    <div class=""><!-- メニュー左側 -->
-                        <img src="" class=""><!-- ロゴ -->
+            <div class="h-Nav"><!-- ナビゲーションバー -->
+                <div class="h-Container"><!-- container -->
+                    <div class="h-Menu_Left"><!-- メニュー左側 -->
+                        <img src="" class="h-Logo"><!-- ロゴ -->
                         <a href="{{ url('/') }}">chat mammoth</a>
-                        <a href="" class="">ルーム検索</a>
+                        <a href="" class="h-Search">ルーム検索</a>
                     </div>
-                    <div class=""><!-- メニュー右側 -->
+                    <div class="h-Menu_Right"><!-- メニュー右側 -->
                         @guest
                             <a href="{{ route('login') }}">サインイン</a>
                             <a href="{{ route('register') }}">サインアップ</a>
                         @else
-                            <a href="" class="">ルーム作成</a>
-                            <a href="" class="">マイページ</a>
+                            <a href="" class="h-Create">ルーム作成</a>
+                            <a href="" class="h-Mypage">マイページ</a>
                             <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">サインアウト</a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                         @endguest
                     </div>
                 </div>
             </div>
-            <div class=""><!-- コンテンツ -->
+            <div class="st-content"><!-- コンテンツ -->
                 @yield('content')
             </div>
         </div>
