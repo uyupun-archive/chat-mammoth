@@ -1,2 +1,14 @@
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "Structure/Color.scss";
+@import "Structure/Wrapper.scss";
+@import "Structure/Container.scss";
+@import "Structure/Tag.scss";
+@import "namespace/layout/_Header.scss";
+@import "namespace/layout/RegisterPage.scss";
+@import "namespace/layout/LoginPage.scss";
+@import "namespace/layout/TopPage.scss";
+@import "namespace/layout/CreatePage.scss";
+@import "namespace/layout/RoomPage.scss";
+@import "namespace/layout/MyPage.scss";
+@import "namespace/layout/SearchPage.scss";

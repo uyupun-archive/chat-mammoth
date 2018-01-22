@@ -1,30 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-<div class=""><!-- wrapper -->
+<div class="st-Wrapper"><!-- wrapper -->
     <h1>サインアップ</h1><!-- タイトル -->
-    <form method="POST" action="{{ route('register') }}" class=""><!-- 登録フォーム -->
+    <form method="POST" action="{{ route('register') }}" class="su-Form"><!-- 登録フォーム -->
         {{ csrf_field() }}
-        <div class=""><!-- スクリーンネーム -->
-            <label for="screen-name" class="">スクリーンネーム</label><!-- ラベル -->
-            <input id="screen-name" type="text" name="screen_name" value="{{ old('screen-name') }}" class="" required autofocus><!-- テキストボックス -->
+        <div class="su-ScreenName"><!-- スクリーンネーム -->
+            <label for="screen-name" class="su-ScreenName_Title">スクリーンネーム</label><!-- ラベル -->
+            <input id="screen-name" type="text" name="screen_name" value="{{ old('screen-name') }}" class="su-ScreenName_Textbox" required autofocus><!-- テキストボックス -->
         </div>
-        <div class=""><!-- ID -->
-            <label for="id" class="">ID</label><!-- ラベル -->
-            <input id="id" type="text" name="id" value="{{ old('id') }}" class="" required autofocus><!-- テキストボックス -->
+        <div class="su-Id"><!-- ID -->
+            <label for="id" class="su-Id_Title">ID</label><!-- ラベル -->
+            <input id="id" type="text" name="id" value="{{ old('id') }}" class="su-Id_Title" required autofocus><!-- テキストボックス -->
         </div>
-        <div class=""><!-- パスワード -->
-            <label for="password" class="">パスワード</label><!-- ラベル -->
-            <input id="password" type="password" name="password" class="" required><!-- テキストボックス -->
+        <div class="su-Password"><!-- パスワード -->
+            <label for="password" class="su-Password_Title">パスワード</label><!-- ラベル -->
+            <input id="password" type="password" name="password" class="su-Password_Textbox" required><!-- テキストボックス -->
             @if ($errors->has('password'))
                 <span class="">{{ $errors->first('password') }}</span><!-- バリデーションメッセージ -->
             @endif
         </div>
-        <div class=""><!-- パスワード（確認） -->
-            <label for="password-confirm" class="">パスワード（確認）</label><!-- ラベル -->
-            <input id="password-confirm" type="password" name="password" class="" required><!-- テキストボックス -->
+        <div class="su-Confirm"><!-- パスワード（確認） -->
+            <label for="password-confirm" class="su-Confirm_Title">パスワード（確認）</label><!-- ラベル -->
+            <input id="password-confirm" type="password" name="password" class="su-Confirm_Textbox" required><!-- テキストボックス -->
         </div>
-        <button type="submit" class="">サインアップ</button><!-- ボタン -->
+        <button type="submit" class="su-Button">サインアップ</button><!-- ボタン -->
     </form>
 </div>
 @endsection
