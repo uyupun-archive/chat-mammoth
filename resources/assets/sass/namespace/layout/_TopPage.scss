@@ -1,21 +1,25 @@
 .tp-Catchphrase {
-  line-height: 350px;
+  height: 500px;
+  line-height: 550px;
   font-size: 80px;
   text-align: center;
   background-color: $red;
+  color: $white;
 }
 
 .tp-Container {
   padding: 0 30px;
   margin-bottom: 30px;
   .tp-Chatroom {
-    border: solid 1px black;
+    border: solid 1px $gray;
+    border-radius: 4px;
     margin: 20px 0;
+    padding: 5px;
     &_Name {
 
     }
     &_Tag {
-
+      margin: 4px 4px 0 0;
     }
     &_Description {
 
