@@ -8350,6 +8350,25 @@ button.close {
   }
 }
 
+.st-Wrapper {
+  width: 100vw;
+  height: 100vh;
+}
+
+.st-Container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.st-Tag {
+  background-color: #489E7C;
+}
+
+.st-Title {
+  margin: 30px 0;
+}
+
 .h-Container {
   height: 60px;
   display: -webkit-box;
@@ -8394,5 +8413,38 @@ button.close {
 
 .h-Container .h-Menu_List {
   margin-right: 16px;
+}
+
+.tp-Catchphrase {
+  line-height: 350px;
+  font-size: 80px;
+  text-align: center;
+  background-color: #AB4238;
+}
+
+.tp-Container {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+
+.tp-Container .tp-Chatroom {
+  border: solid 1px black;
+  margin: 20px 0;
+}
+
+.tp-Container .tp-Chatroom_LinkBox {
+  text-align: right;
+}
+
+.tp-Container .tp-Chatroom_LinkBox .tp-Chatroom_Link {
+  text-decoration: none;
+}
+
+.tp-Container .tp-Search {
+  text-align: right;
+}
+
+.tp-Container .tp-Search_Link {
+  text-decoration: none;
 }
 

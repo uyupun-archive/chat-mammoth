@@ -30,9 +30,7 @@
                     @endguest
                 </ul>
             </div>
-            <div class="st-content"><!-- コンテンツ -->
-                @yield('content')
-            </div>
+            @yield('content')
         </div>
     </body>
 </html>
