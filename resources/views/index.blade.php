@@ -2,9 +2,7 @@
 
 @section('content')
 <div class="st-Wrapper"><!-- wrapper -->
-    <div class="tp-Catchphrase"><!-- キャッチフレーズ -->
-        hogehoge
-    </div>
+    <div class="tp-Catchphrase">投げろマサカリ</div>
     <div class="st-Container"><!-- container -->
         <h2 class="st-Title">おすすめのチャットルーム</h2>
         <div class="tp-Container">
