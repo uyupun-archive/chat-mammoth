@@ -1,0 +1,36 @@
+.tp-Catchphrase {
+  line-height: 350px;
+  font-size: 80px;
+  text-align: center;
+  background-color: $red;
+}
+
+.tp-Container {
+  padding: 0 30px;
+  margin-bottom: 30px;
+  .tp-Chatroom {
+    border: solid 1px black;
+    margin: 20px 0;
+    &_Name {
+
+    }
+    &_Tag {
+
+    }
+    &_Description {
+
+    }
+    &_LinkBox {
+      text-align: right;
+      .tp-Chatroom_Link {
+        text-decoration: none;
+      }
+    }
+  }
+  .tp-Search {
+    text-align: right;
+    &_Link {
+      text-decoration: none;
+    }
+  }
+}
