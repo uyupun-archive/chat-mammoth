@@ -8422,8 +8422,8 @@ button.close {
 }
 
 .tp-Catchphrase {
-  padding-top: 70px;
-  line-height: 350px;
+  height: 500px;
+  line-height: 550px;
   font-size: 80px;
   text-align: center;
   background-color: #AB4238;
