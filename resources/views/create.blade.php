@@ -3,29 +3,40 @@
 @section('content')
 <div class="st-Wrapper"><!-- wrapper -->
     <div class="st-Container"><!-- container -->
-        <h1>ルーム作成</h1><!-- タイトル -->
+        <h2 class="st-Title">チャットルーム作成</h2><!-- タイトル -->
         <form method="POST" action="" class="cp-Chatroom">
             <div class="cp-Chatroom_Item">
                 <label for="name" class="cp-Chatroom_Title">ルーム名</label>
-                <input type="text" name="name" id="name" class="cp-Chatroom_Name">
+                <input type="text" name="name" id="name" class="cp-Chatroom_Name form-control">
             </div>
             <div class="cp-Chatroom_Item">
                 <label for="description" class="cp-Chatroom_Title">ルームの説明</label>
-                <textarea name="description" id="description" class="cp-Chatroom_Description"></textarea>
+                <textarea name="description" id="description" class="cp-Chatroom_Description form-control"></textarea>
             </div>
             <div class="cp-Chatroom_Item">
-                <label for="tag" class="cp-Chatroom_Title">タグの追加</label>
-                <input type="text" name="tag" id="tag" class="cp-Chatroom_Tag">
-                <button class="cp-Chatroom">追加</button>
+                <div class="cp-Chatroom_Title">タグの追加</div>
+                <input type="text" name="tag" class="cp-Chatroom_Tag form-control">
+                <button type="submit" class="st-Button cp-Tag_Button">追加</button>
+                <div class="cp-Tag_Area"><!-- タグのwrapper -->
+                    <span class="st-Tag">タグ</span><!-- タグ -->
+                    <span class="st-Tag">タグ</span><!-- タグ -->
+                    <span class="st-Tag">タグ</span><!-- タグ -->
+                </div>
             </div>
             <div class="cp-Chatroom_Item">
                 <div class="cp-Chatroom_Title">公開設定</div>
-                <input type="checkbox" name="public" id="public" class="cp-Chatroom_public" checked>
-                <label for="public" class="cp-Chatroom_public">公開</label>
-                <input type="checkbox" name="private" id="private" class="cp-Chatroom_private">
-                <label for="private" class="cp-Chatroom_private">非公開</label>
+                <div class="cp-Public_Area">
+                    <input type="radio" name="radio" id="public" class="cp-Chatroom_Public" checked="checked">
+                    <label for="public" class="cp-Chatroom_public">公開</label>
+                </div>
+                <div class="cp-Private_Area">
+                    <input type="radio" name="radio" id="private" class="cp-Chatroom_Private">
+                    <label for="private" class="cp-Chatroom_private">非公開</label>
+                </div>
             </div>
-            <button type="submit" class="cp-Button">ルームを作成</button>
+            <div class="cp-Button_Area">
+                <button type="submit" class="st-Button cp-Button">作成</button>
+            </div>
         </form>
     </div>
 </div>
