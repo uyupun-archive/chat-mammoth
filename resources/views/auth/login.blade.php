@@ -25,9 +25,7 @@
                     <input id="checkbox" type="checkbox" name="remember" class="si-Checkbox_Button form-check-input" {{ old('remember') ? 'checked' : '' }}>
                     <label for="checkbox" class="si-Checkbox_Text form-check-label">パスワードを記憶する</label>
                 </div>
-                <div class="si-Button">
-                    <button type="submit" class="si-Button_Text">サインイン</button><!-- ボタン -->
-                </div>
+                <button type="submit" class="si-Button">サインイン</button><!-- ボタン -->
             </form>
         </div>
     </div>
