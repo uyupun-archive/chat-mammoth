@@ -33,7 +33,9 @@
                     <input id="password-confirm" type="password" name="password" class="su-Confirm_Textbox form-control" required><!-- テキストボックス -->
                 </div>
             </div>
-            <button type="submit" class="st-Button su-Button">サインアップ</button><!-- ボタン -->
+            <div class="su-Button_Area">
+                <button type="submit" class="st-Button su-Button">サインアップ</button><!-- ボタン -->
+            </div>
         </form>
     </div>
 </div>

@@ -8494,8 +8494,13 @@ button.close {
   font-size: 14px;
 }
 
-.su-Form .su-Button {
+.su-Form .su-Button_Area {
+  text-align: right;
   margin: 10px 0;
+}
+
+.su-Form .su-Button_Area .su-Button {
+  margin-right: 15px;
   padding: 5px 10px;
 }
 
@@ -8545,8 +8550,13 @@ button.close {
   margin: 0;
 }
 
-.si-Form .si-Button {
+.si-Form .si-Button_Area {
+  text-align: right;
   margin: 10px 0;
+}
+
+.si-Form .si-Button_Area .si-Button {
+  margin-right: 15px;
   padding: 5px 10px;
 }
 
