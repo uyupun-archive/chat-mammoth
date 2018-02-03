@@ -1,0 +1,52 @@
+.su-Form {
+  padding-left: 5px;
+  .su-ScreenName {
+    margin: 10px 0;
+    &_Title {
+      font-weight: normal;
+      width: 145px;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .su-Id {
+    margin: 10px 0;
+    &_Title {
+      font-weight: normal;
+      width: 145px;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .su-Password {
+    margin: 10px 0;
+    &_Title {
+      font-weight: normal;
+      width: 145px;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .su-Confirm {
+    margin: 10px 0;
+    &_Title {
+      font-weight: normal;
+      width: 145px;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .su-Button {
+    margin: 10px 0;
+    background-color: $gray;
+    border: none;
+  }
+}

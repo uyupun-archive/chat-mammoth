@@ -8416,6 +8416,7 @@ button.close {
 }
 
 .h-Container .h-Menu {
+  font-size: 14px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8425,6 +8426,72 @@ button.close {
 
 .h-Container .h-Menu_List {
   margin-right: 16px;
+}
+
+.su-Form {
+  padding-left: 5px;
+}
+
+.su-Form .su-ScreenName {
+  margin: 10px 0;
+}
+
+.su-Form .su-ScreenName_Title {
+  font-weight: normal;
+  width: 145px;
+  margin: 0;
+}
+
+.su-Form .su-ScreenName_Textbox {
+  font-size: 14px;
+}
+
+.su-Form .su-Id {
+  margin: 10px 0;
+}
+
+.su-Form .su-Id_Title {
+  font-weight: normal;
+  width: 145px;
+  margin: 0;
+}
+
+.su-Form .su-Id_Textbox {
+  font-size: 14px;
+}
+
+.su-Form .su-Password {
+  margin: 10px 0;
+}
+
+.su-Form .su-Password_Title {
+  font-weight: normal;
+  width: 145px;
+  margin: 0;
+}
+
+.su-Form .su-Password_Textbox {
+  font-size: 14px;
+}
+
+.su-Form .su-Confirm {
+  margin: 10px 0;
+}
+
+.su-Form .su-Confirm_Title {
+  font-weight: normal;
+  width: 145px;
+  margin: 0;
+}
+
+.su-Form .su-Confirm_Textbox {
+  font-size: 14px;
+}
+
+.su-Form .su-Button {
+  margin: 10px 0;
+  background-color: #999;
+  border: none;
 }
 
 .si-Form {
@@ -8441,6 +8508,10 @@ button.close {
   margin: 0;
 }
 
+.si-Form .si-Id_Textbox {
+  font-size: 14px;
+}
+
 .si-Form .si-Password {
   margin: 10px 0;
 }
@@ -8449,6 +8520,10 @@ button.close {
   font-weight: normal;
   width: 80px;
   margin: 0;
+}
+
+.si-Form .si-Password_Textbox {
+  font-size: 14px;
 }
 
 .si-Form .si-Checkbox {
@@ -8467,9 +8542,6 @@ button.close {
 
 .si-Form .si-Button {
   margin: 10px 0;
-}
-
-.si-Form .si-Button_Text {
   background-color: #999;
   border: none;
 }
