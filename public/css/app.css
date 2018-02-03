@@ -8673,6 +8673,38 @@ button.close {
   padding: 5px 30px;
 }
 
+.mp-Information {
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
+
+.mp-Information_Name {
+  margin: 10px 0;
+}
+
+.mp-Information_UserId {
+  margin: 10px 0;
+}
+
+.mp-Chatroom {
+  border: solid 1px #999;
+  border-radius: 4px;
+  margin: 20px 10px;
+  padding: 5px;
+}
+
+.mp-Chatroom_Tag {
+  margin: 4px 4px 0 0;
+}
+
+.mp-Chatroom_LinkBox {
+  text-align: right;
+}
+
+.mp-Chatroom_LinkBox .mp-Chatroom_Link {
+  text-decoration: none;
+}
+
 .sp-Search {
   margin: 50px 0;
 }
@@ -8711,7 +8743,7 @@ button.close {
   text-align: right;
 }
 
-.sp-Results .sp-Chatroom_LinkBox .tp-Chatroom_Link {
+.sp-Results .sp-Chatroom_LinkBox .sp-Chatroom_Link {
   text-decoration: none;
 }
 

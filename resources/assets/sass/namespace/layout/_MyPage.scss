@@ -1,0 +1,32 @@
+.mp-Information {
+  padding-left: 5px;
+  margin-bottom: 30px;
+  &_Name {
+    margin: 10px 0;
+  }
+  &_UserId {
+    margin: 10px 0;
+  }
+}
+
+.mp-Chatroom {
+  border: solid 1px $gray;
+  border-radius: 4px;
+  margin: 20px 10px;
+  padding: 5px;
+  &_Name {
+
+  }
+  &_Tag {
+    margin: 4px 4px 0 0;
+  }
+  &_Description {
+
+  }
+  &_LinkBox {
+    text-align: right;
+    .mp-Chatroom_Link {
+      text-decoration: none;
+    }
+  }
+}
