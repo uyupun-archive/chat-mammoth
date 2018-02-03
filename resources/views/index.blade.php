@@ -3,9 +3,9 @@
 @section('content')
 <div class="st-Wrapper"><!-- wrapper -->
     <div class="tp-Catchphrase">投げろマサカリ⛏️</div>
-    <div class="st-Container"><!-- container -->
+    <div class="tp-Container"><!-- container -->
         <h2 class="st-Title">おすすめのチャットルーム</h2>
-        <div class="tp-Container">
+        <div class="tp-Chatroom_Container">
             @for ($i = 0; $i < 10; $i++)
             <div class="tp-Chatroom"><!-- おすすめのチャットルーム -->
                 <div class="tp-Chatroom_Name">ルーム名</div><!-- ルーム名 -->

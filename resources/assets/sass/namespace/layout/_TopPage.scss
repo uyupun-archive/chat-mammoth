@@ -8,6 +8,12 @@
 }
 
 .tp-Container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tp-Chatroom_Container {
   padding: 0 30px;
   margin-bottom: 30px;
   .tp-Chatroom {

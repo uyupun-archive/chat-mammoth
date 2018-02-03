@@ -20,10 +20,12 @@
     color: black;
   }
   .h-Logo {
-    width: 100px;
-    height: 50px;
+    width: 60px;
+    height: auto;
+    object-fit: contain;
   }
   .h-Title {
+    padding-left: 10px;
     margin-right: auto;
   }
   .h-Menu {
