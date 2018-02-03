@@ -18,7 +18,7 @@
                 </h1>
                 <ul class="h-Menu align-self-center"><!-- メニュー -->
                     @guest
-                        <li class="h-Menu_List"><a href="" class="h-Search">ルーム検索</a></li>
+                        <li class="h-Menu_List"><a href="{{ url('/search') }}" class="h-Search">ルーム検索</a></li>
                         <li class="h-Menu_List"><a href="{{ route('login') }}">サインイン</a></li>
                         <li class="h-Menu_List"><a href="{{ route('register') }}">サインアップ</a></li>
                     @else
