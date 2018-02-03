@@ -8374,6 +8374,12 @@ button.close {
   font-size: 28px;
 }
 
+.st-Button {
+  background-color: #999;
+  border: none;
+  border-radius: 3px;
+}
+
 .h-Container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8490,8 +8496,7 @@ button.close {
 
 .su-Form .su-Button {
   margin: 10px 0;
-  background-color: #999;
-  border: none;
+  padding: 5px 10px;
 }
 
 .si-Form {
@@ -8542,8 +8547,7 @@ button.close {
 
 .si-Form .si-Button {
   margin: 10px 0;
-  background-color: #999;
-  border: none;
+  padding: 5px 10px;
 }
 
 .tp-Catchphrase {
@@ -8607,10 +8611,8 @@ button.close {
 }
 
 .sp-Search_Form .sp-Search_Button {
-  margin: 10px 0;
-  background-color: #999;
-  border: none;
-  border-radius: 3px;
+  padding: 3px 10px;
+  margin-left: 15px;
 }
 
 .sp-Results {
