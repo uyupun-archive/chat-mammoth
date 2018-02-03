@@ -1,0 +1,42 @@
+.sp-Search {
+  margin: 50px 0;
+  &_Form {
+    text-align: center;
+    .sp-Search_Textbox {
+      display: inline-block;
+      width: 50%;
+    }
+    .sp-Search_Button {
+      margin: 10px 0;
+      background-color: $gray;
+      border: none;
+      border-radius: 3px;
+    }
+  }
+}
+
+.sp-Results {
+  padding: 0 30px;
+  margin-bottom: 30px;
+  .sp-Chatroom {
+    border: solid 1px $gray;
+    border-radius: 4px;
+    margin: 20px 0;
+    padding: 5px;
+    &_Name {
+
+    }
+    &_Tag {
+      margin: 4px 4px 0 0;
+    }
+    &_Description {
+
+    }
+    &_LinkBox {
+      text-align: right;
+      .tp-Chatroom_Link {
+        text-decoration: none;
+      }
+    }
+  }
+}

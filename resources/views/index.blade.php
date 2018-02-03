@@ -24,7 +24,7 @@
             </div>
             @endfor
             <div class="tp-Search">
-                <a href="" class="tp-Search_Link">チャットルームを探す</a><!-- リンク -->
+                <a href="{{ url('/search') }}" class="tp-Search_Link">チャットルームを探す</a><!-- リンク -->
             </div>
         </div>
     </div>

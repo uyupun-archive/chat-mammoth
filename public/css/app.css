@@ -8593,3 +8593,47 @@ button.close {
   text-decoration: none;
 }
 
+.sp-Search {
+  margin: 50px 0;
+}
+
+.sp-Search_Form {
+  text-align: center;
+}
+
+.sp-Search_Form .sp-Search_Textbox {
+  display: inline-block;
+  width: 50%;
+}
+
+.sp-Search_Form .sp-Search_Button {
+  margin: 10px 0;
+  background-color: #999;
+  border: none;
+  border-radius: 3px;
+}
+
+.sp-Results {
+  padding: 0 30px;
+  margin-bottom: 30px;
+}
+
+.sp-Results .sp-Chatroom {
+  border: solid 1px #999;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 5px;
+}
+
+.sp-Results .sp-Chatroom_Tag {
+  margin: 4px 4px 0 0;
+}
+
+.sp-Results .sp-Chatroom_LinkBox {
+  text-align: right;
+}
+
+.sp-Results .sp-Chatroom_LinkBox .tp-Chatroom_Link {
+  text-decoration: none;
+}
+
