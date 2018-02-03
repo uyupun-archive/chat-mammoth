@@ -12,7 +12,7 @@
     <body>
         <div id="app">
             <div class="h-Container"><!-- container -->
-                <img src="/images/logo.png" class="h-Logo align-self-center"><!-- ロゴ -->
+                <img src="/images/logo3.png" class="h-Logo align-self-center"><!-- ロゴ -->
                 <h1 class="h-Title align-self-center">
                     <a href="{{ url('/') }}">chat mammoth</a>
                 </h1>

@@ -8353,10 +8353,12 @@ button.close {
 .st-Wrapper {
   width: 100vw;
   height: 100vh;
+  font-size: 16px;
 }
 
 .st-Container {
   max-width: 1200px;
+  padding-top: 60px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -8369,6 +8371,7 @@ button.close {
 
 .st-Title {
   margin: 30px 0;
+  font-size: 28px;
 }
 
 .h-Container {
@@ -8401,11 +8404,14 @@ button.close {
 }
 
 .h-Container .h-Logo {
-  width: 100px;
-  height: 50px;
+  width: 60px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .h-Container .h-Title {
+  padding-left: 10px;
   margin-right: auto;
 }
 
@@ -8421,6 +8427,53 @@ button.close {
   margin-right: 16px;
 }
 
+.si-Form {
+  padding-left: 5px;
+}
+
+.si-Form .si-Id {
+  margin: 10px 0;
+}
+
+.si-Form .si-Id_Title {
+  font-weight: normal;
+  width: 80px;
+  margin: 0;
+}
+
+.si-Form .si-Password {
+  margin: 10px 0;
+}
+
+.si-Form .si-Password_Title {
+  font-weight: normal;
+  width: 80px;
+  margin: 0;
+}
+
+.si-Form .si-Checkbox {
+  margin: 10px 0;
+}
+
+.si-Form .si-Checkbox_Button {
+  position: static;
+  margin: 0;
+}
+
+.si-Form .si-Checkbox_Text {
+  font-weight: normal;
+  margin: 0;
+}
+
+.si-Form .si-Button {
+  margin: 10px 0;
+}
+
+.si-Form .si-Button_Text {
+  background-color: #999;
+  border: none;
+}
+
 .tp-Catchphrase {
   height: 500px;
   line-height: 550px;
@@ -8431,34 +8484,40 @@ button.close {
 }
 
 .tp-Container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.tp-Chatroom_Container {
   padding: 0 30px;
   margin-bottom: 30px;
 }
 
-.tp-Container .tp-Chatroom {
+.tp-Chatroom_Container .tp-Chatroom {
   border: solid 1px #999;
   border-radius: 4px;
   margin: 20px 0;
   padding: 5px;
 }
 
-.tp-Container .tp-Chatroom_Tag {
+.tp-Chatroom_Container .tp-Chatroom_Tag {
   margin: 4px 4px 0 0;
 }
 
-.tp-Container .tp-Chatroom_LinkBox {
+.tp-Chatroom_Container .tp-Chatroom_LinkBox {
   text-align: right;
 }
 
-.tp-Container .tp-Chatroom_LinkBox .tp-Chatroom_Link {
+.tp-Chatroom_Container .tp-Chatroom_LinkBox .tp-Chatroom_Link {
   text-decoration: none;
 }
 
-.tp-Container .tp-Search {
+.tp-Chatroom_Container .tp-Search {
   text-align: right;
 }
 
-.tp-Container .tp-Search_Link {
+.tp-Chatroom_Container .tp-Search_Link {
   text-decoration: none;
 }
 
