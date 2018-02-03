@@ -1,30 +1,59 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="st-Wrapper"><!-- wrapper -->
-    <div class="st-Container"><!-- container -->
-        <div class="mp-Information"><!-- ユーザ情報 -->
-            <div class="mp-Information_Name">hoge</div><!-- スクリーンネーム -->
-            <div class="mp-Information_Userid">hoge</div><!-- ユーザID -->
-        </div>
-        <div class="mp-tabs">
-            <div class="mp-Create"><!-- 作成したルーム -->
-                <div class="mp-Create_tab">作成したルーム</div><!-- tab -->
-                <div class="mp-Createroom"><!-- ルーム -->
-                    <div class="mp-Createroom_Name">hoge</div><!-- ルーム名 -->
-                    <span class="st-Tag">タグ</span><!-- タグ -->
-                    <div class="mp-Createroom_Description">hogehogehoge</div><!-- description -->
-                </div>
+    <div class="st-Wrapper">
+        <div class="st-Container">
+            <h2 class="st-Title">マイページ</h2>
+            <div class="mp-Information">
+                <div class="mp-Information_Name">スクリーンネーム</div>
+                <div class="mp-Information_UserId">ユーザID</div>
             </div>
-            <div class="mp-Favorite"><!-- お気に入りのルーム -->
-                <div class="mp-Favorite_tab">お気に入りのルーム</div><!-- tab -->
-                <div class="mp-Favoriteroom"><!-- ルーム -->
-                    <div class="mp-Favoriteroom_Name">hoge</div><!-- ルーム名 -->
-                    <span class="st-Tag">タグ</span><!-- タグ -->
-                    <div class="mp-Favoriteroom_Description">hogehogehoge</div><!-- description -->
+            <div class="mp-Nav_Area">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#create" role="tab" aria-controls="create" aria-selected="true">作成したルーム</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#favorite" role="tab" aria-controls="favorite" aria-selected="false">お気に入りのルーム</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="create" role="tabpanel" aria-labelledby="create-tab">
+                        <div class="mp-Chatroom">
+                            <div class="mp-Chatroom_Name">ルーム名</div>
+                            <div class="mp-Chatroom_Tag">
+                                <span class="st-Tag">タグ</span>
+                                <span class="st-Tag">タグ</span>
+                                <span class="st-Tag">タグ</span>
+                            </div>
+                            <div class="mp-Chatroom_Description">
+                                <p>hoge</p>
+                                <p>piyo</p>
+                            </div>
+                            <div class="mp-Chatroom_LinkBox">
+                                <a href="" class="mp-Chatroom_Link">チャットルームへ</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="favorite" role="tabpanel" aria-labelledby="favorite-tab">
+                        <div class="mp-Chatroom">
+                            <div class="mp-Chatroom_Name">ルーム名</div>
+                            <div class="mp-Chatroom_Tag">
+                                <span class="st-Tag">タグ</span>
+                                <span class="st-Tag">タグ</span>
+                                <span class="st-Tag">タグ</span>
+                            </div>
+                            <div class="mp-Chatroom_Description">
+                                <p>hoge</p>
+                                <p>piyo</p>
+                            </div>
+                            <div class="mp-Chatroom_LinkBox">
+                                <a href="" class="mp-Chatroom_Link">チャットルームへ</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 @endsection
