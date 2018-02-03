@@ -7,7 +7,7 @@
         <div class="sp-Search"><!-- search wrapper -->
             <form method="POST" action="" class="sp-Search_Form form-group"><!-- 検索フォーム -->
                 <input type="text" class="sp-Search_Textbox form-control"><!-- テキストボックス -->
-                <button type="submit" class="sp-Search_Button">検索</button>
+                <button type="submit" class="st-Button sp-Search_Button">検索</button>
             </form>
         </div>
         <div class="sp-Results"><!-- 検索結果wrapper -->
