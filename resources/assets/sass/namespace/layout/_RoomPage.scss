@@ -1,0 +1,68 @@
+.rp-ChatRoom {
+  margin: 20px 0;
+  &_Name {
+    margin: 30px 0;
+    font-size: 28px;
+  }
+  &_Id {
+    margin: 10px 0 0 0;
+  }
+  &_Favorite {
+    .rp-Star {
+      padding-right: 10px;
+      font-size: 24px;
+    }
+  }
+  &_Description {
+
+  }
+  &_Tag {
+
+  }
+}
+
+.rp-List {
+  border-top: solid 5px $red;
+  padding-bottom: 220px;
+  .rp-Message {
+    border-bottom: solid 1px $red;
+    padding: 15px 0;
+    &__User {
+
+    }
+  }
+}
+
+.rp-Wrapper {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 200px;
+  background-color: $blue;
+  .rp-Container {
+    max-width: 1200px;
+    margin: auto;
+    .rp-Form {
+      margin-top: 20px;
+      .rp-TextArea {
+        width: 100%;
+        height: 100px;
+      }
+      .rp-Form_Other {
+        margin-top: 15px;
+        .rp-file {
+
+        }
+        .rp-CheckBox {
+          margin: 0;
+        }
+        .rp-CheckBox_Text {
+          margin: 0 25px 0 5px;
+        }
+        .rp-Button {
+          padding: 5px 10px;
+        }
+      }
+    }
+  }
+}
