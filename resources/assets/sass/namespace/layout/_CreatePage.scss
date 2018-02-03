@@ -1,22 +1,22 @@
-.cp-Chatroom {
+.cp-Create_ChatRoom {
   padding-left: 5px;
-  &_Item {
+  .cp-Item_Area {
     margin: 20px 0;
-    .cp-Chatroom_Title {
+    .cp-Item_Title {
       font-weight: normal;
       margin-bottom: 10px;
     }
-    .cp-Chatroom_Name {
+    .cp-TextBox_Name {
       width: 90%;
       margin: 0 5%;
       font-size: 14px;
     }
-    .cp-Chatroom_Description {
+    .cp-TextArea_Description {
       width: 90%;
       margin: 0 5%;
       font-size: 14px;
     }
-    .cp-Chatroom_Tag {
+    .cp-TextBox_Tag {
       display: inline-block;
       width: 60%;
       margin-left: 5%;
@@ -34,6 +34,12 @@
     }
     .cp-Private_Area {
       margin: 0 0 0 5%;
+      .cp-RadioBox_Secret {
+        display: inline-block;
+        width: 50%;
+        margin-left: 15px;
+        font-size: 14px;
+      }
     }
   }
   .cp-Button_Area {
