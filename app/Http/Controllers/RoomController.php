@@ -10,7 +10,13 @@ use App\Post;
 class RoomController extends Controller {
 
     public function index() {
-        return view('room');
+        $room_id = explode('/', \Request::decodedPath());
+
+        $posts = DB::table('posts')->select('user_id', 'screen_name', 'comment')->where('room_id', $room_id[1])->orderBy('id', 'DESC')->take(10)->get();
+
+        return view('room', [
+            'posts' => $posts
+        ]);
     }
 
     public function store(Request $request) {
