@@ -8561,8 +8561,9 @@ button.close {
 }
 
 .tp-Catchphrase {
-  height: 500px;
-  line-height: 550px;
+  width: 100vw;
+  line-height: 500px;
+  padding-top: 60px;
   font-size: 80px;
   text-align: center;
   background-color: #EC605B;
@@ -8605,6 +8606,20 @@ button.close {
 
 .tp-Chatroom_Container .tp-Search_Link {
   text-decoration: none;
+}
+
+@media screen and (max-width: 800px) {
+  .tp-Catchphrase {
+    line-height: 400px;
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .tp-Catchphrase {
+    line-height: 250px;
+    font-size: 30px;
+  }
 }
 
 .cp-Create_ChatRoom {
