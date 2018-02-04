@@ -14,8 +14,9 @@
         @if(count($room) > 0)
             <div class="sp-Results">
                 <div class="sp-Chatroom">
-                    <div class="sp-Chatroom_Name">{{ $room->name }}</div>
-                    <div>{{ $room->room_id }}</div>
+                    <div class="sp-Chatroom_Name">ルーム名: {{ $room->name }}</div>
+                    <div>ルームID: {{ $room->room_id }}</div>
+                    <div>作成者: {{ $room->creator }}</div>
                     <div class="sp-Chatroom_Tag">
                         <span class="st-Tag">タグ</span>
                         <span class="st-Tag">タグ</span>

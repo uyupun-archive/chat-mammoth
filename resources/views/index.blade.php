@@ -8,8 +8,9 @@
         <div class="tp-Chatroom_Container">
             @foreach($rooms as $room)
                 <div class="tp-Chatroom">
-                    <div class="tp-Chatroom_Name">{{ $room->name }}</div>
-                    <div>{{ $room->room_id }}</div>
+                    <div class="tp-Chatroom_Name">ルーム名: {{ $room->name }}</div>
+                    <div>ルームID: {{ $room->room_id }}</div>
+                    <div>作成者: {{ $room->creator }}</div>
                     <div class="tp-Chatroom_Tag">
                         <span class="st-Tag">タグ</span>
                         <span class="st-Tag">タグ</span>
