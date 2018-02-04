@@ -17,4 +17,8 @@ class MypageController extends Controller {
             'rooms' => $rooms,
         ]);
     }
+
+    public function __construct() {
+        $this->middleware('auth');
+    }
 }
