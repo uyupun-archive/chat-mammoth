@@ -8,14 +8,11 @@ Route::get('/', function () {
 });
 
 /** チャットルーム検索 */
-Route::get('/search', function() {
-    return view('search');
-});
+Route::get('/search', 'SearchRoomsController@index');
+Route::post('/search', 'SearchRoomsController@index');
 
 /** マイページ */
-Route::get('/mypage', function() {
-    return view('mypage');
-});
+Route::get('/mypage', 'MypageController@index');
 
 /** チャットルーム */
 Route::get('/room/{id}', function() {
@@ -23,6 +20,5 @@ Route::get('/room/{id}', function() {
 });
 
 /** チャットルーム作成 */
-Route::get('/create', function() {
-    return view('create');
-});
+Route::get('/create', 'CreateRoomsController@index');
+Route::post('/api/room/add', 'CreateRoomsController@add');
