@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-{{--    {{ dd(Request::decodedPath()) }}--}}
     <div class="st-Wrapper">
         <div class="st-Container">
             <div class="rp-ChatRoom_Favorite ml-auto p-2 align-self-center">
@@ -9,12 +8,14 @@
                     <i class="fas fa-star"></i>
                 </span>
             </div>
-            <div class="rp-List">
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
+            @foreach($posts as $post)
+                <div class="rp-List">
+                    <div class="rp-Message">
+                        <div class="rp-Message_User">{{ $post->screen_name }}&#64;{{ $post->user_id }}</div>
+                        <p>{{ $post->comment }}</p>
+                    </div>
                 </div>
-            </div>
+            @endforeach
             <div class="rp-pagination">
                 <nav aria-label="Page navigation example">
                     <ul class="pagination justify-content-center">
