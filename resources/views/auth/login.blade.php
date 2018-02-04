@@ -7,10 +7,15 @@
             <form  method="POST" action="{{ route('login') }}" class="si-Form"><!-- サインインフォーム -->
                 {{ csrf_field() }}
                 <div class="si-Id row"><!-- ID -->
-                    <label for="id" class="si-Id_Title align-self-center">ID</label><!-- ラベル -->
+                    <label for="id" class="si-Id_Title align-self-center">ユーザID</label><!-- ラベル -->
                     <div class="col">
-                        <input id="id" type="text" name="id" value="{{ old('id') }}" class="si-Id_Textbox form-control" required autofocus><!-- テキストボックス -->
+                        <input id="id" type="text" name="user_id" value="{{ old('user_id') }}" class="si-Id_Textbox form-control" required autofocus><!-- テキストボックス -->
                     </div>
+                    @if ($errors->has('user_id'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('user_id') }}</strong>
+                        </span>
+                    @endif
                 </div>
                 <div class="si-Password row"><!-- パスワード -->
                     <label for="password" class="si-Password_Title align-self-center">パスワード</label><!-- ラベル -->
