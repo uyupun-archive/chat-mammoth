@@ -8728,6 +8728,7 @@ button.close {
   width: 100vw;
   height: 200px;
   background-color: #287CAC;
+  opacity: 0.6;
 }
 
 .rp-Wrapper .rp-Container {
