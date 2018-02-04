@@ -8382,7 +8382,7 @@ button.close {
   border-radius: 3px;
 }
 
-.h-Container {
+.h-Header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8393,37 +8393,37 @@ button.close {
   border-bottom: 1px solid #999;
 }
 
-.h-Container a:link {
+.h-Header a:link {
   text-decoration: none;
 }
 
-.h-Container a:visited {
+.h-Header a:visited {
   text-decoration: none;
 }
 
-.h-Container a:hover {
-  text-decoration: none;
-  color: black;
-}
-
-.h-Container a {
+.h-Header a:hover {
   text-decoration: none;
   color: black;
 }
 
-.h-Container .h-Logo {
-  width: 60px;
+.h-Header a {
+  text-decoration: none;
+  color: black;
+}
+
+.h-Header .h-Logo {
+  width: 50px;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
 
-.h-Container .h-Title {
+.h-Header .h-Title {
   padding-left: 10px;
   margin-right: auto;
 }
 
-.h-Container .h-Menu {
+.h-Header .h-Menu {
   font-size: 14px;
   list-style: none;
   display: -webkit-box;
@@ -8432,8 +8432,12 @@ button.close {
   margin-bottom: 0;
 }
 
-.h-Container .h-Menu_List {
+.h-Header .h-Menu_List {
   margin-right: 16px;
+}
+
+.h-Container {
+  width: 70%;
 }
 
 .su-Form {
@@ -8724,6 +8728,7 @@ button.close {
   width: 100vw;
   height: 200px;
   background-color: #287CAC;
+  opacity: 0.6;
 }
 
 .rp-Wrapper .rp-Container {
