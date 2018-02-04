@@ -8,11 +8,11 @@ use App\Room;
 
 class RoomController extends Controller {
 
-    public function index(Room $rooms) {
-        DB::table('rooms')->where('room_id', $rooms->room_id)->get();
+    public function index(Request $request) {
+        $room = DB::table('rooms')->select('name', 'description', 'creator', 'room_id')->where('room_id', $request->room_id)->first();
 
         return view('room', [
-            'rooms' => $rooms
+            'room' => $room
         ]);
     }
 }
