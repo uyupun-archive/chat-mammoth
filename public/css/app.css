@@ -8568,6 +8568,10 @@ button.close {
   padding: 5px;
 }
 
+.tp-Chatroom_Container .tp-Chatroom_Name {
+  font-size: 26px;
+}
+
 .tp-Chatroom_Container .tp-Chatroom_Tag {
   margin: 4px 4px 0 0;
 }
@@ -8783,6 +8787,10 @@ button.close {
   padding: 5px;
 }
 
+.mp-Chatroom_Name {
+  font-size: 26px;
+}
+
 .mp-Chatroom_Tag {
   margin: 4px 4px 0 0;
 }
@@ -8823,6 +8831,10 @@ button.close {
   border-radius: 4px;
   margin: 20px 0;
   padding: 5px;
+}
+
+.sp-Results .sp-Chatroom_Name {
+  font-size: 26px;
 }
 
 .sp-Results .sp-Chatroom_Tag {
