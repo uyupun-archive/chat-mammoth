@@ -13,9 +13,7 @@ Route::get('/search', function() {
 });
 
 /** マイページ */
-Route::get('/mypage', function() {
-    return view('mypage');
-});
+Route::get('/mypage', 'MypageController@index');
 
 /** チャットルーム */
 Route::get('/room/{id}', function() {
@@ -24,5 +22,4 @@ Route::get('/room/{id}', function() {
 
 /** チャットルーム作成 */
 Route::get('/create', 'CreateRoomsController@index');
-
 Route::post('/api/room/add', 'CreateRoomsController@add');
