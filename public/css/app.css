@@ -8363,6 +8363,13 @@ button.close {
   margin-left: auto;
 }
 
+@media screen and (max-width: 1200px) {
+  .st-Container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .st-Tag {
   border-radius: 2px;
   padding: 3px;
@@ -8614,6 +8621,13 @@ button.close {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .tp-Container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 @media screen and (max-width: 800px) {
   .tp-Catchphrase {
     line-height: 400px;
@@ -8769,6 +8783,13 @@ button.close {
 
 .rp-Wrapper .rp-Container .rp-Form .rp-Form_Other .rp-Button {
   padding: 5px 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .rp-Container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
 
 .mp-Information {

@@ -4,3 +4,10 @@
   margin-right: auto;
   margin-left: auto;
 }
+
+@media screen and (max-width: 1200px) {
+  .st-Container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
