@@ -15,9 +15,6 @@
                         </span>
                     </div>
                 </div>
-                <div class="rp-ChatRoom_Description">
-                    <p>hoge</p>
-                </div>
                 <div class="tp-ChatRoom_Tag">
                     <span class="st-Tag">タグ</span>
                     <span class="st-Tag">タグ</span>
@@ -28,46 +25,6 @@
                 <div class="rp-Message">
                     <div class="rp-Message_User">ユーザ名</div>
                     <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>hogehoge</p>
-                </div>
-                <div class="rp-Message">
-                    <div class="rp-Message_User">ユーザ名</div>
-                    <p>ぱぴこ</p>
                 </div>
             </div>
             <div class="rp-pagination">
