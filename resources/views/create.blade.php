@@ -4,7 +4,7 @@
 <div class="st-Wrapper">
     <div class="st-Container">
         <h2 class="st-Title">チャットルーム作成</h2>
-        <form enctype="multipart/form-data" method="POST" action="{{ url('/api/room/add') }}" class="cp-Create_ChatRoom">
+        <form enctype="multipart/form-data" method="POST" action="{{ url('/api/room/store') }}" class="cp-Create_ChatRoom">
             {{ csrf_field() }}
             <div class="cp-Item_Area">
                 <label for="name" class="cp-Item_Title">ルーム名</label>

@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use DB;
-use App\Room;
+use Auth;
+use App\Post;
 
 class RoomController extends Controller {
 
@@ -14,5 +15,16 @@ class RoomController extends Controller {
         return view('room', [
             'room' => $room
         ]);
+    }
+
+    public function store(Request $request) {
+        $post = new Post();
+        $post->user_id = Auth::user()->user_id;
+        $post->screen_name = Auth::user()->screen_name;
+        $post->room_id = $request->room_id;
+        $post->comment = $request->comment;
+        $post->save();
+
+        return redirect('/');
     }
 }
