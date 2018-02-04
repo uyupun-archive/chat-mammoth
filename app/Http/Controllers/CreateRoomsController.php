@@ -17,8 +17,9 @@ class CreateRoomsController extends Controller {
         $rooms->name = $request->name;
         $rooms->description = $request->description;
         $rooms->publish = $request->publish;
-        $rooms->password = $request->password;
+        $rooms->password = bcrypt($request->password);
         $rooms->creator = Auth::user()->user_id;
+        $rooms->room_id = hash('adler32', Auth::user()->user_id . srand());
         $rooms->save();
 
         return redirect('/');

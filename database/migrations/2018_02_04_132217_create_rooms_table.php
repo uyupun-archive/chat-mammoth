@@ -21,6 +21,7 @@ class CreateRoomsTable extends Migration
             $table->boolean('publish');
             $table->string('password')->nullable();
             $table->string('creator');
+            $table->string('room_id');
             $table->timestamps();
         });
     }
