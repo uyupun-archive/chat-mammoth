@@ -8,7 +8,9 @@
                 <h1 class="rp-ChatRoom_Name p-2">ルーム名</h1>
                 <h2 class="rp-ChatRoom_Id p-2 align-self-center">0123456789</h2>
                 <div class="rp-ChatRoom_Favorite ml-auto p-2 align-self-center">
-                    <span class="rp-Star">★</span>
+                    <span class="rp-Star">
+                        <i class="fas fa-star"></i>
+                    </span>
                 </div>
             </div>
             <div class="rp-ChatRoom_Description">
