@@ -23,6 +23,6 @@ Route::get('/room/{id}', function() {
 });
 
 /** チャットルーム作成 */
-Route::get('/create', function() {
-    return view('create');
-});
+Route::get('/create', 'CreateRoomsController@index');
+
+Route::post('/api/room/add', 'CreateRoomsController@add');

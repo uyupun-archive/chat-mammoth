@@ -1,0 +1,26 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Room;
+use Auth;
+
+class CreateRoomsController extends Controller {
+
+    public function index() {
+        return view('/create');
+    }
+
+    public function add(Request $request) {
+        $rooms = new Room;
+        $rooms->name = $request->name;
+        $rooms->description = $request->description;
+        $rooms->publish = $request->publish;
+        $rooms->password = $request->password;
+        $rooms->creator = Auth::user()->user_id;
+        $rooms->save();
+
+        return redirect('/');
+    }
+}
