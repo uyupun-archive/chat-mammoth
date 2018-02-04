@@ -8390,61 +8390,28 @@ button.close {
 }
 
 .h-Header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  width: 100%;
+  background-color: #fff;
   height: 60px;
-  background: #fff;
-  border-bottom: 1px solid #999;
 }
 
-.h-Header a:link {
-  text-decoration: none;
+.navbar-brand {
+  float: none;
 }
 
-.h-Header a:visited {
-  text-decoration: none;
+.navbar-default .navbar-brand {
+  color: #323232;
 }
 
-.h-Header a:hover {
-  text-decoration: none;
-  color: black;
+.navbar-default .navbar-nav > li > a {
+  color: #323232;
 }
 
-.h-Header a {
-  text-decoration: none;
-  color: black;
-}
-
-.h-Header .h-Logo {
+.h-Logo {
   width: 50px;
+  margin: 5px 0;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
-}
-
-.h-Header .h-Title {
-  padding-left: 10px;
-  margin-right: auto;
-}
-
-.h-Header .h-Menu {
-  font-size: 14px;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 0;
-}
-
-.h-Header .h-Menu_List {
-  margin-right: 16px;
-}
-
-.h-Container {
-  width: 70%;
 }
 
 .su-Form {
@@ -8599,6 +8566,10 @@ button.close {
   border-radius: 4px;
   margin: 20px 0;
   padding: 5px;
+}
+
+.tp-Chatroom_Container .tp-Chatroom_Name {
+  font-size: 26px;
 }
 
 .tp-Chatroom_Container .tp-Chatroom_Tag {
@@ -8816,6 +8787,10 @@ button.close {
   padding: 5px;
 }
 
+.mp-Chatroom_Name {
+  font-size: 26px;
+}
+
 .mp-Chatroom_Tag {
   margin: 4px 4px 0 0;
 }
@@ -8856,6 +8831,10 @@ button.close {
   border-radius: 4px;
   margin: 20px 0;
   padding: 5px;
+}
+
+.sp-Results .sp-Chatroom_Name {
+  font-size: 26px;
 }
 
 .sp-Results .sp-Chatroom_Tag {
