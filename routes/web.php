@@ -3,9 +3,7 @@
 Auth::routes();
 
 /** トップ */
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'IndexController@index');
 
 /** チャットルーム検索 */
 Route::get('/search', 'SearchRoomsController@index');
