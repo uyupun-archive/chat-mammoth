@@ -39,7 +39,6 @@
   width: 100vw;
   height: 200px;
   background-color: $blue;
-  opacity: 0.6;
   .rp-Container {
     max-width: 1200px;
     margin: auto;
@@ -48,6 +47,12 @@
       .rp-TextArea {
         width: 100%;
         height: 100px;
+        resize: none;
+        border-radius: 5px;
+        border: none;
+      }
+      .rp-TextArea:focus {
+        outline: 0;
       }
       .rp-Form_Other {
         margin-top: 15px;
