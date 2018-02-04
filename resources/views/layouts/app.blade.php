@@ -11,7 +11,7 @@
     </head>
     <body>
         <div id="app">
-            <div class="h-Container"><!-- container -->
+            <div class="h-Header"><!-- container -->
                 <img src="/images/logo3.png" class="h-Logo align-self-center"><!-- ロゴ -->
                 <h1 class="h-Title align-self-center">
                     <a href="{{ url('/') }}">chat mammoth</a>
