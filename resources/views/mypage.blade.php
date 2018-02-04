@@ -21,8 +21,9 @@
                     <div class="tab-pane fade show active" id="create" role="tabpanel" aria-labelledby="create-tab">
                         @foreach($rooms as $room)
                             <div class="mp-Chatroom">
-                                <div class="mp-Chatroom_Name">{{ $room->name }}</div>
-                                <div>{{ $room->room_id }}</div>
+                                <div class="mp-Chatroom_Name">ルーム名: {{ $room->name }}</div>
+                                <div>ルームID: {{ $room->room_id }}</div>
+                                <div>作成者: {{ $room->creator }}</div>
                                 <div class="mp-Chatroom_Tag">
                                     <span class="st-Tag">タグ</span>
                                     <span class="st-Tag">タグ</span>
