@@ -20,7 +20,12 @@
                         <p>{{ $room->description }}</p>
                     </div>
                     <div class="tp-Chatroom_LinkBox">
-                        <a href="" class="tp-Chatroom_Link">チャットルームへ</a>
+                        <form enctype="multipart/form-data" action="{{ url('room/' . $room->room_id) }}" method="POST">
+                            {{ csrf_field() }}
+                            <input type="hidden" value="{{ $room->room_id }}" name="room_id">
+                            <button type="submit">チャットルームへ</button>
+                            {{--<a href="" class="tp-Chatroom_Link">チャットルームへ</a>--}}
+                        </form>
                     </div>
                 </div>
             @endforeach
