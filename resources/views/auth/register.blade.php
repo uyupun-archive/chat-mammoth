@@ -13,9 +13,9 @@
                 </div>
             </div>
             <div class="su-Id row"><!-- ID -->
-                <label for="id" class="su-Id_Title align-self-center">ID</label><!-- ラベル -->
+                <label for="user_id" class="su-Id_Title align-self-center">ユーザID</label><!-- ラベル -->
                 <div class="col">
-                    <input id="id" type="text" name="id" value="{{ old('id') }}" class="su-Id_Textbox form-control" required autofocus><!-- テキストボックス -->
+                    <input id="user_id" type="text" name="user_id" value="{{ old('user_id') }}" class="su-Id_Textbox form-control" required autofocus><!-- テキストボックス -->
                 </div>
             </div>
             <div class="su-Password row"><!-- パスワード -->
@@ -30,7 +30,7 @@
             <div class="su-Confirm row"><!-- パスワード（確認） -->
                 <label for="password-confirm" class="su-Confirm_Title align-self-center">パスワード（確認）</label><!-- ラベル -->
                 <div class="col">
-                    <input id="password-confirm" type="password" name="password" class="su-Confirm_Textbox form-control" required><!-- テキストボックス -->
+                    <input id="password-confirm" name="password_confirmation" type="password" class="su-Confirm_Textbox form-control" required><!-- テキストボックス -->
                 </div>
             </div>
             <div class="su-Button_Area">

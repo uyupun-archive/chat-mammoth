@@ -8367,6 +8367,7 @@ button.close {
   border-radius: 2px;
   padding: 3px;
   background-color: #489E7C;
+  color: #fff;
 }
 
 .st-Title {
@@ -8375,7 +8376,8 @@ button.close {
 }
 
 .st-Button {
-  background-color: #999;
+  background-color: #287CAC;
+  color: #fff;
   border: none;
   border-radius: 3px;
 }
