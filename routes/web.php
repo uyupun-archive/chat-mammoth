@@ -13,9 +13,7 @@ Route::post('/search', 'SearchRoomsController@index');
 Route::get('/mypage', 'MypageController@index');
 
 /** チャットルーム */
-Route::get('/room/{id}', function() {
-    return view('room');
-});
+Route::post('/room/{id}', 'RoomController@index');
 
 /** チャットルーム作成 */
 Route::get('/create', 'CreateRoomsController@index');
