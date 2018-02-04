@@ -17,14 +17,13 @@
                     <a href="{{ url('/') }}">chat mammoth</a>
                 </h1>
                 <ul class="h-Menu align-self-center"><!-- メニュー -->
+                    <li class="h-Menu_List"><a href="{{ url('/search') }}" class="h-Search">ルーム検索</a></li>
                     @guest
-                        <li class="h-Menu_List"><a href="{{ url('/search') }}" class="h-Search">ルーム検索</a></li>
                         <li class="h-Menu_List"><a href="{{ route('login') }}">サインイン</a></li>
                         <li class="h-Menu_List"><a href="{{ route('register') }}">サインアップ</a></li>
                     @else
-                        <li class="h-Menu_List"><a href="" class="h-Search">ルーム検索</a></li>
-                        <li class="h-Menu_List"><a href="" class="h-Create">ルーム作成</a></li>
-                        <li class="h-Menu_List"><a href="" class="h-Mypage">マイページ</a></li>
+                        <li class="h-Menu_List"><a href="{{ url('/create') }}" class="h-Create">ルーム作成</a></li>
+                        <li class="h-Menu_List"><a href="{{ url('/mypage') }}" class="h-Mypage">マイページ</a></li>
                         <li class="h-Menu_List"><a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">サインアウト</a></li>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
                     @endguest
