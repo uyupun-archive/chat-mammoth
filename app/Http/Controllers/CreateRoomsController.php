@@ -12,7 +12,7 @@ class CreateRoomsController extends Controller {
         return view('/create');
     }
 
-    public function add(Request $request) {
+    public function store(Request $request) {
         $rooms = new Room;
         $rooms->name = $request->name;
         $rooms->description = $request->description;

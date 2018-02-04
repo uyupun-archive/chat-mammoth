@@ -26,11 +26,7 @@
                         <p>{{ $room->description }}</p>
                     </div>
                     <div class="sp-Chatroom_LinkBox">
-                        <form enctype="multipart/form-data" action="{{ url('room/' . $room->room_id) }}" method="POST">
-                            {{ csrf_field() }}
-                            <button type="submit">チャットルームへ</button>
-                            {{--<a href="" class="sp-Chatroom_Link">チャットルームへ</a>--}}
-                        </form>
+                        <a href="{{ url('/room/' . $room->room_id) }}" class="sp-Chatroom_Link">チャットルームへ</a>
                     </div>
                 </div>
             </div>
