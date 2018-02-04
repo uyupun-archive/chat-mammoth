@@ -37,6 +37,34 @@
                 <div class="rp-Message_User">ユーザ名</div>
                 <p>hogehoge</p>
             </div>
+            <div class="rp-Message">
+                <div class="rp-Message_User">ユーザ名</div>
+                <p>hogehoge</p>
+            </div>
+            <div class="rp-Message">
+                <div class="rp-Message_User">ユーザ名</div>
+                <p>hogehoge</p>
+            </div>
+            <div class="rp-Message">
+                <div class="rp-Message_User">ユーザ名</div>
+                <p>hogehoge</p>
+            </div>
+            <div class="rp-Message">
+                <div class="rp-Message_User">ユーザ名</div>
+                <p>hogehoge</p>
+            </div>
+            <div class="rp-Message">
+                <div class="rp-Message_User">ユーザ名</div>
+                <p>hogehoge</p>
+            </div>
+            <div class="rp-Message">
+                <div class="rp-Message_User">ユーザ名</div>
+                <p>hogehoge</p>
+            </div>
+            <div class="rp-Message">
+                <div class="rp-Message_User">ユーザ名</div>
+                <p>ぱぴこ</p>
+            </div>
         </div>
     </div>
     <div class="rp-Wrapper">
