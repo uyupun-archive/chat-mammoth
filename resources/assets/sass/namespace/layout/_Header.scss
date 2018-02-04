@@ -1,44 +1,23 @@
 .h-Header {
-  display: flex;
-  position: fixed;
-  width: 100%;
+  background-color: $white;
   height: 60px;
-  background: $white;
-  border-bottom: 1px solid $gray;
-  a:link{
-    text-decoration:none;
-  }
-  a:visited{
-    text-decoration:none;
-  }
-  a:hover{
-    text-decoration:none;
-    color: black;
-  }
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  .h-Logo {
-    width: 50px;
-    height: auto;
-    object-fit: contain;
-  }
-  .h-Title {
-    padding-left: 10px;
-    margin-right: auto;
-  }
-  .h-Menu {
-    font-size: 14px;
-    list-style: none;
-    display: flex;
-    margin-bottom: 0;
-    &_List {
-      margin-right: 16px;
-    }
-  }
 }
 
-.h-Container {
-  width: 70%;
+.navbar-brand {
+  float: none;
+}
+
+.navbar-default .navbar-brand {
+  color: $black;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $black;
+}
+
+.h-Logo {
+  width: 50px;
+  margin: 5px 0;
+  height: auto;
+  object-fit: contain;
 }
