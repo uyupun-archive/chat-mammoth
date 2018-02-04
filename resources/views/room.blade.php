@@ -1,25 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
+{{--    {{ dd(Request::decodedPath()) }}--}}
     <div class="st-Wrapper">
         <div class="st-Container">
-            <div class="rp-ChatRoom">
-                <div class="d-flex justify-content-start">
-                    <h1 class="rp-ChatRoom_Name p-2">{{ $room->name }}</h1>
-                    <h2 class="rp-ChatRoom_Id p-2 align-self-center">ルームID: {{ $room->room_id }}</h2>
-                    <h2 class="rp-ChatRoom_Id p-2 align-self-center">作成者: {{ $room->creator }}</h2>
-                    <h2>{{ $room->description }}</h2>
-                    <div class="rp-ChatRoom_Favorite ml-auto p-2 align-self-center">
-                        <span class="rp-Star">
-                            <i class="fas fa-star"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="tp-ChatRoom_Tag">
-                    <span class="st-Tag">タグ</span>
-                    <span class="st-Tag">タグ</span>
-                    <span class="st-Tag">タグ</span>
-                </div>
+            <div class="rp-ChatRoom_Favorite ml-auto p-2 align-self-center">
+                <span class="rp-Star">
+                    <i class="fas fa-star"></i>
+                </span>
             </div>
             <div class="rp-List">
                 <div class="rp-Message">
@@ -58,7 +46,7 @@
                         {{--<input type="file" name="image" class="rp-file mr-auto">--}}
                         {{--<input type="checkbox" name="anonymous" id="anonymous" class="rp-CheckBox align-self-center">--}}
                         {{--<lavel for="anonymous" class="rp-CheckBox_Text align-self-center">匿名投稿</lavel>--}}
-                        <input type="hidden" value="{{ $room->room_id }}" name="room_id">
+                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                         <button type="submit" class="st-Button rp-Button">投稿する</button>
                     </div>
                 </form>
