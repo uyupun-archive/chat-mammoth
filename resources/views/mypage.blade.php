@@ -37,7 +37,6 @@
                                         {{ csrf_field() }}
                                         <button type="submit">チャットルームへ</button>
                                         {{--<a href="" class="tp-Chatroom_Link">チャットルームへ</a>--}}
-                                        <a href="" class="mp-Chatroom_Link">チャットルームへ</a>
                                     </form>
                                 </div>
                             </div>
