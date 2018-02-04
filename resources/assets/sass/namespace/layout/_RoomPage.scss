@@ -24,7 +24,6 @@
 
 .rp-List {
   border-top: solid 5px $red;
-  padding-bottom: 220px;
   .rp-Message {
     border-bottom: solid 1px $red;
     padding: 15px 0;
@@ -34,12 +33,16 @@
   }
 }
 
+.rp-pagination {
+  padding-bottom: 220px;
+}
+
 .rp-Wrapper {
   position: fixed;
   bottom: 0;
   width: 100vw;
   height: 200px;
-  background-color: $blue;
+  background-color: $lightblue;
   .rp-Container {
     max-width: 1200px;
     margin: auto;

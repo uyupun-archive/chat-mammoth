@@ -8715,7 +8715,6 @@ button.close {
 
 .rp-List {
   border-top: solid 5px #EC605B;
-  padding-bottom: 220px;
 }
 
 .rp-List .rp-Message {
@@ -8723,12 +8722,16 @@ button.close {
   padding: 15px 0;
 }
 
+.rp-pagination {
+  padding-bottom: 220px;
+}
+
 .rp-Wrapper {
   position: fixed;
   bottom: 0;
   width: 100vw;
   height: 200px;
-  background-color: #287CAC;
+  background-color: #189CCC;
 }
 
 .rp-Wrapper .rp-Container {
