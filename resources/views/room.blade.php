@@ -19,7 +19,7 @@
                             @endif
                             <span class="rp-Message_Time">{{ str_replace('-', '/', $post->created_at) }}</span>
                         </div>
-                        <p>{!! nl2br(e($post->comment)) !!}</p>
+                        <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                     </div>
                 </div>
             @endforeach
