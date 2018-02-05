@@ -12,11 +12,12 @@
                 <div class="rp-List">
                     <div class="rp-Message">
                         <div class="rp-Message_User">
-                            <span>{{ $post->screen_name }}&#64;{{ $post->user_id }}</span>
+                            <span class="rp-Message_Name">{{ $post->screen_name }}</span>
+                            <span class="rp-Message_Id">&#64;{{ $post->user_id }}</span>
                             @if($post->user_id === 'Anonymous')
                                 <i class="fas fa-user-secret"></i>
                             @endif
-                            <span>{{ str_replace('-', '/', $post->created_at) }}</span>
+                            <span class="rp-Message_Time">{{ str_replace('-', '/', $post->created_at) }}</span>
                         </div>
                         <p>{{ $post->comment }}</p>
                     </div>

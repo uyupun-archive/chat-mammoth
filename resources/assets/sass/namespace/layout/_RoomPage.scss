@@ -23,12 +23,25 @@
 }
 
 .rp-List {
-  border-top: solid 5px $red;
+  //border-top: solid 5px $red;
   .rp-Message {
-    border-bottom: solid 1px $red;
+    //border-bottom: solid 1px $red;
     padding: 15px 0;
-    &__User {
-
+    &:hover {
+      background: $light-gray;
+    }
+    &_User {
+      color: $black;
+    }
+    &_Name {
+      font-weight: 600;
+      font-size: 20px;
+    }
+    &_Id {
+      font-weight: 600;
+    }
+    &_Time {
+      margin-left: 10px;
     }
   }
 }
