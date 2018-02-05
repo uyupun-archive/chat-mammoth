@@ -11,7 +11,12 @@
             @foreach($posts as $post)
                 <div class="rp-List">
                     <div class="rp-Message">
-                        <div class="rp-Message_User">{{ $post->screen_name }}&#64;{{ $post->user_id }}</div>
+                        <div class="rp-Message_User">
+                            <span>{{ $post->screen_name }}&#64;{{ $post->user_id }}</span>
+                            @if($post->user_id === 'Anonymous')
+                                <i class="fas fa-user-secret"></i>
+                            @endif
+                        </div>
                         <p>{{ $post->comment }}</p>
                     </div>
                 </div>
