@@ -37,7 +37,7 @@
                                         <li class="h-Menu_List"><a href="{{ url('/mypage') }}" class="h-Mypage">マイページ</a></li>
                                         <li class="h-Menu_List"><a href="{{ route('logout') }}" class="h-SignOut" onclick="event.preventDefault();document.getElementById('logout-form').submit();">サインアウト</a></li>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                                        <li><a href="{{ url('/config') }}"><i class="fas fa-cog"></i></a></li>
+                                        <li class="h-Menu_List"><a href="{{ url('/config') }}" class="h-Icon"><i class="fas fa-cog"></i></a></li>
                                     @endguest
                                 </ul>
                             </div>
