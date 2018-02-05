@@ -7,12 +7,14 @@
   float: none;
 }
 
-.navbar-default .navbar-brand {
-  color: $black;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: $black;
+.navbar-default {
+  background-color: #ffffff;
+  .navbar-brand {
+    color: $black;
+  }
+  .navbar-nav > li > a {
+    color: $black;
+  }
 }
 
 .h-Logo {
