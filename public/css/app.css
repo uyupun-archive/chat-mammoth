@@ -8809,6 +8809,7 @@ button.close {
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other {
   margin-top: 15px;
+  text-align: right;
 }
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other .rp-CheckBox {
