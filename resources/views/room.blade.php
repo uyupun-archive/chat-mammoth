@@ -16,6 +16,7 @@
                             @if($post->user_id === 'Anonymous')
                                 <i class="fas fa-user-secret"></i>
                             @endif
+                            <span>{{ str_replace('-', '/', $post->created_at) }}</span>
                         </div>
                         <p>{{ $post->comment }}</p>
                     </div>
