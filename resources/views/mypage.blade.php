@@ -19,6 +19,7 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane active" id="create" role="tabpanel">
+                        {{--TODO: Vue.jsに移動--}}
                         @foreach($rooms as $room)
                             <div class="mp-Chatroom">
                                 <div class="mp-Chatroom_Name">ルーム名: {{ $room->name }}</div>

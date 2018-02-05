@@ -14,6 +14,7 @@
         @if(count($room) > 0)
             <div class="sp-Results">
                 <div class="sp-Chatroom">
+                    {{--TODO: Vue.jsに移動--}}
                     <div class="sp-Chatroom_Name">ルーム名: {{ $room->name }}</div>
                     <div>ルームID: {{ $room->room_id }}</div>
                     <div>作成者: {{ $room->creator }}</div>
@@ -31,7 +32,20 @@
                 </div>
             </div>
         @endif
-        <!-- ページネーション -->
+        <ul class="pagination">
+            <li>
+                <a href="#">
+                    <span aria-hidden="true">«</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li class="active"><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#"><span aria-hidden="true">»</span></a>
+            </li>
+        </ul>
     </div>
 </div>
 @endsection

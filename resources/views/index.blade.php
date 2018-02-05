@@ -6,6 +6,10 @@
     <div class="tp-Container">
         <h2 class="st-Title">新着のチャットルーム</h2>
         <div class="tp-Chatroom_Container">
+            <div class="favorite">
+                <favorite></favorite>
+            </div>
+            {{--TODO: Vue.jsに移動--}}
             @foreach($rooms as $room)
                 <div class="tp-Chatroom">
                     <div class="tp-Chatroom_Name">ルーム名: {{ $room->name }}</div>
