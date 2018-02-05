@@ -9,6 +9,7 @@ Route::get('/api/room/get', 'IndexController@get');
 /** チャットルーム検索 */
 Route::get('/search', 'SearchRoomsController@index');
 Route::post('/search', 'SearchRoomsController@index');
+Route::get('/api/search/get', 'SearchController@get');
 
 /** マイページ */
 Route::get('/mypage', 'MypageController@index');
