@@ -45,8 +45,6 @@
                     <textarea name="comment" class="rp-TextArea"></textarea>
                     <div class="rp-Form_Other d-flex justify-content-end">
                         {{--<input type="file" name="image" class="rp-file mr-auto">--}}
-                        {{--<input type="checkbox" name="anonymous" id="anonymous" class="rp-CheckBox align-self-center">--}}
-                        {{--<lavel for="anonymous" class="rp-CheckBox_Text align-self-center">匿名投稿</lavel>--}}
                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                         <button type="submit" class="st-Button rp-Button">投稿する</button>
                     </div>
