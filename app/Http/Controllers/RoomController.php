@@ -25,6 +25,10 @@ class RoomController extends Controller {
         $user_id = isset(Auth::user()->user_id) ? Auth::user()->user_id : 'Anonymous';
         $screen_name = isset(Auth::user()->screen_name) ? Auth::user()->screen_name : 'Anonymous';
 
+        if(!isset($request->comment)) {
+            return redirect('/room/' . $room_id[1]);
+        }
+
         $post = new Post();
         $post->user_id = $user_id;
         $post->screen_name = $screen_name;
