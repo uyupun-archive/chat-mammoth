@@ -982,11 +982,11 @@ Vue.component('newRoom', __webpack_require__(57));
 Vue.component('myPage', __webpack_require__(62));
 
 var newRoom = new Vue({
-    el: '.new-room'
+    el: '#new-room'
 });
 
 var myPage = new Vue({
-    el: '.my-page'
+    el: '#my-page'
 });
 
 /***/ }),

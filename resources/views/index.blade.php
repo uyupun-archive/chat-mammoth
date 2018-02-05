@@ -6,7 +6,7 @@
     <div class="tp-Container">
         <h2 class="st-Title">新着のチャットルーム</h2>
         <div class="tp-Chatroom_Container">
-            <div class="new-room">
+            <div id="new-room">
                 <new-room></new-room>
             </div>
             <div class="tp-Search">
