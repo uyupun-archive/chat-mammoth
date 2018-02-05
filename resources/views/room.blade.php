@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="st-Wrapper">
-        <div class="st-Container">
+        <div class="rp-Container">
             <div class="rp-ChatRoom_Favorite ml-auto p-2 align-self-center">
                 <span class="rp-Star">
                     <i class="fas fa-star"></i>
@@ -23,10 +23,10 @@
                     </div>
                 </div>
             @endforeach
+            {{ $posts->links() }}
         </div>
-        {{ $posts->links() }}
-        <div class="rp-Wrapper">
-            <div class="rp-Container">
+        <div class="rp-Post_Wrapper">
+            <div class="rp-Post_Container">
                 <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
                     {{ csrf_field() }}
                     <textarea name="comment" placeholder="Please write here." class="rp-TextArea"></textarea>

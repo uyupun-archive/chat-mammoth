@@ -3,16 +3,23 @@
   height: 60px;
 }
 
+.h-Title {
+  font-size: 26px;
+}
+
 .navbar-brand {
   float: none;
+  margin-left: 0;
 }
 
-.navbar-default .navbar-brand {
-  color: $black;
-}
-
-.navbar-default .navbar-nav > li > a {
-  color: $black;
+.navbar-default {
+  background-color: #ffffff;
+  .navbar-brand {
+    color: $black;
+  }
+  .navbar-nav > li > a {
+    color: $black;
+  }
 }
 
 .h-Logo {
@@ -20,4 +27,32 @@
   margin: 5px 0;
   height: auto;
   object-fit: contain;
+}
+
+.h-Menu {
+  height: 60px;
+  &_List {
+    height: 60px;
+    .h-Top {
+      padding: 20px 15px;
+    }
+    .h-Search {
+      padding: 20px 15px;
+    }
+    .h-SignIn {
+      padding: 20px 15px;
+    }
+    .h-SignUp {
+      padding: 20px 15px;
+    }
+    .h-SignOut {
+      padding: 20px 15px;
+    }
+    .h-Create {
+      padding: 20px 15px;
+    }
+    .h-Mypage {
+      padding: 20px 15px;
+    }
+  }
 }
