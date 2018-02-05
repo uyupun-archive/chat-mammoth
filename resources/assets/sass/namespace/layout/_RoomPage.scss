@@ -1,3 +1,10 @@
+.rp-Container {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 200px;
+}
+
 .rp-ChatRoom {
   margin: 20px 0;
   &_Name {
@@ -51,13 +58,14 @@
   padding-bottom: 220px;
 }
 
-.rp-Wrapper {
+.rp-Post_Wrapper {
   position: fixed;
+  z-index: 999;
   bottom: 0;
   width: 100vw;
   height: 200px;
   background-color: $lightblue;
-  .rp-Container {
+  .rp-Post_Container {
     max-width: 1200px;
     margin: auto;
     .rp-Form {
@@ -93,6 +101,10 @@
 
 @media screen and (max-width: 1200px) {
   .rp-Container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .rp-Post_Container {
     padding-left: 10px;
     padding-right: 10px;
   }
