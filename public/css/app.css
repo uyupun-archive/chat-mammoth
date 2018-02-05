@@ -8701,7 +8701,7 @@ button.close {
 }
 
 .rp-List .rp-Message:hover {
-  background: #EEEEEE;
+  background: #EFEFEF;
 }
 
 .rp-List .rp-Message_User {
@@ -8719,6 +8719,7 @@ button.close {
 
 .rp-List .rp-Message_Time {
   margin-left: 10px;
+  color: #999;
 }
 
 .rp-pagination {

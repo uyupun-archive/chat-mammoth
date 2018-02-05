@@ -29,7 +29,7 @@
             <div class="rp-Container">
                 <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
                     {{ csrf_field() }}
-                    <textarea name="comment" class="rp-TextArea"></textarea>
+                    <textarea name="comment" placeholder="Please write here." class="rp-TextArea"></textarea>
                     <div class="rp-Form_Other d-flex justify-content-end">
                         {{--<input type="file" name="image" class="rp-file mr-auto">--}}
                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
