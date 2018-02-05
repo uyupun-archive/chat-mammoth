@@ -3,7 +3,10 @@
         <div v-for="room in rooms">
             <div class="mp-Chatroom">
                 <div class="mp-Chatroom_Name">ルーム名: {{ room.name }}</div>
-                <div>ルームID: {{ room.room_id }}</div>
+                <div>
+                    <span>ルームID: {{ room.room_id }}</span>
+                    <i class="fas fa-unlock-alt"></i>
+                </div>
                 <div>作成者: {{ room.creator }}</div>
                 <div class="mp-Chatroom_Tag">
                     <span class="st-Tag">タグ</span>

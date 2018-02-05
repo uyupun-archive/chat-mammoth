@@ -1402,7 +1402,7 @@ var myPage = new Vue({
     el: '#my-page'
 });
 
-var searcg = new Vue({
+var search = new Vue({
     el: '#search'
 });
 
@@ -43454,6 +43454,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -43495,7 +43498,11 @@ var render = function() {
             _vm._v("ルーム名: " + _vm._s(room.name))
           ]),
           _vm._v(" "),
-          _c("div", [_vm._v("ルームID: " + _vm._s(room.room_id))]),
+          _c("div", [
+            _c("span", [_vm._v("ルームID: " + _vm._s(room.room_id))]),
+            _vm._v(" "),
+            _c("i", { staticClass: "fas fa-unlock-alt" })
+          ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
           _vm._v(" "),
@@ -43621,6 +43628,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -43662,7 +43672,11 @@ var render = function() {
             _vm._v("ルーム名: " + _vm._s(room.name))
           ]),
           _vm._v(" "),
-          _c("div", [_vm._v("ルームID: " + _vm._s(room.room_id))]),
+          _c("div", [
+            _c("span", [_vm._v("ルームID: " + _vm._s(room.room_id))]),
+            _vm._v(" "),
+            _c("i", { staticClass: "fas fa-unlock-alt" })
+          ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
           _vm._v(" "),
@@ -43855,6 +43869,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -43938,7 +43955,11 @@ var render = function() {
                   _vm._v("ルーム名: " + _vm._s(_vm.room.name))
                 ]),
                 _vm._v(" "),
-                _c("div", [_vm._v("ルームID: " + _vm._s(_vm.room.room_id))]),
+                _c("div", [
+                  _c("span", [_vm._v("ルームID: " + _vm._s(_vm.room.room_id))]),
+                  _vm._v(" "),
+                  _c("i", { staticClass: "fas fa-unlock-alt" })
+                ]),
                 _vm._v(" "),
                 _c("div", [_vm._v("作成者: " + _vm._s(_vm.room.creator))]),
                 _vm._v(" "),
