@@ -8696,13 +8696,29 @@ button.close {
   color: #F7F711;
 }
 
-.rp-List {
-  border-top: solid 5px #EC605B;
+.rp-List .rp-Message {
+  padding: 15px 0;
 }
 
-.rp-List .rp-Message {
-  border-bottom: solid 1px #EC605B;
-  padding: 15px 0;
+.rp-List .rp-Message:hover {
+  background: #EEEEEE;
+}
+
+.rp-List .rp-Message_User {
+  color: #323232;
+}
+
+.rp-List .rp-Message_Name {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.rp-List .rp-Message_Id {
+  font-weight: 600;
+}
+
+.rp-List .rp-Message_Time {
+  margin-left: 10px;
 }
 
 .rp-pagination {
