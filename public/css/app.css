@@ -8393,8 +8393,13 @@ button.close {
   height: 60px;
 }
 
+.h-Title {
+  font-size: 26px;
+}
+
 .navbar-brand {
   float: none;
+  margin-left: 0;
 }
 
 .navbar-default {
@@ -8415,6 +8420,42 @@ button.close {
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.h-Menu {
+  height: 60px;
+}
+
+.h-Menu_List {
+  height: 60px;
+}
+
+.h-Menu_List .h-Top {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-Search {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-SignIn {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-SignUp {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-SignOut {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-Create {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-Mypage {
+  padding: 20px 15px;
 }
 
 .su-Form {
