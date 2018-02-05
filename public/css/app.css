@@ -8381,6 +8381,20 @@ button.close {
   font-size: 28px;
 }
 
+@media screen and (max-width: 800px) {
+  .st-Title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .st-Title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
 .st-Button {
   background-color: #287CAC;
   color: #fff;
@@ -8454,6 +8468,10 @@ button.close {
 }
 
 .h-Menu_List .h-Mypage {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-Icon {
   padding: 20px 15px;
 }
 
