@@ -8389,7 +8389,6 @@ button.close {
 }
 
 .h-Header {
-  background-color: #fff;
   height: 60px;
 }
 
@@ -8775,7 +8774,7 @@ button.close {
 }
 
 .rp-pagination {
-  padding-bottom: 220px;
+  text-align: center;
 }
 
 .rp-Post_Wrapper {
