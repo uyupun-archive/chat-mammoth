@@ -6,7 +6,7 @@
             <h2 class="st-Title">マイページ</h2>
             <div class="mp-Information">
                 <div class="mp-Information_Name">{{ $screen_name }}</div>
-                <div class="mp-Information_UserId">@ {{ $user_id }}</div>
+                <div class="mp-Information_UserId">&#64;{{ $user_id }}</div>
             </div>
             <div class="mp-Nav_Area">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -19,25 +19,9 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane active" id="create" role="tabpanel">
-                        {{--TODO: Vue.jsに移動--}}
-                        @foreach($rooms as $room)
-                            <div class="mp-Chatroom">
-                                <div class="mp-Chatroom_Name">ルーム名: {{ $room->name }}</div>
-                                <div>ルームID: {{ $room->room_id }}</div>
-                                <div>作成者: {{ $room->creator }}</div>
-                                <div class="mp-Chatroom_Tag">
-                                    <span class="st-Tag">タグ</span>
-                                    <span class="st-Tag">タグ</span>
-                                    <span class="st-Tag">タグ</span>
-                                </div>
-                                <div class="mp-Chatroom_Description">
-                                    <p>{{ $room->description }}</p>
-                                </div>
-                                <div class="mp-Chatroom_LinkBox">
-                                    <a href="{{ url('/room/' . $room->room_id) }}" class="tp-Chatroom_Link">チャットルームへ</a>
-                                </div>
-                            </div>
-                        @endforeach
+                        <div class="my-page">
+                            <my-page></my-page>
+                        </div>
                     </div>
                     <div class="tab-pane" id="favorite" role="tabpanel">
                         <div class="mp-Chatroom">

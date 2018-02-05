@@ -31,7 +31,7 @@
             }
         },
         methods: {
-            getRoom() {
+            getRooms() {
                 axios.get('/api/room/get')
                     .then(response => {
                         this.rooms = response.data
@@ -39,7 +39,7 @@
             }
         },
         created() {
-            this.getRoom()
+            this.getRooms()
         }
     }
 </script>

@@ -1,7 +1,12 @@
 require('./bootstrap');
 
-Vue.component('favorite', require('./components/Favorite.vue'));
+Vue.component('newRoom', require('./components/NewRoom.vue'));
+Vue.component('myPage', require('./components/MyPage.vue'));
 
-const favorite = new Vue({
-    el: '.favorite'
+const newRoom = new Vue({
+    el: '.new-room'
+});
+
+const myPage = new Vue({
+    el: '.my-page'
 });
