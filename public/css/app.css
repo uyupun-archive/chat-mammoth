@@ -8397,6 +8397,10 @@ button.close {
   float: none;
 }
 
+.navbar-default {
+  background-color: #ffffff;
+}
+
 .navbar-default .navbar-brand {
   color: #323232;
 }
