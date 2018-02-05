@@ -9,7 +9,10 @@ use Auth;
 class MypageController extends Controller {
 
     public function index() {
-        return view('mypage');
+        return view('mypage', [
+            'screen_name' => Auth::user()->screen_name,
+            'user_id' => Auth::user()->user_id,
+        ]);
     }
 
     public function get() {
