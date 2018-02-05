@@ -8,8 +8,8 @@ Route::get('/api/room/get', 'IndexController@get');
 
 /** チャットルーム検索 */
 Route::get('/search', 'SearchRoomsController@index');
-Route::post('/search', 'SearchRoomsController@index');
-Route::get('/api/search/get', 'SearchController@get');
+//Route::post('/search', 'SearchRoomsController@index');
+Route::post('/api/search/{id}', 'SearchRoomsController@post');
 
 /** マイページ */
 Route::get('/mypage', 'MypageController@index');
