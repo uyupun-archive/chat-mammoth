@@ -14,4 +14,10 @@ class IndexController extends Controller
             'rooms' => $rooms
         ]);
     }
+
+    public function get() {
+        $rooms = DB::table('rooms')->select('name', 'description', 'room_id', 'creator')->orderBy('id', 'DESC')->take(10)->get();
+
+        return json_encode($rooms);
+    }
 }

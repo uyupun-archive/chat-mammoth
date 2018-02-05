@@ -4,6 +4,7 @@ Auth::routes();
 
 /** トップ */
 Route::get('/', 'IndexController@index');
+Route::get('/api/room/get', 'IndexController@get');
 
 /** チャットルーム検索 */
 Route::get('/search', 'SearchRoomsController@index');
