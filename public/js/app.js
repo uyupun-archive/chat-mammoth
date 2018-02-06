@@ -43606,7 +43606,12 @@ var render = function() {
               }
             ],
             staticClass: "sp-Search_Textbox form-control",
-            attrs: { type: "text", autofocus: "", required: "" },
+            attrs: {
+              type: "text",
+              autofocus: "",
+              required: "",
+              placeholder: "Please room id here!"
+            },
             domProps: { value: _vm.room_id },
             on: {
               input: function($event) {
