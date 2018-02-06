@@ -2,7 +2,7 @@
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 200px;
+  padding-bottom: 234px;
 }
 
 .rp-ChatRoom {
@@ -58,16 +58,41 @@
   text-align: center;
 }
 
-.rp-Post_Wrapper {
+.rp-Accordion {
+  padding-right: 5px;
+  width: 100%;
   position: fixed;
   z-index: 999;
   bottom: 0;
+  right: 0;
+  background-color: $lightblue;
+}
+
+.rp-Bar {
+  margin: 0;
+  text-align: right;
+  &Text {
+    color: $black;
+  }
+}
+
+.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.btn-link:hover, .btn-link:focus {
+  text-decoration: none;
+}
+
+.rp-Post_Wrapper {
   width: 100vw;
   height: 200px;
   background-color: $lightblue;
   .rp-Post_Container {
     max-width: 1200px;
     margin: auto;
+    padding-top: 10px;
     .rp-Form {
       margin-top: 20px;
       .rp-TextArea {
