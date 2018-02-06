@@ -12,6 +12,6 @@ const myPage = new Vue({
     el: '#my-page'
 });
 
-const searcg = new Vue({
+const search = new Vue({
     el: '#search'
 });

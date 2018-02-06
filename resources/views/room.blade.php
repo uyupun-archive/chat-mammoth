@@ -3,11 +3,6 @@
 @section('content')
     <div class="st-Wrapper">
         <div class="rp-Container">
-            <div class="rp-ChatRoom_Favorite ml-auto p-2 align-self-center">
-                <span class="rp-Star">
-                    <i class="fas fa-star"></i>
-                </span>
-            </div>
             @foreach($posts as $post)
                 <div class="rp-List">
                     <div class="rp-Message">
@@ -19,7 +14,7 @@
                             @endif
                             <span class="rp-Message_Time">{{ str_replace('-', '/', $post->created_at) }}</span>
                         </div>
-                        <p>{{ $post->comment }}</p>
+                        <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                     </div>
                 </div>
             @endforeach
@@ -29,7 +24,7 @@
             <div class="rp-Post_Container">
                 <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
                     {{ csrf_field() }}
-                    <textarea name="comment" placeholder="Please write here." class="rp-TextArea"></textarea>
+                    <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="140"></textarea>
                     <div class="rp-Form_Other d-flex">
                         {{--<input type="file" name="image" class="rp-file mr-auto">--}}
                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">

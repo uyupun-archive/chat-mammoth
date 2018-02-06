@@ -34,7 +34,7 @@
                 <div class="cp-Private_Area">
                     <input type="radio" name="publish" id="private" value="private" class="cp-RadioBox_Private">
                     <label for="private" class="cp-Chatroom_private">非公開</label>
-                    <input type="text" name="password" id="password" class="cp-RadioBox_Secret form-control" placeholder="あいことばを入力">
+                    <input type="text" name="password" id="password" class="cp-RadioBox_Secret form-control" placeholder="Please enter a password.">
                 </div>
             </div>
             <div class="cp-Button_Area">
