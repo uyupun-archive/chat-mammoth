@@ -20,17 +20,32 @@
             @endforeach
             <div class="rp-pagination">{{ $posts->links() }}</div>
         </div>
-        <div class="rp-Post_Wrapper">
-            <div class="rp-Post_Container">
-                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
-                    {{ csrf_field() }}
-                    <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="140"></textarea>
-                    <div class="rp-Form_Other d-flex">
-                        {{--<input type="file" name="image" class="rp-file mr-auto">--}}
-                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
-                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+        <div id="accordion" class="rp-Accordion">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <div id="collapseOne" class="collapse in" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <div class="rp-Post_Wrapper">
+                                <div class="rp-Post_Container">
+                                    <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                        {{ csrf_field() }}
+                                        <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="140"></textarea>
+                                        <div class="rp-Form_Other d-flex">
+                                            {{--<input type="file" name="image" class="rp-file mr-auto">--}}
+                                            <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
+                                            <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </form>
+                    <h5 class="rp-Bar">
+                        <button class="btn btn-link rp-BarText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
+                            <i class="fas fa-window-maximize"></i>
+                        </button>
+                    </h5>
+                </div>
             </div>
         </div>
     </div>
