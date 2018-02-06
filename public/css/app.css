@@ -8360,6 +8360,7 @@ button.close {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 60px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -8747,6 +8748,7 @@ button.close {
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 234px;
+  padding-top: 60px;
 }
 
 .rp-ChatRoom {
