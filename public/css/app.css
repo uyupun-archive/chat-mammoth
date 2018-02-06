@@ -8689,9 +8689,11 @@ button.close {
 }
 
 .cp-Create_ChatRoom .cp-Item_Area .cp-TextArea_Description {
+  height: 100px;
   width: 90%;
   margin: 0 5%;
   font-size: 14px;
+  resize: none;
 }
 
 .cp-Create_ChatRoom .cp-Item_Area .cp-TextBox_Tag {

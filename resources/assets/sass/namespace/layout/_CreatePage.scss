@@ -12,9 +12,11 @@
       font-size: 14px;
     }
     .cp-TextArea_Description {
+      height: 100px;
       width: 90%;
       margin: 0 5%;
       font-size: 14px;
+      resize: none;
     }
     .cp-TextBox_Tag {
       display: inline-block;
