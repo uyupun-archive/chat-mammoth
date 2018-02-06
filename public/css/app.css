@@ -8381,6 +8381,20 @@ button.close {
   font-size: 28px;
 }
 
+@media screen and (max-width: 800px) {
+  .st-Title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .st-Title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
 .st-Button {
   background-color: #287CAC;
   color: #fff;
@@ -8389,7 +8403,6 @@ button.close {
 }
 
 .h-Header {
-  background-color: #fff;
   height: 60px;
 }
 
@@ -8455,6 +8468,10 @@ button.close {
 }
 
 .h-Menu_List .h-Mypage {
+  padding: 20px 15px;
+}
+
+.h-Menu_List .h-Icon {
   padding: 20px 15px;
 }
 
@@ -8775,7 +8792,7 @@ button.close {
 }
 
 .rp-pagination {
-  padding-bottom: 220px;
+  text-align: center;
 }
 
 .rp-Post_Wrapper {
@@ -8810,6 +8827,7 @@ button.close {
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other {
   margin-top: 15px;
+  text-align: right;
 }
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other .rp-CheckBox {
@@ -8879,18 +8897,15 @@ button.close {
 
 .sp-Search {
   margin: 50px 0;
-}
-
-.sp-Search_Form {
   text-align: center;
 }
 
-.sp-Search_Form .sp-Search_Textbox {
+.sp-Search .sp-Search_Textbox {
   display: inline-block;
   width: 50%;
 }
 
-.sp-Search_Form .sp-Search_Button {
+.sp-Search .sp-Search_Button {
   padding: 3px 10px;
   margin-left: 15px;
 }
