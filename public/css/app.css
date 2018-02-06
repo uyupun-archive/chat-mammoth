@@ -8404,6 +8404,9 @@ button.close {
 
 .h-Header {
   height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
 .h-Title {
@@ -8439,10 +8442,6 @@ button.close {
   height: 60px;
 }
 
-.h-Menu_List .h-Top {
-  padding: 20px 15px;
-}
-
 .h-Menu_List .h-Search {
   padding: 20px 15px;
 }
@@ -8469,6 +8468,11 @@ button.close {
 
 .h-Menu_List .h-Icon {
   padding: 20px 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #f5f5f5;
 }
 
 .su-Form {
@@ -8604,6 +8608,7 @@ button.close {
   text-align: center;
   background-color: #EC605B;
   color: #323232;
+  margin-top: 60px;
 }
 
 .tp-Container {
