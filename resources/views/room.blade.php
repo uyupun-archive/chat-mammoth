@@ -20,7 +20,7 @@
                     </div>
                 @endforeach
             @else
-                <p>コメントしてね</p>
+                <p>このルームはまだ誰も投稿していません！</p>
             @endif
             <div class="rp-pagination">{{ $posts->links() }}</div>
         </div>
