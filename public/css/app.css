@@ -8981,3 +8981,13 @@ button.close {
   text-decoration: none;
 }
 
+.sp-ErrorComment_Area {
+  text-align: center;
+  color: #323232;
+}
+
+.sp-Message_Area {
+  text-align: center;
+  color: #323232;
+}
+
