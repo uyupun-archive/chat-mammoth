@@ -43622,6 +43622,7 @@ var render = function() {
               type: "text",
               autofocus: "",
               required: "",
+              maxlength: "8",
               placeholder: "Please room id here!"
             },
             domProps: { value: _vm.room_id },
