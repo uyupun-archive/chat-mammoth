@@ -28,6 +28,9 @@
                         </div>
                     </div>
                 </div>
+                <div v-if="!state">
+                    <p>{{ error }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -41,18 +44,24 @@
             return {
                 room_id: '',
                 state: false,
-                room: {}
+                room: {},
+                error: ''
             }
         },
         methods: {
             postRoomId() {
-                axios.post('/api/search/' + this.room_id, {
-                    title: this.room_id,
+                axios.post('/api/room/search', {
+                    room_id: this.room_id,
                 })
-                .then(response => {
-                    this.state = true
-                    this.room = response.data
-                })
+                    .then(response => {
+                        this.state = true
+                        this.room = response.data
+                    })
+                    .catch(error => {
+                        this.state = false
+                        this.room = {}
+                        this.error = '該当するルームが見つかりませんでした。'
+                    })
             }
         }
     }
