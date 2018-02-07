@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Validator;
 use DB;
 
 class SearchRoomsController extends Controller {
@@ -12,6 +13,19 @@ class SearchRoomsController extends Controller {
     }
 
     public function search(Request $request) {
+
+        $validator = Validator::make($request->all(), [
+            'room_id' => [
+                'required',
+                'string',
+                'regex: /^[0-9a-z]{8}$/'
+            ]
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/search')->withInput()->withErrors($validator);
+        }
+
         $room = DB::table('rooms')->select('name', 'room_id', 'description', 'creator')->where('room_id', $request->room_id)->first();
 
         if (isset($room)) {
