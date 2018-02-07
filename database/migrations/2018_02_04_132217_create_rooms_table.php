@@ -18,7 +18,7 @@ class CreateRoomsTable extends Migration
             $table->string('name');
             $table->text('description');
             // タグの対応は後ほど
-            $table->boolean('publish');
+            $table->string('publish');
             $table->string('password')->nullable();
             $table->string('creator');
             $table->string('room_id');
