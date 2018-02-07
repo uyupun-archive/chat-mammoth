@@ -25,3 +25,5 @@ Route::post('/api/room/store', 'CreateRoomsController@store');
 /** 設定 */
 Route::get('/config', 'ConfigController@index');
 Route::post('/api/user/update', 'ConfigController@update');
+
+Route::view('/modal', 'modal');
