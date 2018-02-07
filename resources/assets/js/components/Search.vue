@@ -31,6 +31,9 @@
                 <div v-if="!state">
                     <p>{{ error }}</p>
                 </div>
+                <div v-if="!state && error === ''">
+                    <p>{{ message }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -45,6 +48,7 @@
                 room_id: '',
                 state: false,
                 room: {},
+                message: 'ルームIDを検索してください！',
                 error: ''
             }
         },

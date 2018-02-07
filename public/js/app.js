@@ -43861,6 +43861,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -43870,6 +43873,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             room_id: '',
             state: false,
             room: {},
+            message: 'ルームIDを検索してください！',
             error: ''
         };
     },
@@ -43984,6 +43988,10 @@ var render = function() {
         _vm._v(" "),
         !_vm.state
           ? _c("div", [_c("p", [_vm._v(_vm._s(_vm.error))])])
+          : _vm._e(),
+        _vm._v(" "),
+        !_vm.state && _vm.error === ""
+          ? _c("div", [_c("p", [_vm._v(_vm._s(_vm.message))])])
           : _vm._e()
       ])
     ])
