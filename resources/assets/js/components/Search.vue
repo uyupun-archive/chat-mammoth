@@ -28,10 +28,10 @@
                         </div>
                     </div>
                 </div>
-                <div v-if="!state">
+                <div v-if="!state" class="sp-ErrorComment_Area">
                     <p>{{ error }}</p>
                 </div>
-                <div v-if="!state && error === ''">
+                <div v-if="!state && error === ''" class="sp-Message_Area">
                     <p>{{ message }}</p>
                 </div>
             </div>
