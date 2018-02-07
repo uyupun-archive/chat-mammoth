@@ -8796,6 +8796,12 @@ button.close {
   color: #999;
 }
 
+.rp-NotComment {
+  text-align: center;
+  line-height: 400px;
+  color: #323232;
+}
+
 .rp-pagination {
   text-align: center;
 }
