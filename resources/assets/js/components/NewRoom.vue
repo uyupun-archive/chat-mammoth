@@ -5,7 +5,6 @@
                 <div class="tp-Chatroom_Name">ルーム名: {{ room.name }}</div>
                 <div>
                     <span>ルームID: {{ room.room_id }}</span>
-                    <i class="fas fa-unlock-alt"></i>
                 </div>
                 <div>作成者: {{ room.creator }}</div>
                 <div class="tp-Chatroom_Tag">

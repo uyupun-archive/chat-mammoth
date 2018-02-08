@@ -43461,7 +43461,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 
 
@@ -43504,9 +43503,7 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", [
-            _c("span", [_vm._v("ルームID: " + _vm._s(room.room_id))]),
-            _vm._v(" "),
-            _c("i", { staticClass: "fas fa-unlock-alt" })
+            _c("span", [_vm._v("ルームID: " + _vm._s(room.room_id))])
           ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
@@ -44156,7 +44153,8 @@ var render = function() {
           name: "password",
           id: "password",
           placeholder: "Please enter a password.",
-          disabled: _vm.state
+          disabled: _vm.state,
+          required: ""
         }
       })
     ])
