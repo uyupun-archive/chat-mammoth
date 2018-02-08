@@ -72,20 +72,27 @@
   background-color: $winered;
 }
 
-.rp-Bar {
-  margin: 0;
-  text-align: right;
-  &Text {
-    color: $red;
-  }
+.rp-NavText_Wrapper {
+  position: relative;
 }
 
-.rp-BarText:hover {
+.rp-NavText {
+  position: absolute;
+  top: 5px;
+  right: 10px;
   color: $red;
 }
 
-.rp-BarText:focus {
-  color: $red;
+.rp-NavText:hover {
+  color: $white;
+}
+
+.rp-NavText:focus {
+  color: $white;
+}
+
+.rp-NavText.active {
+  color: $white;
 }
 
 .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
@@ -97,33 +104,34 @@
   text-decoration: none;
 }
 
-.rp-Nav_Area {
-  .rp-Nav_Tabs {
-    background-color: $garnet;
-    border-bottom-color: $white;
-    .rp-Nav_Tab {
+.rp-Nav_Tabs {
+  background-color: $garnet;
+  .rp-Nav_Tab {
 
-      a {
-        margin: 0;
-        color: $white;
-        box-sizing: border-box;
-        border: none;
-        border-bottom: solid 1px $white;
-      }
+    a {
+      margin: 0;
+      color: $white;
+      box-sizing: border-box;
+      border: none;
     }
   }
-  .nav-tabs > li.active > a,
-  .nav-tabs > li.active > a:hover,
-  .nav-tabs > li.active > a:focus {
-    color: $white;
-    background-color: $red;
-    border: none;
-    border-radius: 0;
-  }
-  .nav > li > a:hover, .nav > li > a:focus {
-    background-color: $hover_red;
-    border-radius: 0;
-  }
+}
+
+.nav-tabs {
+  border: 0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: $white;
+  background-color: $red;
+  border: 0;
+  border-radius: 0;
+}
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: $hover_red;
+  border-radius: 0;
 }
 
 .rp-Post_Wrapper {
