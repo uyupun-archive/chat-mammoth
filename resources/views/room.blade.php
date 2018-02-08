@@ -29,17 +29,78 @@
                 <div class="card-header" id="headingOne">
                     <div id="collapseOne" class="collapse in" aria-labelledby="headingOne" data-parent="#accordion">
                         <div class="card-body">
-                            <div class="rp-Post_Wrapper">
-                                <div class="rp-Post_Container">
-                                    <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
-                                        {{ csrf_field() }}
-                                        <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="1000"></textarea>
-                                        <div class="rp-Form_Other d-flex">
-                                            {{--<input type="file" name="image" class="rp-file mr-auto">--}}
-                                            <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
-                                            <button type="submit" class="st-Button rp-Button">投稿する</button>
+                            <div class="rp-Nav_Area">
+                                <ul class="nav nav-tabs rp-Nav_Tabs" id="myTab" role="tablist">
+                                    <li class="nav-item active rp-Nav_Tab">
+                                        <a class="nav-link rp-normal" data-toggle="tab" href="#normal" role="tab" aria-controls="normal" aria-expanded="true">ノーマル</a>
+                                    </li>
+                                    <li class="nav-item rp-Nav_Tab">
+                                        <a class="nav-link rp-file" data-toggle="tab" href="#file" role="tab" aria-controls="file" aria-expanded="false">ファイル選択</a>
+                                    </li>
+                                    <li class="nav-item rp-Nav_Tab">
+                                        <a class="nav-link rp-gif" data-toggle="tab" href="#gif" role="tab" aria-controls="gif" aria-expanded="false">gif</a>
+                                    </li>
+                                    <li class="nav-item rp-Nav_Tab">
+                                        <a class="nav-link rp-write" data-toggle="tab" href="#write" role="tab" aria-controls="write" aria-expanded="false">手書き</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane active" id="normal" role="tabpanel">
+                                        <div class="rp-Post_Wrapper">
+                                            <div class="rp-Post_Container">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                    {{ csrf_field() }}
+                                                    <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="1000"></textarea>
+                                                    <div class="rp-Form_Other d-flex">
+                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
+                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
-                                    </form>
+                                    </div>
+                                    <div class="tab-pane" id="file" role="tabpanel">
+                                        <div class="rp-Post_Wrapper">
+                                            <div class="rp-Post_Container">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                    {{ csrf_field() }}
+                                                    <input type="file" name="image" class="rp-file mr-auto">
+                                                    <div class="rp-Form_Other d-flex">
+                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
+                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="gif" role="tabpanel">
+                                        <div class="rp-Post_Wrapper">
+                                            <div class="rp-Post_Container">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                    {{ csrf_field() }}
+                                                    <p>工事中</p>
+                                                    {{--<div class="rp-Form_Other d-flex">--}}
+                                                        {{--<input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">--}}
+                                                        {{--<button type="submit" class="st-Button rp-Button">投稿する</button>--}}
+                                                    {{--</div>--}}
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="write" role="tabpanel">
+                                        <div class="rp-Post_Wrapper">
+                                            <div class="rp-Post_Container">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                    {{ csrf_field() }}
+                                                    <p>工事中</p>
+                                                    {{--<div class="rp-Form_Other d-flex">--}}
+                                                        {{--<input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">--}}
+                                                        {{--<button type="submit" class="st-Button rp-Button">投稿する</button>--}}
+                                                    {{--</div>--}}
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

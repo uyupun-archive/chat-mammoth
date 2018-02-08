@@ -8848,6 +8848,35 @@ button.close {
   text-decoration: none;
 }
 
+.rp-Nav_Area .rp-Nav_Tabs {
+  background-color: #b33e5c;
+  border-bottom-color: #fff;
+}
+
+.rp-Nav_Area .rp-Nav_Tabs .rp-Nav_Tab a {
+  margin: 0;
+  color: #fff;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  border-bottom: solid 1px #fff;
+}
+
+.rp-Nav_Area .nav-tabs > li.active > a,
+.rp-Nav_Area .nav-tabs > li.active > a:hover,
+.rp-Nav_Area .nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: #EC605B;
+  border: none;
+  border-radius: 0;
+}
+
+.rp-Nav_Area .nav > li > a:hover,
+.rp-Nav_Area .nav > li > a:focus {
+  background-color: #f5a09d;
+  border-radius: 0;
+}
+
 .rp-Post_Wrapper {
   width: 100vw;
   height: 200px;

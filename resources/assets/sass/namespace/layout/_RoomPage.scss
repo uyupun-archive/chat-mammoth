@@ -98,6 +98,35 @@
   text-decoration: none;
 }
 
+.rp-Nav_Area {
+  .rp-Nav_Tabs {
+    background-color: $winered;
+    border-bottom-color: $white;
+    .rp-Nav_Tab {
+
+      a {
+        margin: 0;
+        color: $white;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: solid 1px $white;
+      }
+    }
+  }
+  .nav-tabs > li.active > a,
+  .nav-tabs > li.active > a:hover,
+  .nav-tabs > li.active > a:focus {
+    color: $white;
+    background-color: $red;
+    border: none;
+    border-radius: 0;
+  }
+  .nav > li > a:hover, .nav > li > a:focus {
+    background-color: $hover_red;
+    border-radius: 0;
+  }
+}
+
 .rp-Post_Wrapper {
   width: 100vw;
   height: 200px;
@@ -136,6 +165,7 @@
         }
       }
     }
+
   }
 }
 
