@@ -31,9 +31,7 @@
 }
 
 .rp-List {
-  //border-top: solid 5px $red;
   .rp-Message {
-    //border-bottom: solid 1px $red;
     padding: 15px 0;
     &:hover {
       background: $light-gray;
@@ -72,15 +70,23 @@
   z-index: 999;
   bottom: 0;
   right: 0;
-  background-color: $lightblue;
+  background-color: #b33e5c;
 }
 
 .rp-Bar {
   margin: 0;
   text-align: right;
   &Text {
-    color: $black;
+    color: $red;
   }
+}
+
+.rp-BarText:hover {
+  color: $red;
+}
+
+.rp-BarText:focus {
+  color: $red;
 }
 
 .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
@@ -95,7 +101,7 @@
 .rp-Post_Wrapper {
   width: 100vw;
   height: 200px;
-  background-color: $lightblue;
+  background-color: #b33e5c;
   .rp-Post_Container {
     max-width: 1200px;
     margin: auto;
@@ -126,10 +132,15 @@
         }
         .rp-Button {
           padding: 5px 10px;
+          background-color: $red;
         }
       }
     }
   }
+}
+
+.rp-Button:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 1200px) {
