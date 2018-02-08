@@ -26,7 +26,7 @@ class SearchRoomsController extends Controller {
             return redirect('/search')->withInput()->withErrors($validator);
         }
 
-        $room = DB::table('rooms')->select('name', 'room_id', 'description', 'creator')->where('room_id', $request->room_id)->first();
+        $room = DB::table('rooms')->select('name', 'room_id', 'description', 'creator', 'publish')->where('room_id', $request->room_id)->first();
 
         if (isset($room)) {
             return json_encode($room);

@@ -12,7 +12,7 @@ Route::post('/api/room/search', 'SearchRoomsController@search');
 
 /** マイページ */
 Route::get('/mypage', 'MypageController@index');
-Route::get('/api/myroom/get', 'MypageController@get');
+Route::get('/api/mypage/get', 'MypageController@get');
 
 /** チャットルーム */
 Route::get('/room/{id}', 'RoomController@index');

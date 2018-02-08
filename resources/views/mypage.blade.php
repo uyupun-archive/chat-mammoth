@@ -19,7 +19,7 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane active" id="create" role="tabpanel">
-                        <div id="my-page">
+                        <div id="app">
                             <my-page></my-page>
                         </div>
                     </div>

@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div v-for="room in rooms">
+        <div v-if="rooms" v-for="room in rooms">
             <div class="mp-Chatroom">
                 <div class="mp-Chatroom_Name">ルーム名: {{ room.name }}</div>
                 <div>
                     <span>ルームID: {{ room.room_id }}</span>
-                    <i class="fas fa-unlock-alt"></i>
+                    <i v-if="room.publish === 'private'" class="fas fa-unlock-alt"></i>
                 </div>
                 <div>作成者: {{ room.creator }}</div>
                 <div class="mp-Chatroom_Tag">
@@ -35,7 +35,7 @@
         },
         methods: {
             getRooms() {
-                axios.get('/api/myroom/get')
+                axios.get('/api/mypage/get')
                     .then(response => {
                         this.rooms = response.data
                     })
