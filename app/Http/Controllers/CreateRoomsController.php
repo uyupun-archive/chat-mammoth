@@ -18,7 +18,7 @@ class CreateRoomsController extends Controller {
         $rooms->description = $request->description;
         $rooms->publish = $request->publish;
         $rooms->creator = Auth::user()->user_id;
-        $rooms->room_id = hash('adler32', mt_rand());
+        $rooms->room_id = hash('md5', mt_rand());
 
         if (isset($request->password) && $request->publish === 'private') {
             $rooms->password = bcrypt($request->password);
