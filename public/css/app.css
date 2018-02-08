@@ -8807,7 +8807,6 @@ button.close {
 }
 
 .rp-Accordion {
-  padding-right: 5px;
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -8849,7 +8848,7 @@ button.close {
 }
 
 .rp-Nav_Area .rp-Nav_Tabs {
-  background-color: #b33e5c;
+  background-color: #942343;
   border-bottom-color: #fff;
 }
 
