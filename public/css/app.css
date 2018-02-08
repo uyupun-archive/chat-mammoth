@@ -8813,7 +8813,7 @@ button.close {
   z-index: 999;
   bottom: 0;
   right: 0;
-  background-color: #189CCC;
+  background-color: #b33e5c;
 }
 
 .rp-Bar {
@@ -8822,7 +8822,15 @@ button.close {
 }
 
 .rp-BarText {
-  color: #323232;
+  color: #EC605B;
+}
+
+.rp-BarText:hover {
+  color: #EC605B;
+}
+
+.rp-BarText:focus {
+  color: #EC605B;
 }
 
 .btn:focus,
@@ -8843,7 +8851,7 @@ button.close {
 .rp-Post_Wrapper {
   width: 100vw;
   height: 200px;
-  background-color: #189CCC;
+  background-color: #b33e5c;
 }
 
 .rp-Post_Wrapper .rp-Post_Container {
@@ -8883,6 +8891,11 @@ button.close {
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other .rp-Button {
   padding: 5px 10px;
+  background-color: #EC605B;
+}
+
+.rp-Button:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 1200px) {

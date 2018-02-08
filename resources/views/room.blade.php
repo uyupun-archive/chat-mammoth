@@ -44,11 +44,11 @@
                             </div>
                         </div>
                     </div>
-                    <h5 class="rp-Bar">
+                    <div class="rp-Bar">
                         <button class="btn btn-link rp-BarText" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true">
                             <i class="fas fa-window-maximize"></i>
                         </button>
-                    </h5>
+                    </div>
                 </div>
             </div>
         </div>
