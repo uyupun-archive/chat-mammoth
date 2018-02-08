@@ -43664,7 +43664,11 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", [
-                _c("span", [_vm._v("ルームID: " + _vm._s(room.room_id))])
+                _c("span", [_vm._v("ルームID: " + _vm._s(room.room_id))]),
+                _vm._v(" "),
+                room.publish === "private"
+                  ? _c("i", { staticClass: "fas fa-unlock-alt" })
+                  : _vm._e()
               ]),
               _vm._v(" "),
               _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
@@ -43952,7 +43956,9 @@ var render = function() {
                 _c("div", [
                   _c("span", [_vm._v("ルームID: " + _vm._s(_vm.room.room_id))]),
                   _vm._v(" "),
-                  _c("i", { staticClass: "fas fa-unlock-alt" })
+                  _vm.room.publish === "private"
+                    ? _c("i", { staticClass: "fas fa-unlock-alt" })
+                    : _vm._e()
                 ]),
                 _vm._v(" "),
                 _c("div", [_vm._v("作成者: " + _vm._s(_vm.room.creator))]),
