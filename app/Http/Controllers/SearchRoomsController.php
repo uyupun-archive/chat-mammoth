@@ -20,17 +20,17 @@ class SearchRoomsController extends Controller {
             return response('404 Not Found', 404);
         }
 
-//        $validator = Validator::make($request->all(), [
-//            'room_id' => [
-//                'required',
-//                'string',
-//                'regex: /^[0-9a-z]{8}$/'
-//            ]
-//        ]);
-//
-//        if ($validator->fails()) {
-//            return redirect('/search')->withInput()->withErrors($validator);
-//        }
+        $validator = Validator::make($request->all(), [
+            'room_id' => [
+                'required',
+                'string',
+                'regex: /^[0-9a-z]{8}$/'
+            ]
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/search')->withInput()->withErrors($validator);
+        }
 
         return json_encode($room);
     }
