@@ -8807,7 +8807,6 @@ button.close {
 }
 
 .rp-Accordion {
-  padding-right: 5px;
   width: 100%;
   position: fixed;
   z-index: 999;
@@ -8816,21 +8815,27 @@ button.close {
   background-color: #b33e5c;
 }
 
-.rp-Bar {
-  margin: 0;
-  text-align: right;
+.rp-NavText_Wrapper {
+  position: relative;
 }
 
-.rp-BarText {
+.rp-NavText {
+  position: absolute;
+  top: 5px;
+  right: 10px;
   color: #EC605B;
 }
 
-.rp-BarText:hover {
-  color: #EC605B;
+.rp-NavText:hover {
+  color: #fff;
 }
 
-.rp-BarText:focus {
-  color: #EC605B;
+.rp-NavText:focus {
+  color: #fff;
+}
+
+.rp-NavText.active {
+  color: #fff;
 }
 
 .btn:focus,
@@ -8848,31 +8853,33 @@ button.close {
   text-decoration: none;
 }
 
-.rp-Nav_Area .rp-Nav_Tabs {
-  background-color: #b33e5c;
-  border-bottom-color: #fff;
+.rp-Nav_Tabs {
+  background-color: #942343;
 }
 
-.rp-Nav_Area .rp-Nav_Tabs .rp-Nav_Tab a {
+.rp-Nav_Tabs .rp-Nav_Tab a {
   margin: 0;
   color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
-  border-bottom: solid 1px #fff;
 }
 
-.rp-Nav_Area .nav-tabs > li.active > a,
-.rp-Nav_Area .nav-tabs > li.active > a:hover,
-.rp-Nav_Area .nav-tabs > li.active > a:focus {
+.nav-tabs {
+  border: 0;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
   color: #fff;
   background-color: #EC605B;
-  border: none;
+  border: 0;
   border-radius: 0;
 }
 
-.rp-Nav_Area .nav > li > a:hover,
-.rp-Nav_Area .nav > li > a:focus {
+.nav > li > a:hover,
+.nav > li > a:focus {
   background-color: #f5a09d;
   border-radius: 0;
 }
