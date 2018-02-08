@@ -1393,6 +1393,7 @@ __webpack_require__(15);
 Vue.component('newRoom', __webpack_require__(41));
 Vue.component('myPage', __webpack_require__(47));
 Vue.component('search', __webpack_require__(50));
+Vue.component('create', __webpack_require__(65));
 
 var newRoom = new Vue({
     el: '#new-room'
@@ -1404,6 +1405,10 @@ var myPage = new Vue({
 
 var search = new Vue({
     el: '#search'
+});
+
+var create = new Vue({
+    el: '#create'
 });
 
 /***/ }),
@@ -44030,6 +44035,172 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */,
+/* 61 */,
+/* 62 */,
+/* 63 */,
+/* 64 */,
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(4)
+/* script */
+var __vue_script__ = __webpack_require__(67)
+/* template */
+var __vue_template__ = __webpack_require__(66)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Create.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0e5f501a", Component.options)
+  } else {
+    hotAPI.reload("data-v-0e5f501a", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("公開設定")]),
+    _vm._v(" "),
+    _c("div", { staticClass: "cp-Public_Area" }, [
+      _c("input", {
+        staticClass: "cp-RadioBox_Public",
+        attrs: {
+          type: "radio",
+          name: "publish",
+          id: "public",
+          value: "public",
+          checked: ""
+        },
+        on: {
+          click: function($event) {
+            _vm.state = !_vm.state
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "label",
+        { staticClass: "cp-Chatroom_public", attrs: { for: "public" } },
+        [_vm._v("公開")]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "cp-Private_Area" }, [
+      _c("input", {
+        staticClass: "cp-RadioBox_Private",
+        attrs: {
+          type: "radio",
+          name: "publish",
+          id: "private",
+          value: "private"
+        },
+        on: {
+          click: function($event) {
+            _vm.state = !_vm.state
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "label",
+        { staticClass: "cp-Chatroom_private", attrs: { for: "private" } },
+        [_vm._v("非公開")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "cp-RadioBox_Secret form-control",
+        attrs: {
+          type: "text",
+          name: "password",
+          id: "password",
+          placeholder: "Please enter a password.",
+          disabled: _vm.state
+        }
+      })
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-0e5f501a", module.exports)
+  }
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            state: true
+        };
+    }
+});
 
 /***/ })
 /******/ ]);
