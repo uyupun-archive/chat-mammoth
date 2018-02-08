@@ -43916,10 +43916,10 @@ var render = function() {
             staticClass: "sp-Search_Textbox form-control",
             attrs: {
               type: "text",
-              autofocus: "",
-              required: "",
               maxlength: "8",
-              placeholder: "Please room id here!"
+              placeholder: "Please room id here!",
+              required: "",
+              autofocus: ""
             },
             domProps: { value: _vm.room_id },
             on: {
