@@ -26,7 +26,7 @@
                     {{--</div>--}}
                 {{--</div>--}}
                 <div class="cp-Item_Area">
-                    <div id="create">
+                    <div id="app">
                         <create></create>
                     </div>
                 </div>

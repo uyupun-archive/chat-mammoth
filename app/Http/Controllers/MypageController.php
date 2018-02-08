@@ -16,7 +16,7 @@ class MypageController extends Controller {
     }
 
     public function get() {
-        $rooms = DB::table('rooms')->select('name', 'room_id', 'description', 'creator')->where('creator', Auth::user()->user_id)->get();
+        $rooms = DB::table('rooms')->select('name', 'room_id', 'description', 'creator', 'publish')->where('creator', Auth::user()->user_id)->get();
 
         return json_encode($rooms);
     }
