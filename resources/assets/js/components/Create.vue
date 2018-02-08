@@ -2,13 +2,13 @@
     <div>
         <div class="cp-Item_Title">公開設定</div>
         <div class="cp-Public_Area">
-            <input type="radio" name="publish" id="public" value="public" class="cp-RadioBox_Public" checked @click="state = !state">
+            <input type="radio" name="publish" id="public" value="public" class="cp-RadioBox_Public" checked required @click="state = !state">
             <label for="public" class="cp-Chatroom_public">公開</label>
         </div>
         <div class="cp-Private_Area">
-            <input type="radio" name="publish" id="private" value="private" class="cp-RadioBox_Private" @click="state = !state">
+            <input type="radio" name="publish" id="private" value="private" class="cp-RadioBox_Private" required @click="state = !state">
             <label for="private" class="cp-Chatroom_private">非公開</label>
-            <input type="text" name="password" id="password" class="cp-RadioBox_Secret form-control" placeholder="Please enter a password." :disabled="state" required>
+            <input type="text" name="password" id="password" class="cp-RadioBox_Secret form-control" placeholder="Please enter a password." :disabled="state" required maxlength="32">
         </div>
     </div>
 </template>

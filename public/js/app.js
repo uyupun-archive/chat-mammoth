@@ -44117,7 +44117,8 @@ var render = function() {
           name: "publish",
           id: "public",
           value: "public",
-          checked: ""
+          checked: "",
+          required: ""
         },
         on: {
           click: function($event) {
@@ -44140,7 +44141,8 @@ var render = function() {
           type: "radio",
           name: "publish",
           id: "private",
-          value: "private"
+          value: "private",
+          required: ""
         },
         on: {
           click: function($event) {
@@ -44163,7 +44165,8 @@ var render = function() {
           id: "password",
           placeholder: "Please enter a password.",
           disabled: _vm.state,
-          required: ""
+          required: "",
+          maxlength: "32"
         }
       })
     ])
