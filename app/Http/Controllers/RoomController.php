@@ -23,7 +23,7 @@ class RoomController extends Controller {
     public function store(Request $request) {
         $room_id = explode('/', $request->room_id);
 
-        $user_id = isset(Auth::user()->user_id) ? Auth::user()->user_id : 'Anonymous';
+        $user_id = isset(Auth::user()->user_id) ? Auth::user()->user_id : 'anonymous';
         $screen_name = isset(Auth::user()->screen_name) ? Auth::user()->screen_name : 'Anonymous';
 
         if(!isset($request->comment)) {
