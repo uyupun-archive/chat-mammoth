@@ -1,10 +1,14 @@
 <template>
     <div>
-        <div v-if="rooms" v-for="room in rooms">
+        <div v-if="rooms" v-for="(room, index) in rooms">
             <div class="mp-Chatroom">
                 <div class="mp-Chatroom_Name">ルーム名: {{ room.name }}</div>
                 <div>
-                    <span>ルームID: {{ room.room_id }}</span>
+                    <span>ルームID: </span>
+                    <input type="text" :value="room.room_id " :id="'copy' + index + 'mp'">
+                    <button class="btn" :data-clipboard-target="'#copy' + index + 'mp'">
+                        <i class="fas fa-clipboard"></i>
+                    </button>
                     <i v-if="room.publish === 'private'" class="fas fa-unlock-alt"></i>
                 </div>
                 <div>作成者: {{ room.creator }}</div>
@@ -26,6 +30,7 @@
 
 <script>
     import axios from 'axios'
+    import Clipboard from 'clipboard'
 
     export default {
         data() {
@@ -43,6 +48,7 @@
         },
         created() {
             this.getRooms()
+            const clipboard = new Clipboard('.btn');
         }
     }
 </script>

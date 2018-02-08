@@ -14,6 +14,12 @@ class SearchRoomsController extends Controller {
 
     public function search(Request $request) {
 
+        $room = DB::table('rooms')->select('name', 'room_id', 'description', 'creator', 'publish')->where('room_id', $request->room_id)->first();
+
+        if (!isset($room)) {
+            return response('404 Not Found', 404);
+        }
+
         $validator = Validator::make($request->all(), [
             'room_id' => [
                 'required',
@@ -26,12 +32,6 @@ class SearchRoomsController extends Controller {
             return redirect('/search')->withInput()->withErrors($validator);
         }
 
-        $room = DB::table('rooms')->select('name', 'room_id', 'description', 'creator', 'publish')->where('room_id', $request->room_id)->first();
-
-        if (isset($room)) {
-            return json_encode($room);
-        } else {
-            return response('404 Not Found', 404);
-        }
+        return json_encode($room);
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Auth;
 use Validator;
+use Hash;
 use App\Post;
 
 class RoomController extends Controller {
@@ -13,9 +14,15 @@ class RoomController extends Controller {
     public function index() {
         $room_id = explode('/', \Request::decodedPath());
 
+        // 非公開ルームかどうかの検証
+        $publish = DB::table('rooms')->select('publish')->where('room_id', $room_id[1])->first();
+        if ($publish->publish === 'private') {
+            return redirect('/room/' . $room_id[1] . '/auth');
+        }
+
         $posts = DB::table('posts')->select('user_id', 'screen_name', 'comment', 'created_at')->where('room_id', $room_id[1])->orderBy('id', 'DESC')->take(100)->paginate(10);
 
-        return view('room', [
+        return view('room.room', [
             'posts' => $posts
         ]);
     }
@@ -51,4 +58,16 @@ class RoomController extends Controller {
 
         return redirect('/room/' . $room_id[1]);
     }
+
+//    TODO: 実装する
+//    public function auth(Request $request) {
+//        $room_id = explode('/', \Request::decodedPath());
+//        $password = DB::table('rooms')->select('password')->where('room_id', $room_id[1])->first();
+//
+//        if (Hash::check($request->password, $password->password)) {
+//            return redirect('/room/' . $room_id[1]);
+//        }
+//
+//        return view('room.auth');
+//    }
 }

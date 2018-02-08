@@ -18,6 +18,10 @@ Route::get('/api/mypage/get', 'MypageController@get');
 Route::get('/room/{id}', 'RoomController@index');
 Route::post('/api/comment/store', 'RoomController@store');
 
+/** 非公開ルーム認証 */
+//Route::get('/room/{id}/auth', 'RoomController@auth');
+//Route::post('/room/{id}/auth', 'RoomController@auth');
+
 /** チャットルーム作成 */
 Route::get('/create', 'CreateRoomsController@index');
 Route::post('/api/room/store', 'CreateRoomsController@store');
