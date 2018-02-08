@@ -4,7 +4,7 @@
             <div class="st-Container">
                 <h2 class="st-Title">チャットルーム検索</h2>
                 <div class="sp-Search">
-                    <input type="text" class="sp-Search_Textbox form-control" v-model="room_id" autofocus required>
+                    <input type="text" class="sp-Search_Textbox form-control" v-model="room_id" autofocus required maxlength="8" placeholder="Please room id here!">
                     <button class="st-Button sp-Search_Button" @click="postRoomId()">検索</button>
                 </div>
                 <div v-if="state" class="sp-Results">
@@ -28,20 +28,12 @@
                         </div>
                     </div>
                 </div>
-                <ul class="pagination">
-                    <li>
-                        <a href="#">　
-                            <span aria-hidden="true">«</span>
-                        </a>
-                    </li>
-                    <li><a href="#">1</a></li>
-                    <li class="active"><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><span aria-hidden="true">»</span></a>
-                    </li>
-                </ul>
+                <div v-if="!state">
+                    <p>{{ error }}</p>
+                </div>
+                <div v-if="!state && error === ''">
+                    <p>{{ message }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -55,18 +47,25 @@
             return {
                 room_id: '',
                 state: false,
-                room: {}
+                room: {},
+                message: 'ルームIDを検索してください！',
+                error: ''
             }
         },
         methods: {
             postRoomId() {
-                axios.post('/api/search/' + this.room_id, {
-                    title: this.room_id,
+                axios.post('/api/room/search', {
+                    room_id: this.room_id,
                 })
-                .then(response => {
-                    this.state = true
-                    this.room = response.data
-                })
+                    .then(response => {
+                        this.state = true
+                        this.room = response.data
+                    })
+                    .catch(error => {
+                        this.state = false
+                        this.room = {}
+                        this.error = '該当するルームが見つかりませんでした。'
+                    })
             }
         }
     }

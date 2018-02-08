@@ -8,7 +8,7 @@ Route::get('/api/room/get', 'IndexController@get');
 
 /** チャットルーム検索 */
 Route::get('/search', 'SearchRoomsController@index');
-Route::post('/api/search/{id}', 'SearchRoomsController@post');
+Route::post('/api/room/search', 'SearchRoomsController@search');
 
 /** マイページ */
 Route::get('/mypage', 'MypageController@index');
@@ -25,3 +25,5 @@ Route::post('/api/room/store', 'CreateRoomsController@store');
 /** 設定 */
 Route::get('/config', 'ConfigController@index');
 Route::post('/api/user/update', 'ConfigController@update');
+
+Route::view('/modal', 'modal');

@@ -12,7 +12,7 @@
     <body>
         <div id="app">
             <div class="h-Header">
-                <nav class="navbar navbar-default navbar-fixed-top p-navbar">
+                <nav class="navbar navbar-default p-navbar">
                     <div class="container-fluid">
                         <div class="container">
                             <div class="navbar-header">
@@ -27,7 +27,6 @@
                             </div>
                             <div id="navbar" class="navbar-collapse collapse">
                                 <ul class="nav navbar-nav navbar-right h-Menu">
-                                    <li class="h-Menu_List"><a href="{{ url('/') }}" class="h-Top">トップページ</a></li>
                                     <li class="h-Menu_List"><a href="{{ url('/search') }}" class="h-Search">ルーム検索</a></li>
                                     @guest
                                         <li class="h-Menu_List"><a href="{{ route('login') }}" class="h-SignIn">サインイン</a></li>
@@ -37,7 +36,7 @@
                                         <li class="h-Menu_List"><a href="{{ url('/mypage') }}" class="h-Mypage">マイページ</a></li>
                                         <li class="h-Menu_List"><a href="{{ route('logout') }}" class="h-SignOut" onclick="event.preventDefault();document.getElementById('logout-form').submit();">サインアウト</a></li>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                                        <li><a href="{{ url('/config') }}"><i class="fas fa-cog"></i></a></li>
+                                        <li class="h-Menu_List"><a href="{{ url('/config') }}" class="h-Icon"><i class="fas fa-cog"></i></a></li>
                                     @endguest
                                 </ul>
                             </div>

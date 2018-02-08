@@ -1,15 +1,13 @@
 .sp-Search {
   margin: 50px 0;
-  &_Form {
-    text-align: center;
-    .sp-Search_Textbox {
-      display: inline-block;
-      width: 50%;
-    }
-    .sp-Search_Button {
-      padding: 3px 10px;
-      margin-left: 15px;
-    }
+  text-align: center;
+  .sp-Search_Textbox {
+    display: inline-block;
+    width: 50%;
+  }
+  .sp-Search_Button {
+    padding: 3px 10px;
+    margin-left: 15px;
   }
 }
 

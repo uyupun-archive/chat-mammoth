@@ -8360,6 +8360,7 @@ button.close {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
+  padding-top: 60px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -8381,6 +8382,20 @@ button.close {
   font-size: 28px;
 }
 
+@media screen and (max-width: 800px) {
+  .st-Title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .st-Title {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
+}
+
 .st-Button {
   background-color: #287CAC;
   color: #fff;
@@ -8389,8 +8404,10 @@ button.close {
 }
 
 .h-Header {
-  background-color: #fff;
   height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
 .h-Title {
@@ -8422,16 +8439,8 @@ button.close {
      object-fit: contain;
 }
 
-.h-Menu {
-  height: 60px;
-}
-
 .h-Menu_List {
   height: 60px;
-}
-
-.h-Menu_List .h-Top {
-  padding: 20px 15px;
 }
 
 .h-Menu_List .h-Search {
@@ -8456,6 +8465,15 @@ button.close {
 
 .h-Menu_List .h-Mypage {
   padding: 20px 15px;
+}
+
+.h-Menu_List .h-Icon {
+  padding: 20px 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #f5f5f5;
 }
 
 .su-Form {
@@ -8591,6 +8609,7 @@ button.close {
   text-align: center;
   background-color: #EC605B;
   color: #323232;
+  margin-top: 60px;
 }
 
 .tp-Container {
@@ -8676,9 +8695,11 @@ button.close {
 }
 
 .cp-Create_ChatRoom .cp-Item_Area .cp-TextArea_Description {
+  height: 100px;
   width: 90%;
   margin: 0 5%;
   font-size: 14px;
+  resize: none;
 }
 
 .cp-Create_ChatRoom .cp-Item_Area .cp-TextBox_Tag {
@@ -8726,7 +8747,8 @@ button.close {
   max-width: 1200px;
   margin-right: auto;
   margin-left: auto;
-  padding-bottom: 200px;
+  padding-bottom: 234px;
+  padding-top: 60px;
 }
 
 .rp-ChatRoom {
@@ -8774,14 +8796,51 @@ button.close {
   color: #999;
 }
 
-.rp-pagination {
-  padding-bottom: 220px;
+.rp-NotComment {
+  text-align: center;
+  line-height: 400px;
+  color: #323232;
 }
 
-.rp-Post_Wrapper {
+.rp-pagination {
+  text-align: center;
+}
+
+.rp-Accordion {
+  padding-right: 5px;
+  width: 100%;
   position: fixed;
   z-index: 999;
   bottom: 0;
+  right: 0;
+  background-color: #189CCC;
+}
+
+.rp-Bar {
+  margin: 0;
+  text-align: right;
+}
+
+.rp-BarText {
+  color: #323232;
+}
+
+.btn:focus,
+.btn.focus,
+.btn:active:focus,
+.btn:active.focus,
+.btn.active:focus,
+.btn.active.focus {
+  outline: none;
+  outline-offset: 0;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  text-decoration: none;
+}
+
+.rp-Post_Wrapper {
   width: 100vw;
   height: 200px;
   background-color: #189CCC;
@@ -8790,6 +8849,7 @@ button.close {
 .rp-Post_Wrapper .rp-Post_Container {
   max-width: 1200px;
   margin: auto;
+  padding-top: 10px;
 }
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form {
@@ -8810,6 +8870,7 @@ button.close {
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other {
   margin-top: 15px;
+  text-align: right;
 }
 
 .rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other .rp-CheckBox {
@@ -8879,18 +8940,15 @@ button.close {
 
 .sp-Search {
   margin: 50px 0;
-}
-
-.sp-Search_Form {
   text-align: center;
 }
 
-.sp-Search_Form .sp-Search_Textbox {
+.sp-Search .sp-Search_Textbox {
   display: inline-block;
   width: 50%;
 }
 
-.sp-Search_Form .sp-Search_Button {
+.sp-Search .sp-Search_Button {
   padding: 3px 10px;
   margin-left: 15px;
 }

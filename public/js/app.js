@@ -43864,14 +43864,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -43880,7 +43872,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             room_id: '',
             state: false,
-            room: {}
+            room: {},
+            message: 'ルームIDを検索してください！',
+            error: ''
         };
     },
 
@@ -43888,11 +43882,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         postRoomId: function postRoomId() {
             var _this = this;
 
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/search/' + this.room_id, {
-                title: this.room_id
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/room/search', {
+                room_id: this.room_id
             }).then(function (response) {
                 _this.state = true;
                 _this.room = response.data;
+            }).catch(function (error) {
+                _this.state = false;
+                _this.room = {};
+                _this.error = '該当するルームが見つかりませんでした。';
             });
         }
     }
@@ -43922,7 +43920,13 @@ var render = function() {
               }
             ],
             staticClass: "sp-Search_Textbox form-control",
-            attrs: { type: "text", autofocus: "", required: "" },
+            attrs: {
+              type: "text",
+              autofocus: "",
+              required: "",
+              maxlength: "8",
+              placeholder: "Please room id here!"
+            },
             domProps: { value: _vm.room_id },
             on: {
               input: function($event) {
@@ -43983,7 +43987,13 @@ var render = function() {
             ])
           : _vm._e(),
         _vm._v(" "),
-        _vm._m(1)
+        !_vm.state
+          ? _c("div", [_c("p", [_vm._v(_vm._s(_vm.error))])])
+          : _vm._e(),
+        _vm._v(" "),
+        !_vm.state && _vm.error === ""
+          ? _c("div", [_c("p", [_vm._v(_vm._s(_vm.message))])])
+          : _vm._e()
       ])
     ])
   ])
@@ -43999,36 +44009,6 @@ var staticRenderFns = [
       _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
       _vm._v(" "),
       _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "pagination" }, [
-      _c("li", [
-        _c("a", { attrs: { href: "#" } }, [
-          _c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("«")])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("1")])]),
-      _vm._v(" "),
-      _c("li", { staticClass: "active" }, [
-        _c("a", { attrs: { href: "#" } }, [_vm._v("2")])
-      ]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("3")])]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("4")])]),
-      _vm._v(" "),
-      _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("5")])]),
-      _vm._v(" "),
-      _c("li", [
-        _c("a", { attrs: { href: "#" } }, [
-          _c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("»")])
-        ])
-      ])
     ])
   }
 ]

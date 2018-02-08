@@ -1,6 +1,8 @@
 .h-Header {
-  background-color: $white;
   height: 60px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
 }
 
 .h-Title {
@@ -30,12 +32,9 @@
 }
 
 .h-Menu {
-  height: 60px;
+
   &_List {
     height: 60px;
-    .h-Top {
-      padding: 20px 15px;
-    }
     .h-Search {
       padding: 20px 15px;
     }
@@ -54,5 +53,12 @@
     .h-Mypage {
       padding: 20px 15px;
     }
+    .h-Icon {
+      padding: 20px 15px;
+    }
   }
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  background-color: $light-gray;
 }

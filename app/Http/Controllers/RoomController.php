@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
+use Validator;
 use App\Post;
 
 class RoomController extends Controller {
@@ -27,6 +28,18 @@ class RoomController extends Controller {
 
         if(!isset($request->comment)) {
             return redirect('/room/' . $room_id[1]);
+        }
+
+        $validator = Validator::make($request->all(), [
+            'room_id' => [
+                'required',
+                'string',
+                'max: 1000'
+            ]
+        ]);
+
+        if ($validator->fails()) {
+            return redirect('/room/' . $room_id[1])->withInput()->withErrors($validator);
         }
 
         $post = new Post();
