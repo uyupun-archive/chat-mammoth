@@ -70,7 +70,7 @@
   z-index: 999;
   bottom: 0;
   right: 0;
-  background-color: #b33e5c;
+  background-color: $winered;
 }
 
 .rp-Bar {
@@ -101,7 +101,7 @@
 .rp-Post_Wrapper {
   width: 100vw;
   height: 200px;
-  background-color: #b33e5c;
+  background-color: $winered;
   .rp-Post_Container {
     max-width: 1200px;
     margin: auto;
