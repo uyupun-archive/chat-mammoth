@@ -22,12 +22,6 @@
       color: $yellow;
     }
   }
-  &_Description {
-
-  }
-  &_Tag {
-
-  }
 }
 
 .rp-List {
@@ -124,10 +118,6 @@
   }
 }
 
-.rp-Nav_Tabs {
-
-}
-
 .rp-Nav_Tabs > li.active > a,
 .rp-Nav_Tabs > li.active > a:hover,
 .rp-Nav_Tabs > li.active > a:focus {
@@ -196,4 +186,12 @@
     padding-left: 10px;
     padding-right: 10px;
   }
+}
+
+.rp-Gif_Wrapper {
+  padding: 20px;
+  height: 150px;
+  background: $white;
+  border-radius: 5px;
+  overflow: scroll;
 }

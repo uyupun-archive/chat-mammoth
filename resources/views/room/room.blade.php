@@ -68,7 +68,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <div>
+                                                    <div class="rp-Gif_Wrapper">
                                                         <img src="{{ url('/gif/child_01.gif') }}" width="70" alt="">
                                                     </div>
                                                     <div class="rp-Form_Other d-flex">

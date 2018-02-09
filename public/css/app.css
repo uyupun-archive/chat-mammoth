@@ -9011,6 +9011,14 @@ button.close {
   }
 }
 
+.rp-Gif_Wrapper {
+  padding: 20px;
+  height: 150px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
 .mp-Information {
   padding-left: 5px;
   margin-bottom: 30px;
