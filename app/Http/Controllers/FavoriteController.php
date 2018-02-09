@@ -24,7 +24,7 @@ class FavoriteController extends Controller {
                 DB::table('rooms')->where('room_id', $room_id)->decrement('favorite');
                 DB::table('favorites')->where('user_id', Auth::user()->user_id)->delete();
 
-                return;
+                return 0;
             }
 
             // お気に入り済みでないならDBに挿入しインクリメント
@@ -36,6 +36,8 @@ class FavoriteController extends Controller {
             ]);
 
             DB::table('rooms')->where('room_id', $room_id)->increment('favorite');
+
+            return 1;
         }
     }
 }

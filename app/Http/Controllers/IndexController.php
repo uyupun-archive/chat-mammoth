@@ -12,7 +12,7 @@ class IndexController extends Controller
     }
 
     public function get() {
-        $rooms = DB::table('rooms')->select('name', 'description', 'room_id', 'creator')->where('publish', 'public')->orderBy('id', 'DESC')->take(10)->get();
+        $rooms = DB::table('rooms')->select('name', 'description', 'room_id', 'creator', 'favorite')->where('publish', 'public')->orderBy('id', 'DESC')->take(10)->get();
 
         return json_encode($rooms);
     }
