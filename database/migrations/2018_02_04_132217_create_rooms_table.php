@@ -22,6 +22,7 @@ class CreateRoomsTable extends Migration
             $table->string('password')->nullable();
             $table->string('creator');
             $table->string('room_id');
+            $table->unsignedInteger('favorite')->default(0);
             $table->timestamps();
         });
     }

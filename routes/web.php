@@ -30,4 +30,6 @@ Route::post('/api/room/store', 'CreateRoomsController@store');
 Route::get('/config', 'ConfigController@index');
 Route::post('/api/user/update', 'ConfigController@update');
 
+Route::post('/api/favorite/post', 'FavoriteController@post');
+
 Route::view('/modal', 'modal');

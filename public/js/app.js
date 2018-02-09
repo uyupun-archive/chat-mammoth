@@ -43080,6 +43080,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -43097,6 +43098,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/room/get').then(function (response) {
                 _this.rooms = response.data;
+            });
+        },
+        postFavorite: function postFavorite(room_id) {
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/favorite/post', {
+                room_id: room_id
             });
         }
     },
@@ -44653,6 +44659,18 @@ var render = function() {
                 attrs: { "data-clipboard-target": "#copy" + index + "nr" }
               },
               [_c("i", { staticClass: "fas fa-clipboard" })]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                on: {
+                  click: function($event) {
+                    _vm.postFavorite(room.room_id)
+                  }
+                }
+              },
+              [_vm._v("☆")]
             )
           ]),
           _vm._v(" "),
