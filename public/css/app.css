@@ -8623,7 +8623,6 @@ button.close {
 }
 
 .tp-Chatroom_Container {
-  padding: 0 30px;
   margin-bottom: 30px;
 }
 
@@ -8656,6 +8655,20 @@ button.close {
 
 .tp-Chatroom_Container .tp-Search_Link {
   text-decoration: none;
+}
+
+.tp-Chatroom_Container .tp-Copy_Area {
+  padding: 0;
+  border: none;
+}
+
+.tp-Chatroom_Container .tp-Copy {
+  background-color: #fff;
+}
+
+.tp-Chatroom_Container .tp-Copy:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media screen and (max-width: 1200px) {

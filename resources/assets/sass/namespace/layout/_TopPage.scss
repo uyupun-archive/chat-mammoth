@@ -15,7 +15,6 @@
 }
 
 .tp-Chatroom_Container {
-  padding: 0 30px;
   margin-bottom: 30px;
   .tp-Chatroom {
     border: solid 1px $gray;
@@ -44,6 +43,17 @@
       text-decoration: none;
     }
   }
+  .tp-Copy_Area {
+    padding: 0;
+    border: none;
+  }
+  .tp-Copy {
+    background-color: $white;
+  }
+  .tp-Copy:active {
+    box-shadow: none;
+  }
+;
 }
 
 @media screen and (max-width: 1200px) {

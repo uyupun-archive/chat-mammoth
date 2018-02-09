@@ -43981,6 +43981,7 @@ var render = function() {
             _c("span", [_vm._v("ルームID: ")]),
             _vm._v(" "),
             _c("input", {
+              staticClass: "tp-Copy_Area",
               attrs: { type: "text", id: "copy" + index + "nr" },
               domProps: { value: room.room_id }
             }),
@@ -43988,7 +43989,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn",
+                staticClass: "btn tp-Copy",
                 attrs: { "data-clipboard-target": "#copy" + index + "nr" }
               },
               [_c("i", { staticClass: "fas fa-clipboard" })]
