@@ -8616,6 +8616,30 @@ button.close {
   margin-top: 60px;
 }
 
+.tp-Rotation {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+}
+
+.tp-Rotation_img {
+  position: absolute;
+  top: -100px;
+  left: 42%;
+  width: 200px;
+  height: auto;
+  -webkit-transition: .5s;
+  transition: .5s;
+  -webkit-transform: rotateZ(0deg);
+          transform: rotateZ(0deg);
+}
+
+.tp-Rotation_img:hover {
+  -webkit-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+}
+
 .tp-Container {
   max-width: 1200px;
   margin-right: auto;
@@ -8683,12 +8707,33 @@ button.close {
     line-height: 300px;
     font-size: 50px;
   }
+
+  .tp-Rotation {
+    height: 100px;
+  }
+
+  .tp-Rotation_img {
+    top: -75px;
+    width: 150px;
+    height: auto;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .tp-Catchphrase {
     line-height: 200px;
     font-size: 30px;
+  }
+
+  .tp-Rotation {
+    height: 75px;
+  }
+
+  .tp-Rotation_img {
+    top: -50px;
+    left: 38%;
+    width: 100px;
+    height: auto;
   }
 }
 
