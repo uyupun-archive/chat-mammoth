@@ -16,7 +16,8 @@ Route::get('/api/mypage/get', 'MypageController@get');
 
 /** チャットルーム */
 Route::get('/room/{id}', 'RoomController@index');
-Route::post('/api/comment/store', 'RoomController@store');
+Route::post('/api/comment/text', 'RoomController@text');
+Route::post('/api/comment/image', 'RoomController@image');
 
 /** 非公開ルーム認証 */
 //Route::get('/room/{id}/auth', 'RoomController@auth');

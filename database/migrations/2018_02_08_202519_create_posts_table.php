@@ -18,7 +18,8 @@ class CreatePostsTable extends Migration
             $table->string('user_id');
             $table->string('screen_name');
             $table->string('room_id');
-            $table->text('comment');
+            $table->text('comment')->nullable();
+            $table->text('image')->nullable();
             $table->timestamps();
         });
     }

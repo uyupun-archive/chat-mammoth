@@ -15,7 +15,11 @@
                                 @endif
                                 <span class="rp-Message_Time">{{ str_replace('-', '/', $post->created_at) }}</span>
                             </div>
-                            <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
+                            @if(isset($post->comment))
+                                <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
+                            @elseif(isset($post->image))
+                                <img src="data:image/png;base64,{{ $post->image }}" alt="">
+                            @endif
                         </div>
                     </div>
                 @endforeach
@@ -34,7 +38,7 @@
                                     <div class="tab-pane active" id="normal" role="tabpanel">
                                         <div class="rp-Post_Wrapper">
                                             <div class="rp-Post_Container">
-                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/text') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
                                                     <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="1000"></textarea>
                                                     <div class="rp-Form_Other d-flex">
@@ -48,9 +52,9 @@
                                     <div class="tab-pane" id="file" role="tabpanel">
                                         <div class="rp-Post_Wrapper">
                                             <div class="rp-Post_Container">
-                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/image') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <input type="file" name="image" class="rp-file mr-auto">
+                                                    <input type="file" name="image" class="rp-file mr-auto" required>
                                                     <div class="rp-Form_Other d-flex">
                                                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                         <button type="submit" class="st-Button rp-Button">投稿する</button>
