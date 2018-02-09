@@ -44003,13 +44003,9 @@ var render = function() {
                   _vm.postFavorite(room.room_id)
                 }
               }
-<<<<<<< HEAD
             }),
             _vm._v(" "),
             _c("span", [_vm._v(_vm._s(room.favorite))])
-=======
-            })
->>>>>>> 7d5be37ae625d160c1e46f0732fa46a1cd26de94
           ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
