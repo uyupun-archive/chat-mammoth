@@ -11,10 +11,10 @@
             <div class="mp-Nav_Area">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item active">
-                        <a class="nav-link" data-toggle="tab" href="#create" role="tab" aria-controls="create" aria-expanded="true">作成したルーム</a>
+                        <a class="nav-link mp-Nav_Link" data-toggle="tab" href="#create" role="tab" aria-controls="create" aria-expanded="true">作成したルーム</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#favorite" role="tab" aria-controls="favorite" aria-expanded="false">お気に入りのルーム</a>
+                        <a class="nav-link mp-Nav_Link" data-toggle="tab" href="#favorite" role="tab" aria-controls="favorite" aria-expanded="false">お気に入りのルーム</a>
                     </li>
                 </ul>
                 <div class="tab-content" id="myTabContent">

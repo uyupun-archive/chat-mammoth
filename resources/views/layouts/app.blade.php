@@ -25,7 +25,7 @@
                                 <img src="{{ asset('/images/logo3.png') }}" alt="" class="h-Logo">
                                 <a class="navbar-brand h-Title" href="{{ url('/') }}">chat mammoth</a>
                             </div>
-                            <div id="navbar" class="navbar-collapse collapse">
+                            <div id="navbar" class="navbar-collapse collapse h-Navbar-Collapse">
                                 <ul class="nav navbar-nav navbar-right h-Menu">
                                     <li class="h-Menu_List"><a href="{{ url('/search') }}" class="h-Search">ルーム検索</a></li>
                                     @guest
