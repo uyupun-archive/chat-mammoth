@@ -19,10 +19,15 @@ class FavoriteController extends Controller {
             // お気に入り済みかどうか
             $favorited = Favorite::where('room_id', $room_id)->where('user_id', Auth::user()->user_id)->first();
 
+            // お気に入り済みならDBから削除しデクリメント
             if (isset($favorited)) {
+                DB::table('rooms')->where('room_id', $room_id)->decrement('favorite');
+                DB::table('favorites')->where('user_id', Auth::user()->user_id)->delete();
+
                 return;
             }
 
+            // お気に入り済みでないならDBに挿入しインクリメント
             $user_id =  Auth::user()->user_id;
 
             DB::table('favorites')->insert([

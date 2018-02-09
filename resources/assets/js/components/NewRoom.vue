@@ -49,7 +49,7 @@
                 axios.post('/api/favorite/post', {
                     room_id: room_id
                 })
-            }
+            },
         },
         created() {
             this.getRooms()
