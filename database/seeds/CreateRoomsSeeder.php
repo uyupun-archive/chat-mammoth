@@ -12,13 +12,28 @@ class CreateRoomsSeeder extends Seeder {
 
         DB::table('rooms')->truncate();
 
-        for ($i = 1; $i <= 10; $i++) {
+        $animals = [
+            'いぬさん',
+            'ねこさん',
+            'ぞうさん',
+            'きりんさん',
+            'うさぎさん',
+            'かめさん',
+            'きつねさん',
+            'たぬきさん',
+            'らいおんさん',
+            'かばさん',
+        ];
+
+        DB::table('rooms')->truncate();
+
+        for ($i = 0; $i <= 9; $i++) {
             DB::table('rooms')->insert([
-                'name' => '雑談' . $i,
+                'name' => $animals[$i],
                 'description' => '雑談用のチャットルームです',
                 'publish' => 'public',
                 'creator' => 'ASS',
-                'room_id' => hash('adler32', mt_rand())
+                'room_id' => hash('md5', mt_rand())
             ]);
         }
     }

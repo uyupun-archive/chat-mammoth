@@ -9,6 +9,8 @@
                     <button class="btn" :data-clipboard-target="'#copy' + index + 'nr'">
                         <i class="fas fa-clipboard"></i>
                     </button>
+                    <i class="far fa-heart" @click="postFavorite(room.room_id)"></i>
+                    <!--<i class="fas fa-heart" @click="postFavorite(room.room_id)"></i>-->
                 </div>
                 <div>作成者: {{ room.creator }}</div>
                 <div class="tp-Chatroom_Tag">
@@ -34,7 +36,7 @@
     export default {
         data() {
             return {
-                rooms: {}
+                rooms: {},
             }
         },
         methods: {
@@ -43,7 +45,12 @@
                     .then(response => {
                         this.rooms = response.data
                     })
-            }
+            },
+            postFavorite(room_id) {
+                axios.post('/api/favorite/post', {
+                    room_id: room_id
+                })
+            },
         },
         created() {
             this.getRooms()
