@@ -43292,6 +43292,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -43364,7 +43365,9 @@ var render = function() {
                   _vm.postFavorite(room.room_id)
                 }
               }
-            })
+            }),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(room.favorite))])
           ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),

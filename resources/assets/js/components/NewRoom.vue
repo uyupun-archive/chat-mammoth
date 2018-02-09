@@ -10,6 +10,7 @@
                         <i class="fas fa-clipboard"></i>
                     </button>
                     <i class="far fa-heart" @click="postFavorite(room.room_id)"></i>
+                    <span>{{ room.favorite }}</span>
                     <!--<i class="fas fa-heart" @click="postFavorite(room.room_id)"></i>-->
                 </div>
                 <div>作成者: {{ room.creator }}</div>
