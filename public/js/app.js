@@ -43357,27 +43357,14 @@ var render = function() {
               [_c("i", { staticClass: "fas fa-clipboard" })]
             ),
             _vm._v(" "),
-            room.favorite <= 0
-              ? _c("i", {
-                  staticClass: "far fa-heart",
-                  on: {
-                    click: function($event) {
-                      _vm.postFavorite(room.room_id)
-                    }
-                  }
-                })
-              : _vm._e(),
-            _vm._v(" "),
-            room.favorite > 0
-              ? _c("i", {
-                  staticClass: "fas fa-heart",
-                  on: {
-                    click: function($event) {
-                      _vm.postFavorite(room.room_id)
-                    }
-                  }
-                })
-              : _vm._e()
+            _c("i", {
+              staticClass: "far fa-heart",
+              on: {
+                click: function($event) {
+                  _vm.postFavorite(room.room_id)
+                }
+              }
+            })
           ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
