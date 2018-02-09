@@ -55,7 +55,7 @@
 
 .rp-NotComment {
   text-align: center;
-  line-height: 400px;
+  margin-top: 100px;
   color: $black;
 }
 
@@ -66,10 +66,14 @@
 .rp-Accordion {
   width: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 100;
   bottom: 0;
   right: 0;
   background-color: $winered;
+}
+
+.h-Navbar-Collapse {
+  z-index: 11111;
 }
 
 .rp-NavText_Wrapper {
@@ -95,17 +99,20 @@
   color: $white;
 }
 
-.btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+.rp-NavText:focus, .rp-NavText.focus, .rp-NavText:active:focus, .rp-NavText:active.focus, .rp-NavText.active:focus, .rp-NavText.active.focus {
   outline: none;
   outline-offset: 0;
+  color: $red;
 }
 
-.btn-link:hover, .btn-link:focus {
+.rp-NavText:hover, .rp-NavText:focus {
   text-decoration: none;
+  color: $red;
 }
 
 .rp-Nav_Tabs {
   background-color: $garnet;
+  border: 0;
   .rp-Nav_Tab {
 
     a {
@@ -117,19 +124,19 @@
   }
 }
 
-.nav-tabs {
-  border: 0;
+.rp-Nav_Tabs {
+
 }
 
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+.rp-Nav_Tabs > li.active > a,
+.rp-Nav_Tabs > li.active > a:hover,
+.rp-Nav_Tabs > li.active > a:focus {
   color: $white;
   background-color: $red;
   border: 0;
   border-radius: 0;
 }
-.nav > li > a:hover, .nav > li > a:focus {
+.rp-Nav_Tabs > .rp-Nav_Tab > a:hover, .rp-Nav_Tabs > .rp-Nav_Tab > a:focus {
   background-color: $hover_red;
   border-radius: 0;
 }

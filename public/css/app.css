@@ -8419,6 +8419,10 @@ button.close {
   margin-left: 0;
 }
 
+.navbar-toggle {
+  margin: 12px 0 8px 0;
+}
+
 .navbar-default {
   background-color: #ffffff;
 }
@@ -8619,7 +8623,6 @@ button.close {
 }
 
 .tp-Chatroom_Container {
-  padding: 0 30px;
   margin-bottom: 30px;
 }
 
@@ -8652,6 +8655,20 @@ button.close {
 
 .tp-Chatroom_Container .tp-Search_Link {
   text-decoration: none;
+}
+
+.tp-Chatroom_Container .tp-Copy_Area {
+  padding: 0;
+  border: none;
+}
+
+.tp-Chatroom_Container .tp-Copy {
+  background-color: #fff;
+}
+
+.tp-Chatroom_Container .tp-Copy:active {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 @media screen and (max-width: 1200px) {
@@ -8798,7 +8815,7 @@ button.close {
 
 .rp-NotComment {
   text-align: center;
-  line-height: 400px;
+  margin-top: 100px;
   color: #323232;
 }
 
@@ -8809,10 +8826,14 @@ button.close {
 .rp-Accordion {
   width: 100%;
   position: fixed;
-  z-index: 999;
+  z-index: 100;
   bottom: 0;
   right: 0;
   background-color: #b33e5c;
+}
+
+.h-Navbar-Collapse {
+  z-index: 11111;
 }
 
 .rp-NavText_Wrapper {
@@ -8838,23 +8859,26 @@ button.close {
   color: #fff;
 }
 
-.btn:focus,
-.btn.focus,
-.btn:active:focus,
-.btn:active.focus,
-.btn.active:focus,
-.btn.active.focus {
+.rp-NavText:focus,
+.rp-NavText.focus,
+.rp-NavText:active:focus,
+.rp-NavText:active.focus,
+.rp-NavText.active:focus,
+.rp-NavText.active.focus {
   outline: none;
   outline-offset: 0;
+  color: #EC605B;
 }
 
-.btn-link:hover,
-.btn-link:focus {
+.rp-NavText:hover,
+.rp-NavText:focus {
   text-decoration: none;
+  color: #EC605B;
 }
 
 .rp-Nav_Tabs {
   background-color: #942343;
+  border: 0;
 }
 
 .rp-Nav_Tabs .rp-Nav_Tab a {
@@ -8865,21 +8889,17 @@ button.close {
   border: none;
 }
 
-.nav-tabs {
-  border: 0;
-}
-
-.nav-tabs > li.active > a,
-.nav-tabs > li.active > a:hover,
-.nav-tabs > li.active > a:focus {
+.rp-Nav_Tabs > li.active > a,
+.rp-Nav_Tabs > li.active > a:hover,
+.rp-Nav_Tabs > li.active > a:focus {
   color: #fff;
   background-color: #EC605B;
   border: 0;
   border-radius: 0;
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
+.rp-Nav_Tabs > .rp-Nav_Tab > a:hover,
+.rp-Nav_Tabs > .rp-Nav_Tab > a:focus {
   background-color: #f5a09d;
   border-radius: 0;
 }
@@ -8962,6 +8982,10 @@ button.close {
 
 .mp-Nav_Area {
   padding: 0 5px;
+}
+
+.mp-Nav_Area .mp-Nav_Link {
+  z-index: -1;
 }
 
 .mp-Chatroom {

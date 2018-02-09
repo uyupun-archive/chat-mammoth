@@ -5,8 +5,8 @@
                 <div class="tp-Chatroom_Name">ルーム名: {{ room.name }}</div>
                 <div>
                     <span>ルームID: </span>
-                    <input type="text" :value="room.room_id " :id="'copy' + index + 'nr'">
-                    <button class="btn" :data-clipboard-target="'#copy' + index + 'nr'">
+                    <input class="tp-Copy_Area" type="text" :value="room.room_id " :id="'copy' + index + 'nr'">
+                    <button class="btn tp-Copy" :data-clipboard-target="'#copy' + index + 'nr'">
                         <i class="fas fa-clipboard"></i>
                     </button>
                     <i class="far fa-heart" @click="postFavorite(room.room_id)"></i>
