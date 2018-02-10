@@ -7,7 +7,7 @@
                     <span>ルームID: </span>
                     <input class="tp-Copy_Area" type="text" :value="room.room_id " :id="'copy' + index + 'nr'">
                     <button class="btn tp-Copy_Button st-Tooltip_Button" :data-clipboard-target="'#copy' + index + 'nr'">
-                        <span class="st-Tooltip">コピー</span>
+                        <span class="st-Tooltip">Copy</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
                     <i class="far fa-heart" @click="postFavorite(room.room_id)"></i>

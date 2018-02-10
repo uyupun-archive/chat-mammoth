@@ -8839,6 +8839,10 @@ button.close {
   outline-offset: 0;
 }
 
+.tp-Copy_Area:focus {
+  outline: none;
+}
+
 @media screen and (max-width: 1200px) {
   .tp-Container {
     padding-left: 10px;
