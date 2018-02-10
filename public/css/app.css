@@ -8438,7 +8438,6 @@ button.close {
   top: 85%;
   left: 23%;
   border: 13px transparent solid;
-  border-bottom-width: 0;
   border-top-color: #323232;
   z-index: 100;
 }
