@@ -21,7 +21,7 @@
                                 <img class="rp-Image" src="data:image/png;base64,{{ $post->image }}" alt="">
                                 <a href="data:image/png;base64,{{ $post->image }}" download="download.png">ダウンロード</a>
                             @elseif(isset($post->gif))
-                                <img src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
+                                <img class="rp-Gif" src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
                             @endif
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/image') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <input type="file" name="image" class="rp-file mr-auto" required>
+                                                    <input type="file" name="image" class="rp-File mr-auto" required>
                                                     <div class="rp-Form_Other d-flex">
                                                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                         <button type="submit" class="st-Button rp-Button">投稿する</button>
@@ -69,12 +69,14 @@
                                     <div class="tab-pane" id="gif" role="tabpanel">
                                         <div class="rp-Post_Wrapper">
                                             <div class="rp-Post_Container">
-                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/gif') }}" method="POST" class="rp-Form">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/gif') }}" method="POST" class="rp-Form_Gif">
                                                     {{ csrf_field() }}
                                                     <div class="rp-Gif_Wrapper">
                                                         @for($i = 0; $i < 20; $i++)
-                                                            <img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif">
-                                                            <input type="radio" name="gif" value="{{ $i }}" required>
+                                                            <label class="rp-Gif_Label" for="gif{{ $i }}">
+                                                                <img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif_Select">
+                                                            </label>
+                                                            <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
                                                         @endfor
                                                     </div>
                                                     <div class="rp-Form_Other d-flex">
