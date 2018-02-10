@@ -45285,7 +45285,7 @@ var render = function() {
         "button",
         {
           staticClass: "st-Button rp-Button",
-          attrs: { type: "button" },
+          attrs: { type: "button", disabled: _vm.state },
           on: {
             click: function($event) {
               _vm.clearCanvas()

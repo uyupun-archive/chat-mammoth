@@ -2,7 +2,7 @@
     <div>
         <canvas id="canvas" class="canvas" width="700" height="100"></canvas>
         <div style="padding:10px">
-            <button type="button" @click="clearCanvas()" class="st-Button rp-Button">やり直す</button>
+            <button type="button" @click="clearCanvas()" class="st-Button rp-Button" :disabled="state">やり直す</button>
             <input type="hidden" :value="image" name="draw">
             <button type="submit" class="st-Button rp-Button" :disabled="state">投稿する</button>
         </div>
