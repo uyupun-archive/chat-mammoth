@@ -6,7 +6,8 @@
                 <div>
                     <span>ルームID: </span>
                     <input type="text" :value="room.room_id " :id="'copy' + index + 'mp'">
-                    <button class="btn" :data-clipboard-target="'#copy' + index + 'mp'">
+                    <button class="btn st-Tooltip_Button" :data-clipboard-target="'#copy' + index + 'mp'">
+                        <span class="st-Tooltip">コピー</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
                     <i v-if="room.publish === 'private'" class="fas fa-unlock-alt"></i>
