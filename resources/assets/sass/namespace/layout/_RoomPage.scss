@@ -45,8 +45,13 @@
       color: $gray;
     }
     .rp-Image {
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
+      object-fit: scale-down;
+    }
+    .rp-Gif {
+      width: 300px;
+      height: 300px;
       object-fit: scale-down;
     }
   }
