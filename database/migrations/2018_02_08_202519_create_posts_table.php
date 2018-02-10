@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
             $table->text('comment')->nullable();
             $table->text('image')->nullable();
             $table->unsignedInteger('gif')->nullable();
+            $table->text('draw')->nullable();
             $table->timestamps();
         });
     }

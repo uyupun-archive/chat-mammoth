@@ -19,6 +19,7 @@ Route::get('/room/{id}', 'RoomController@index');
 Route::post('/api/comment/text', 'RoomController@text');
 Route::post('/api/comment/image', 'RoomController@image');
 Route::post('/api/comment/gif', 'RoomController@gif');
+Route::post('/api/comment/draw', 'RoomController@draw');
 
 /** 非公開ルーム認証 */
 //Route::get('/room/{id}/auth', 'RoomController@auth');
