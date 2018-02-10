@@ -22,6 +22,8 @@
                                 <a href="data:image/png;base64,{{ $post->image }}" download="download.png">ダウンロード</a>
                             @elseif(isset($post->gif))
                                 <img src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
+                            @elseif(isset($post->draw))
+                                <img class="rp-Image" src="{{ $post->draw }}" alt="">
                             @endif
                         </div>
                     </div>
@@ -88,15 +90,15 @@
                                     <div class="tab-pane" id="write" role="tabpanel">
                                         <div class="rp-Post_Wrapper">
                                             <div class="rp-Post_Container">
-                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/draw') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
                                                     <div id="app">
                                                         <hand-write></hand-write>
                                                     </div>
-                                                    {{--<div class="rp-Form_Other d-flex">--}}
-                                                        {{--<input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">--}}
-                                                        {{--<button type="submit" class="st-Button rp-Button">投稿する</button>--}}
-                                                    {{--</div>--}}
+                                                    <div class="rp-Form_Other d-flex">
+                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
+                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>
