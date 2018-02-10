@@ -19,6 +19,8 @@
                                 <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                             @elseif(isset($post->image))
                                 <img class="rp-Image" src="data:image/png;base64,{{ $post->image }}" alt="">
+                            @elseif(isset($post->gif))
+                                <img src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
                             @endif
                         </div>
                     </div>
@@ -66,10 +68,13 @@
                                     <div class="tab-pane" id="gif" role="tabpanel">
                                         <div class="rp-Post_Wrapper">
                                             <div class="rp-Post_Container">
-                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/gif') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
                                                     <div class="rp-Gif_Wrapper">
-                                                        <img src="{{ url('/gif/child_01.gif') }}" alt="" class="rp-Gif">
+                                                        @for($i = 0; $i < 20; $i++)
+                                                            <img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif">
+                                                            <input type="radio" name="gif" value="{{ $i }}">
+                                                        @endfor
                                                     </div>
                                                     <div class="rp-Form_Other d-flex">
                                                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
