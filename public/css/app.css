@@ -8447,6 +8447,7 @@ button.close {
   width: 100vw;
   position: fixed;
   top: 0;
+  z-index: 1001;
 }
 
 .h-Title {
