@@ -158,7 +158,6 @@
       }
       .rp-Form_Other {
         margin-top: 15px;
-        text-align: right;
         .rp-file {
 
         }
@@ -168,17 +167,42 @@
         .rp-CheckBox_Text {
           margin: 0 25px 0 5px;
         }
-        .rp-Button {
-          padding: 5px 10px;
-          background-color: $red;
-        }
       }
     }
   }
 }
 
+.rp-Form_Other {
+  text-align: right;
+}
+
+.rp-Button {
+  padding: 5px 10px;
+  background-color: $red;
+}
+
 .rp-Button:focus {
   outline: none;
+}
+
+.rp-Gif_Label {
+  .rp-Gif_Select {
+    width: 120px;
+  }
+}
+
+.rp-Gif_RadioButton {
+  display: none;
+}
+.rp-Form_Gif {
+  .rp-Gif_Wrapper {
+    padding: 10px;
+    height: 140px;
+    background: $white;
+    border-radius: 5px;
+    overflow: scroll;
+    margin-bottom: 8px;
+  }
 }
 
 @media screen and (max-width: 1200px) {
@@ -190,18 +214,6 @@
     padding-left: 10px;
     padding-right: 10px;
   }
-}
-
-.rp-Gif {
-  width: 120px;
-}
-
-.rp-Gif_Wrapper {
-  padding: 20px;
-  height: 150px;
-  background: $white;
-  border-radius: 5px;
-  overflow: scroll;
 }
 
 @media screen and (max-width: 450px) {
