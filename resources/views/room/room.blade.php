@@ -18,7 +18,7 @@
                             @if(isset($post->comment))
                                 <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                             @elseif(isset($post->image))
-                                <img src="data:image/png;base64,{{ $post->image }}" alt="">
+                                <img class="rp-Image" src="data:image/png;base64,{{ $post->image }}" alt="">
                             @endif
                         </div>
                     </div>
@@ -100,25 +100,25 @@
                     <ul class="nav nav-tabs rp-Nav_Tabs" id="myTab" role="tablist">
                         <li class="nav-item active rp-Nav_Tab">
                             <a class="nav-link rp-normal" data-toggle="tab" href="#normal" role="tab" aria-controls="normal" aria-expanded="true">
-                                <span>テキスト</span>
+                                <span class="rp-Nav_Text">テキスト</span>
                                 <i class="fas fa-keyboard"></i>
                             </a>
                         </li>
                         <li class="nav-item rp-Nav_Tab">
                             <a class="nav-link rp-file" data-toggle="tab" href="#file" role="tab" aria-controls="file" aria-expanded="false">
-                                <span>画像</span>
+                                <span class="rp-Nav_Text">画像</span>
                                 <i class="fas fa-images"></i>
                             </a>
                         </li>
                         <li class="nav-item rp-Nav_Tab">
                             <a class="nav-link rp-gif" data-toggle="tab" href="#gif" role="tab" aria-controls="gif" aria-expanded="false">
-                                <span>GIF</span>
+                                <span class="rp-Nav_Text">GIF</span>
                                 <i class="fas fa-film"></i>
                             </a>
                         </li>
                         <li class="nav-item rp-Nav_Tab">
                             <a class="nav-link rp-write" data-toggle="tab" href="#write" role="tab" aria-controls="write" aria-expanded="false">
-                                <span>手書き</span>
+                                <span class="rp-Nav_Text">手書き</span>
                                 <i class="fas fa-pencil-alt"></i>
                             </a>
                         </li>

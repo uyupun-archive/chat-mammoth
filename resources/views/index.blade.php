@@ -2,10 +2,11 @@
 
 @section('content')
 <div class="st-Wrapper">
-    <div class="tp-Catchphrase">投げろマサカリ⛏️
+    <div class="tp-Catchphrase">
+        <div class="tp-Catchphrase_Animation">投げろマサカリ⛏️</div>
+    </div>
     <div class="tp-Rotation">
         <img src="{{ asset('/images/logo2.png') }}" alt="" class="tp-Rotation_img">
-    </div>
     </div>
     <div class="tp-Container">
         <h2 class="st-Title">新着のチャットルーム</h2>

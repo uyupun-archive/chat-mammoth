@@ -1,0 +1,38 @@
+.st-Tooltip_Button{
+  display: inline-block;
+  .st-Tooltip {
+    display: none;
+  }
+}
+
+.st-Tooltip_Button:hover {
+  position: relative;
+  color: #333;
+  .st-Tooltip {
+    display: block;
+    position: absolute;
+    top: -100%;
+    left: -20%;
+    font-size: 90%;
+    color: $white;
+    background-color: $black;
+    padding: 5px;
+    border-radius: 3px;
+    z-index: 101;
+  }
+}
+
+.st-Tooltip_Button {
+  .st-Tooltip:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: 85%;
+    left: 23%;
+    border: 13px transparent solid;
+    border-top-color: $black;
+    z-index: 100;
+  }
+}
