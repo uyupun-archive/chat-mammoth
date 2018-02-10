@@ -50,6 +50,11 @@
       margin-left: 10px;
       color: $gray;
     }
+    .rp-Image {
+      width: 200px;
+      height: 200px;
+      object-fit: scale-down;
+    }
   }
 }
 
