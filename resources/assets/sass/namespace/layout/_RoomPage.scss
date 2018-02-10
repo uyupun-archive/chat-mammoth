@@ -48,6 +48,11 @@
       width: 300px;
       height: 300px;
       object-fit: scale-down;
+      &_Link {
+        display: block;
+        text-decoration: none;
+        margin: 10px 80% 0 10%;
+      }
     }
     .rp-Gif {
       width: 300px;
