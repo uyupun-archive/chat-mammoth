@@ -8646,18 +8646,18 @@ button.close {
   padding: 5px 10px;
 }
 
-.tp-Catchphrase {
+.tp-Catchphrase_Area {
+  position: relative;
+  height: 500px;
+}
+
+.tp-Catchphrase_Area .tp-Catchphrase {
   width: 100vw;
-  line-height: 450px;
-  font-size: 80px;
-  text-align: center;
+  height: 500px;
+  position: absolute;
   background-color: #EC605B;
   color: #323232;
   margin-top: 60px;
-}
-
-.tp-Catchphrase_Animation {
-  overflow: hidden;
   -webkit-animation-name: catchphrase;
           animation-name: catchphrase;
   -webkit-animation-fill-mode: forwards;
@@ -8668,15 +8668,36 @@ button.close {
           animation-timing-function: linear;
 }
 
+.tp-Catchphrase_Area .tp-Catchphrase_Text {
+  width: 640px;
+  font-size: 80px;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  overflow: hidden;
+  -webkit-animation-name: catchphrase-text;
+          animation-name: catchphrase-text;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
 @-webkit-keyframes catchphrase {
   from {
     -webkit-transform: translate(-101%, 0);
             transform: translate(-101%, 0);
+    opacity: 0;
   }
 
   to {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    opacity: 1;
   }
 }
 
@@ -8684,11 +8705,53 @@ button.close {
   from {
     -webkit-transform: translate(-101%, 0);
             transform: translate(-101%, 0);
+    opacity: 0;
   }
 
   to {
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes catchphrase-text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+            transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+  }
+
+  65% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+            transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateX(0deg);
+            transform: translateX(-50%) translateY(-50%) rotateX(0deg);
+  }
+}
+
+@keyframes catchphrase-text {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+            transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+  }
+
+  65% {
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+            transform: translateX(-50%) translateY(-50%) rotateX(88deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotateX(0deg);
+            transform: translateX(-50%) translateY(-50%) rotateX(0deg);
   }
 }
 
@@ -8702,18 +8765,18 @@ button.close {
 .tp-Rotation_img {
   position: absolute;
   top: -100px;
-  left: 42%;
+  left: 50%;
   width: 200px;
   height: auto;
   -webkit-transition: .5s;
   transition: .5s;
-  -webkit-transform: rotateZ(0deg);
-          transform: rotateZ(0deg);
+  -webkit-transform: translateX(-50%) rotateZ(0deg);
+          transform: translateX(-50%) rotateZ(0deg);
 }
 
 .tp-Rotation_img:hover {
-  -webkit-transform: rotateZ(360deg);
-          transform: rotateZ(360deg);
+  -webkit-transform: translateX(-50%) rotateZ(360deg);
+          transform: translateX(-50%) rotateZ(360deg);
 }
 
 .tp-Container {
@@ -8784,8 +8847,17 @@ button.close {
 }
 
 @media screen and (max-width: 800px) {
-  .tp-Catchphrase {
-    line-height: 300px;
+  .tp-Catchphrase_Area {
+    height: 350px;
+  }
+
+  .tp-Catchphrase_Area .tp-Catchphrase {
+    height: 350px;
+  }
+
+  .tp-Catchphrase_Area .tp-Catchphrase_Text {
+    top: 56%;
+    width: 400px;
     font-size: 50px;
   }
 
@@ -8801,8 +8873,17 @@ button.close {
 }
 
 @media screen and (max-width: 450px) {
-  .tp-Catchphrase {
-    line-height: 200px;
+  .tp-Catchphrase_Area {
+    height: 250px;
+  }
+
+  .tp-Catchphrase_Area .tp-Catchphrase {
+    height: 250px;
+  }
+
+  .tp-Catchphrase_Area .tp-Catchphrase_Text {
+    top: 63%;
+    width: 240px;
     font-size: 30px;
   }
 
@@ -8812,7 +8893,6 @@ button.close {
 
   .tp-Rotation_img {
     top: -50px;
-    left: 38%;
     width: 100px;
     height: auto;
   }
