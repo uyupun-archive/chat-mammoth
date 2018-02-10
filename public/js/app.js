@@ -1293,7 +1293,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(67);
+module.exports = __webpack_require__(62);
 
 
 /***/ }),
@@ -44718,13 +44718,13 @@ if (false) {
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(60)
+  __webpack_require__(73)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(65)
+var __vue_script__ = __webpack_require__(60)
 /* template */
-var __vue_template__ = __webpack_require__(66)
+var __vue_template__ = __webpack_require__(77)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -44764,46 +44764,179 @@ module.exports = Component.exports
 
 /***/ }),
 /* 60 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
-// load the styles
-var content = __webpack_require__(61);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(63)("1842b2c2", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b99f06ee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HandWrite.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b99f06ee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HandWrite.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            myStorage: localStorage,
+            canvas: {},
+            ctx: {},
+            moveflg: 0,
+            Xpoint: 0,
+            Ypoint: 0,
+            defSize: 1,
+            defColor: '#555',
+            currentCanvas: 0,
+            temp: '',
+            image: {}
+        };
+    },
+
+    methods: {
+        startPoint: function startPoint(e) {
+            e.preventDefault();
+            this.ctx.beginPath();
+
+            this.Xpoint = e.layerX;
+            this.Ypoint = e.layerY;
+
+            this.ctx.moveTo(this.Xpoint, this.Ypoint);
+        },
+        movePoint: function movePoint(e) {
+            if (e.buttons === 1 || e.witch === 1 || e.type == 'touchmove') {
+                this.Xpoint = e.layerX;
+                this.Ypoint = e.layerY;
+                this.moveflg = 1;
+
+                this.ctx.lineTo(this.Xpoint, this.Ypoint);
+                this.ctx.lineCap = 'round';
+                this.ctx.lineWidth = this.defSize * 2;
+                this.ctx.strokeStyle = this.defColor;
+                this.ctx.stroke();
+            }
+        },
+        endPoint: function endPoint() {
+            if (this.moveflg === 0) {
+                this.ctx.lineTo(this.Xpoint - 1, this.Ypoint - 1);
+                this.ctx.lineCap = 'round';
+                this.ctx.lineWidth = this.defSize * 2;
+                this.ctx.strokeStyle = this.defColor;
+                this.ctx.stroke();
+            }
+            this.moveflg = 0;
+            this.setLocalStoreage();
+        },
+        clearCanvas: function clearCanvas() {
+            if (confirm('Canvasを初期化しますか？')) {
+                this.initLocalStorage();
+                this.temp = [];
+                this.resetCanvas();
+            }
+        },
+        resetCanvas: function resetCanvas() {
+            this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight);
+        },
+        chgImg: function chgImg() {
+            document.getElementById('newImg').src = this.canvas.toDataURL();
+            this.image = this.canvas.toDataURL();
+        },
+        initLocalStorage: function initLocalStorage() {
+            this.myStorage.setItem('__log', JSON.stringify([]));
+        },
+        setLocalStoreage: function setLocalStoreage() {
+            var _this = this;
+
+            var png = this.canvas.toDataURL();
+            var logs = JSON.parse(this.myStorage.getItem('__log'));
+
+            setTimeout(function () {
+                logs.unshift({ png: png });
+
+                _this.myStorage.setItem('__log', JSON.stringify(logs));
+
+                _this.currentCanvas = 0;
+                _this.temp = [];
+            }, 0);
+        },
+        prevCanvas: function prevCanvas() {
+            var _this2 = this;
+
+            var logs = JSON.parse(this.myStorage.getItem('__log'));
+
+            if (logs.length > 0) {
+                this.temp.unshift(logs.shift());
+
+                setTimeout(function () {
+                    _this2.myStorage.setItem('__log', JSON.stringify(logs));
+                    _this2.resetCanvas();
+
+                    _this2.draw(logs[0]['png']);
+                }, 0);
+            }
+        },
+        nextCanvas: function nextCanvas() {
+            var _this3 = this;
+
+            var logs = JSON.parse(this.myStorage.getItem('__log'));
+
+            if (this.temp.length > 0) {
+                logs.unshift(this.temp.shift());
+
+                setTimeout(function () {
+                    _this3.myStorage.setItem('__log', JSON.stringify(logs));
+                    _this3.resetCanvas();
+
+                    _this3.draw(logs[0]['png']);
+                }, 0);
+            }
+        },
+        draw: function draw(src) {
+            var _this4 = this;
+
+            var img = new Image();
+            img.src = src;
+
+            img.onload = function () {
+                _this4.ctx.drawImage(img, 0, 0);
+            };
+        }
+    },
+    mounted: function mounted() {
+        this.initLocalStorage();
+        this.canvas = document.getElementById('canvas');
+        this.ctx = this.canvas.getContext('2d');
+
+        // PC
+        this.canvas.addEventListener('mousedown', this.startPoint, false);
+        this.canvas.addEventListener('mousemove', this.movePoint, false);
+        this.canvas.addEventListener('mouseup', this.endPoint, false);
+
+        // SP
+        this.canvas.addEventListener('touchstart', this.startPoint, false);
+        this.canvas.addEventListener('touchmove', this.movePoint, false);
+        this.canvas.addEventListener('touchend', this.endPoint, false);
+    }
+});
 
 /***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(62)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\n.canvas[data-v-b99f06ee] {\n  position: relative;\n  border-radius: 5px;\n  background: #fff;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 61 */,
 /* 62 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 63 */,
+/* 64 */,
+/* 65 */
 /***/ (function(module, exports) {
 
 /*
@@ -44885,7 +45018,54 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 63 */
+/* 66 */,
+/* 67 */,
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(74);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(75)("1842b2c2", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b99f06ee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HandWrite.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-b99f06ee\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HandWrite.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 74 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(65)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.canvas[data-v-b99f06ee] {\n  position: relative;\n  border-radius: 5px;\n  background: #fff;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -44904,7 +45084,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(64)
+var listToStyles = __webpack_require__(76)
 
 /*
 type StyleObject = {
@@ -45106,7 +45286,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 64 */
+/* 76 */
 /***/ (function(module, exports) {
 
 /**
@@ -45139,171 +45319,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 65 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            myStorage: localStorage,
-            canvas: {},
-            ctx: {},
-            moveflg: 0,
-            Xpoint: 0,
-            Ypoint: 0,
-            defSize: 1,
-            defColor: '#555',
-            currentCanvas: 0,
-            temp: '',
-            image: {}
-        };
-    },
-
-    methods: {
-        startPoint: function startPoint(e) {
-            e.preventDefault();
-            this.ctx.beginPath();
-
-            this.Xpoint = e.layerX;
-            this.Ypoint = e.layerY;
-
-            this.ctx.moveTo(this.Xpoint, this.Ypoint);
-        },
-        movePoint: function movePoint(e) {
-            if (e.buttons === 1 || e.witch === 1 || e.type == 'touchmove') {
-                this.Xpoint = e.layerX;
-                this.Ypoint = e.layerY;
-                this.moveflg = 1;
-
-                this.ctx.lineTo(this.Xpoint, this.Ypoint);
-                this.ctx.lineCap = 'round';
-                this.ctx.lineWidth = this.defSize * 2;
-                this.ctx.strokeStyle = this.defColor;
-                this.ctx.stroke();
-            }
-        },
-        endPoint: function endPoint() {
-            if (this.moveflg === 0) {
-                this.ctx.lineTo(this.Xpoint - 1, this.Ypoint - 1);
-                this.ctx.lineCap = 'round';
-                this.ctx.lineWidth = this.defSize * 2;
-                this.ctx.strokeStyle = this.defColor;
-                this.ctx.stroke();
-            }
-            this.moveflg = 0;
-            this.setLocalStoreage();
-        },
-        clearCanvas: function clearCanvas() {
-            if (confirm('Canvasを初期化しますか？')) {
-                this.initLocalStorage();
-                this.temp = [];
-                this.resetCanvas();
-            }
-        },
-        resetCanvas: function resetCanvas() {
-            this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight);
-        },
-        chgImg: function chgImg() {
-            document.getElementById('newImg').src = this.canvas.toDataURL();
-            this.image = this.canvas.toDataURL();
-        },
-        initLocalStorage: function initLocalStorage() {
-            this.myStorage.setItem('__log', JSON.stringify([]));
-        },
-        setLocalStoreage: function setLocalStoreage() {
-            var _this = this;
-
-            var png = this.canvas.toDataURL();
-            var logs = JSON.parse(this.myStorage.getItem('__log'));
-
-            setTimeout(function () {
-                logs.unshift({ png: png });
-
-                _this.myStorage.setItem('__log', JSON.stringify(logs));
-
-                _this.currentCanvas = 0;
-                _this.temp = [];
-            }, 0);
-        },
-        prevCanvas: function prevCanvas() {
-            var _this2 = this;
-
-            var logs = JSON.parse(this.myStorage.getItem('__log'));
-
-            if (logs.length > 0) {
-                this.temp.unshift(logs.shift());
-
-                setTimeout(function () {
-                    _this2.myStorage.setItem('__log', JSON.stringify(logs));
-                    _this2.resetCanvas();
-
-                    _this2.draw(logs[0]['png']);
-                }, 0);
-            }
-        },
-        nextCanvas: function nextCanvas() {
-            var _this3 = this;
-
-            var logs = JSON.parse(this.myStorage.getItem('__log'));
-
-            if (this.temp.length > 0) {
-                logs.unshift(this.temp.shift());
-
-                setTimeout(function () {
-                    _this3.myStorage.setItem('__log', JSON.stringify(logs));
-                    _this3.resetCanvas();
-
-                    _this3.draw(logs[0]['png']);
-                }, 0);
-            }
-        },
-        draw: function draw(src) {
-            var _this4 = this;
-
-            var img = new Image();
-            img.src = src;
-
-            img.onload = function () {
-                _this4.ctx.drawImage(img, 0, 0);
-            };
-        }
-    },
-    mounted: function mounted() {
-        this.initLocalStorage();
-        this.canvas = document.getElementById('canvas');
-        this.ctx = this.canvas.getContext('2d');
-
-        // PC
-        this.canvas.addEventListener('mousedown', this.startPoint, false);
-        this.canvas.addEventListener('mousemove', this.movePoint, false);
-        this.canvas.addEventListener('mouseup', this.endPoint, false);
-
-        // SP
-        this.canvas.addEventListener('touchstart', this.startPoint, false);
-        this.canvas.addEventListener('touchmove', this.movePoint, false);
-        this.canvas.addEventListener('touchend', this.endPoint, false);
-    }
-});
-
-/***/ }),
-/* 66 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45396,12 +45412,6 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-b99f06ee", module.exports)
   }
 }
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
