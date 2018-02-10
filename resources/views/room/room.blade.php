@@ -19,7 +19,7 @@
                                 <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                             @elseif(isset($post->image))
                                 <img class="rp-Image" src="data:image/png;base64,{{ $post->image }}" alt="">
-                                <a href="data:image/png;base64,{{ $post->image }}" download="data:image/png;base64,{{ $post->image }}">ダウンロード</a>
+                                <a href="data:image/png;base64,{{ $post->image }}" download="download.png">ダウンロード</a>
                             @elseif(isset($post->gif))
                                 <img src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
                             @endif
