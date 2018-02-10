@@ -20,6 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('room_id');
             $table->text('comment')->nullable();
             $table->text('image')->nullable();
+            $table->unsignedInteger('gif')->nullable();
             $table->timestamps();
         });
     }

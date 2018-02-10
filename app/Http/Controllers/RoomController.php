@@ -20,7 +20,7 @@ class RoomController extends Controller {
             return redirect('/room/' . $room_id[1] . '/auth');
         }
 
-        $posts = DB::table('posts')->select('user_id', 'screen_name', 'comment', 'created_at', 'image')->where('room_id', $room_id[1])->orderBy('id', 'DESC')->take(100)->paginate(10);
+        $posts = DB::table('posts')->select('user_id', 'screen_name', 'comment', 'created_at', 'image', 'gif')->where('room_id', $room_id[1])->orderBy('id', 'DESC')->take(100)->paginate(10);
 
         return view('room.room', [
             'posts' => $posts
@@ -74,6 +74,26 @@ class RoomController extends Controller {
         $post->screen_name = $screen_name;
         $post->room_id = $room_id[1];
         $post->image = base64_encode(file_get_contents($request->image));
+        $post->save();
+
+        return redirect('/room/' . $room_id[1]);
+    }
+
+    public function gif(Request $request) {
+        $room_id = explode('/', $request->room_id);
+
+        $user_id = isset(Auth::user()->user_id) ? Auth::user()->user_id : 'anonymous';
+        $screen_name = isset(Auth::user()->screen_name) ? Auth::user()->screen_name : 'Anonymous';
+
+        if(!isset($request->gif)) {
+            return redirect('/room/' . $room_id[1]);
+        }
+
+        $post = new Post();
+        $post->user_id = $user_id;
+        $post->screen_name = $screen_name;
+        $post->room_id = $room_id[1];
+        $post->gif = $request->gif;
         $post->save();
 
         return redirect('/room/' . $room_id[1]);
