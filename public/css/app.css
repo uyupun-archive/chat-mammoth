@@ -9123,10 +9123,6 @@ button.close {
   padding: 0 5px;
 }
 
-.mp-Nav_Area .mp-Nav_Link {
-  z-index: -1;
-}
-
 .mp-Chatroom {
   border: solid 1px #999;
   border-radius: 4px;
