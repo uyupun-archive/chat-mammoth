@@ -18,7 +18,7 @@
                             @if(isset($post->comment))
                                 <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                             @elseif(isset($post->image))
-                                <img src="data:image/png;base64,{{ $post->image }}" alt="">
+                                <img class="rp-Image" src="data:image/png;base64,{{ $post->image }}" alt="">
                             @endif
                         </div>
                     </div>

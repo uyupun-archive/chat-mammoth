@@ -8939,6 +8939,13 @@ button.close {
   color: #999;
 }
 
+.rp-List .rp-Message .rp-Image {
+  width: 200px;
+  height: 200px;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
 .rp-NotComment {
   text-align: center;
   margin-top: 100px;
