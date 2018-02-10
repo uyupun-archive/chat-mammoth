@@ -1,6 +1,6 @@
 <template>
     <div>
-        <canvas id="canvas" class="canvas" width="700" height="100"></canvas>
+        <canvas id="canvas" class="canvas"></canvas>
         <div>
             <button type="button" @click="clearCanvas()" class="st-Button rp-Button" :disabled="state">やり直す</button>
             <input type="hidden" :value="image" name="draw">
@@ -15,6 +15,7 @@
             return {
                 myStorage: localStorage,
                 canvas: {},
+                container: {},
                 ctx: {},
                 moveflg: 0,
                 Xpoint: 0,
@@ -102,7 +103,11 @@
         mounted() {
             this.initLocalStorage()
             this.canvas = document.getElementById('canvas')
+            this.container = document.getElementById('canvasWrapper')
             this.ctx = this.canvas.getContext('2d')
+
+            this.canvas.width = 700
+            this.canvas.height = 100
 
             // PC
             this.canvas.addEventListener('mousedown', this.startPoint, false)
@@ -122,6 +127,5 @@
         position: relative;
         border-radius: 5px;
         background: #fff;
-        width: 700px;
     }
 </style>

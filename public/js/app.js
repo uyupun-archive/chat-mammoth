@@ -44797,7 +44797,7 @@ exports = module.exports = __webpack_require__(62)(false);
 
 
 // module
-exports.push([module.i, "\n.canvas[data-v-b99f06ee] {\n  position: relative;\n  border-radius: 5px;\n  background: #fff;\n  width: 700px;\n}\n", ""]);
+exports.push([module.i, "\n.canvas[data-v-b99f06ee] {\n  position: relative;\n  border-radius: 5px;\n  background: #fff;\n}\n", ""]);
 
 // exports
 
@@ -45161,6 +45161,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             myStorage: localStorage,
             canvas: {},
+            container: {},
             ctx: {},
             moveflg: 0,
             Xpoint: 0,
@@ -45251,7 +45252,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     mounted: function mounted() {
         this.initLocalStorage();
         this.canvas = document.getElementById('canvas');
+        this.container = document.getElementById('canvasWrapper');
         this.ctx = this.canvas.getContext('2d');
+
+        this.canvas.width = 700;
+        this.canvas.height = 100;
 
         // PC
         this.canvas.addEventListener('mousedown', this.startPoint, false);
@@ -45274,10 +45279,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("canvas", {
-      staticClass: "canvas",
-      attrs: { id: "canvas", width: "700", height: "100" }
-    }),
+    _c("canvas", { staticClass: "canvas", attrs: { id: "canvas" } }),
     _vm._v(" "),
     _c("div", [
       _c(
