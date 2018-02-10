@@ -44146,6 +44146,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -44201,10 +44202,16 @@ var render = function() {
                 _c(
                   "button",
                   {
-                    staticClass: "btn",
+                    staticClass: "btn st-Tooltip_Button",
                     attrs: { "data-clipboard-target": "#copy" + index + "mp" }
                   },
-                  [_c("i", { staticClass: "fas fa-clipboard" })]
+                  [
+                    _c("span", { staticClass: "st-Tooltip" }, [
+                      _vm._v("コピー")
+                    ]),
+                    _vm._v(" "),
+                    _c("i", { staticClass: "fas fa-clipboard" })
+                  ]
                 ),
                 _vm._v(" "),
                 room.publish === "private"
