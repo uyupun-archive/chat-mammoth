@@ -184,7 +184,6 @@
         }
       }
     }
-
   }
 }
 
@@ -200,5 +199,11 @@
   .rp-Post_Container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .rp-Nav_Text {
+    display: none;
   }
 }
