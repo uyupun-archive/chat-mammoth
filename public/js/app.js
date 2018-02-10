@@ -43293,6 +43293,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -43990,10 +43991,14 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn tp-Copy",
+                staticClass: "btn tp-Copy_Button st-Tooltip_Button",
                 attrs: { "data-clipboard-target": "#copy" + index + "nr" }
               },
-              [_c("i", { staticClass: "fas fa-clipboard" })]
+              [
+                _c("span", { staticClass: "st-Tooltip" }, [_vm._v("コピー")]),
+                _vm._v(" "),
+                _c("i", { staticClass: "fas fa-clipboard" })
+              ]
             ),
             _vm._v(" "),
             _c("i", {
@@ -44003,13 +44008,9 @@ var render = function() {
                   _vm.postFavorite(room.room_id)
                 }
               }
-<<<<<<< HEAD
             }),
             _vm._v(" "),
             _c("span", [_vm._v(_vm._s(room.favorite))])
-=======
-            })
->>>>>>> 7d5be37ae625d160c1e46f0732fa46a1cd26de94
           ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),

@@ -8403,6 +8403,46 @@ button.close {
   border-radius: 3px;
 }
 
+.st-Tooltip_Button {
+  display: inline-block;
+}
+
+.st-Tooltip_Button .st-Tooltip {
+  display: none;
+}
+
+.st-Tooltip_Button:hover {
+  position: relative;
+  color: #333;
+}
+
+.st-Tooltip_Button:hover .st-Tooltip {
+  display: block;
+  position: absolute;
+  top: -100%;
+  left: -20%;
+  font-size: 90%;
+  color: #fff;
+  background-color: #323232;
+  padding: 5px;
+  border-radius: 3px;
+  z-index: 101;
+}
+
+.st-Tooltip_Button .st-Tooltip:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: 85%;
+  left: 23%;
+  border: 13px transparent solid;
+  border-bottom-width: 0;
+  border-top-color: #323232;
+  z-index: 100;
+}
+
 .h-Header {
   height: 60px;
   width: 100vw;
@@ -8686,13 +8726,18 @@ button.close {
   border: none;
 }
 
-.tp-Chatroom_Container .tp-Copy {
+.tp-Chatroom_Container .tp-Copy_Button {
   background-color: #fff;
 }
 
-.tp-Chatroom_Container .tp-Copy:active {
+.tp-Chatroom_Container .btn:active {
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.tp-Chatroom_Container .btn:focus {
+  outline: none;
+  outline-offset: 0;
 }
 
 @media screen and (max-width: 1200px) {
