@@ -21,13 +21,9 @@
                                 <img class="rp-Image" src="data:image/png;base64,{{ $post->image }}" alt="">
                                 <a class="rp-Image_Link" href="data:image/png;base64,{{ $post->image }}" download="download.png">ダウンロード</a>
                             @elseif(isset($post->gif))
-<<<<<<< HEAD
-                                <img src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
+                                <img class="rp-Gif" src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
                             @elseif(isset($post->draw))
                                 <img class="rp-Image" src="{{ $post->draw }}" alt="">
-=======
-                                <img class="rp-Gif" src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
->>>>>>> 0e43ebb22a0271b5b9f3bd3c79ca9eafbeb34b98
                             @endif
                         </div>
                     </div>
@@ -101,10 +97,7 @@
                                                     <div id="app">
                                                         <hand-write></hand-write>
                                                     </div>
-                                                    <div class="rp-Form_Other d-flex">
-                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
-                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
-                                                    </div>
+                                                    <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                 </form>
                                             </div>
                                         </div>

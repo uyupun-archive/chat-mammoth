@@ -5,8 +5,8 @@
             <button type="button" @click="clearCanvas()">リセット</button>
             <button type="button" @click="prevCanvas()">戻る</button>
             <button type="button" @click="nextCanvas()">進む</button>
-            <button type="button" @click="chgImg()" value="1">画像変換</button>
             <input type="hidden" :value="image" name="draw">
+            <button type="submit" class="st-Button rp-Button">投稿する</button>
         </div>
         <div id="img-box"><img id="newImg"></div>
     </div>
@@ -64,20 +64,18 @@
                 }
                 this.moveflg = 0
                 this.setLocalStoreage()
+
+                this.image = this.canvas.toDataURL()
             },
             clearCanvas() {
-                if(confirm('Canvasを初期化しますか？')) {
-                    this.initLocalStorage()
-                    this.temp = []
-                    this.resetCanvas()
-                }
+                this.initLocalStorage()
+                this.temp = []
+                this.resetCanvas()
+
+                this.image = this.canvas.toDataURL()
             },
             resetCanvas() {
                 this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight)
-            },
-            chgImg() {
-                document.getElementById('newImg').src = this.canvas.toDataURL()
-                this.image = this.canvas.toDataURL()
             },
             initLocalStorage() {
                 this.myStorage.setItem('__log', JSON.stringify([]))
@@ -106,7 +104,6 @@
                         this.resetCanvas();
 
                         this.draw(logs[0]['png'])
-
                     }, 0);
                 }
             },
@@ -121,7 +118,6 @@
                         this.resetCanvas()
 
                         this.draw(logs[0]['png'])
-
                     }, 0);
                 }
             },

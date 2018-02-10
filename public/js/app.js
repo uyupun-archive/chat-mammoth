@@ -45209,20 +45209,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
             this.moveflg = 0;
             this.setLocalStoreage();
+
+            this.image = this.canvas.toDataURL();
         },
         clearCanvas: function clearCanvas() {
-            if (confirm('Canvasを初期化しますか？')) {
-                this.initLocalStorage();
-                this.temp = [];
-                this.resetCanvas();
-            }
+            this.initLocalStorage();
+            this.temp = [];
+            this.resetCanvas();
+
+            this.image = this.canvas.toDataURL();
         },
         resetCanvas: function resetCanvas() {
             this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight);
-        },
-        chgImg: function chgImg() {
-            document.getElementById('newImg').src = this.canvas.toDataURL();
-            this.image = this.canvas.toDataURL();
         },
         initLocalStorage: function initLocalStorage() {
             this.myStorage.setItem('__log', JSON.stringify([]));
@@ -45356,23 +45354,16 @@ var render = function() {
         [_vm._v("進む")]
       ),
       _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button", value: "1" },
-          on: {
-            click: function($event) {
-              _vm.chgImg()
-            }
-          }
-        },
-        [_vm._v("画像変換")]
-      ),
-      _vm._v(" "),
       _c("input", {
         attrs: { type: "hidden", name: "draw" },
         domProps: { value: _vm.image }
-      })
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "st-Button rp-Button", attrs: { type: "submit" } },
+        [_vm._v("投稿する")]
+      )
     ]),
     _vm._v(" "),
     _vm._m(0)
