@@ -8946,6 +8946,12 @@ button.close {
      object-fit: scale-down;
 }
 
+.rp-List .rp-Message .rp-Image_Link {
+  display: block;
+  text-decoration: none;
+  margin: 10px 80% 0 10%;
+}
+
 .rp-List .rp-Message .rp-Gif {
   width: 300px;
   height: 300px;
