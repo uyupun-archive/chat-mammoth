@@ -69,7 +69,7 @@
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
                                                     <div class="rp-Gif_Wrapper">
-                                                        <img src="{{ url('/gif/child_01.gif') }}" width="70" alt="">
+                                                        <img src="{{ url('/gif/child_01.gif') }}" alt="" class="rp-Gif">
                                                     </div>
                                                     <div class="rp-Form_Other d-flex">
                                                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">

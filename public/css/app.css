@@ -9011,6 +9011,10 @@ button.close {
   }
 }
 
+.rp-Gif {
+  width: 120px;
+}
+
 .rp-Gif_Wrapper {
   padding: 20px;
   height: 150px;
