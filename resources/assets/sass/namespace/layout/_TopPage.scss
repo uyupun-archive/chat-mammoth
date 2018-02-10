@@ -1,25 +1,56 @@
-.tp-Catchphrase {
-  width: 100vw;
-  line-height: 450px;
-  font-size: 80px;
-  text-align: center;
-  background-color: $red;
-  color: $black;
-  margin-top: 60px;
-  &_Animation {
-    overflow: hidden;
+.tp-Catchphrase_Area {
+  position: relative;
+  height: 500px;
+  .tp-Catchphrase {
+    width: 100vw;
+    height: 500px;
+    position: absolute;
+    background-color: $red;
+    color: $black;
+    margin-top: 60px;
     animation-name: catchphrase;
     animation-fill-mode: forwards;
     animation-duration: 1s;
     animation-timing-function: linear;
   }
-  @keyframes catchphrase {
-    from {
-      transform: translate(-101%, 0);
-    }
-    to {
-      transform: translate(0, 0);
-    }
+  .tp-Catchphrase_Text {
+    width: 640px;
+    font-size: 80px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    overflow: hidden;
+    animation-name: catchphrase-text;
+    animation-fill-mode: forwards;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes catchphrase {
+  from {
+    transform: translate(-101%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes catchphrase-text {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotateX( 88deg ) ;
+  }
+  65% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-50%) rotateX( 88deg ) ;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%) rotateX( 0deg ) ;
   }
 }
 
@@ -31,16 +62,16 @@
   &_img {
     position: absolute;
     top: -100px;
-    left: 42%;
+    left: 50%;
     width: 200px;
     height: auto;
     transition: .5s ;
-    transform: rotateZ(0deg);
+    transform: translateX(-50%) rotateZ(0deg);
   }
 }
 
 .tp-Rotation_img:hover {
-  transform: rotateZ(360deg);
+  transform: translateX(-50%) rotateZ(360deg);
 }
 
 .tp-Container {
@@ -103,9 +134,16 @@
 }
 
 @media screen and (max-width: 800px) {
-  .tp-Catchphrase {
-    line-height: 300px;
-    font-size: 50px;
+  .tp-Catchphrase_Area {
+    height: 350px;
+    .tp-Catchphrase {
+      height: 350px;
+    }
+    .tp-Catchphrase_Text {
+      top: 56%;
+      width: 400px;
+      font-size: 50px;
+    }
   }
   .tp-Rotation {
     height: 100px;
@@ -118,15 +156,21 @@
 }
 
 @media screen and (max-width: 450px) {
-  .tp-Catchphrase {
-    line-height: 200px;
-    font-size: 30px;
+  .tp-Catchphrase_Area {
+    height: 250px;
+    .tp-Catchphrase {
+      height: 250px;
+    }
+    .tp-Catchphrase_Text {
+      top: 63%;
+      width: 240px;
+      font-size: 30px;
+    }
   }
   .tp-Rotation {
     height: 75px;
     &_img {
       top: -50px;
-      left: 38%;
       width: 100px;
       height: auto;
     }
