@@ -2,11 +2,9 @@
     <div>
         <canvas id="canvas" class="canvas" width="700" height="100"></canvas>
         <div style="padding:10px">
-            <button type="button" @click="clearCanvas()">リセット</button>
-            <button type="button" @click="prevCanvas()">戻る</button>
-            <button type="button" @click="nextCanvas()">進む</button>
+            <button type="button" @click="clearCanvas()" class="st-Button rp-Button">やり直す</button>
             <input type="hidden" :value="image" name="draw">
-            <button type="submit" class="st-Button rp-Button">投稿する</button>
+            <button type="submit" class="st-Button rp-Button" :disabled="state">投稿する</button>
         </div>
         <div id="img-box"><img id="newImg"></div>
     </div>
@@ -23,10 +21,11 @@
                 Xpoint: 0,
                 Ypoint: 0,
                 defSize: 1,
-                defColor: '#555',
+                defColor: '#323232',
                 currentCanvas: 0,
                 temp: '',
-                image: {}
+                image: {},
+                state: true
             }
         },
         methods: {
@@ -66,16 +65,15 @@
                 this.setLocalStoreage()
 
                 this.image = this.canvas.toDataURL()
+                this.state= false
             },
             clearCanvas() {
                 this.initLocalStorage()
                 this.temp = []
-                this.resetCanvas()
+                this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight)
 
                 this.image = this.canvas.toDataURL()
-            },
-            resetCanvas() {
-                this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight)
+                this.state = true
             },
             initLocalStorage() {
                 this.myStorage.setItem('__log', JSON.stringify([]))
@@ -92,34 +90,6 @@
                     this.currentCanvas = 0
                     this.temp = []
                 }, 0)
-            },
-            prevCanvas() {
-                let logs = JSON.parse(this.myStorage.getItem('__log'))
-
-                if(logs.length > 0) {
-                    this.temp.unshift(logs.shift())
-
-                    setTimeout(() => {
-                        this.myStorage.setItem('__log', JSON.stringify(logs))
-                        this.resetCanvas();
-
-                        this.draw(logs[0]['png'])
-                    }, 0);
-                }
-            },
-            nextCanvas() {
-                let logs = JSON.parse(this.myStorage.getItem('__log'))
-
-                if(this.temp.length > 0) {
-                    logs.unshift(this.temp.shift())
-
-                    setTimeout(() => {
-                        this.myStorage.setItem('__log', JSON.stringify(logs))
-                        this.resetCanvas()
-
-                        this.draw(logs[0]['png'])
-                    }, 0);
-                }
             },
             draw(src) {
                 let img = new Image()

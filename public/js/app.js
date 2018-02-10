@@ -45156,8 +45156,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -45169,10 +45167,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             Xpoint: 0,
             Ypoint: 0,
             defSize: 1,
-            defColor: '#555',
+            defColor: '#323232',
             currentCanvas: 0,
             temp: '',
-            image: {}
+            image: {},
+            state: true
         };
     },
 
@@ -45211,16 +45210,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.setLocalStoreage();
 
             this.image = this.canvas.toDataURL();
+            this.state = false;
         },
         clearCanvas: function clearCanvas() {
             this.initLocalStorage();
             this.temp = [];
-            this.resetCanvas();
+            this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight);
 
             this.image = this.canvas.toDataURL();
-        },
-        resetCanvas: function resetCanvas() {
-            this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight);
+            this.state = true;
         },
         initLocalStorage: function initLocalStorage() {
             this.myStorage.setItem('__log', JSON.stringify([]));
@@ -45240,46 +45238,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.temp = [];
             }, 0);
         },
-        prevCanvas: function prevCanvas() {
-            var _this2 = this;
-
-            var logs = JSON.parse(this.myStorage.getItem('__log'));
-
-            if (logs.length > 0) {
-                this.temp.unshift(logs.shift());
-
-                setTimeout(function () {
-                    _this2.myStorage.setItem('__log', JSON.stringify(logs));
-                    _this2.resetCanvas();
-
-                    _this2.draw(logs[0]['png']);
-                }, 0);
-            }
-        },
-        nextCanvas: function nextCanvas() {
-            var _this3 = this;
-
-            var logs = JSON.parse(this.myStorage.getItem('__log'));
-
-            if (this.temp.length > 0) {
-                logs.unshift(this.temp.shift());
-
-                setTimeout(function () {
-                    _this3.myStorage.setItem('__log', JSON.stringify(logs));
-                    _this3.resetCanvas();
-
-                    _this3.draw(logs[0]['png']);
-                }, 0);
-            }
-        },
         draw: function draw(src) {
-            var _this4 = this;
+            var _this2 = this;
 
             var img = new Image();
             img.src = src;
 
             img.onload = function () {
-                _this4.ctx.drawImage(img, 0, 0);
+                _this2.ctx.drawImage(img, 0, 0);
             };
         }
     },
@@ -45318,6 +45284,7 @@ var render = function() {
       _c(
         "button",
         {
+          staticClass: "st-Button rp-Button",
           attrs: { type: "button" },
           on: {
             click: function($event) {
@@ -45325,33 +45292,7 @@ var render = function() {
             }
           }
         },
-        [_vm._v("リセット")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button" },
-          on: {
-            click: function($event) {
-              _vm.prevCanvas()
-            }
-          }
-        },
-        [_vm._v("戻る")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button" },
-          on: {
-            click: function($event) {
-              _vm.nextCanvas()
-            }
-          }
-        },
-        [_vm._v("進む")]
+        [_vm._v("やり直す")]
       ),
       _vm._v(" "),
       _c("input", {
@@ -45361,7 +45302,10 @@ var render = function() {
       _vm._v(" "),
       _c(
         "button",
-        { staticClass: "st-Button rp-Button", attrs: { type: "submit" } },
+        {
+          staticClass: "st-Button rp-Button",
+          attrs: { type: "submit", disabled: _vm.state }
+        },
         [_vm._v("投稿する")]
       )
     ]),
