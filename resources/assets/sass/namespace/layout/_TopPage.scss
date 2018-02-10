@@ -6,6 +6,21 @@
   background-color: $red;
   color: $black;
   margin-top: 60px;
+  &_Animation {
+    overflow: hidden;
+    animation-name: catchphrase;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+  @keyframes catchphrase {
+    from {
+      transform: translate(-101%, 0);
+    }
+    to {
+      transform: translate(0, 0);
+    }
+  }
 }
 
 .tp-Rotation {

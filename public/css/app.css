@@ -8656,6 +8656,42 @@ button.close {
   margin-top: 60px;
 }
 
+.tp-Catchphrase_Animation {
+  overflow: hidden;
+  -webkit-animation-name: catchphrase;
+          animation-name: catchphrase;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes catchphrase {
+  from {
+    -webkit-transform: translate(-101%, 0);
+            transform: translate(-101%, 0);
+  }
+
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes catchphrase {
+  from {
+    -webkit-transform: translate(-101%, 0);
+            transform: translate(-101%, 0);
+  }
+
+  to {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
 .tp-Rotation {
   position: relative;
   width: 100%;
