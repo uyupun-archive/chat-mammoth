@@ -67,11 +67,15 @@
     padding: 0;
     border: none;
   }
-  .tp-Copy {
+  .tp-Copy_Button {
     background-color: $white;
   }
-  .tp-Copy:active {
+  .btn:active {
     box-shadow: none;
+  }
+  .btn:focus {
+    outline: none;
+    outline-offset: 0;
   }
 ;
 }
