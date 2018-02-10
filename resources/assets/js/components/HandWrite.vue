@@ -1,12 +1,11 @@
 <template>
     <div>
         <canvas id="canvas" class="canvas" width="700" height="100"></canvas>
-        <div style="padding:10px">
+        <div>
             <button type="button" @click="clearCanvas()" class="st-Button rp-Button" :disabled="state">やり直す</button>
             <input type="hidden" :value="image" name="draw">
             <button type="submit" class="st-Button rp-Button" :disabled="state">投稿する</button>
         </div>
-        <div id="img-box"><img id="newImg"></div>
     </div>
 </template>
 
@@ -39,7 +38,7 @@
                 this.ctx.moveTo(this.Xpoint, this.Ypoint)
             },
             movePoint(e) {
-                if(e.buttons === 1 || e.witch === 1 || e.type == 'touchmove') {
+                if(e.buttons === 1 || e.witch === 1) {
                     this.Xpoint = e.layerX
                     this.Ypoint = e.layerY
                     this.moveflg = 1
@@ -123,5 +122,6 @@
         position: relative;
         border-radius: 5px;
         background: #fff;
+        width: 700px;
     }
 </style>

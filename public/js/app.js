@@ -44797,7 +44797,7 @@ exports = module.exports = __webpack_require__(62)(false);
 
 
 // module
-exports.push([module.i, "\n.canvas[data-v-b99f06ee] {\n  position: relative;\n  border-radius: 5px;\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "\n.canvas[data-v-b99f06ee] {\n  position: relative;\n  border-radius: 5px;\n  background: #fff;\n  width: 700px;\n}\n", ""]);
 
 // exports
 
@@ -45155,7 +45155,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -45186,7 +45185,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.ctx.moveTo(this.Xpoint, this.Ypoint);
         },
         movePoint: function movePoint(e) {
-            if (e.buttons === 1 || e.witch === 1 || e.type == 'touchmove') {
+            if (e.buttons === 1 || e.witch === 1) {
                 this.Xpoint = e.layerX;
                 this.Ypoint = e.layerY;
                 this.moveflg = 1;
@@ -45280,7 +45279,7 @@ var render = function() {
       attrs: { id: "canvas", width: "700", height: "100" }
     }),
     _vm._v(" "),
-    _c("div", { staticStyle: { padding: "10px" } }, [
+    _c("div", [
       _c(
         "button",
         {
@@ -45308,21 +45307,10 @@ var render = function() {
         },
         [_vm._v("投稿する")]
       )
-    ]),
-    _vm._v(" "),
-    _vm._m(0)
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "img-box" } }, [
-      _c("img", { attrs: { id: "newImg" } })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
