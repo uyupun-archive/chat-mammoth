@@ -68,11 +68,13 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/store') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <p>工事中</p>
-                                                    {{--<div class="rp-Form_Other d-flex">--}}
-                                                        {{--<input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">--}}
-                                                        {{--<button type="submit" class="st-Button rp-Button">投稿する</button>--}}
-                                                    {{--</div>--}}
+                                                    <div class="rp-Gif_Wrapper">
+                                                        <img src="{{ url('/gif/child_01.gif') }}" alt="" class="rp-Gif">
+                                                    </div>
+                                                    <div class="rp-Form_Other d-flex">
+                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
+                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                                    </div>
                                                 </form>
                                             </div>
                                         </div>

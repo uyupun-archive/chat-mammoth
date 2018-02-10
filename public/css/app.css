@@ -9099,6 +9099,18 @@ button.close {
   }
 }
 
+.rp-Gif {
+  width: 120px;
+}
+
+.rp-Gif_Wrapper {
+  padding: 20px;
+  height: 150px;
+  background: #fff;
+  border-radius: 5px;
+  overflow: scroll;
+}
+
 @media screen and (max-width: 450px) {
   .rp-Nav_Text {
     display: none;
