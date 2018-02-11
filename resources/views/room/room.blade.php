@@ -57,9 +57,13 @@
                                     <div class="tab-pane" id="file" role="tabpanel">
                                         <div class="rp-Post_Wrapper">
                                             <div class="rp-Post_Container">
-                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/image') }}" method="POST" class="rp-Form">
+                                                <form enctype="multipart/form-data" action="{{ url('/api/comment/image') }}" method="POST" class="rp-Form_File">
                                                     {{ csrf_field() }}
-                                                    <input type="file" name="image" class="rp-File mr-auto" required>
+                                                    <label class="rp-File_Area" for="file-area">
+                                                        <i class="fas fa-cloud-upload-alt fa-4x rp-Cloud_Upload"></i>
+                                                        <p class="rp-File_Text">画像を選択</p>
+                                                        <input type="file" name="image" class="rp-File_Input mr-auto" required id="file-area">
+                                                    </label>
                                                     <div class="rp-Form_Other d-flex">
                                                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                         <button type="submit" class="st-Button rp-Button">投稿する</button>
