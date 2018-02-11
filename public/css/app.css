@@ -9053,6 +9053,24 @@ button.close {
   text-align: center;
 }
 
+.rp-pagination .pagination a {
+  color: #EC605B;
+}
+
+.rp-pagination .pagination a:hover {
+  color: #EC605B;
+}
+
+.rp-pagination .pagination .disabled span {
+  color: #323232;
+}
+
+.rp-pagination .pagination .active span {
+  color: #fff;
+  background-color: #EC605B;
+  border-color: #EC605B;
+}
+
 .rp-Accordion {
   width: 100%;
   position: fixed;
