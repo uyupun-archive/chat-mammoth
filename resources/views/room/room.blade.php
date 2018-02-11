@@ -15,7 +15,9 @@
                                 @endif
                                 <span class="rp-Message_Time">{{ str_replace('-', '/', $post->created_at) }}</span>
                             </div>
-                            @if(isset($post->comment))
+                            @if($post->markdown)
+                                {!! $post->comment !!}
+                            @elseif(isset($post->comment))
                                 <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                             @elseif(isset($post->image))
                                 <img class="rp-Image" src="{{ $post->image }}" alt="">
