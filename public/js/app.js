@@ -45392,6 +45392,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -45428,62 +45431,71 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(_vm.rooms, function(room, index) {
-      return _vm.rooms
-        ? _c("div", [
-            _c("div", { staticClass: "mp-Chatroom" }, [
-              _c("div", { staticClass: "mp-Chatroom_Name" }, [
-                _vm._v("ルーム名: " + _vm._s(room.name))
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("span", [_vm._v("ルームID: ")]),
+    [
+      _vm._l(_vm.rooms, function(room, index) {
+        return _vm.rooms
+          ? _c("div", [
+              _c("div", { staticClass: "mp-Chatroom" }, [
+                _c("div", { staticClass: "mp-Chatroom_Name" }, [
+                  _vm._v("ルーム名: " + _vm._s(room.name))
+                ]),
                 _vm._v(" "),
-                _c("input", {
-                  attrs: { type: "text", id: "copy" + index + "mp" },
-                  domProps: { value: room.room_id }
-                }),
+                _c("div", [
+                  _c("span", [_vm._v("ルームID: ")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    attrs: { type: "text", id: "copy" + index + "mp" },
+                    domProps: { value: room.room_id }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn st-Tooltip_Button",
+                      attrs: { "data-clipboard-target": "#copy" + index + "mp" }
+                    },
+                    [
+                      _c("span", { staticClass: "st-Tooltip" }, [
+                        _vm._v("Coyp")
+                      ]),
+                      _vm._v(" "),
+                      _c("i", { staticClass: "fas fa-clipboard" })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  room.publish === "private"
+                    ? _c("i", { staticClass: "fas fa-unlock-alt" })
+                    : _vm._e()
+                ]),
                 _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn st-Tooltip_Button",
-                    attrs: { "data-clipboard-target": "#copy" + index + "mp" }
-                  },
-                  [
-                    _c("span", { staticClass: "st-Tooltip" }, [_vm._v("Coyp")]),
-                    _vm._v(" "),
-                    _c("i", { staticClass: "fas fa-clipboard" })
-                  ]
-                ),
+                _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
                 _vm._v(" "),
-                room.publish === "private"
-                  ? _c("i", { staticClass: "fas fa-unlock-alt" })
-                  : _vm._e()
-              ]),
-              _vm._v(" "),
-              _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
-              _vm._v(" "),
-              _vm._m(0, true),
-              _vm._v(" "),
-              _c("div", { staticClass: "mp-Chatroom_Description" }, [
-                _c("p", [_vm._v(_vm._s(room.description))])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "mp-Chatroom_LinkBox" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "tp-Chatroom_Link",
-                    attrs: { href: "/room/" + room.room_id }
-                  },
-                  [_vm._v("チャットルームへ")]
-                )
+                _vm._m(0, true),
+                _vm._v(" "),
+                _c("div", { staticClass: "mp-Chatroom_Description" }, [
+                  _c("p", [_vm._v(_vm._s(room.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "mp-Chatroom_LinkBox" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "tp-Chatroom_Link",
+                      attrs: { href: "/room/" + room.room_id }
+                    },
+                    [_vm._v("チャットルームへ")]
+                  )
+                ])
               ])
             ])
-          ])
+          : _vm._e()
+      }),
+      _vm._v(" "),
+      _vm.rooms.length <= 0
+        ? _c("div", [_c("p", [_vm._v("ルームはまだ作成されていません。")])])
         : _vm._e()
-    })
+    ],
+    2
   )
 }
 var staticRenderFns = [
@@ -45597,6 +45609,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
 
 
 
@@ -45633,62 +45648,71 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(_vm.rooms, function(room, index) {
-      return _vm.rooms
-        ? _c("div", [
-            _c("div", { staticClass: "mp-Chatroom" }, [
-              _c("div", { staticClass: "mp-Chatroom_Name" }, [
-                _vm._v("ルーム名: " + _vm._s(room.name))
-              ]),
-              _vm._v(" "),
-              _c("div", [
-                _c("span", [_vm._v("ルームID: ")]),
+    [
+      _vm._l(_vm.rooms, function(room, index) {
+        return _vm.rooms
+          ? _c("div", [
+              _c("div", { staticClass: "mp-Chatroom" }, [
+                _c("div", { staticClass: "mp-Chatroom_Name" }, [
+                  _vm._v("ルーム名: " + _vm._s(room.name))
+                ]),
                 _vm._v(" "),
-                _c("input", {
-                  attrs: { type: "text", id: "copy" + index + "mp" },
-                  domProps: { value: room.room_id }
-                }),
+                _c("div", [
+                  _c("span", [_vm._v("ルームID: ")]),
+                  _vm._v(" "),
+                  _c("input", {
+                    attrs: { type: "text", id: "copy" + index + "mp" },
+                    domProps: { value: room.room_id }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn st-Tooltip_Button",
+                      attrs: { "data-clipboard-target": "#copy" + index + "mp" }
+                    },
+                    [
+                      _c("span", { staticClass: "st-Tooltip" }, [
+                        _vm._v("Coyp")
+                      ]),
+                      _vm._v(" "),
+                      _c("i", { staticClass: "fas fa-clipboard" })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  room.publish === "private"
+                    ? _c("i", { staticClass: "fas fa-unlock-alt" })
+                    : _vm._e()
+                ]),
                 _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn st-Tooltip_Button",
-                    attrs: { "data-clipboard-target": "#copy" + index + "mp" }
-                  },
-                  [
-                    _c("span", { staticClass: "st-Tooltip" }, [_vm._v("Coyp")]),
-                    _vm._v(" "),
-                    _c("i", { staticClass: "fas fa-clipboard" })
-                  ]
-                ),
+                _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
                 _vm._v(" "),
-                room.publish === "private"
-                  ? _c("i", { staticClass: "fas fa-unlock-alt" })
-                  : _vm._e()
-              ]),
-              _vm._v(" "),
-              _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
-              _vm._v(" "),
-              _vm._m(0, true),
-              _vm._v(" "),
-              _c("div", { staticClass: "mp-Chatroom_Description" }, [
-                _c("p", [_vm._v(_vm._s(room.description))])
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "mp-Chatroom_LinkBox" }, [
-                _c(
-                  "a",
-                  {
-                    staticClass: "tp-Chatroom_Link",
-                    attrs: { href: "/room/" + room.room_id }
-                  },
-                  [_vm._v("チャットルームへ")]
-                )
+                _vm._m(0, true),
+                _vm._v(" "),
+                _c("div", { staticClass: "mp-Chatroom_Description" }, [
+                  _c("p", [_vm._v(_vm._s(room.description))])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "mp-Chatroom_LinkBox" }, [
+                  _c(
+                    "a",
+                    {
+                      staticClass: "tp-Chatroom_Link",
+                      attrs: { href: "/room/" + room.room_id }
+                    },
+                    [_vm._v("チャットルームへ")]
+                  )
+                ])
               ])
             ])
-          ])
+          : _vm._e()
+      }),
+      _vm._v(" "),
+      _vm.rooms.length <= 0
+        ? _c("div", [_c("p", [_vm._v("お気に入りのルームはまだありません。")])])
         : _vm._e()
-    })
+    ],
+    2
   )
 }
 var staticRenderFns = [

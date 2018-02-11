@@ -26,6 +26,9 @@
                 </div>
             </div>
         </div>
+        <div v-if="rooms.length <= 0">
+            <p>ルームはまだ作成されていません。</p>
+        </div>
     </div>
 </template>
 

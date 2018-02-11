@@ -26,6 +26,9 @@
                 </div>
             </div>
         </div>
+        <div v-if="rooms.length <= 0">
+            <p>お気に入りのルームはまだありません。</p>
+        </div>
     </div>
 </template>
 
