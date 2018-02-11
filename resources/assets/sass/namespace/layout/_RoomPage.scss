@@ -166,24 +166,19 @@
       .rp-TextArea:focus {
         outline: 0;
       }
-      .rp-Form_Other {
-        margin-top: 15px;
-        .rp-file {
-
-        }
-        .rp-CheckBox {
-          margin: 0;
-        }
-        .rp-CheckBox_Text {
-          margin: 0 25px 0 5px;
-        }
-      }
     }
   }
 }
 
 .rp-Form_Other {
+  margin-top: 15px;
   text-align: right;
+  .rp-CheckBox {
+    margin: 0;
+  }
+  .rp-CheckBox_Text {
+    margin: 0 25px 0 5px;
+  }
 }
 
 .rp-Button {
@@ -193,6 +188,28 @@
 
 .rp-Button:focus {
   outline: none;
+}
+
+.rp-Form_File {
+  .rp-File_Area {
+    width: 100%;
+    //border: solid 1px $white;
+    //border-radius: 5px;
+    text-align: center;
+    .rp-Cloud_Upload {
+      color: $white;
+    }
+    .rp-File_Text {
+      color: $white;
+      margin-bottom: 0;
+    }
+    .rp-File_Input {
+      display: none;
+    }
+  }
+  .rp-Form_Other {
+    margin-top: 10px;
+  }
 }
 
 .rp-Gif_Label {

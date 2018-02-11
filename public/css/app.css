@@ -9162,20 +9162,17 @@ button.close {
   outline: 0;
 }
 
-.rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other {
+.rp-Form_Other {
   margin-top: 15px;
+  text-align: right;
 }
 
-.rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other .rp-CheckBox {
+.rp-Form_Other .rp-CheckBox {
   margin: 0;
 }
 
-.rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other .rp-CheckBox_Text {
+.rp-Form_Other .rp-CheckBox_Text {
   margin: 0 25px 0 5px;
-}
-
-.rp-Form_Other {
-  text-align: right;
 }
 
 .rp-Button {
@@ -9185,6 +9182,28 @@ button.close {
 
 .rp-Button:focus {
   outline: none;
+}
+
+.rp-Form_File .rp-File_Area {
+  width: 100%;
+  text-align: center;
+}
+
+.rp-Form_File .rp-File_Area .rp-Cloud_Upload {
+  color: #fff;
+}
+
+.rp-Form_File .rp-File_Area .rp-File_Text {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.rp-Form_File .rp-File_Area .rp-File_Input {
+  display: none;
+}
+
+.rp-Form_File .rp-Form_Other {
+  margin-top: 10px;
 }
 
 .rp-Gif_Label .rp-Gif_Select {
