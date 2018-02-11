@@ -44795,7 +44795,7 @@ exports = module.exports = __webpack_require__(62)(false);
 
 
 // module
-exports.push([module.i, "\n.canvas[data-v-b99f06ee] {\n  position: relative;\n  border-radius: 5px;\n  background: #fff;\n}\n", ""]);
+exports.push([module.i, "", ""]);
 
 // exports
 

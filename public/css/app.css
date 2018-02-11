@@ -9180,6 +9180,12 @@ button.close {
   outline: 0;
 }
 
+.rp-Post_Wrapper .rp-Post_Container .canvas {
+  position: relative;
+  border-radius: 5px;
+  background: #fff;
+}
+
 .rp-Form_Other {
   margin-top: 15px;
   text-align: right;
