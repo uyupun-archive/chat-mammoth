@@ -45292,7 +45292,7 @@ var render = function() {
   return _c("div", [
     _c("canvas", { staticClass: "canvas", attrs: { id: "canvas" } }),
     _vm._v(" "),
-    _c("div", [
+    _c("div", { staticClass: "rp-Form_Other" }, [
       _c(
         "button",
         {
