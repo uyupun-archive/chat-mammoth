@@ -1,7 +1,7 @@
 <template>
     <div>
         <canvas id="canvas" class="canvas"></canvas>
-        <div>
+        <div class="rp-Form_Other">
             <button type="button" @click="clearCanvas()" class="st-Button rp-Button" :disabled="state">やり直す</button>
             <input type="hidden" :value="image" name="draw">
             <button type="submit" class="st-Button rp-Button" :disabled="state">投稿する</button>
