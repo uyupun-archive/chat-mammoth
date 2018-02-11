@@ -9038,7 +9038,7 @@ button.close {
 
 .rp-List .rp-Message .rp-Gif {
   width: 300px;
-  height: 300px;
+  height: 200px;
   -o-object-fit: scale-down;
      object-fit: scale-down;
 }
