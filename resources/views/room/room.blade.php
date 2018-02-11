@@ -75,7 +75,11 @@
                                                     <div class="rp-Gif_Wrapper">
                                                         @for($i = 0; $i < 20; $i++)
                                                             <label class="rp-Gif_Label" for="gif{{ $i }}">
-                                                                <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
+                                                                @if ($i === 0)
+                                                                    <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}" checked>
+                                                                @else
+                                                                    <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
+                                                                @endif
                                                                 <img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif_Select">
                                                             </label>
                                                         @endfor
