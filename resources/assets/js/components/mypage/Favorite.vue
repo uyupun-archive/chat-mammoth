@@ -41,7 +41,7 @@
         },
         methods: {
             getRooms() {
-                axios.get('/api/mypage/get')
+                axios.get('/api/mypage/favorite')
                     .then(response => {
                         this.rooms = response.data
                     })

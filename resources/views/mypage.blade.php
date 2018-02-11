@@ -20,24 +20,12 @@
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane active" id="create" role="tabpanel">
                         <div id="app">
-                            <my-page></my-page>
+                            <my-create></my-create>
                         </div>
                     </div>
                     <div class="tab-pane" id="favorite" role="tabpanel">
-                        <div class="mp-Chatroom">
-                            <div class="mp-Chatroom_Name">ルーム名</div>
-                            <div class="mp-Chatroom_Tag">
-                                <span class="st-Tag">タグ</span>
-                                <span class="st-Tag">タグ</span>
-                                <span class="st-Tag">タグ</span>
-                            </div>
-                            <div class="mp-Chatroom_Description">
-                                <p>hoge</p>
-                                <p>piyo</p>
-                            </div>
-                            <div class="mp-Chatroom_LinkBox">
-                                <a href="" class="mp-Chatroom_Link">チャットルームへ</a>
-                            </div>
+                        <div id="app">
+                            <my-favorite></my-favorite>
                         </div>
                     </div>
                 </div>
