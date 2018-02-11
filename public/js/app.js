@@ -43997,7 +43997,7 @@ var render = function() {
                 attrs: { "data-clipboard-target": "#copy" + index + "nr" }
               },
               [
-                _c("span", { staticClass: "st-Tooltip" }, [_vm._v("コピー")]),
+                _c("span", { staticClass: "st-Tooltip" }, [_vm._v("Copy")]),
                 _vm._v(" "),
                 _c("i", { staticClass: "fas fa-clipboard" })
               ]
@@ -44208,9 +44208,7 @@ var render = function() {
                     attrs: { "data-clipboard-target": "#copy" + index + "mp" }
                   },
                   [
-                    _c("span", { staticClass: "st-Tooltip" }, [
-                      _vm._v("コピー")
-                    ]),
+                    _c("span", { staticClass: "st-Tooltip" }, [_vm._v("Coyp")]),
                     _vm._v(" "),
                     _c("i", { staticClass: "fas fa-clipboard" })
                   ]

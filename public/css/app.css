@@ -8662,8 +8662,8 @@ button.close {
           animation-name: catchphrase;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
@@ -8681,8 +8681,8 @@ button.close {
           animation-name: catchphrase-text;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
 }
@@ -8722,7 +8722,7 @@ button.close {
             transform: translateX(-50%) translateY(-50%) rotateX(88deg);
   }
 
-  65% {
+  60% {
     opacity: 0;
     -webkit-transform: translateX(-50%) translateY(-50%) rotateX(88deg);
             transform: translateX(-50%) translateY(-50%) rotateX(88deg);
@@ -8742,7 +8742,7 @@ button.close {
             transform: translateX(-50%) translateY(-50%) rotateX(88deg);
   }
 
-  65% {
+  60% {
     opacity: 0;
     -webkit-transform: translateX(-50%) translateY(-50%) rotateX(88deg);
             transform: translateX(-50%) translateY(-50%) rotateX(88deg);
@@ -8837,6 +8837,10 @@ button.close {
 .tp-Chatroom_Container .btn:focus {
   outline: none;
   outline-offset: 0;
+}
+
+.tp-Copy_Area:focus {
+  outline: none;
 }
 
 @media screen and (max-width: 1200px) {
