@@ -45,11 +45,10 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/text') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="1000"></textarea>
-                                                    <div class="rp-Form_Other d-flex">
-                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
-                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                                    <div id="app">
+                                                        <keyboard></keyboard>
                                                     </div>
+                                                    <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                 </form>
                                             </div>
                                         </div>
@@ -80,7 +79,11 @@
                                                     <div class="rp-Gif_Wrapper">
                                                         @for($i = 0; $i < 20; $i++)
                                                             <label class="rp-Gif_Label" for="gif{{ $i }}">
-                                                                <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
+                                                                @if ($i === 0)
+                                                                    <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}" checked>
+                                                                @else
+                                                                    <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
+                                                                @endif
                                                                 <img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif_Select">
                                                             </label>
                                                         @endfor

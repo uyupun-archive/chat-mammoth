@@ -1306,6 +1306,7 @@ Vue.component('newRoom', __webpack_require__(40));
 Vue.component('myPage', __webpack_require__(50));
 Vue.component('search', __webpack_require__(53));
 Vue.component('create', __webpack_require__(56));
+Vue.component('keyboard', __webpack_require__(88));
 Vue.component('handWrite', __webpack_require__(59));
 
 var app = new Vue({
@@ -45338,6 +45339,167 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 68 */,
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */,
+/* 75 */,
+/* 76 */,
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(89)
+/* template */
+var __vue_template__ = __webpack_require__(90)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Keyboard.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-140ebcc4", Component.options)
+  } else {
+    hotAPI.reload("data-v-140ebcc4", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 89 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            state: true,
+            text: ''
+        };
+    },
+
+    methods: {
+        changeState: function changeState() {
+            this.text.length > 0 ? this.state = false : this.state = true;
+        }
+    }
+});
+
+/***/ }),
+/* 90 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("textarea", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.text,
+          expression: "text"
+        }
+      ],
+      staticClass: "rp-TextArea",
+      attrs: {
+        name: "comment",
+        placeholder: "Please write here.",
+        autofocus: "",
+        required: "",
+        minlength: "1",
+        maxlength: "1000"
+      },
+      domProps: { value: _vm.text },
+      on: {
+        keyup: function($event) {
+          _vm.changeState()
+        },
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.text = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _c("div", { staticClass: "rp-Form_Other d-flex" }, [
+      _c(
+        "button",
+        {
+          staticClass: "st-Button rp-Button",
+          attrs: { type: "submit", disabled: _vm.state }
+        },
+        [_vm._v("投稿する")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-140ebcc4", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
