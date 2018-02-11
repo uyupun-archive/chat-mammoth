@@ -36,3 +36,7 @@ Route::post('/api/user/update', 'ConfigController@update');
 Route::post('/api/favorite/post', 'FavoriteController@post');
 
 Route::view('/modal', 'modal');
+
+Route::get('/404',function(){
+    return view('404');
+});
