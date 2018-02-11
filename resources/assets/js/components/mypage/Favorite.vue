@@ -7,7 +7,7 @@
                     <span>ルームID: </span>
                     <input type="text" :value="room.room_id " :id="'copy' + index + 'mp'">
                     <button class="btn st-Tooltip_Button" :data-clipboard-target="'#copy' + index + 'mp'">
-                        <span class="st-Tooltip">Coyp</span>
+                        <span class="st-Tooltip">Copy</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
                     <i v-if="room.publish === 'private'" class="fas fa-unlock-alt"></i>
@@ -26,6 +26,9 @@
                 </div>
             </div>
         </div>
+        <div v-if="rooms.length <= 0">
+            <p>お気に入りのルームはまだありません。</p>
+        </div>
     </div>
 </template>
 
@@ -41,7 +44,7 @@
         },
         methods: {
             getRooms() {
-                axios.get('/api/mypage/get')
+                axios.get('/api/mypage/favorite')
                     .then(response => {
                         this.rooms = response.data
                     })

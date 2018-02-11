@@ -26,7 +26,7 @@ class CreateRoomsController extends Controller {
 
         $rooms->save();
 
-        return redirect('/');
+        return redirect('/mypage');
     }
 
     public function __construct() {
