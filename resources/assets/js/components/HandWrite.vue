@@ -103,11 +103,14 @@
         mounted() {
             this.initLocalStorage()
             this.canvas = document.getElementById('canvas')
-            this.container = document.getElementById('canvasWrapper')
             this.ctx = this.canvas.getContext('2d')
 
-            this.canvas.width = 700
+            this.canvas.width = document.getElementById('app').offsetWidth - (document.getElementById('app').offsetWidth / 10)
             this.canvas.height = 100
+
+            $(window).resize(() => {
+                this.canvas.width = document.getElementById('app').offsetWidth - (document.getElementById('app').offsetWidth / 10)
+            })
 
             // PC
             this.canvas.addEventListener('mousedown', this.startPoint, false)
