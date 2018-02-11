@@ -45404,7 +45404,32 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c(
+    "div",
+    _vm._l(_vm.names, function(name) {
+      return _c(
+        "label",
+        { staticClass: "rp-Gif_Label", attrs: { for: "gif" + name } },
+        [
+          _c("img", {
+            staticClass: "rp-Gif_Select",
+            attrs: { src: "/gif/" + name + ".gif", alt: "" }
+          }),
+          _vm._v(" "),
+          _c("input", {
+            staticClass: "rp-Gif_RadioButton",
+            attrs: {
+              type: "radio",
+              name: "gif",
+              required: "",
+              id: "gif" + name
+            },
+            domProps: { value: name }
+          })
+        ]
+      )
+    })
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -45426,10 +45451,19 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
-        return {};
+        return {
+            names: Array.from(new Array(19)).map(function (v, i) {
+                return i;
+            })
+        };
     }
 });
 

@@ -74,12 +74,15 @@
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/gif') }}" method="POST" class="rp-Form_Gif">
                                                     {{ csrf_field() }}
                                                     <div class="rp-Gif_Wrapper">
-                                                        @for($i = 0; $i < 20; $i++)
-                                                            <label class="rp-Gif_Label" for="gif{{ $i }}">
-                                                                <img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif_Select">
-                                                            </label>
-                                                            <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
-                                                        @endfor
+                                                        <div id="app">
+                                                            <gif></gif>
+                                                        </div>
+                                                        {{--@for($i = 0; $i < 20; $i++)--}}
+                                                            {{--<label class="rp-Gif_Label" for="gif{{ $i }}">--}}
+                                                                {{--<img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif_Select">--}}
+                                                            {{--</label>--}}
+                                                            {{--<input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">--}}
+                                                        {{--@endfor--}}
                                                     </div>
                                                     <div class="rp-Form_Other d-flex">
                                                         <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
