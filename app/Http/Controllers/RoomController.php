@@ -73,7 +73,7 @@ class RoomController extends Controller {
         $post->user_id = $user_id;
         $post->screen_name = $screen_name;
         $post->room_id = $room_id[1];
-        $post->image = base64_encode(file_get_contents($request->image));
+        $post->image = 'data:image/png;base64,' . base64_encode(file_get_contents($request->image));
         $post->save();
 
         return redirect('/room/' . $room_id[1]);
