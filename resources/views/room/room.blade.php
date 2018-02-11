@@ -45,11 +45,10 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/text') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="1000"></textarea>
-                                                    <div class="rp-Form_Other d-flex">
-                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
-                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                                    <div id="app">
+                                                        <keyboard></keyboard>
                                                     </div>
+                                                    <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                 </form>
                                             </div>
                                         </div>
