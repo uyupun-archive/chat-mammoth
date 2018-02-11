@@ -105,11 +105,19 @@
             this.canvas = document.getElementById('canvas')
             this.ctx = this.canvas.getContext('2d')
 
-            this.canvas.width = document.getElementById('app').offsetWidth - (document.getElementById('app').offsetWidth / 10)
+            if (document.getElementById('app').offsetWidth > 1200) {
+                this.canvas.width = 1200
+            } else {
+                this.canvas.width = document.getElementById('app').offsetWidth - (document.getElementById('app').offsetWidth / 10)
+            }
             this.canvas.height = 100
 
             $(window).resize(() => {
-                this.canvas.width = document.getElementById('app').offsetWidth - (document.getElementById('app').offsetWidth / 10)
+                if (document.getElementById('app').offsetWidth > 1200) {
+                    this.canvas.width = 1200
+                } else {
+                    this.canvas.width = document.getElementById('app').offsetWidth - (document.getElementById('app').offsetWidth / 10)
+                }
             })
 
             // PC
