@@ -45673,7 +45673,7 @@ var render = function() {
                     },
                     [
                       _c("span", { staticClass: "st-Tooltip" }, [
-                        _vm._v("Coyp")
+                        _vm._v("Copy")
                       ]),
                       _vm._v(" "),
                       _c("i", { staticClass: "fas fa-clipboard" })
