@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('screen_name');
             $table->string('room_id');
             $table->text('comment')->nullable();
+            $table->boolean('markdown')->default(false);
             $table->text('image')->nullable();
             $table->unsignedInteger('gif')->nullable();
             $table->text('draw')->nullable();

@@ -20,7 +20,7 @@ class RoomController extends Controller {
             return redirect('/room/' . $room_id[1] . '/auth');
         }
 
-        $posts = DB::table('posts')->select('user_id', 'screen_name', 'comment', 'created_at', 'image', 'gif', 'draw')->where('room_id', $room_id[1])->orderBy('id', 'DESC')->take(100)->paginate(10);
+        $posts = DB::table('posts')->select('user_id', 'screen_name', 'comment', 'markdown', 'created_at', 'image', 'gif', 'draw')->where('room_id', $room_id[1])->orderBy('id', 'DESC')->take(100)->paginate(10);
 
         return view('room.room', [
             'posts' => $posts
@@ -53,7 +53,14 @@ class RoomController extends Controller {
         $post->user_id = $user_id;
         $post->screen_name = $screen_name;
         $post->room_id = $room_id[1];
-        $post->comment = $request->comment;
+
+        $request->markdown === 'on' ? $post->markdown = true : $post->markdown = false;
+        if ($request->markdown === 'on') {
+            $parser = new \cebe\markdown\Markdown();
+            $post->comment = $parser->parse($request->comment);
+        } else {
+            $post->comment = $request->comment;
+        }
         $post->save();
 
         return redirect('/room/' . $room_id[1]);
