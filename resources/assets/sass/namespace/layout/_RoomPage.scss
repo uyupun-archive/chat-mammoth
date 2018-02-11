@@ -215,6 +215,10 @@
   }
 }
 
+.rp-Gif_RadioButton:checked + .rp-Gif_Select {
+  border: 3px solid $red;
+}
+
 @media screen and (max-width: 1200px) {
   .rp-Container {
     padding-left: 10px;

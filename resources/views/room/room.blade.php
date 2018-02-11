@@ -76,9 +76,9 @@
                                                     <div class="rp-Gif_Wrapper">
                                                         @for($i = 0; $i < 20; $i++)
                                                             <label class="rp-Gif_Label" for="gif{{ $i }}">
+                                                                <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
                                                                 <img src="{{ url('/gif/' . $i . '.gif') }}" alt="" class="rp-Gif_Select">
                                                             </label>
-                                                            <input class="rp-Gif_RadioButton" type="radio" name="gif" value="{{ $i }}" required id="gif{{ $i }}">
                                                         @endfor
                                                     </div>
                                                     <div class="rp-Form_Other d-flex">
