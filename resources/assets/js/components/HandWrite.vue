@@ -134,9 +134,5 @@
 </script>
 
 <style lang="scss" scoped>
-    .canvas {
-        position: relative;
-        border-radius: 5px;
-        background: #fff;
-    }
+
 </style>
