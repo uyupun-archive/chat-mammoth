@@ -45153,24 +45153,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
             myStorage: localStorage,
             canvas: {},
+            container: {},
             ctx: {},
             moveflg: 0,
             Xpoint: 0,
             Ypoint: 0,
             defSize: 1,
-            defColor: '#555',
+            defColor: '#323232',
             currentCanvas: 0,
             temp: '',
-            image: {}
+            image: {},
+            state: true
         };
     },
 
@@ -45185,7 +45184,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             this.ctx.moveTo(this.Xpoint, this.Ypoint);
         },
         movePoint: function movePoint(e) {
-            if (e.buttons === 1 || e.witch === 1 || e.type == 'touchmove') {
+            if (e.buttons === 1 || e.witch === 1) {
                 this.Xpoint = e.layerX;
                 this.Ypoint = e.layerY;
                 this.moveflg = 1;
@@ -45207,20 +45206,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
             this.moveflg = 0;
             this.setLocalStoreage();
+
+            this.image = this.canvas.toDataURL();
+            this.state = false;
         },
         clearCanvas: function clearCanvas() {
-            if (confirm('Canvasを初期化しますか？')) {
-                this.initLocalStorage();
-                this.temp = [];
-                this.resetCanvas();
-            }
-        },
-        resetCanvas: function resetCanvas() {
+            this.initLocalStorage();
+            this.temp = [];
             this.ctx.clearRect(0, 0, this.ctx.canvas.clientWidth, this.ctx.canvas.clientHeight);
-        },
-        chgImg: function chgImg() {
-            document.getElementById('newImg').src = this.canvas.toDataURL();
+
             this.image = this.canvas.toDataURL();
+            this.state = true;
         },
         initLocalStorage: function initLocalStorage() {
             this.myStorage.setItem('__log', JSON.stringify([]));
@@ -45240,53 +45236,38 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 _this.temp = [];
             }, 0);
         },
-        prevCanvas: function prevCanvas() {
-            var _this2 = this;
-
-            var logs = JSON.parse(this.myStorage.getItem('__log'));
-
-            if (logs.length > 0) {
-                this.temp.unshift(logs.shift());
-
-                setTimeout(function () {
-                    _this2.myStorage.setItem('__log', JSON.stringify(logs));
-                    _this2.resetCanvas();
-
-                    _this2.draw(logs[0]['png']);
-                }, 0);
-            }
-        },
-        nextCanvas: function nextCanvas() {
-            var _this3 = this;
-
-            var logs = JSON.parse(this.myStorage.getItem('__log'));
-
-            if (this.temp.length > 0) {
-                logs.unshift(this.temp.shift());
-
-                setTimeout(function () {
-                    _this3.myStorage.setItem('__log', JSON.stringify(logs));
-                    _this3.resetCanvas();
-
-                    _this3.draw(logs[0]['png']);
-                }, 0);
-            }
-        },
         draw: function draw(src) {
-            var _this4 = this;
+            var _this2 = this;
 
             var img = new Image();
             img.src = src;
 
             img.onload = function () {
-                _this4.ctx.drawImage(img, 0, 0);
+                _this2.ctx.drawImage(img, 0, 0);
             };
         }
     },
     mounted: function mounted() {
+        var _this3 = this;
+
         this.initLocalStorage();
         this.canvas = document.getElementById('canvas');
         this.ctx = this.canvas.getContext('2d');
+
+        if (document.getElementById('app').offsetWidth > 1200) {
+            this.canvas.width = 1200;
+        } else {
+            this.canvas.width = document.getElementById('app').offsetWidth - document.getElementById('app').offsetWidth / 10;
+        }
+        this.canvas.height = 100;
+
+        $(window).resize(function () {
+            if (document.getElementById('app').offsetWidth > 1200) {
+                _this3.canvas.width = 1200;
+            } else {
+                _this3.canvas.width = document.getElementById('app').offsetWidth - document.getElementById('app').offsetWidth / 10;
+            }
+        });
 
         // PC
         this.canvas.addEventListener('mousedown', this.startPoint, false);
@@ -45309,83 +45290,40 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("canvas", {
-      staticClass: "canvas",
-      attrs: { id: "canvas", width: "700", height: "100" }
-    }),
+    _c("canvas", { staticClass: "canvas", attrs: { id: "canvas" } }),
     _vm._v(" "),
-    _c("div", { staticStyle: { padding: "10px" } }, [
+    _c("div", [
       _c(
         "button",
         {
-          attrs: { type: "button" },
+          staticClass: "st-Button rp-Button",
+          attrs: { type: "button", disabled: _vm.state },
           on: {
             click: function($event) {
               _vm.clearCanvas()
             }
           }
         },
-        [_vm._v("リセット")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button" },
-          on: {
-            click: function($event) {
-              _vm.prevCanvas()
-            }
-          }
-        },
-        [_vm._v("戻る")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button" },
-          on: {
-            click: function($event) {
-              _vm.nextCanvas()
-            }
-          }
-        },
-        [_vm._v("進む")]
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          attrs: { type: "button", value: "1" },
-          on: {
-            click: function($event) {
-              _vm.chgImg()
-            }
-          }
-        },
-        [_vm._v("画像変換")]
+        [_vm._v("やり直す")]
       ),
       _vm._v(" "),
       _c("input", {
         attrs: { type: "hidden", name: "draw" },
         domProps: { value: _vm.image }
-      })
-    ]),
-    _vm._v(" "),
-    _vm._m(0)
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "st-Button rp-Button",
+          attrs: { type: "submit", disabled: _vm.state }
+        },
+        [_vm._v("投稿する")]
+      )
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { attrs: { id: "img-box" } }, [
-      _c("img", { attrs: { id: "newImg" } })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
