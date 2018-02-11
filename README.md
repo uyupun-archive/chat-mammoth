@@ -31,13 +31,14 @@ DB_CONNECTION=sqlite
 $ php artisan migrate
 ```
 
-### 8. Start up local server
-
-```
-$ php artisan serve
-```
-### 9. Seeding
+### 8. Seeding
 
 ```
 $ php artisan db:seed
+```
+
+### 9. Start up local server
+
+```
+$ php artisan serve
 ```
