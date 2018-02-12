@@ -4,7 +4,7 @@
 
 ```
 $ composer install
-$ npm i
+$ 　
 ```
 
 ### 2. Create ".env"

@@ -8776,6 +8776,40 @@ button.close {
   transition: .5s;
   -webkit-transform: translateX(-50%) rotateZ(0deg);
           transform: translateX(-50%) rotateZ(0deg);
+  -webkit-animation-name: elephant;
+          animation-name: elephant;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes elephant {
+  form {
+    -webkit-transform: translateX(-50%) rotateZ(360deg);
+            transform: translateX(-50%) rotateZ(360deg);
+  }
+
+  to {
+    -webkit-transform: translateX(-50%) rotateZ(360deg);
+            transform: translateX(-50%) rotateZ(360deg);
+  }
+}
+
+@keyframes elephant {
+  form {
+    -webkit-transform: translateX(-50%) rotateZ(360deg);
+            transform: translateX(-50%) rotateZ(360deg);
+  }
+
+  to {
+    -webkit-transform: translateX(-50%) rotateZ(360deg);
+            transform: translateX(-50%) rotateZ(360deg);
+  }
 }
 
 .tp-Rotation_img:hover {
