@@ -9339,6 +9339,29 @@ button.close {
   padding: 0 5px;
 }
 
+.mp-Nav_Area .nav-tabs {
+  border-bottom-color: #EC605B;
+}
+
+.mp-Nav_Area .nav-tabs .nav-item .mp-Nav_Link {
+  color: #EC605B;
+}
+
+.mp-Nav_Area .nav-tabs .nav-item .mp-Nav_Link:hover {
+  border-bottom: none;
+}
+
+.mp-Nav_Area .nav-tabs .active .mp-Nav_Link {
+  background-color: #EC605B;
+  color: #fff;
+  border-color: #EC605B;
+}
+
+.mp-Nav_Area .nav-tabs .active .mp-Nav_Link:hover {
+  color: #fff;
+  border: solid 1px #EC605B;
+}
+
 .mp-ChatRoom {
   border: solid 1px #999;
   border-radius: 4px;

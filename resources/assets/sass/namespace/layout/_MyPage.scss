@@ -12,6 +12,28 @@
 
 .mp-Nav_Area {
   padding: 0 5px;
+  .nav-tabs {
+    border-bottom-color: $red;
+    .nav-item {
+      .mp-Nav_Link {
+        color: $red;
+      }
+      .mp-Nav_Link:hover {
+        border-bottom: none;
+      }
+    }
+    .active {
+      .mp-Nav_Link {
+        background-color: $red;
+        color: $white;
+        border-color: $red;
+      }
+      .mp-Nav_Link:hover {
+        color: $white;
+        border: solid 1px $red;
+      }
+    }
+  }
 }
 
 .mp-ChatRoom {
