@@ -6,6 +6,7 @@ Vue.component('myFavorite', require('./components/mypage/Favorite.vue'));
 Vue.component('search', require('./components/Search.vue'));
 Vue.component('create', require('./components/Create.vue'));
 Vue.component('keyboard', require('./components/Keyboard.vue'));
+Vue.component('photo', require('./components/Photo.vue'));
 Vue.component('handWrite', require('./components/HandWrite.vue'));
 
 const app = new Vue({
