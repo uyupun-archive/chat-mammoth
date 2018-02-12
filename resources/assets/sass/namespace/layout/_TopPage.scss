@@ -67,6 +67,20 @@
     height: auto;
     transition: .5s ;
     transform: translateX(-50%) rotateZ(0deg);
+    animation-name: elephant;
+    animation-duration: 0.5s;
+    animation-delay: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes elephant {
+  form {
+    transform:translateX(-50%) rotateZ(360deg);
+  }
+  to {
+    transform:translateX(-50%) rotateZ(360deg);
   }
 }
 
