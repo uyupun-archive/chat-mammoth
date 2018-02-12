@@ -17,7 +17,7 @@
                                 @endif
                                 <span class="rp-Message_Name">{{ $post->screen_name }}</span>
                                 <span class="rp-Message_Id">&#64;{{ $post->user_id }}</span>
-                                @if($post->user_id === 'Anonymous')
+                                @if($post->user_id === 'anonymous')
                                     <i class="fas fa-user-secret"></i>
                                 @endif
                                 <span class="rp-Message_Time">{{ str_replace('-', '/', $post->created_at) }}</span>
