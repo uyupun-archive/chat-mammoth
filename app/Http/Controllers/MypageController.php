@@ -9,7 +9,11 @@ use Auth;
 class MypageController extends Controller {
 
     public function index() {
+
+        $avatar = DB::table('users')->select('avatar', 'default_avatar')->where('user_id', Auth::user()->user_id)->first();
+
         return view('mypage', [
+            'avatar' => $avatar,
             'screen_name' => Auth::user()->screen_name,
             'user_id' => Auth::user()->user_id,
         ]);
