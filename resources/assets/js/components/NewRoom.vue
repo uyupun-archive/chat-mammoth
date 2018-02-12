@@ -1,8 +1,8 @@
 <template>
     <div>
         <div v-for="(room, index) in rooms">
-            <div class="tp-Chatroom">
-                <div class="tp-Chatroom_Name">ルーム名: {{ room.name }}</div>
+            <div class="tp-ChatRoom">
+                <div class="tp-ChatRoom_Name">ルーム名: {{ room.name }}</div>
                 <div>
                     <span>ルームID: </span>
                     <input class="tp-Copy_Area" type="text" :value="room.room_id " :id="'copy' + index + 'nr'">
@@ -15,16 +15,16 @@
                     <!--<i class="fas fa-heart" @click="postFavorite(room.room_id)"></i>-->
                 </div>
                 <div>作成者: {{ room.creator }}</div>
-                <div class="tp-Chatroom_Tag">
+                <div class="tp-ChatRoom_Tag">
                     <span class="st-Tag">タグ</span>
                     <span class="st-Tag">タグ</span>
                     <span class="st-Tag">タグ</span>
                 </div>
-                <div class="tp-Chatroom_Description">
+                <div class="tp-ChatRoom_Description">
                     <p>{{ room.description }}</p>
                 </div>
-                <div class="tp-Chatroom_LinkBox">
-                    <a :href="'/room/' + room.room_id" class="tp-Chatroom_Link">チャットルームへ</a>
+                <div class="tp-ChatRoom_LinkBox">
+                    <a :href="'/room/' + room.room_id" class="tp-ChatRoom_Link">チャットルームへ</a>
                 </div>
             </div>
         </div>

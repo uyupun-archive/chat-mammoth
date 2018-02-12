@@ -80,9 +80,9 @@
   margin-left: auto;
 }
 
-.tp-Chatroom_Container {
+.tp-ChatRoom_Container {
   margin-bottom: 30px;
-  .tp-Chatroom {
+  .tp-ChatRoom {
     border: solid 1px $gray;
     border-radius: 4px;
     margin: 20px 0;
@@ -98,7 +98,7 @@
     }
     &_LinkBox {
       text-align: right;
-      .tp-Chatroom_Link {
+      .tp-ChatRoom_Link {
         text-decoration: none;
       }
     }
