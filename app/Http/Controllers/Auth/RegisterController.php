@@ -51,7 +51,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'avatar' => 'image',
             'screen_name' => 'required|string|min:1|max:16',
-            'user_id' => 'required|string|alpha_num|min:1|max:16|unique:users',
+            'user_id' => 'required|string|regex:/^[a-zA-Z0-9]+$/|min:1|max:16|unique:users',
             'password' => 'required|string|min:8|max:32|confirmed',
         ]);
     }
