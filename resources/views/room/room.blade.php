@@ -11,6 +11,9 @@
                                 @if(isset($post->avatar))
                                     <img class="rp-Message_UserIcon" src="{{ $post->avatar }}" alt="">
                                 @endif
+                                @if(isset($post->default_avatar))
+                                    <img class="rp-Message_UserIcon" src="{{ $post->default_avatar }}" alt="">
+                                @endif
                                 <span class="rp-Message_Name">{{ $post->screen_name }}</span>
                                 <span class="rp-Message_Id">&#64;{{ $post->user_id }}</span>
                                 @if($post->user_id === 'Anonymous')

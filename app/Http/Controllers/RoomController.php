@@ -22,7 +22,7 @@ class RoomController extends Controller {
 
         $posts = DB::table('users')
                         ->join('posts', 'users.user_id', '=', 'posts.user_id')
-                        ->select('users.user_id', 'users.avatar', 'posts.screen_name', 'posts.comment', 'posts.markdown', 'posts.created_at', 'posts.image', 'posts.gif', 'posts.draw')
+                        ->select('users.user_id', 'users.avatar', 'users.default_avatar', 'users.screen_name', 'posts.comment', 'posts.markdown', 'posts.created_at', 'posts.image', 'posts.gif', 'posts.draw')
                         ->where('posts.room_id', $room_id[1])
                         ->orderBy('posts.id', 'DESC')
                         ->take(100)
