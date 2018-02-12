@@ -27,7 +27,7 @@
             </div>
         </div>
         <div v-if="rooms.length <= 0">
-            <p>お気に入りのルームはまだありません。</p>
+            <p class="mp-Not_FavoriteRoom">お気に入りのルームはまだありません。</p>
         </div>
     </div>
 </template>

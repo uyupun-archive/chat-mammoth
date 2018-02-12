@@ -9293,27 +9293,39 @@ button.close {
   padding: 0 5px;
 }
 
-.mp-Chatroom {
+.mp-ChatRoom {
   border: solid 1px #999;
   border-radius: 4px;
   margin: 20px 10px;
   padding: 5px;
 }
 
-.mp-Chatroom_Name {
+.mp-ChatRoom_Name {
   font-size: 26px;
 }
 
-.mp-Chatroom_Tag {
+.mp-ChatRoom_Tag {
   margin: 4px 4px 0 0;
 }
 
-.mp-Chatroom_LinkBox {
+.mp-ChatRoom_LinkBox {
   text-align: right;
 }
 
-.mp-Chatroom_LinkBox .mp-Chatroom_Link {
+.mp-ChatRoom_LinkBox .mp-Chatroom_Link {
   text-decoration: none;
+}
+
+.mp-Not_CreateRoom {
+  text-align: center;
+  color: #323232;
+  margin-top: 50px;
+}
+
+.mp-Not_FavoriteRoom {
+  text-align: center;
+  color: #323232;
+  margin-top: 50px;
 }
 
 .sp-Search {
