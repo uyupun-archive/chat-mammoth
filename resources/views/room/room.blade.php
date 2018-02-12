@@ -10,6 +10,10 @@
                             <div class="rp-Message_User">
                                 @if(isset($post->avatar))
                                     <img class="rp-Message_UserIcon" src="{{ $post->avatar }}" alt="">
+                                @elseif((isset($post->default_avatar)))
+                                    <img class="rp-Message_UserIcon" src="{{ $post->default_avatar }}" alt="">
+                                @else
+                                    <img class="rp-Message_UserIcon" src="{{ $default_avatar }}" alt="">
                                 @endif
                                 <span class="rp-Message_Name">{{ $post->screen_name }}</span>
                                 <span class="rp-Message_Id">&#64;{{ $post->user_id }}</span>

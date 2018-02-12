@@ -62,24 +62,37 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\User
      */
-    protected function create(array $data)
-    {
+    protected function create(array $data) {
+
+        $default_avatars = [
+            'bear',
+            'cat',
+            'dog',
+            'elephants',
+            'hippo',
+            'horse',
+            'koala',
+            'lion',
+            'monkey',
+            'panda',
+            'penguin',
+            'pig',
+            'rabbit',
+            'sheep',
+            'squirre',
+            'tiger',
+        ];
 
         $user = new User();
-        if (Input::file('avatar')->isValid()) {
+        if (Input::file('avatar')) {
             $user->avatar = 'data:image/jpg;base64,' . base64_encode(file_get_contents(Input::file('avatar')));
+        } else {
+            $user->default_avatar = '/avatar/' . $default_avatars[mt_rand(0, 15)] . '.png';
         }
         $user->screen_name = Input::get('screen_name');
         $user->user_id = Input::get('user_id');
         $user->password = bcrypt(Input::get('password'));
         $user->save();
         return $user;
-
-//        return User::create([
-////            'image' => $image,
-//            'screen_name' => $data['screen_name'],
-//            'user_id' => $data['user_id'],
-//            'password' => bcrypt($data['password']),
-//        ]);
     }
 }
