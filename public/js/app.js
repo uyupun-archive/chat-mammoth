@@ -44230,8 +44230,9 @@ var render = function() {
             staticClass: "sp-Search_Textbox form-control",
             attrs: {
               type: "text",
-              maxlength: "8",
               placeholder: "Please room id here!",
+              minlength: "32",
+              maxlength: "32",
               required: "",
               autofocus: ""
             },
