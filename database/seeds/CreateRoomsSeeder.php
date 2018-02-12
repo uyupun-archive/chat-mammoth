@@ -25,8 +25,6 @@ class CreateRoomsSeeder extends Seeder {
             'かばさん',
         ];
 
-        DB::table('rooms')->truncate();
-
         for ($i = 0; $i <= 9; $i++) {
             DB::table('rooms')->insert([
                 'name' => $animals[$i],

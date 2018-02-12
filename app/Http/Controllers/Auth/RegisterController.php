@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Input;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends Controller
@@ -48,6 +49,7 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
+//            'image' => 'image',
             'screen_name' => 'required|string|max:255',
             'user_id' => 'required|string|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
@@ -62,10 +64,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'screen_name' => $data['screen_name'],
-            'user_id' => $data['user_id'],
-            'password' => bcrypt($data['password']),
-        ]);
+
+        $user = new User();
+        if (Input::file('avatar')->isValid()) {
+            $user->avatar = 'data:image/jpg;base64,' . base64_encode(file_get_contents(Input::file('avatar')));
+        }
+        $user->screen_name = Input::get('screen_name');
+        $user->user_id = Input::get('user_id');
+        $user->password = bcrypt(Input::get('password'));
+        $user->save();
+        return $user;
+
+//        return User::create([
+////            'image' => $image,
+//            'screen_name' => $data['screen_name'],
+//            'user_id' => $data['user_id'],
+//            'password' => bcrypt($data['password']),
+//        ]);
     }
 }
