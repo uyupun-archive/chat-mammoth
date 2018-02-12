@@ -9,7 +9,7 @@
                         <div class="rp-Message">
                             <div class="rp-Message_User">
                                 @if(isset($post->avatar))
-                                    <img src="{{ $post->avatar }}" alt="">
+                                    <img class="rp-Message_UserIcon" src="{{ $post->avatar }}" alt="">
                                 @endif
                                 <span class="rp-Message_Name">{{ $post->screen_name }}</span>
                                 <span class="rp-Message_Id">&#64;{{ $post->user_id }}</span>
