@@ -68,7 +68,7 @@ class RegisterController extends Controller
             'bear',
             'cat',
             'dog',
-            'elephants',
+            'elephant',
             'hippo',
             'horse',
             'koala',
