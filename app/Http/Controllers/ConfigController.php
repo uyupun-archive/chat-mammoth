@@ -15,6 +15,10 @@ class ConfigController extends Controller {
 
     public function update(Request $request) {
         $user = User::where('user_id', Auth::user()->user_id)->first();
+
+        if (isset($request->avatar)) {
+            $user->avatar = 'data:image/jpg;base64,' . base64_encode(file_get_contents($request->avatar));
+        }
         $user->screen_name = $request->screen_name;
 
         $isUser_id = DB::table('users')->where('user_id', $request->user_id)->get();

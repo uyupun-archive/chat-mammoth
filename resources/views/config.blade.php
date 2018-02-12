@@ -6,6 +6,17 @@
             <h1 class="st-Title">設定</h1>
             <form method="POST" enctype="multipart/form-data" action="{{ url('/api/user/update') }}" class="su-Form">
                 {{ csrf_field() }}
+                <div class="row">
+                    <label for="avatar" class="">プロフィール画像</label>
+                    @if(isset(Auth::user()->avatar))
+                        <img src="{{ Auth::user()->avatar }}" alt="">
+                    @else
+                        <img src="{{ Auth::user()->default_avatar }}" alt="">
+                    @endif
+                    <div class="col">
+                        <input id="avatar" type="file" name="avatar" accept="image/*">
+                    </div>
+                </div>
                 <div class="su-ScreenName row">
                     <label for="screen-name" class="su-ScreenName_Title align-self-center">スクリーンネーム</label>
                     <div class="col">
