@@ -44495,6 +44495,7 @@ var render = function() {
           placeholder: "Please enter a password.",
           disabled: _vm.state,
           required: "",
+          minlength: "8",
           maxlength: "32"
         }
       })
