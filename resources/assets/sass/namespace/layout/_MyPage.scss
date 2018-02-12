@@ -14,7 +14,7 @@
   padding: 0 5px;
 }
 
-.mp-Chatroom {
+.mp-ChatRoom {
   border: solid 1px $gray;
   border-radius: 4px;
   margin: 20px 10px;
@@ -34,4 +34,16 @@
       text-decoration: none;
     }
   }
+}
+
+.mp-Not_CreateRoom {
+  text-align: center;
+  color: $black;
+  margin-top: 50px;
+}
+
+.mp-Not_FavoriteRoom {
+  text-align: center;
+  color: $black;
+  margin-top: 50px;
 }
