@@ -71,7 +71,6 @@
     animation-duration: 1s;
     animation-delay: 1.5s;
     animation-iteration-count: 1;
-    animation-timing-function: linear;
   }
 }
 
@@ -83,16 +82,16 @@
     transform: translateX(-50%) rotateZ(370deg);
   }
   60% {
-    transform: translateX(-50%) rotateZ(350deg);
+    transform: translateX(-50%) rotateZ(352deg);
   }
   70% {
-    transform: translateX(-50%) rotateZ(360deg);
-  }
-  80% {
     transform: translateX(-50%) rotateZ(365deg);
   }
-  90% {
+  80% {
     transform: translateX(-50%) rotateZ(355deg);
+  }
+  90% {
+    transform: translateX(-50%) rotateZ(363deg);
   }
   100% {
     transform: translateX(-50%) rotateZ(360deg);

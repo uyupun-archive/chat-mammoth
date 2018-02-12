@@ -8784,8 +8784,6 @@ button.close {
           animation-delay: 1.5s;
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
 }
 
 @-webkit-keyframes elephant {
@@ -8800,23 +8798,23 @@ button.close {
   }
 
   60% {
-    -webkit-transform: translateX(-50%) rotateZ(350deg);
-            transform: translateX(-50%) rotateZ(350deg);
+    -webkit-transform: translateX(-50%) rotateZ(352deg);
+            transform: translateX(-50%) rotateZ(352deg);
   }
 
   70% {
-    -webkit-transform: translateX(-50%) rotateZ(360deg);
-            transform: translateX(-50%) rotateZ(360deg);
-  }
-
-  80% {
     -webkit-transform: translateX(-50%) rotateZ(365deg);
             transform: translateX(-50%) rotateZ(365deg);
   }
 
-  90% {
+  80% {
     -webkit-transform: translateX(-50%) rotateZ(355deg);
             transform: translateX(-50%) rotateZ(355deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(-50%) rotateZ(363deg);
+            transform: translateX(-50%) rotateZ(363deg);
   }
 
   100% {
@@ -8837,23 +8835,23 @@ button.close {
   }
 
   60% {
-    -webkit-transform: translateX(-50%) rotateZ(350deg);
-            transform: translateX(-50%) rotateZ(350deg);
+    -webkit-transform: translateX(-50%) rotateZ(352deg);
+            transform: translateX(-50%) rotateZ(352deg);
   }
 
   70% {
-    -webkit-transform: translateX(-50%) rotateZ(360deg);
-            transform: translateX(-50%) rotateZ(360deg);
-  }
-
-  80% {
     -webkit-transform: translateX(-50%) rotateZ(365deg);
             transform: translateX(-50%) rotateZ(365deg);
   }
 
-  90% {
+  80% {
     -webkit-transform: translateX(-50%) rotateZ(355deg);
             transform: translateX(-50%) rotateZ(355deg);
+  }
+
+  90% {
+    -webkit-transform: translateX(-50%) rotateZ(363deg);
+            transform: translateX(-50%) rotateZ(363deg);
   }
 
   100% {
