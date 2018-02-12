@@ -8420,7 +8420,7 @@ button.close {
   display: block;
   position: absolute;
   top: -100%;
-  left: -20%;
+  left: -8%;
   font-size: 90%;
   color: #fff;
   background-color: #323232;
@@ -8435,8 +8435,8 @@ button.close {
   position: absolute;
   height: 0;
   width: 0;
-  top: 85%;
-  left: 23%;
+  top: 80%;
+  left: 18%;
   border: 13px transparent solid;
   border-top-color: #323232;
   z-index: 100;
@@ -8450,29 +8450,38 @@ button.close {
   z-index: 1001;
 }
 
-.h-Title {
-  font-size: 26px;
+.h-Header .navbar {
+  border-radius: 0;
 }
 
-.navbar-brand {
+.h-Header .navbar-brand {
   float: none;
   margin-left: 0;
 }
 
-.navbar-toggle {
+.h-Header .navbar-toggle {
   margin: 12px 0 8px 0;
 }
 
-.navbar-default {
+.h-Header .navbar-default {
   background-color: #ffffff;
 }
 
-.navbar-default .navbar-brand {
+.h-Header .navbar-default .navbar-brand {
   color: #323232;
 }
 
-.navbar-default .navbar-nav > li > a {
+.h-Header .navbar-default .navbar-nav > li > a {
   color: #323232;
+}
+
+.h-Header .navbar-default .navbar-nav > li > a:hover,
+.h-Header .navbar-default .navbar-nav > li > a:focus {
+  background-color: #f5f5f5;
+}
+
+.h-Title {
+  font-size: 26px;
 }
 
 .h-Logo {
@@ -8513,11 +8522,6 @@ button.close {
 
 .h-Menu_List .h-Icon {
   padding: 20px 15px;
-}
-
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  background-color: #f5f5f5;
 }
 
 .su-Form {
@@ -8785,56 +8789,56 @@ button.close {
   margin-left: auto;
 }
 
-.tp-Chatroom_Container {
+.tp-ChatRoom_Container {
   margin-bottom: 30px;
 }
 
-.tp-Chatroom_Container .tp-Chatroom {
+.tp-ChatRoom_Container .tp-ChatRoom {
   border: solid 1px #999;
   border-radius: 4px;
   margin: 20px 0;
   padding: 5px;
 }
 
-.tp-Chatroom_Container .tp-Chatroom_Name {
+.tp-ChatRoom_Container .tp-ChatRoom_Name {
   font-size: 26px;
 }
 
-.tp-Chatroom_Container .tp-Chatroom_Tag {
+.tp-ChatRoom_Container .tp-ChatRoom_Tag {
   margin: 4px 4px 0 0;
 }
 
-.tp-Chatroom_Container .tp-Chatroom_LinkBox {
+.tp-ChatRoom_Container .tp-ChatRoom_LinkBox {
   text-align: right;
 }
 
-.tp-Chatroom_Container .tp-Chatroom_LinkBox .tp-Chatroom_Link {
+.tp-ChatRoom_Container .tp-ChatRoom_LinkBox .tp-ChatRoom_Link {
   text-decoration: none;
 }
 
-.tp-Chatroom_Container .tp-Search {
+.tp-ChatRoom_Container .tp-Search {
   text-align: right;
 }
 
-.tp-Chatroom_Container .tp-Search_Link {
+.tp-ChatRoom_Container .tp-Search_Link {
   text-decoration: none;
 }
 
-.tp-Chatroom_Container .tp-Copy_Area {
+.tp-ChatRoom_Container .tp-Copy_Area {
   padding: 0;
   border: none;
 }
 
-.tp-Chatroom_Container .tp-Copy_Button {
+.tp-ChatRoom_Container .tp-Copy_Button {
   background-color: #fff;
 }
 
-.tp-Chatroom_Container .btn:active {
+.tp-ChatRoom_Container .btn:active {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
 
-.tp-Chatroom_Container .btn:focus {
+.tp-ChatRoom_Container .btn:focus {
   outline: none;
   outline-offset: 0;
 }
@@ -9179,6 +9183,10 @@ button.close {
   outline: 0;
 }
 
+.rp-Post_Wrapper .rp-Post_Container .rp-Form .rp-Form_Other {
+  margin-top: 15px;
+}
+
 .rp-Post_Wrapper .rp-Post_Container .canvas {
   position: relative;
   border-radius: 5px;
@@ -9186,7 +9194,6 @@ button.close {
 }
 
 .rp-Form_Other {
-  margin-top: 15px;
   text-align: right;
 }
 
@@ -9205,6 +9212,10 @@ button.close {
 
 .rp-Button:focus {
   outline: none;
+}
+
+.rp-Button:disabled {
+  opacity: 0.5;
 }
 
 .rp-Form_File .rp-File_Area {
@@ -9286,27 +9297,39 @@ button.close {
   padding: 0 5px;
 }
 
-.mp-Chatroom {
+.mp-ChatRoom {
   border: solid 1px #999;
   border-radius: 4px;
   margin: 20px 10px;
   padding: 5px;
 }
 
-.mp-Chatroom_Name {
+.mp-ChatRoom_Name {
   font-size: 26px;
 }
 
-.mp-Chatroom_Tag {
+.mp-ChatRoom_Tag {
   margin: 4px 4px 0 0;
 }
 
-.mp-Chatroom_LinkBox {
+.mp-ChatRoom_LinkBox {
   text-align: right;
 }
 
-.mp-Chatroom_LinkBox .mp-Chatroom_Link {
+.mp-ChatRoom_LinkBox .mp-Chatroom_Link {
   text-decoration: none;
+}
+
+.mp-Not_CreateRoom {
+  text-align: center;
+  color: #323232;
+  margin-top: 50px;
+}
+
+.mp-Not_FavoriteRoom {
+  text-align: center;
+  color: #323232;
+  margin-top: 50px;
 }
 
 .sp-Search {

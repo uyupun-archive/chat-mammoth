@@ -185,6 +185,9 @@
       .rp-TextArea:focus {
         outline: 0;
       }
+      .rp-Form_Other {
+        margin-top: 15px;
+      }
     }
     .canvas {
       position: relative;
@@ -195,7 +198,6 @@
 }
 
 .rp-Form_Other {
-  margin-top: 15px;
   text-align: right;
   .rp-CheckBox {
     margin: 0;
@@ -212,6 +214,10 @@
 
 .rp-Button:focus {
   outline: none;
+}
+
+.rp-Button:disabled {
+  opacity: 0.5;
 }
 
 .rp-Form_File {
