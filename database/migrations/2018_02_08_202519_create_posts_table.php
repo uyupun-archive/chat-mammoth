@@ -15,8 +15,8 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('user_id');
-            $table->string('screen_name');
+            $table->string('user_id')->default('anonymous');
+            $table->string('screen_name')->default('Anonymous');
             $table->string('room_id');
             $table->text('comment')->nullable();
             $table->boolean('markdown')->default(false);
