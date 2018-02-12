@@ -29,7 +29,7 @@ class ConfigController extends Controller {
         $validator = Validator::make($request->all(), [
             'avatar' => 'image',
             'screen_name' => 'required|string|min:1|max:16',
-            'user_id' => 'required|string|regex:/^[a-zA-Z0-9_]+$/|min:1|max:16|',
+            'user_id' => 'required|string|regex:/^[a-zA-Z0-9_]+$/|min:1|max:16',
             'password' => 'required|string|min:8|max:32',
         ]);
 
