@@ -65,10 +65,10 @@
     left: 50%;
     width: 200px;
     height: auto;
-    transition: .5s ;
+    transition: 0.5s;
     transform: translateX(-50%) rotateZ(0deg);
     animation-name: elephant;
-    animation-duration: 0.5s;
+    animation-duration: 1s;
     animation-delay: 1.5s;
     animation-iteration-count: 1;
     animation-timing-function: linear;
@@ -76,11 +76,26 @@
 }
 
 @keyframes elephant {
-  form {
-    transform:translateX(-50%) rotateZ(360deg);
+  0% {
+    transform: translateX(-50%) rotateZ(0deg);
   }
-  to {
-    transform:translateX(-50%) rotateZ(360deg);
+  50% {
+    transform: translateX(-50%) rotateZ(370deg);
+  }
+  60% {
+    transform: translateX(-50%) rotateZ(350deg);
+  }
+  70% {
+    transform: translateX(-50%) rotateZ(360deg);
+  }
+  80% {
+    transform: translateX(-50%) rotateZ(365deg);
+  }
+  90% {
+    transform: translateX(-50%) rotateZ(355deg);
+  }
+  100% {
+    transform: translateX(-50%) rotateZ(360deg);
   }
 }
 
