@@ -20,7 +20,13 @@ class RoomController extends Controller {
             return redirect('/room/' . $room_id[1] . '/auth');
         }
 
-        $posts = DB::table('posts')->select('user_id', 'screen_name', 'comment', 'markdown', 'created_at', 'image', 'gif', 'draw')->where('room_id', $room_id[1])->orderBy('id', 'DESC')->take(100)->paginate(10);
+        $posts = DB::table('users')
+                        ->join('posts', 'users.user_id', '=', 'posts.user_id')
+                        ->select('users.user_id', 'users.avatar', 'posts.screen_name', 'posts.comment', 'posts.markdown', 'posts.created_at', 'posts.image', 'posts.gif', 'posts.draw')
+                        ->where('posts.room_id', $room_id[1])
+                        ->orderBy('posts.id', 'DESC')
+                        ->take(100)
+                        ->paginate(10);
 
         return view('room.room', [
             'posts' => $posts

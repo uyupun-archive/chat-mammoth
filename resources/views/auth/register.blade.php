@@ -4,12 +4,18 @@
 <div class="st-Wrapper">
     <div class="st-Container">
         <h1 class="st-Title">サインアップ</h1>
-        <form method="POST" action="{{ route('register') }}" class="su-Form">
+        <form enctype="multipart/form-data" method="POST" action="{{ route('register') }}" class="su-Form">
             {{ csrf_field() }}
+            <div class="row">
+                <label for="avatar" class="">プロフィール画像</label>
+                <div class="col">
+                    <input id="avatar" type="file" name="avatar" class="">
+                </div>
+            </div>
             <div class="su-ScreenName row">
                 <label for="screen-name" class="su-ScreenName_Title align-self-center">スクリーンネーム</label>
                 <div class="col">
-                    <input id="screen-name" type="text" name="screen_name" value="{{ old('screen-name') }}" class="su-ScreenName_Textbox form-control" required autofocus maxlength="16">
+                    <input id="screen-name" type="text" name="screen_name" value="{{ old('screen_name') }}" class="su-ScreenName_Textbox form-control" required autofocus maxlength="16">
                 </div>
             </div>
             <div class="su-Id row">
