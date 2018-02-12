@@ -9,7 +9,7 @@
             <div class="row">
                 <label for="avatar" class="">プロフィール画像</label>
                 <div class="col">
-                    <input id="avatar" type="file" name="avatar" class="">
+                    <input id="avatar" type="file" name="avatar" accept="image/*">
                 </div>
             </div>
             <div class="su-ScreenName row">
