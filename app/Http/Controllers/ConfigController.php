@@ -21,7 +21,7 @@ class ConfigController extends Controller {
         }
         $user->screen_name = $request->screen_name;
 
-        $isUser_id = DB::table('users')->where('user_id', $request->user_id)->get();
+        $isUser_id = DB::table('users')->where('user_id', $request->user_id)->first();
         if (isset($isUser_id) && $request->user_id !== Auth::user()->user_id) {
             return redirect('/config')->with('response', '指定されたユーザIDはすでに使用されています。');
         }
