@@ -11,7 +11,7 @@
     </div>
     <div class="tp-Container">
         <h2 class="st-Title">新着のチャットルーム</h2>
-        <div class="tp-Chatroom_Container">
+        <div class="tp-ChatRoom_Container">
             <div id="app">
                 <new-room></new-room>
             </div>

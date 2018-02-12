@@ -4,29 +4,32 @@
   position: fixed;
   top: 0;
   z-index: 1001;
+  .navbar {
+    border-radius: 0;
+  }
+  .navbar-brand {
+    float: none;
+    margin-left: 0;
+  }
+  .navbar-toggle {
+    margin: 12px 0 8px 0;
+  }
+  .navbar-default {
+    background-color: #ffffff;
+    .navbar-brand {
+      color: $black;
+    }
+    .navbar-nav > li > a {
+      color: $black;
+    }
+  }
+  .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: $light-gray;
+  }
 }
 
 .h-Title {
   font-size: 26px;
-}
-
-.navbar-brand {
-  float: none;
-  margin-left: 0;
-}
-
-.navbar-toggle {
-  margin: 12px 0 8px 0;
-}
-
-.navbar-default {
-  background-color: #ffffff;
-  .navbar-brand {
-    color: $black;
-  }
-  .navbar-nav > li > a {
-    color: $black;
-  }
 }
 
 .h-Logo {
@@ -37,7 +40,6 @@
 }
 
 .h-Menu {
-
   &_List {
     height: 60px;
     .h-Search {
@@ -64,6 +66,3 @@
   }
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  background-color: $light-gray;
-}

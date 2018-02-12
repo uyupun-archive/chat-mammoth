@@ -43977,8 +43977,8 @@ var render = function() {
     "div",
     _vm._l(_vm.rooms, function(room, index) {
       return _c("div", [
-        _c("div", { staticClass: "tp-Chatroom" }, [
-          _c("div", { staticClass: "tp-Chatroom_Name" }, [
+        _c("div", { staticClass: "tp-ChatRoom" }, [
+          _c("div", { staticClass: "tp-ChatRoom_Name" }, [
             _vm._v("ルーム名: " + _vm._s(room.name))
           ]),
           _vm._v(" "),
@@ -44020,15 +44020,15 @@ var render = function() {
           _vm._v(" "),
           _vm._m(0, true),
           _vm._v(" "),
-          _c("div", { staticClass: "tp-Chatroom_Description" }, [
+          _c("div", { staticClass: "tp-ChatRoom_Description" }, [
             _c("p", [_vm._v(_vm._s(room.description))])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "tp-Chatroom_LinkBox" }, [
+          _c("div", { staticClass: "tp-ChatRoom_LinkBox" }, [
             _c(
               "a",
               {
-                staticClass: "tp-Chatroom_Link",
+                staticClass: "tp-ChatRoom_Link",
                 attrs: { href: "/room/" + room.room_id }
               },
               [_vm._v("チャットルームへ")]
@@ -44044,7 +44044,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tp-Chatroom_Tag" }, [
+    return _c("div", { staticClass: "tp-ChatRoom_Tag" }, [
       _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
       _vm._v(" "),
       _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
