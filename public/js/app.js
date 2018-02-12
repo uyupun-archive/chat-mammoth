@@ -1293,7 +1293,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(73);
+module.exports = __webpack_require__(76);
 
 
 /***/ }),
@@ -1303,22 +1303,13 @@ module.exports = __webpack_require__(73);
 __webpack_require__(14);
 
 Vue.component('newRoom', __webpack_require__(40));
-<<<<<<< HEAD
-Vue.component('myCreate', __webpack_require__(87));
-Vue.component('myFavorite', __webpack_require__(90));
-Vue.component('search', __webpack_require__(53));
-Vue.component('create', __webpack_require__(56));
-Vue.component('keyboard', __webpack_require__(59));
-Vue.component('photo', __webpack_require__(96));
-Vue.component('handWrite', __webpack_require__(62));
-=======
 Vue.component('myCreate', __webpack_require__(50));
 Vue.component('myFavorite', __webpack_require__(53));
 Vue.component('search', __webpack_require__(56));
 Vue.component('create', __webpack_require__(59));
 Vue.component('keyboard', __webpack_require__(62));
-Vue.component('handWrite', __webpack_require__(65));
->>>>>>> 2fcff5f9a067d48fe0beae1af3eed7adf2eb9f28
+Vue.component('photo', __webpack_require__(65));
+Vue.component('handWrite', __webpack_require__(68));
 
 var app = new Vue({
     el: '#app'
@@ -45112,15 +45103,150 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+var normalizeComponent = __webpack_require__(1)
+/* script */
+var __vue_script__ = __webpack_require__(66)
+/* template */
+var __vue_template__ = __webpack_require__(67)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/assets/js/components/Photo.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-14d95d8b", Component.options)
+  } else {
+    hotAPI.reload("data-v-14d95d8b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 66 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            state: true,
+            image: ''
+        };
+    },
+
+    methods: {
+        changeState: function changeState() {
+            this.state = false;
+        }
+    }
+});
+
+/***/ }),
+/* 67 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("label", { staticClass: "rp-File_Area", attrs: { for: "file-area" } }, [
+      _c("i", { staticClass: "fas fa-cloud-upload-alt fa-4x rp-Cloud_Upload" }),
+      _vm._v(" "),
+      _c("p", { staticClass: "rp-File_Text" }, [_vm._v("画像を選択")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "rp-File_Input mr-auto",
+        attrs: {
+          type: "file",
+          name: "image",
+          required: "",
+          accept: "image/*",
+          id: "file-area"
+        },
+        on: {
+          change: function($event) {
+            _vm.changeState()
+          }
+        }
+      })
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "rp-Form_Other d-flex" }, [
+      _c(
+        "button",
+        {
+          staticClass: "st-Button rp-Button",
+          attrs: { type: "submit", disabled: _vm.state }
+        },
+        [_vm._v("投稿する")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-14d95d8b", module.exports)
+  }
+}
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(66)
+  __webpack_require__(69)
 }
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(71)
+var __vue_script__ = __webpack_require__(74)
 /* template */
-var __vue_template__ = __webpack_require__(72)
+var __vue_template__ = __webpack_require__(75)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45159,17 +45285,17 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 66 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(67);
+var content = __webpack_require__(70);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(69)("1842b2c2", content, false);
+var update = __webpack_require__(72)("1842b2c2", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -45185,10 +45311,10 @@ if(false) {
 }
 
 /***/ }),
-/* 67 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(68)(false);
+exports = module.exports = __webpack_require__(71)(false);
 // imports
 
 
@@ -45199,7 +45325,7 @@ exports.push([module.i, "", ""]);
 
 
 /***/ }),
-/* 68 */
+/* 71 */
 /***/ (function(module, exports) {
 
 /*
@@ -45281,7 +45407,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 69 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -45300,7 +45426,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(70)
+var listToStyles = __webpack_require__(73)
 
 /*
 type StyleObject = {
@@ -45502,7 +45628,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 70 */
+/* 73 */
 /***/ (function(module, exports) {
 
 /**
@@ -45535,7 +45661,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 71 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45680,7 +45806,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 72 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45732,609 +45858,10 @@ if (false) {
 }
 
 /***/ }),
-/* 73 */
+/* 76 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
-<<<<<<< HEAD
-/***/ }),
-/* 71 */,
-/* 72 */,
-/* 73 */,
-/* 74 */,
-/* 75 */,
-/* 76 */,
-/* 77 */,
-/* 78 */,
-/* 79 */,
-/* 80 */,
-/* 81 */,
-/* 82 */,
-/* 83 */,
-/* 84 */,
-/* 85 */,
-/* 86 */,
-/* 87 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(88)
-/* template */
-var __vue_template__ = __webpack_require__(89)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/mypage/Create.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-6dccea2e", Component.options)
-  } else {
-    hotAPI.reload("data-v-6dccea2e", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 88 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clipboard__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_clipboard__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            rooms: {}
-        };
-    },
-
-    methods: {
-        getRooms: function getRooms() {
-            var _this = this;
-
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/mypage/create').then(function (response) {
-                _this.rooms = response.data;
-            });
-        }
-    },
-    created: function created() {
-        this.getRooms();
-        var clipboard = new __WEBPACK_IMPORTED_MODULE_1_clipboard___default.a('.btn');
-    }
-});
-
-/***/ }),
-/* 89 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm._l(_vm.rooms, function(room, index) {
-        return _vm.rooms
-          ? _c("div", [
-              _c("div", { staticClass: "mp-ChatRoom" }, [
-                _c("div", { staticClass: "mp-ChatRoom_Name" }, [
-                  _vm._v("ルーム名: " + _vm._s(room.name))
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("span", [_vm._v("ルームID: ")]),
-                  _vm._v(" "),
-                  _c("input", {
-                    attrs: { type: "text", id: "copy" + index + "mp" },
-                    domProps: { value: room.room_id }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn st-Tooltip_Button",
-                      attrs: { "data-clipboard-target": "#copy" + index + "mp" }
-                    },
-                    [
-                      _c("span", { staticClass: "st-Tooltip" }, [
-                        _vm._v("Coyp")
-                      ]),
-                      _vm._v(" "),
-                      _c("i", { staticClass: "fas fa-clipboard" })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  room.publish === "private"
-                    ? _c("i", { staticClass: "fas fa-unlock-alt" })
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
-                _vm._v(" "),
-                _vm._m(0, true),
-                _vm._v(" "),
-                _c("div", { staticClass: "mp-ChatRoom_Description" }, [
-                  _c("p", [_vm._v(_vm._s(room.description))])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mp-ChatRoom_LinkBox" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "tp-Chatroom_Link",
-                      attrs: { href: "/room/" + room.room_id }
-                    },
-                    [_vm._v("チャットルームへ")]
-                  )
-                ])
-              ])
-            ])
-          : _vm._e()
-      }),
-      _vm._v(" "),
-      _vm.rooms.length <= 0
-        ? _c("div", [
-            _c("p", { staticClass: "mp-Not_CreateRoom" }, [
-              _vm._v("ルームはまだ作成されていません。")
-            ])
-          ])
-        : _vm._e()
-    ],
-    2
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mp-ChatRoom_Tag" }, [
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-6dccea2e", module.exports)
-  }
-}
-
-/***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(91)
-/* template */
-var __vue_template__ = __webpack_require__(92)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/mypage/Favorite.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-28bf3b6e", Component.options)
-  } else {
-    hotAPI.reload("data-v-28bf3b6e", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 91 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_axios__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clipboard__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_clipboard___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_clipboard__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            rooms: {}
-        };
-    },
-
-    methods: {
-        getRooms: function getRooms() {
-            var _this = this;
-
-            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/mypage/favorite').then(function (response) {
-                _this.rooms = response.data;
-            });
-        }
-    },
-    created: function created() {
-        this.getRooms();
-        var clipboard = new __WEBPACK_IMPORTED_MODULE_1_clipboard___default.a('.btn');
-    }
-});
-
-/***/ }),
-/* 92 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm._l(_vm.rooms, function(room, index) {
-        return _vm.rooms
-          ? _c("div", [
-              _c("div", { staticClass: "mp-Chatroom" }, [
-                _c("div", { staticClass: "mp-Chatroom_Name" }, [
-                  _vm._v("ルーム名: " + _vm._s(room.name))
-                ]),
-                _vm._v(" "),
-                _c("div", [
-                  _c("span", [_vm._v("ルームID: ")]),
-                  _vm._v(" "),
-                  _c("input", {
-                    attrs: { type: "text", id: "copy" + index + "mp" },
-                    domProps: { value: room.room_id }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn st-Tooltip_Button",
-                      attrs: { "data-clipboard-target": "#copy" + index + "mp" }
-                    },
-                    [
-                      _c("span", { staticClass: "st-Tooltip" }, [
-                        _vm._v("Copy")
-                      ]),
-                      _vm._v(" "),
-                      _c("i", { staticClass: "fas fa-clipboard" })
-                    ]
-                  ),
-                  _vm._v(" "),
-                  room.publish === "private"
-                    ? _c("i", { staticClass: "fas fa-unlock-alt" })
-                    : _vm._e()
-                ]),
-                _vm._v(" "),
-                _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
-                _vm._v(" "),
-                _vm._m(0, true),
-                _vm._v(" "),
-                _c("div", { staticClass: "mp-Chatroom_Description" }, [
-                  _c("p", [_vm._v(_vm._s(room.description))])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "mp-Chatroom_LinkBox" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "tp-Chatroom_Link",
-                      attrs: { href: "/room/" + room.room_id }
-                    },
-                    [_vm._v("チャットルームへ")]
-                  )
-                ])
-              ])
-            ])
-          : _vm._e()
-      }),
-      _vm._v(" "),
-      _vm.rooms.length <= 0
-        ? _c("div", [
-            _c("p", { staticClass: "mp-Not_FavoriteRoom" }, [
-              _vm._v("お気に入りのルームはまだありません。")
-            ])
-          ])
-        : _vm._e()
-    ],
-    2
-  )
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mp-Chatroom_Tag" }, [
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")])
-    ])
-  }
-]
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-28bf3b6e", module.exports)
-  }
-}
-
-/***/ }),
-/* 93 */,
-/* 94 */,
-/* 95 */,
-/* 96 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var disposed = false
-var normalizeComponent = __webpack_require__(1)
-/* script */
-var __vue_script__ = __webpack_require__(97)
-/* template */
-var __vue_template__ = __webpack_require__(98)
-/* template functional */
-var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __vue_script__,
-  __vue_template__,
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "resources/assets/js/components/Photo.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-14d95d8b", Component.options)
-  } else {
-    hotAPI.reload("data-v-14d95d8b", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 97 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            state: true,
-            image: ''
-        };
-    },
-
-    methods: {
-        changeState: function changeState() {
-            this.state = false;
-        }
-    }
-});
-
-/***/ }),
-/* 98 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("label", { staticClass: "rp-File_Area", attrs: { for: "file-area" } }, [
-      _c("i", { staticClass: "fas fa-cloud-upload-alt fa-4x rp-Cloud_Upload" }),
-      _vm._v(" "),
-      _c("p", { staticClass: "rp-File_Text" }, [_vm._v("画像を選択")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "rp-File_Input mr-auto",
-        attrs: {
-          type: "file",
-          name: "image",
-          required: "",
-          accept: "image/*",
-          id: "file-area"
-        },
-        on: {
-          change: function($event) {
-            _vm.changeState()
-          }
-        }
-      })
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "rp-Form_Other d-flex" }, [
-      _c(
-        "button",
-        {
-          staticClass: "st-Button rp-Button",
-          attrs: { type: "submit", disabled: _vm.state }
-        },
-        [_vm._v("投稿する")]
-      )
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-14d95d8b", module.exports)
-  }
-}
-
-=======
->>>>>>> 2fcff5f9a067d48fe0beae1af3eed7adf2eb9f28
 /***/ })
 /******/ ]);
