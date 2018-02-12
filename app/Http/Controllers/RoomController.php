@@ -28,8 +28,28 @@ class RoomController extends Controller {
                         ->take(100)
                         ->paginate(10);
 
+        $default_avatars = [
+            'bear',
+            'cat',
+            'dog',
+            'elephants',
+            'hippo',
+            'horse',
+            'koala',
+            'lion',
+            'monkey',
+            'panda',
+            'penguin',
+            'pig',
+            'rabbit',
+            'sheep',
+            'squirre',
+            'tiger',
+        ];
+
         return view('room.room', [
-            'posts' => $posts
+            'posts' => $posts,
+            'default_avatar' => '/avatar/' . $default_avatars[mt_rand(0, 15)] . '.png'
         ]);
     }
 
