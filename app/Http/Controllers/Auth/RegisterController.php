@@ -49,10 +49,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-//            'image' => 'image',
-            'screen_name' => 'required|string|max:255',
-            'user_id' => 'required|string|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'avatar' => 'image',
+            'screen_name' => 'required|string|min:1|max:16',
+            'user_id' => 'required|string|regex:/^[a-zA-Z0-9_]+$/|min:1|max:16|unique:users',
+            'password' => 'required|string|min:8|max:32|confirmed',
         ]);
     }
 
@@ -68,7 +68,7 @@ class RegisterController extends Controller
             'bear',
             'cat',
             'dog',
-            'elephants',
+            'elephant',
             'hippo',
             'horse',
             'koala',

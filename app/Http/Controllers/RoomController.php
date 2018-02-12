@@ -32,7 +32,7 @@ class RoomController extends Controller {
             'bear',
             'cat',
             'dog',
-            'elephants',
+            'elephant',
             'hippo',
             'horse',
             'koala',
@@ -74,7 +74,7 @@ class RoomController extends Controller {
 
         $post = new Post();
         if (isset(Auth::user()->user_id))   $post->user_id = Auth::user()->user_id;
-        if (isset(Auth::user()->screen_name))   $post->user_id = Auth::user()->screen_name;
+        if (isset(Auth::user()->screen_name))   $post->screen_name = Auth::user()->screen_name;
         $post->room_id = $room_id[1];
 
         $request->markdown === 'on' ? $post->markdown = true : $post->markdown = false;
@@ -98,7 +98,7 @@ class RoomController extends Controller {
 
         $post = new Post();
         if (isset(Auth::user()->user_id))   $post->user_id = Auth::user()->user_id;
-        if (isset(Auth::user()->screen_name))   $post->user_id = Auth::user()->screen_name;
+        if (isset(Auth::user()->screen_name))   $post->screen_name = Auth::user()->screen_name;
         $post->room_id = $room_id[1];
         $post->image = 'data:image/png;base64,' . base64_encode(file_get_contents($request->image));
         $post->save();
@@ -115,7 +115,7 @@ class RoomController extends Controller {
 
         $post = new Post();
         if (isset(Auth::user()->user_id))   $post->user_id = Auth::user()->user_id;
-        if (isset(Auth::user()->screen_name))   $post->user_id = Auth::user()->screen_name;
+        if (isset(Auth::user()->screen_name))   $post->screen_name = Auth::user()->screen_name;
         $post->room_id = $room_id[1];
         $post->gif = $request->gif;
         $post->save();
@@ -132,7 +132,7 @@ class RoomController extends Controller {
 
         $post = new Post();
         if (isset(Auth::user()->user_id))   $post->user_id = Auth::user()->user_id;
-        if (isset(Auth::user()->screen_name))   $post->user_id = Auth::user()->screen_name;
+        if (isset(Auth::user()->screen_name))   $post->screen_name = Auth::user()->screen_name;
         $post->room_id = $room_id[1];
         $post->draw = $request->draw;
         $post->save();
