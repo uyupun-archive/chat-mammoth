@@ -62,8 +62,9 @@
   }
   &_LinkBox {
     text-align: right;
-    .mp-Chatroom_Link {
+    .mp-ChatRoom_Link {
       text-decoration: none;
+      color: $red;
     }
   }
 }

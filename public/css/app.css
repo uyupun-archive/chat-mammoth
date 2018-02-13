@@ -8908,6 +8908,7 @@ button.close {
 
 .tp-ChatRoom_Container .tp-ChatRoom_LinkBox .tp-ChatRoom_Link {
   text-decoration: none;
+  color: #EC605B;
 }
 
 .tp-ChatRoom_Container .tp-Search {
@@ -9466,8 +9467,9 @@ button.close {
   text-align: right;
 }
 
-.mp-ChatRoom_LinkBox .mp-Chatroom_Link {
+.mp-ChatRoom_LinkBox .mp-ChatRoom_Link {
   text-decoration: none;
+  color: #EC605B;
 }
 
 .mp-Not_CreateRoom {
