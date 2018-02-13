@@ -1,0 +1,63 @@
+.cf-Form {
+  padding-left: 5px;
+  .cf-Image {
+    margin: 0 0 10px 0;
+    &_Title {
+      font-weight: normal;
+    }
+    .cf-Icon {
+      display: block;
+      object-fit: scale-down;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+  .cf-ScreenName {
+    margin: 0 0 10px 0;
+    &_Title {
+      font-weight: normal;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .cf-Id {
+    margin: 0 0 10px 0;
+    &_Title {
+      font-weight: normal;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .cf-Password {
+    margin: 0 0 10px 0;
+    &_Title {
+      font-weight: normal;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .cf-Confirm {
+    margin: 0 0 30px 0;
+    &_Title {
+      font-weight: normal;
+      margin: 0;
+    }
+    &_Textbox {
+      font-size: 14px;
+    }
+  }
+  .cf-Button_Area {
+    text-align: right;
+    margin: 10px 0;
+    .cf-Button {
+      padding: 5px 10px;
+    }
+  }
+}

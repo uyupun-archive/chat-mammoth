@@ -4,45 +4,45 @@
     <div class="st-Wrapper">
         <div class="st-Container">
             <h1 class="st-Title">設定</h1>
-            <form method="POST" enctype="multipart/form-data" action="{{ url('/api/user/update') }}" class="su-Form">
+            <form method="POST" enctype="multipart/form-data" action="{{ url('/api/user/update') }}" class="cf-Form">
                 {{ csrf_field() }}
-                <div class="row">
-                    <label for="avatar" class="">プロフィール画像</label>
+                <div class="cf-Image row">
+                    <label for="avatar" class="cf-Image_Title">プロフィール画像</label>
                     @if(isset(Auth::user()->avatar))
-                        <img src="{{ Auth::user()->avatar }}" alt="">
+                        <img class="cf-Icon" src="{{ Auth::user()->avatar }}" alt="">
                     @else
-                        <img src="{{ Auth::user()->default_avatar }}" alt="">
+                        <img class="cf-Icon" src="{{ Auth::user()->default_avatar }}" alt="">
                     @endif
                     <div class="col">
                         <input id="avatar" type="file" name="avatar" accept="image/*">
                     </div>
                 </div>
-                <div class="su-ScreenName row">
-                    <label for="screen-name" class="su-ScreenName_Title align-self-center">スクリーンネーム</label>
+                <div class="cf-ScreenName row">
+                    <label for="screen-name" class="cf-ScreenName_Title">スクリーンネーム</label>
                     <div class="col">
-                        <input id="screen-name" type="text" name="screen_name" value="{{ Auth::user()->screen_name }}" class="su-ScreenName_Textbox form-control" required autofocus minlength="1" maxlength="16">
+                        <input id="screen-name" type="text" name="screen_name" value="{{ Auth::user()->screen_name }}" class="cf-ScreenName_Textbox form-control" required autofocus minlength="1" maxlength="16">
                     </div>
                 </div>
-                <div class="su-Id row">
-                    <label for="user_id" class="su-Id_Title align-self-center">ユーザID</label>
+                <div class="cf-Id row">
+                    <label for="user_id" class="cf-Id_Title">ユーザID</label>
                     <div class="col">
-                        <input id="user_id" type="text" name="user_id" value="{{ Auth::user()->user_id }}" class="su-Id_Textbox form-control" required minlength="1" maxlength="16">
+                        <input id="user_id" type="text" name="user_id" value="{{ Auth::user()->user_id }}" class="cf-Id_Textbox form-control" required minlength="1" maxlength="16">
                     </div>
                 </div>
-                <div class="su-Password row">
-                    <label for="password" class="su-Password_Title align-self-center">パスワード</label>
+                <div class="cf-Password row">
+                    <label for="password" class="cf-Password_Title">パスワード</label>
                     <div class="col">
-                        <input id="password" type="password" name="password" class="su-Password_Textbox form-control" required minlength="8" maxlength="32">
+                        <input id="password" type="password" name="password" class="cf-Password_Textbox form-control" required minlength="8" maxlength="32">
                     </div>
                 </div>
-                <div class="su-Confirm row">
-                    <label for="password-confirm" class="su-Confirm_Title align-self-center">パスワード（確認）</label>
+                <div class="cf-Confirm row">
+                    <label for="password-confirm" class="cf-Confirm_Title">パスワード（確認）</label>
                     <div class="col">
-                        <input id="password-confirm" type="password" name="password_confirm" class="su-Confirm_Textbox form-control" required minlength="8" maxlength="32">
+                        <input id="password-confirm" type="password" name="password_confirm" class="cf-Confirm_Textbox form-control" required minlength="8" maxlength="32">
                     </div>
                 </div>
-                <div class="su-Button_Area">
-                    <button type="submit" class="st-Button su-Button">変更</button>
+                <div class="cf-Button_Area">
+                    <button type="submit" class="st-Button cf-Button">変更</button>
                 </div>
             </form>
             @if(session('response'))
