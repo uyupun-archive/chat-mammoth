@@ -8357,13 +8357,13 @@ button.close {
 }
 
 .st-Container {
-  max-width: 1200px;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
   padding-top: 60px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .st-Container {
     padding-left: 10px;
     padding-right: 10px;
@@ -8651,11 +8651,9 @@ button.close {
 
 .si-Form .si-Button_Area {
   text-align: right;
-  margin: 10px 0;
 }
 
 .si-Form .si-Button_Area .si-Button {
-  margin-right: 15px;
   padding: 5px 10px;
 }
 
@@ -8875,7 +8873,7 @@ button.close {
 }
 
 .tp-Container {
-  max-width: 1200px;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -8944,13 +8942,6 @@ button.close {
   outline: none;
 }
 
-@media screen and (max-width: 1200px) {
-  .tp-Container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .tp-Catchphrase_Area {
     height: 350px;
@@ -8974,6 +8965,11 @@ button.close {
     top: -75px;
     width: 150px;
     height: auto;
+  }
+
+  .tp-Container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -9072,7 +9068,7 @@ button.close {
 }
 
 .rp-Container {
-  max-width: 1200px;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 234px;
@@ -9374,12 +9370,14 @@ button.close {
 }
 
 @media screen and (max-width: 1200px) {
-  .rp-Container {
+  .rp-Post_Container {
     padding-left: 10px;
     padding-right: 10px;
   }
+}
 
-  .rp-Post_Container {
+@media screen and (max-width: 800px) {
+  .rp-Container {
     padding-left: 10px;
     padding-right: 10px;
   }

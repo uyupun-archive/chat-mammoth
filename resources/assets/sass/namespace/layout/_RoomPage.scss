@@ -1,5 +1,5 @@
 .rp-Container {
-  max-width: 1200px;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
   padding-bottom: 234px;
@@ -278,11 +278,14 @@
 }
 
 @media screen and (max-width: 1200px) {
-  .rp-Container {
+  .rp-Post_Container {
     padding-left: 10px;
     padding-right: 10px;
   }
-  .rp-Post_Container {
+}
+
+@media screen and (max-width: 800px) {
+  .rp-Container {
     padding-left: 10px;
     padding-right: 10px;
   }
