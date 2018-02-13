@@ -44239,7 +44239,7 @@ var render = function() {
                   _c(
                     "a",
                     {
-                      staticClass: "tp-ChatRoom_Link",
+                      staticClass: "mp-ChatRoom_Link",
                       attrs: { href: "/room/" + room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
