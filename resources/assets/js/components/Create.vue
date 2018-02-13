@@ -12,8 +12,8 @@
             <div class="cp-Item_Area">
                 <div class="cp-Item_Area">
                     <div class="cp-Item_Title">タグの追加</div>
-                    <input type="text" name="tag" class="cp-TextBox_Tag form-control" v-model="tag" @keyup="isDisabled()">
-                    <button type="button" class="st-Button cp-Tag_Button" @click="addTag(tag)" :disabled="disabled">追加</button>
+                    <input type="text" name="tag" class="cp-TextBox_Tag form-control" v-model="tag" @keyup="isDisabled()" :disabled="tagState">
+                    <button type="button" class="st-Button cp-Tag_Button" @click="addTag(tag)" :disabled="btnState">追加</button>
                     <div class="cp-Tag_Area">
                         <span class="st-Tag" v-for="tag in tags">{{ tag }}</span>
                     </div>
@@ -44,20 +44,25 @@
                 publish: '',
                 tags: [],
                 tag: '',
-                disabled: true,
+                btnState: true,
+                tagState: false,
             }
         },
         methods: {
             addTag(tag) {
                 this.tags.push(tag)
                 this.tag = ''
-                this.disabled = true
+                this.btnState = true
+
+                if (this.tags.length > 4) {
+                    this.tagState = true
+                }
             },
             isDisabled() {
                 if (this.tag.length > 0) {
-                    this.disabled = false
+                    this.btnState = false
                 } else {
-                    this.disabled = true
+                    this.btnState = true
                 }
             },
             send() {
