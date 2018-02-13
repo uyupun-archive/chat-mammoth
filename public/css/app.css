@@ -8403,6 +8403,10 @@ button.close {
   border-radius: 3px;
 }
 
+.st-Button:focus {
+  outline: 0;
+}
+
 .st-Tooltip_Button {
   display: inline-block;
 }
@@ -8907,6 +8911,7 @@ button.close {
 
 .tp-ChatRoom_Container .tp-Search_Link {
   text-decoration: none;
+  color: #EC605B;
 }
 
 .tp-ChatRoom_Container .tp-Copy_Area {
