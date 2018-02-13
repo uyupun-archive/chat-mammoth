@@ -52,7 +52,7 @@
                 </div>
             </form>
             @if(session('response'))
-                <div>{{ session('response') }}</div>
+                <span>{{ session('response') }}</span>
             @endif
         </div>
     </div>
