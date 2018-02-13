@@ -45444,21 +45444,17 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(69)
-}
 var normalizeComponent = __webpack_require__(1)
 /* script */
 var __vue_script__ = __webpack_require__(74)
 /* template */
-var __vue_template__ = __webpack_require__(75)
+var __vue_template__ = __webpack_require__(88)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = injectStyle
+var __vue_styles__ = null
 /* scopeId */
-var __vue_scopeId__ = "data-v-8cdb3f9a"
+var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
@@ -45491,46 +45487,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(70);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(72)("3f518888", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8cdb3f9a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HandWrite.vue", function() {
-     var newContent = require("!!../../../../../node_modules/css-loader/index.js!../../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-8cdb3f9a\",\"scoped\":true,\"hasInlineConfig\":true}!../../../../../node_modules/sass-loader/lib/loader.js!../../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./HandWrite.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(71)(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/***/ }),
+/* 69 */,
+/* 70 */,
 /* 71 */
 /***/ (function(module, exports) {
 
@@ -46012,58 +45970,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 75 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("canvas", { staticClass: "canvas", attrs: { id: "canvas" } }),
-    _vm._v(" "),
-    _c("div", { staticClass: "rp-Form_Other" }, [
-      _c(
-        "button",
-        {
-          staticClass: "st-Button rp-Button",
-          attrs: { type: "button", disabled: _vm.state },
-          on: {
-            click: function($event) {
-              _vm.clearCanvas()
-            }
-          }
-        },
-        [_vm._v("やり直す")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        attrs: { type: "hidden", name: "draw" },
-        domProps: { value: _vm.image }
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "st-Button rp-Button",
-          attrs: { type: "submit", disabled: _vm.state }
-        },
-        [_vm._v("投稿する")]
-      )
-    ])
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-module.exports = { render: render, staticRenderFns: staticRenderFns }
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-8cdb3f9a", module.exports)
-  }
-}
-
-/***/ }),
+/* 75 */,
 /* 76 */
 /***/ (function(module, exports) {
 
@@ -46117,6 +46024,58 @@ exports.push([module.i, "\n.cp-Tag_Button {\n  cursor: pointer;\n}\n.cp-Tag_Butt
 
 // exports
 
+
+/***/ }),
+/* 88 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("canvas", { staticClass: "canvas", attrs: { id: "canvas" } }),
+    _vm._v(" "),
+    _c("div", { staticClass: "rp-Form_Other" }, [
+      _c(
+        "button",
+        {
+          staticClass: "st-Button rp-Button",
+          attrs: { type: "button", disabled: _vm.state },
+          on: {
+            click: function($event) {
+              _vm.clearCanvas()
+            }
+          }
+        },
+        [_vm._v("やり直す")]
+      ),
+      _vm._v(" "),
+      _c("input", {
+        attrs: { type: "hidden", name: "draw" },
+        domProps: { value: _vm.image }
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "st-Button rp-Button",
+          attrs: { type: "submit", disabled: _vm.state }
+        },
+        [_vm._v("投稿する")]
+      )
+    ])
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-8cdb3f9a", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);
