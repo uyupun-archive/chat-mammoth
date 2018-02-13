@@ -6,12 +6,14 @@
             <h2 class="st-Title">マイページ</h2>
             <div class="mp-Information">
                 @if(isset($avatar->avatar))
-                    <img src="{{ $avatar->avatar }}" alt="">
+                    <img class="mp-Information_Image" src="{{ $avatar->avatar }}" alt="">
                 @else
-                    <img src="{{ $avatar->default_avatar }}" alt="">
+                    <img class="mp-Information_Image" src="{{ $avatar->default_avatar }}" alt="">
                 @endif
-                <div class="mp-Information_Name">{{ $screen_name }}</div>
-                <div class="mp-Information_UserId">&#64;{{ $user_id }}</div>
+                <div class="mp-Information_Sub">
+                    <div class="mp-Information_Name">{{ $screen_name }}</div>
+                    <div class="mp-Information_UserId">&#64;{{ $user_id }}</div>
+                </div>
             </div>
             <div class="mp-Nav_Area">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">

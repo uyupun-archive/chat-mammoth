@@ -1,12 +1,21 @@
 .mp-Information {
   padding-left: 5px;
   margin-bottom: 30px;
-  &_Name {
-    margin: 10px 0;
-    font-size: 24px;
+  &_Image {
+    object-fit: scale-down;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
   }
-  &_UserId {
-    margin: 10px 0;
+  .mp-Information_Sub {
+    display: inline-block;
+    .mp-Information_Name {
+      margin: 10px 0;
+      font-size: 24px;
+    }
+    .mp-Information_UserId {
+      margin: 10px 0;
+    }
   }
 }
 
