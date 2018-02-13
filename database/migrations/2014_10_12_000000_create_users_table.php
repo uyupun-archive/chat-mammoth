@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('screen_name');
             $table->string('user_id')->unique();
             $table->string('password')->nullable();
+            $table->string('bio')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

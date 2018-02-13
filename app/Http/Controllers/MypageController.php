@@ -16,6 +16,7 @@ class MypageController extends Controller {
             'avatar' => $avatar,
             'screen_name' => Auth::user()->screen_name,
             'user_id' => Auth::user()->user_id,
+            'bio' => Auth::user()->bio,
         ]);
     }
 
