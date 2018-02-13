@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="su-ScreenName row">
-                <label for="screen-name" class="su-ScreenName_Title">スクリーンネーム</label>
+                <label for="screen-name" class="su-ScreenName_Title">スクリーンネーム<span class="st-Required">*</span></label>
                 <div class="col">
                     <input id="screen-name" type="text" name="screen_name" value="{{ old('screen_name') }}" class="su-ScreenName_Textbox form-control" required autofocus minlength="1" maxlength="16">
                     @if ($errors->has('screen_name'))
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="su-Id row">
-                <label for="user_id" class="su-Id_Title">ユーザID</label>
+                <label for="user_id" class="su-Id_Title">ユーザID<span class="st-Required">*</span></label>
                 <div class="col">
                     <input id="user_id" type="text" name="user_id" value="{{ old('user_id') }}" class="su-Id_Textbox form-control" required minlength="1" maxlength="16">
                     @if ($errors->has('user_id'))
@@ -34,7 +34,7 @@
                 </div>
             </div>
             <div class="su-Password row">
-                <label for="password" class="su-Password_Title">パスワード</label>
+                <label for="password" class="su-Password_Title">パスワード<span class="st-Required">*</span></label>
                 <div class="col">
                     <input id="password" type="password" name="password" class="su-Password_Textbox form-control" required minlength="8" maxlength="32">
                     @if ($errors->has('password'))
@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="su-Confirm row">
-                <label for="password-confirm" class="su-Confirm_Title">パスワード（確認）</label>
+                <label for="password-confirm" class="su-Confirm_Title">パスワード（確認）<span class="st-Required">*</span></label>
                 <div class="col">
                     <input id="password-confirm" name="password_confirmation" type="password" class="su-Confirm_Textbox form-control" required minlength="8" maxlength="32">
                 </div>

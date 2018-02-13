@@ -8446,6 +8446,10 @@ button.close {
   z-index: 100;
 }
 
+.st-Required {
+  color: #EC605B;
+}
+
 .h-Header {
   height: 60px;
   width: 100vw;
@@ -8611,7 +8615,6 @@ button.close {
 
 .si-Form .si-Id_Title {
   font-weight: normal;
-  width: 80px;
   margin: 0;
 }
 
@@ -8625,7 +8628,6 @@ button.close {
 
 .si-Form .si-Password_Title {
   font-weight: normal;
-  width: 80px;
   margin: 0;
 }
 
