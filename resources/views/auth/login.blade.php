@@ -7,7 +7,7 @@
             <form  method="POST" action="{{ route('login') }}" class="si-Form">
                 {{ csrf_field() }}
                 <div class="si-Id row">
-                    <label for="id" class="si-Id_Title align-self-center">ユーザID</label>
+                    <label for="id" class="si-Id_Title">ユーザID<span class="st-Required">*</span></label>
                     <div class="col">
                         <input id="id" type="text" name="user_id" value="{{ old('user_id') }}" class="si-Id_Textbox form-control" required autofocus minlength="1" maxlength="16">
                     </div>
@@ -18,7 +18,7 @@
                     @endif
                 </div>
                 <div class="si-Password row">
-                    <label for="password" class="si-Password_Title align-self-center">パスワード</label>
+                    <label for="password" class="si-Password_Title">パスワード<span class="st-Required">*</span></label>
                     <div class="col">
                         <input id="password" type="password" name="password" class="si-Password_Textbox form-control" required minlength="8" maxlength="32">
                     </div>
