@@ -8,11 +8,11 @@
                 {{ csrf_field() }}
                 <div class="cp-Item_Area">
                     <label for="name" class="cp-Item_Title">ルーム名</label>
-                    <input type="text" name="name" id="name" class="cp-TextBox_Name form-control" required autofocus>
+                    <input type="text" name="name" id="name" class="cp-TextBox_Name form-control" required autofocus minlength="1" maxlength="32">
                 </div>
                 <div class="cp-Item_Area">
                     <label for="description" class="cp-Item_Title">ルームの説明</label>
-                    <textarea name="description" id="description" class="cp-TextArea_Description form-control" required></textarea>
+                    <textarea name="description" id="description" class="cp-TextArea_Description form-control" required minlength="1" maxlength="512"></textarea>
                 </div>
                 {{--タグの対応は後ほど--}}
                 {{--<div class="cp-Item_Area">--}}

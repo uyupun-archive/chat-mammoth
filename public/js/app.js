@@ -44030,7 +44030,7 @@ var render = function() {
               "a",
               {
                 staticClass: "tp-ChatRoom_Link",
-                attrs: { href: "/room/" + room.room_id }
+                attrs: { href: "/room/auth/" + room.room_id }
               },
               [_vm._v("チャットルームへ")]
             )
@@ -44239,8 +44239,8 @@ var render = function() {
                   _c(
                     "a",
                     {
-                      staticClass: "tp-Chatroom_Link",
-                      attrs: { href: "/room/" + room.room_id }
+                      staticClass: "tp-ChatRoom_Link",
+                      attrs: { href: "/room/auth/" + room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
                   )
@@ -44461,7 +44461,7 @@ var render = function() {
                     "a",
                     {
                       staticClass: "tp-Chatroom_Link",
-                      attrs: { href: "/room/" + room.room_id }
+                      attrs: { href: "/room/auth/" + room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
                   )
@@ -44669,8 +44669,9 @@ var render = function() {
             staticClass: "sp-Search_Textbox form-control",
             attrs: {
               type: "text",
-              maxlength: "8",
               placeholder: "Please room id here!",
+              minlength: "32",
+              maxlength: "32",
               required: "",
               autofocus: ""
             },
@@ -44741,7 +44742,7 @@ var render = function() {
                     "a",
                     {
                       staticClass: "sp-Chatroom_Link",
-                      attrs: { href: "/room/" + _vm.room.room_id }
+                      attrs: { href: "/room/auth/" + _vm.room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
                   )
@@ -44933,6 +44934,7 @@ var render = function() {
           placeholder: "Please enter a password.",
           disabled: _vm.state,
           required: "",
+          minlength: "8",
           maxlength: "32"
         }
       })

@@ -24,7 +24,7 @@ class SearchRoomsController extends Controller {
             'room_id' => [
                 'required',
                 'string',
-                'regex: /^[0-9a-z]{8}$/'
+                'regex: /^[0-9a-z]{32}$/'
             ]
         ]);
 

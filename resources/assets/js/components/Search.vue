@@ -4,7 +4,7 @@
             <div class="st-Container">
                 <h2 class="st-Title">チャットルーム検索</h2>
                 <div class="sp-Search">
-                    <input type="text" class="sp-Search_Textbox form-control" v-model="room_id" maxlength="8" placeholder="Please room id here!" required autofocus>
+                    <input type="text" class="sp-Search_Textbox form-control" v-model="room_id" placeholder="Please room id here!" minlength="32" maxlength="32" required autofocus>
                     <button class="st-Button sp-Search_Button" @click="postRoomId()">検索</button>
                 </div>
                 <div v-if="state" class="sp-Results">
@@ -28,7 +28,7 @@
                             <p>{{ room.description }}</p>
                         </div>
                         <div class="sp-Chatroom_LinkBox">
-                            <a :href="'/room/' + room.room_id" class="sp-Chatroom_Link">チャットルームへ</a>
+                            <a :href="'/room/auth/' + room.room_id" class="sp-Chatroom_Link">チャットルームへ</a>
                         </div>
                     </div>
                 </div>

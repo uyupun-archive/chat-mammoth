@@ -24,7 +24,7 @@
                     <p>{{ room.description }}</p>
                 </div>
                 <div class="tp-ChatRoom_LinkBox">
-                    <a :href="'/room/' + room.room_id" class="tp-ChatRoom_Link">チャットルームへ</a>
+                    <a :href="'/room/auth/' + room.room_id" class="tp-ChatRoom_Link">チャットルームへ</a>
                 </div>
             </div>
         </div>
