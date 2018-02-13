@@ -34,6 +34,9 @@
                     <button type="submit" class="st-Button cp-Button">作成</button>
                 </div>
             </form>
+            @if(session('response'))
+                <span>{{ session('response') }}</span>
+            @endif
         </div>
     </div>
 @endsection

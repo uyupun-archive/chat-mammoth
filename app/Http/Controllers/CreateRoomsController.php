@@ -21,6 +21,10 @@ class CreateRoomsController extends Controller {
             'publish' => '|required|'
         ]);
 
+        if ($validator->fails()) {
+            return redirect('/config')->with('response', '使用不可能な文字列が含まれています。');
+        }
+
         $rooms = new Room;
         $rooms->name = $request->name;
         $rooms->description = $request->description;
