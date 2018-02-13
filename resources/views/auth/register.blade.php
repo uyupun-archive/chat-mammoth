@@ -10,18 +10,27 @@
                 <label for="avatar" class="su-Image_Title">プロフィール画像</label>
                 <div class="col">
                     <input id="avatar" type="file" name="avatar" accept="image/*" class="su-Image_Choose">
+                    @if ($errors->has('avatar'))
+                        <span class="">{{ $errors->first('avatar') }}</span>
+                    @endif
                 </div>
             </div>
             <div class="su-ScreenName row">
                 <label for="screen-name" class="su-ScreenName_Title">スクリーンネーム</label>
                 <div class="col">
                     <input id="screen-name" type="text" name="screen_name" value="{{ old('screen_name') }}" class="su-ScreenName_Textbox form-control" required autofocus minlength="1" maxlength="16">
+                    @if ($errors->has('screen_name'))
+                        <span class="">{{ $errors->first('screen_name') }}</span>
+                    @endif
                 </div>
             </div>
             <div class="su-Id row">
                 <label for="user_id" class="su-Id_Title">ユーザID</label>
                 <div class="col">
                     <input id="user_id" type="text" name="user_id" value="{{ old('user_id') }}" class="su-Id_Textbox form-control" required minlength="1" maxlength="16">
+                    @if ($errors->has('user_id'))
+                        <span class="">{{ $errors->first('user_id') }}</span>
+                    @endif
                 </div>
             </div>
             <div class="su-Password row">
