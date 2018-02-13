@@ -44030,7 +44030,7 @@ var render = function() {
               "a",
               {
                 staticClass: "tp-ChatRoom_Link",
-                attrs: { href: "/room/auth/" + room.room_id }
+                attrs: { href: "/room/" + room.room_id }
               },
               [_vm._v("チャットルームへ")]
             )
@@ -44240,7 +44240,7 @@ var render = function() {
                     "a",
                     {
                       staticClass: "tp-ChatRoom_Link",
-                      attrs: { href: "/room/auth/" + room.room_id }
+                      attrs: { href: "/room/" + room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
                   )
@@ -44461,7 +44461,7 @@ var render = function() {
                     "a",
                     {
                       staticClass: "tp-Chatroom_Link",
-                      attrs: { href: "/room/auth/" + room.room_id }
+                      attrs: { href: "/room/" + room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
                   )
@@ -44742,7 +44742,7 @@ var render = function() {
                     "a",
                     {
                       staticClass: "sp-Chatroom_Link",
-                      attrs: { href: "/room/auth/" + _vm.room.room_id }
+                      attrs: { href: "/room/" + _vm.room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
                   )
@@ -44796,7 +44796,7 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(60)
+var __vue_script__ = null
 /* template */
 var __vue_template__ = __webpack_require__(61)
 /* template functional */
@@ -44837,36 +44837,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 60 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            state: true
-        };
-    }
-});
-
-/***/ }),
+/* 60 */,
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -44923,21 +44894,7 @@ var render = function() {
         "label",
         { staticClass: "cp-Chatroom_private", attrs: { for: "private" } },
         [_vm._v("非公開")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "cp-RadioBox_Secret form-control",
-        attrs: {
-          type: "text",
-          name: "password",
-          id: "password",
-          placeholder: "Please enter a password.",
-          disabled: _vm.state,
-          required: "",
-          minlength: "8",
-          maxlength: "32"
-        }
-      })
+      )
     ])
   ])
 }

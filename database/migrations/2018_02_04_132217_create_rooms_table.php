@@ -19,7 +19,6 @@ class CreateRoomsTable extends Migration
             $table->text('description');
             // タグの対応は後ほど
             $table->string('publish');
-            $table->string('password')->nullable();
             $table->string('creator');
             $table->string('room_id');
             $table->unsignedInteger('favorite')->default(0);

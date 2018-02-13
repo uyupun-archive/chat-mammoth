@@ -22,7 +22,7 @@
                     <p>{{ room.description }}</p>
                 </div>
                 <div class="mp-Chatroom_LinkBox">
-                    <a :href="'/room/auth/' + room.room_id" class="tp-Chatroom_Link">チャットルームへ</a>
+                    <a :href="'/room/' + room.room_id" class="tp-Chatroom_Link">チャットルームへ</a>
                 </div>
             </div>
         </div>

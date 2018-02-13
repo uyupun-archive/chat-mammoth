@@ -22,11 +22,6 @@ class CreateRoomsController extends Controller {
         ]);
 
         $rooms = new Room;
-
-        if (isset($request->password) && $request->publish === 'private') {
-            $rooms->password = bcrypt($request->password);
-        }
-
         $rooms->name = $request->name;
         $rooms->description = $request->description;
         $rooms->publish = $request->publish;
