@@ -9384,12 +9384,24 @@ button.close {
   margin-bottom: 30px;
 }
 
-.mp-Information_Name {
+.mp-Information_Image {
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.mp-Information .mp-Information_Sub {
+  display: inline-block;
+}
+
+.mp-Information .mp-Information_Sub .mp-Information_Name {
   margin: 10px 0;
   font-size: 24px;
 }
 
-.mp-Information_UserId {
+.mp-Information .mp-Information_Sub .mp-Information_UserId {
   margin: 10px 0;
 }
 
