@@ -9136,6 +9136,10 @@ button.close {
      object-fit: scale-down;
 }
 
+.rp-User_Comment {
+  word-break: break-all;
+}
+
 .rp-NotComment {
   text-align: center;
   margin-top: 100px;
