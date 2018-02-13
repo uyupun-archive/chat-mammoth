@@ -13,7 +13,6 @@ class RoomController extends Controller {
 
     public function index() {
 
-
         $room_id = explode('/', \Request::decodedPath());
 
         $posts = DB::table('users')
@@ -43,7 +42,7 @@ class RoomController extends Controller {
             'tiger',
         ];
 
-        return view('room.room', [
+        return view('room', [
             'posts' => $posts,
             'default_avatar' => '/avatar/' . $default_avatars[mt_rand(0, 15)] . '.png'
         ]);

@@ -22,10 +22,6 @@ Route::post('/api/comment/image', 'RoomController@image');
 Route::post('/api/comment/gif', 'RoomController@gif');
 Route::post('/api/comment/draw', 'RoomController@draw');
 
-/** 非公開ルーム認証 */
-Route::get('/room/auth/{id}', 'RoomAuthController@index');
-Route::post('/api/room/auth', 'RoomAuthController@auth');
-
 /** チャットルーム作成 */
 Route::get('/create', 'CreateRoomsController@index');
 Route::post('/api/room/store', 'CreateRoomsController@store');
