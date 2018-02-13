@@ -44913,9 +44913,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             axios.post('/api/room/store', {
                 name: this.name,
                 description: this.description,
-                publish: this.publish
+                publish: this.publish,
+                tags: this.tags
             }).then(function (response) {
-                window.location = '/mypage';
+                location = '/mypage';
             });
         }
     }

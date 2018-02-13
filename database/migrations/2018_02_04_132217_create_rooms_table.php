@@ -17,10 +17,10 @@ class CreateRoomsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->text('description');
-            // タグの対応は後ほど
             $table->string('publish');
             $table->string('creator');
             $table->string('room_id');
+            $table->string('tags')->nullable();
             $table->unsignedInteger('favorite')->default(0);
             $table->timestamps();
         });

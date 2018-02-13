@@ -31,6 +31,7 @@ class CreateRoomsController extends Controller {
         $rooms->publish = $request->publish;
         $rooms->creator = Auth::user()->user_id;
         $rooms->room_id = hash('md5', mt_rand());
+        if(isset($request->tags))   $rooms->tags = json_encode($request->tags);
         $rooms->save();
     }
 

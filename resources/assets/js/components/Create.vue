@@ -65,9 +65,10 @@
                     name: this.name,
                     description: this.description,
                     publish: this.publish,
+                    tags: this.tags
                 })
                     .then(response => {
-                        window.location = '/mypage'
+                        location = '/mypage'
                     })
             }
         }
