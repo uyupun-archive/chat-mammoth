@@ -12,7 +12,7 @@
                 @endif
                 <div class="mp-Information_Sub">
                     <div class="mp-Information_Name">{{ $screen_name }}</div>
-                    <div class="mp-Information_UserId">{{ $user_id }}</div>
+                    <div class="mp-Information_UserId">&#64;{{ $user_id }}</div>
                     @if(isset($bio))
                         <div class="mp-Information_UserId">{{ $bio }}</div>
                     @endif

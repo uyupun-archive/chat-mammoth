@@ -14,9 +14,7 @@
                 </div>
                 <div>作成者: {{ room.creator }}</div>
                 <div class="mp-Chatroom_Tag">
-                    <span class="st-Tag">タグ</span>
-                    <span class="st-Tag">タグ</span>
-                    <span class="st-Tag">タグ</span>
+                    <span class="st-Tag" v-for="(tag) in tags[index]">{{ tag }}</span>
                 </div>
                 <div class="mp-Chatroom_Description">
                     <p>{{ room.description }}</p>
@@ -39,7 +37,8 @@
     export default {
         data() {
             return {
-                rooms: {}
+                rooms: {},
+                tags: []
             }
         },
         methods: {
@@ -47,6 +46,10 @@
                 axios.get('/api/mypage/favorite')
                     .then(response => {
                         this.rooms = response.data
+
+                        for (let i = 0; i < response.data.length; i++) {
+                            this.tags.push(JSON.parse(response.data[i].tags))
+                        }
                     })
             }
         },
