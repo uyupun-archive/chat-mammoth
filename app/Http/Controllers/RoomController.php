@@ -12,6 +12,8 @@ use App\Post;
 class RoomController extends Controller {
 
     public function index() {
+
+
         $room_id = explode('/', \Request::decodedPath());
 
         $posts = DB::table('users')
