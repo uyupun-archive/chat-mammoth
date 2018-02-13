@@ -1,10 +1,15 @@
 .su-Form {
   padding-left: 5px;
-  .su-ScreenName {
-    margin: 10px 0;
+  .su-Image {
+    margin: 0 0 10px 0;
     &_Title {
       font-weight: normal;
-      width: 145px;
+    }
+  }
+  .su-ScreenName {
+    margin: 0 0 10px 0;
+    &_Title {
+      font-weight: normal;
       margin: 0;
     }
     &_Textbox {
@@ -12,10 +17,9 @@
     }
   }
   .su-Id {
-    margin: 10px 0;
+    margin: 0 0 10px 0;
     &_Title {
       font-weight: normal;
-      width: 145px;
       margin: 0;
     }
     &_Textbox {
@@ -23,10 +27,9 @@
     }
   }
   .su-Password {
-    margin: 10px 0;
+    margin: 0 0 10px 0;
     &_Title {
       font-weight: normal;
-      width: 145px;
       margin: 0;
     }
     &_Textbox {
@@ -34,10 +37,9 @@
     }
   }
   .su-Confirm {
-    margin: 10px 0;
+    margin: 0 0 30px 0;
     &_Title {
       font-weight: normal;
-      width: 145px;
       margin: 0;
     }
     &_Textbox {
@@ -48,7 +50,6 @@
     text-align: right;
     margin: 10px 0;
     .su-Button {
-      margin-right: 15px;
       padding: 5px 10px;
     }
   }

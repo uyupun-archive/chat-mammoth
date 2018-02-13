@@ -8528,13 +8528,20 @@ button.close {
   padding-left: 5px;
 }
 
+.su-Form .su-Image {
+  margin: 0 0 10px 0;
+}
+
+.su-Form .su-Image_Title {
+  font-weight: normal;
+}
+
 .su-Form .su-ScreenName {
-  margin: 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .su-Form .su-ScreenName_Title {
   font-weight: normal;
-  width: 145px;
   margin: 0;
 }
 
@@ -8543,12 +8550,11 @@ button.close {
 }
 
 .su-Form .su-Id {
-  margin: 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .su-Form .su-Id_Title {
   font-weight: normal;
-  width: 145px;
   margin: 0;
 }
 
@@ -8557,12 +8563,11 @@ button.close {
 }
 
 .su-Form .su-Password {
-  margin: 10px 0;
+  margin: 0 0 10px 0;
 }
 
 .su-Form .su-Password_Title {
   font-weight: normal;
-  width: 145px;
   margin: 0;
 }
 
@@ -8571,12 +8576,11 @@ button.close {
 }
 
 .su-Form .su-Confirm {
-  margin: 10px 0;
+  margin: 0 0 30px 0;
 }
 
 .su-Form .su-Confirm_Title {
   font-weight: normal;
-  width: 145px;
   margin: 0;
 }
 
@@ -8590,7 +8594,6 @@ button.close {
 }
 
 .su-Form .su-Button_Area .su-Button {
-  margin-right: 15px;
   padding: 5px 10px;
 }
 
@@ -9084,7 +9087,7 @@ button.close {
 }
 
 .rp-List .rp-Message {
-  padding: 15px 0;
+  padding: 15px;
 }
 
 .rp-List .rp-Message:hover {
@@ -9138,6 +9141,7 @@ button.close {
 
 .rp-User_Comment {
   word-break: break-all;
+  margin: 10px;
 }
 
 .rp-NotComment {

@@ -26,7 +26,7 @@
 
 .rp-List {
   .rp-Message {
-    padding: 15px 0;
+    padding: 15px;
     &:hover {
       background: $light-gray;
     }
@@ -69,6 +69,7 @@
 
 .rp-User_Comment {
   word-break: break-all;
+  margin: 10px;
 }
 
 .rp-NotComment {
