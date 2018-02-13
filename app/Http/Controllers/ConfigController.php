@@ -31,6 +31,7 @@ class ConfigController extends Controller {
             'screen_name' => 'required|string|min:1|max:16',
             'user_id' => 'required|string|regex:/^[a-zA-Z0-9_]+$/|min:1|max:16',
             'password' => 'required|string|min:8|max:32',
+            'bio' => 'string|max:512'
         ]);
 
         if ($validator->fails()) {
@@ -43,6 +44,11 @@ class ConfigController extends Controller {
         $user->screen_name = $request->screen_name;
         $user->user_id = $request->user_id;
         $user->password = bcrypt($request->password);
+
+        if (isset($request->bio)) {
+            $user->bio = $request->bio;
+        }
+
         $user->save();
 
         return redirect('/config')->with('response', '変更が完了しました。');
