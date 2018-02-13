@@ -23,8 +23,7 @@ Route::post('/api/comment/gif', 'RoomController@gif');
 Route::post('/api/comment/draw', 'RoomController@draw');
 
 /** 非公開ルーム認証 */
-//Route::get('/room/{id}/auth', 'RoomController@auth');
-//Route::post('/room/{id}/auth', 'RoomController@auth');
+Route::get('/room/auth/{id}', 'RoomAuthController@index');
 
 /** チャットルーム作成 */
 Route::get('/create', 'CreateRoomsController@index');

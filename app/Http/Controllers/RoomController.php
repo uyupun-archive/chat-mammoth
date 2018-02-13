@@ -14,12 +14,6 @@ class RoomController extends Controller {
     public function index() {
         $room_id = explode('/', \Request::decodedPath());
 
-        // 非公開ルームかどうかの検証
-        $publish = DB::table('rooms')->select('publish')->where('room_id', $room_id[1])->first();
-        if ($publish->publish === 'private') {
-            return redirect('/room/' . $room_id[1] . '/auth');
-        }
-
         $posts = DB::table('users')
                         ->join('posts', 'users.user_id', '=', 'posts.user_id')
                         ->select('users.user_id', 'users.avatar', 'users.default_avatar', 'users.screen_name', 'posts.comment', 'posts.markdown', 'posts.created_at', 'posts.image', 'posts.gif', 'posts.draw')
@@ -139,16 +133,4 @@ class RoomController extends Controller {
 
         return redirect('/room/' . $room_id[1]);
     }
-
-//    TODO: 実装する
-//    public function auth(Request $request) {
-//        $room_id = explode('/', \Request::decodedPath());
-//        $password = DB::table('rooms')->select('password')->where('room_id', $room_id[1])->first();
-//
-//        if (Hash::check($request->password, $password->password)) {
-//            return redirect('/room/' . $room_id[1]);
-//        }
-//
-//        return view('room.auth');
-//    }
 }
