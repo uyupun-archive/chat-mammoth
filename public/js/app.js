@@ -44151,8 +44151,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -44160,7 +44158,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            rooms: {}
+            rooms: {},
+            tags: []
         };
     },
 
@@ -44170,6 +44169,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/mypage/create').then(function (response) {
                 _this.rooms = response.data;
+
+                for (var i = 0; i < response.data.length; i++) {
+                    _this.tags.push(JSON.parse(response.data[i].tags));
+                }
             });
         }
     },
@@ -44228,7 +44231,15 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
                 _vm._v(" "),
-                _vm._m(0, true),
+                _c(
+                  "div",
+                  { staticClass: "mp-ChatRoom_Tag" },
+                  _vm._l(_vm.tags[index], function(tag) {
+                    return _c("span", { staticClass: "st-Tag" }, [
+                      _vm._v(_vm._s(tag))
+                    ])
+                  })
+                ),
                 _vm._v(" "),
                 _c("div", { staticClass: "mp-ChatRoom_Description" }, [
                   _c("p", [_vm._v(_vm._s(room.description))])
@@ -44260,20 +44271,7 @@ var render = function() {
     2
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mp-ChatRoom_Tag" }, [
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -44372,8 +44370,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -44381,7 +44377,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            rooms: {}
+            rooms: {},
+            tags: []
         };
     },
 
@@ -44391,6 +44388,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/mypage/favorite').then(function (response) {
                 _this.rooms = response.data;
+
+                for (var i = 0; i < response.data.length; i++) {
+                    _this.tags.push(JSON.parse(response.data[i].tags));
+                }
             });
         }
     },
@@ -44449,7 +44450,15 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
                 _vm._v(" "),
-                _vm._m(0, true),
+                _c(
+                  "div",
+                  { staticClass: "mp-Chatroom_Tag" },
+                  _vm._l(_vm.tags[index], function(tag) {
+                    return _c("span", { staticClass: "st-Tag" }, [
+                      _vm._v(_vm._s(tag))
+                    ])
+                  })
+                ),
                 _vm._v(" "),
                 _c("div", { staticClass: "mp-Chatroom_Description" }, [
                   _c("p", [_vm._v(_vm._s(room.description))])
@@ -44481,20 +44490,7 @@ var render = function() {
     2
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mp-Chatroom_Tag" }, [
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
