@@ -43296,8 +43296,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
 
 
 
@@ -43305,7 +43303,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
-            rooms: {}
+            rooms: {},
+            tags: []
         };
     },
 
@@ -43315,6 +43314,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/room/get').then(function (response) {
                 _this.rooms = response.data;
+
+                for (var i = 0; i < response.data.length; i++) {
+                    _this.tags.push(JSON.parse(response.data[i].tags));
+                }
             });
         },
         postFavorite: function postFavorite(room_id) {
@@ -43325,6 +43328,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     created: function created() {
         this.getRooms();
+
         var clipboard = new __WEBPACK_IMPORTED_MODULE_1_clipboard___default.a('.btn');
     }
 });
@@ -43976,7 +43980,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    _vm._l(_vm.rooms, function(room, index) {
+    _vm._l(_vm.rooms, function(room, i) {
       return _c("div", [
         _c("div", { staticClass: "tp-ChatRoom" }, [
           _c("div", { staticClass: "tp-ChatRoom_Name" }, [
@@ -43988,7 +43992,7 @@ var render = function() {
             _vm._v(" "),
             _c("input", {
               staticClass: "tp-Copy_Area",
-              attrs: { type: "text", id: "copy" + index + "nr" },
+              attrs: { type: "text", id: "copy" + i + "nr" },
               domProps: { value: room.room_id }
             }),
             _vm._v(" "),
@@ -43996,7 +44000,7 @@ var render = function() {
               "button",
               {
                 staticClass: "btn tp-Copy_Button st-Tooltip_Button",
-                attrs: { "data-clipboard-target": "#copy" + index + "nr" }
+                attrs: { "data-clipboard-target": "#copy" + i + "nr" }
               },
               [
                 _c("span", { staticClass: "st-Tooltip" }, [_vm._v("Copy")]),
@@ -44019,7 +44023,15 @@ var render = function() {
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
           _vm._v(" "),
-          _vm._m(0, true),
+          _c(
+            "div",
+            { staticClass: "tp-ChatRoom_Tag" },
+            _vm._l(_vm.tags[i], function(tag) {
+              return _c("span", { staticClass: "st-Tag" }, [
+                _vm._v(_vm._s(tag))
+              ])
+            })
+          ),
           _vm._v(" "),
           _c("div", { staticClass: "tp-ChatRoom_Description" }, [
             _c("p", [_vm._v(_vm._s(room.description))])
@@ -44040,20 +44052,7 @@ var render = function() {
     })
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "tp-ChatRoom_Tag" }, [
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")]),
-      _vm._v(" "),
-      _c("span", { staticClass: "st-Tag" }, [_vm._v("タグ")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
