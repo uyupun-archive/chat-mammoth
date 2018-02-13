@@ -9520,3 +9520,85 @@ button.close {
   color: #323232;
 }
 
+.cf-Form {
+  padding-left: 5px;
+}
+
+.cf-Form .cf-Image {
+  margin: 0 0 10px 0;
+}
+
+.cf-Form .cf-Image_Title {
+  font-weight: normal;
+}
+
+.cf-Form .cf-Image .cf-Icon {
+  display: block;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.cf-Form .cf-ScreenName {
+  margin: 0 0 10px 0;
+}
+
+.cf-Form .cf-ScreenName_Title {
+  font-weight: normal;
+  margin: 0;
+}
+
+.cf-Form .cf-ScreenName_Textbox {
+  font-size: 14px;
+}
+
+.cf-Form .cf-Id {
+  margin: 0 0 10px 0;
+}
+
+.cf-Form .cf-Id_Title {
+  font-weight: normal;
+  margin: 0;
+}
+
+.cf-Form .cf-Id_Textbox {
+  font-size: 14px;
+}
+
+.cf-Form .cf-Password {
+  margin: 0 0 10px 0;
+}
+
+.cf-Form .cf-Password_Title {
+  font-weight: normal;
+  margin: 0;
+}
+
+.cf-Form .cf-Password_Textbox {
+  font-size: 14px;
+}
+
+.cf-Form .cf-Confirm {
+  margin: 0 0 30px 0;
+}
+
+.cf-Form .cf-Confirm_Title {
+  font-weight: normal;
+  margin: 0;
+}
+
+.cf-Form .cf-Confirm_Textbox {
+  font-size: 14px;
+}
+
+.cf-Form .cf-Button_Area {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.cf-Form .cf-Button_Area .cf-Button {
+  padding: 5px 10px;
+}
+
