@@ -8891,10 +8891,15 @@ button.close {
 
 .tp-ChatRoom_Container .tp-ChatRoom_Name {
   font-size: 26px;
+  word-break: break-all;
 }
 
 .tp-ChatRoom_Container .tp-ChatRoom_Tag {
   margin: 4px 4px 0 0;
+}
+
+.tp-ChatRoom_Container .tp-ChatRoom_Description {
+  word-break: break-all;
 }
 
 .tp-ChatRoom_Container .tp-ChatRoom_LinkBox {
@@ -9446,10 +9451,15 @@ button.close {
 
 .mp-ChatRoom_Name {
   font-size: 26px;
+  word-break: break-all;
 }
 
 .mp-ChatRoom_Tag {
   margin: 4px 4px 0 0;
+}
+
+.mp-ChatRoom_Description {
+  word-break: break-all;
 }
 
 .mp-ChatRoom_LinkBox {
