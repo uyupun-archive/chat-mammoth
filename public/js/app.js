@@ -44887,7 +44887,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             publish: '',
             tags: [],
             tag: '',
-            disabled: true
+            btnState: true,
+            tagState: false
         };
     },
 
@@ -44895,13 +44896,17 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addTag: function addTag(tag) {
             this.tags.push(tag);
             this.tag = '';
-            this.disabled = true;
+            this.btnState = true;
+
+            if (this.tags.length > 4) {
+                this.tagState = true;
+            }
         },
         isDisabled: function isDisabled() {
             if (this.tag.length > 0) {
-                this.disabled = false;
+                this.btnState = false;
             } else {
-                this.disabled = true;
+                this.btnState = true;
             }
         },
         send: function send() {
@@ -45013,7 +45018,7 @@ var render = function() {
               }
             ],
             staticClass: "cp-TextBox_Tag form-control",
-            attrs: { type: "text", name: "tag" },
+            attrs: { type: "text", name: "tag", disabled: _vm.tagState },
             domProps: { value: _vm.tag },
             on: {
               keyup: function($event) {
@@ -45032,7 +45037,7 @@ var render = function() {
             "button",
             {
               staticClass: "st-Button cp-Tag_Button",
-              attrs: { type: "button", disabled: _vm.disabled },
+              attrs: { type: "button", disabled: _vm.btnState },
               on: {
                 click: function($event) {
                   _vm.addTag(_vm.tag)
