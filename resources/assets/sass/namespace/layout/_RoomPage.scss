@@ -26,7 +26,7 @@
 
 .rp-List {
   .rp-Message {
-    padding: 15px 0;
+    padding: 15px;
     &:hover {
       background: $light-gray;
     }
@@ -65,6 +65,11 @@
       object-fit: scale-down;
     }
   }
+}
+
+.rp-User_Comment {
+  word-break: break-all;
+  margin: 10px;
 }
 
 .rp-NotComment {
@@ -229,8 +234,7 @@
 .rp-Form_File {
   .rp-File_Area {
     width: 100%;
-    //border: solid 1px $white;
-    //border-radius: 5px;
+    margin-top: 20px;
     text-align: center;
     .rp-Cloud_Upload {
       color: $white;
@@ -244,7 +248,8 @@
     }
   }
   .rp-Form_Other {
-    margin-top: 10px;
+    margin-top: 20px;
+    text-align: center;
   }
 }
 

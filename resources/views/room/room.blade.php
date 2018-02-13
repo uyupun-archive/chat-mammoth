@@ -25,7 +25,7 @@
                             @if($post->markdown)
                                 {!! $post->comment !!}
                             @elseif(isset($post->comment))
-                                <p>{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
+                                <p class="rp-User_Comment">{!! nl2br(htmlspecialchars($post->comment)) !!}</p>
                             @elseif(isset($post->image))
                                 <img class="rp-Image" src="{{ $post->image }}" alt="">
                                 <a class="rp-Image_Link" href="{{ $post->image }}" download="download.png">ダウンロード</a>
