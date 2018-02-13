@@ -44868,10 +44868,28 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
         return {
+            name: '',
+            description: '',
+            publish: '',
             tags: [],
             tag: '',
             disabled: true
@@ -44882,6 +44900,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addTag: function addTag(tag) {
             this.tags.push(tag);
             this.tag = '';
+            this.disabled = true;
         },
         isDisabled: function isDisabled() {
             if (this.tag.length > 0) {
@@ -44889,6 +44908,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             } else {
                 this.disabled = true;
             }
+        },
+        send: function send() {
+            axios.post('/api/room/store', {
+                name: this.name,
+                description: this.description,
+                publish: this.publish
+            }).then(function (response) {
+                window.location = '/mypage';
+            });
         }
     }
 });
@@ -44902,113 +44930,222 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "cp-Item_Area" }, [
-      _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("タグの追加")]),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.tag,
-            expression: "tag"
-          }
-        ],
-        staticClass: "cp-TextBox_Tag form-control",
-        attrs: { type: "text", name: "tag" },
-        domProps: { value: _vm.tag },
-        on: {
-          keyup: function($event) {
-            _vm.isDisabled()
+    _c("div", { staticClass: "cp-Create_ChatRoom" }, [
+      _c("div", { staticClass: "cp-Item_Area" }, [
+        _c("label", { staticClass: "cp-Item_Title", attrs: { for: "name" } }, [
+          _vm._v("ルーム名")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.name,
+              expression: "name"
+            }
+          ],
+          staticClass: "cp-TextBox_Name form-control",
+          attrs: {
+            type: "text",
+            name: "name",
+            id: "name",
+            required: "",
+            autofocus: "",
+            minlength: "1",
+            maxlength: "32"
           },
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.tag = $event.target.value
-          }
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "st-Button cp-Tag_Button",
-          attrs: { type: "button", disabled: _vm.disabled },
+          domProps: { value: _vm.name },
           on: {
-            click: function($event) {
-              _vm.addTag(_vm.tag)
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.name = $event.target.value
             }
           }
-        },
-        [_vm._v("追加")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "cp-Tag_Area" },
-        _vm._l(_vm.tags, function(tag) {
-          return _c("span", { staticClass: "st-Tag" }, [_vm._v(_vm._s(tag))])
         })
-      )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("公開設定")]),
-    _vm._v(" "),
-    _vm._m(0),
-    _vm._v(" "),
-    _vm._m(1)
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "cp-Item_Area" }, [
+        _c(
+          "label",
+          { staticClass: "cp-Item_Title", attrs: { for: "description" } },
+          [_vm._v("ルームの説明")]
+        ),
+        _vm._v(" "),
+        _c("textarea", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.description,
+              expression: "description"
+            }
+          ],
+          staticClass: "cp-TextArea_Description form-control",
+          attrs: {
+            name: "description",
+            id: "description",
+            required: "",
+            minlength: "1",
+            maxlength: "512"
+          },
+          domProps: { value: _vm.description },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.description = $event.target.value
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "cp-Item_Area" }, [
+        _c("div", { staticClass: "cp-Item_Area" }, [
+          _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("タグの追加")]),
+          _vm._v(" "),
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.tag,
+                expression: "tag"
+              }
+            ],
+            staticClass: "cp-TextBox_Tag form-control",
+            attrs: { type: "text", name: "tag" },
+            domProps: { value: _vm.tag },
+            on: {
+              keyup: function($event) {
+                _vm.isDisabled()
+              },
+              input: function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.tag = $event.target.value
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "st-Button cp-Tag_Button",
+              attrs: { type: "button", disabled: _vm.disabled },
+              on: {
+                click: function($event) {
+                  _vm.addTag(_vm.tag)
+                }
+              }
+            },
+            [_vm._v("追加")]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "cp-Tag_Area" },
+            _vm._l(_vm.tags, function(tag) {
+              return _c("span", { staticClass: "st-Tag" }, [
+                _vm._v(_vm._s(tag))
+              ])
+            })
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("公開設定")]),
+        _vm._v(" "),
+        _c("div", { staticClass: "cp-Public_Area" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.publish,
+                expression: "publish"
+              }
+            ],
+            staticClass: "cp-RadioBox_Public",
+            attrs: {
+              type: "radio",
+              name: "publish",
+              id: "public",
+              value: "public",
+              checked: "",
+              required: ""
+            },
+            domProps: { checked: _vm._q(_vm.publish, "public") },
+            on: {
+              change: function($event) {
+                _vm.publish = "public"
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "cp-Chatroom_public", attrs: { for: "public" } },
+            [_vm._v("公開")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "cp-Private_Area" }, [
+          _c("input", {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.publish,
+                expression: "publish"
+              }
+            ],
+            staticClass: "cp-RadioBox_Private",
+            attrs: {
+              type: "radio",
+              name: "publish",
+              id: "private",
+              value: "private",
+              required: ""
+            },
+            domProps: { checked: _vm._q(_vm.publish, "private") },
+            on: {
+              change: function($event) {
+                _vm.publish = "private"
+              }
+            }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            { staticClass: "cp-Chatroom_private", attrs: { for: "private" } },
+            [_vm._v("非公開")]
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "cp-Button_Area" }, [
+        _c(
+          "button",
+          {
+            staticClass: "st-Button cp-Button",
+            attrs: { type: "button" },
+            on: {
+              click: function($event) {
+                _vm.send()
+              }
+            }
+          },
+          [_vm._v("作成")]
+        )
+      ])
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "cp-Public_Area" }, [
-      _c("input", {
-        staticClass: "cp-RadioBox_Public",
-        attrs: {
-          type: "radio",
-          name: "publish",
-          id: "public",
-          value: "public",
-          checked: "",
-          required: ""
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "label",
-        { staticClass: "cp-Chatroom_public", attrs: { for: "public" } },
-        [_vm._v("公開")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "cp-Private_Area" }, [
-      _c("input", {
-        staticClass: "cp-RadioBox_Private",
-        attrs: {
-          type: "radio",
-          name: "publish",
-          id: "private",
-          value: "private",
-          required: ""
-        }
-      }),
-      _vm._v(" "),
-      _c(
-        "label",
-        { staticClass: "cp-Chatroom_private", attrs: { for: "private" } },
-        [_vm._v("非公開")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
