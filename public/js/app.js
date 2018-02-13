@@ -44794,15 +44794,19 @@ if (false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(86)
+}
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = null
+var __vue_script__ = __webpack_require__(60)
 /* template */
 var __vue_template__ = __webpack_require__(61)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = null
+var __vue_styles__ = injectStyle
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -44837,7 +44841,59 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 60 */,
+/* 60 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    data: function data() {
+        return {
+            tags: [],
+            tag: '',
+            disabled: true
+        };
+    },
+
+    methods: {
+        addTag: function addTag(tag) {
+            this.tags.push(tag);
+            this.tag = '';
+        },
+        isDisabled: function isDisabled() {
+            if (this.tag.length > 0) {
+                this.disabled = false;
+            } else {
+                this.disabled = true;
+            }
+        }
+    }
+});
+
+/***/ }),
 /* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -44846,9 +44902,70 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _c("div", { staticClass: "cp-Item_Area" }, [
+      _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("タグの追加")]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "model",
+            rawName: "v-model",
+            value: _vm.tag,
+            expression: "tag"
+          }
+        ],
+        staticClass: "cp-TextBox_Tag form-control",
+        attrs: { type: "text", name: "tag" },
+        domProps: { value: _vm.tag },
+        on: {
+          keyup: function($event) {
+            _vm.isDisabled()
+          },
+          input: function($event) {
+            if ($event.target.composing) {
+              return
+            }
+            _vm.tag = $event.target.value
+          }
+        }
+      }),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "st-Button cp-Tag_Button",
+          attrs: { type: "button", disabled: _vm.disabled },
+          on: {
+            click: function($event) {
+              _vm.addTag(_vm.tag)
+            }
+          }
+        },
+        [_vm._v("追加")]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "cp-Tag_Area" },
+        _vm._l(_vm.tags, function(tag) {
+          return _c("span", { staticClass: "st-Tag" }, [_vm._v(_vm._s(tag))])
+        })
+      )
+    ]),
+    _vm._v(" "),
     _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("公開設定")]),
     _vm._v(" "),
-    _c("div", { staticClass: "cp-Public_Area" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _vm._m(1)
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "cp-Public_Area" }, [
       _c("input", {
         staticClass: "cp-RadioBox_Public",
         attrs: {
@@ -44858,11 +44975,6 @@ var render = function() {
           value: "public",
           checked: "",
           required: ""
-        },
-        on: {
-          click: function($event) {
-            _vm.state = !_vm.state
-          }
         }
       }),
       _vm._v(" "),
@@ -44871,9 +44983,13 @@ var render = function() {
         { staticClass: "cp-Chatroom_public", attrs: { for: "public" } },
         [_vm._v("公開")]
       )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "cp-Private_Area" }, [
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "cp-Private_Area" }, [
       _c("input", {
         staticClass: "cp-RadioBox_Private",
         attrs: {
@@ -44882,11 +44998,6 @@ var render = function() {
           id: "private",
           value: "private",
           required: ""
-        },
-        on: {
-          click: function($event) {
-            _vm.state = !_vm.state
-          }
         }
       }),
       _vm._v(" "),
@@ -44896,9 +45007,8 @@ var render = function() {
         [_vm._v("非公開")]
       )
     ])
-  ])
-}
-var staticRenderFns = []
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
@@ -45821,6 +45931,55 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(87);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(72)("6a84ebbc", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0e5f501a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Create.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-0e5f501a\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/sass-loader/lib/loader.js!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./Create.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(71)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.cp-Tag_Button {\n  cursor: pointer;\n}\n.cp-Tag_Button:disabled {\n    cursor: not-allowed;\n}\n.st-Tag {\n  display: inline-block;\n}\n.st-Tag:not(:last-child) {\n    margin-right: 5px;\n}\n", ""]);
+
+// exports
+
 
 /***/ })
 /******/ ]);

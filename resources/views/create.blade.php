@@ -14,17 +14,6 @@
                     <label for="description" class="cp-Item_Title">ルームの説明</label>
                     <textarea name="description" id="description" class="cp-TextArea_Description form-control" required minlength="1" maxlength="512"></textarea>
                 </div>
-                {{--タグの対応は後ほど--}}
-                {{--<div class="cp-Item_Area">--}}
-                    {{--<div class="cp-Item_Title">タグの追加</div>--}}
-                    {{--<input type="text" name="tag" class="cp-TextBox_Tag form-control">--}}
-                    {{--<button type="submit" class="st-Button cp-Tag_Button">追加</button>--}}
-                    {{--<div class="cp-Tag_Area"><!-- タグのwrapper -->--}}
-                        {{--<span class="st-Tag">タグ</span><!-- タグ -->--}}
-                        {{--<span class="st-Tag">タグ</span><!-- タグ -->--}}
-                        {{--<span class="st-Tag">タグ</span><!-- タグ -->--}}
-                    {{--</div>--}}
-                {{--</div>--}}
                 <div class="cp-Item_Area">
                     <div id="app">
                         <create></create>
