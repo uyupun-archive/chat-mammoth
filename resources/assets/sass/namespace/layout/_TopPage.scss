@@ -103,7 +103,7 @@
 }
 
 .tp-Container {
-  max-width: 1200px;
+  max-width: 800px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -159,13 +159,6 @@
   outline: none;
 }
 
-@media screen and (max-width: 1200px) {
-  .tp-Container {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-
 @media screen and (max-width: 800px) {
   .tp-Catchphrase_Area {
     height: 350px;
@@ -185,6 +178,10 @@
       width: 150px;
       height: auto;
     }
+  }
+  .tp-Container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
