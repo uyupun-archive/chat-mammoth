@@ -45253,6 +45253,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -45397,10 +45403,12 @@ var render = function() {
         })
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "cp-Item_Area" }, [
-        _c("div", { staticClass: "cp-Item_Area" }, [
-          _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("タグの追加")]),
-          _vm._v(" "),
+      _c("div", { staticClass: "cp-Tag_Add row" }, [
+        _c("label", { staticClass: "cp-Tag_Title", attrs: { for: "tag" } }, [
+          _vm._v("タグの追加")
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-xs-9" }, [
           _c("input", {
             directives: [
               {
@@ -45411,7 +45419,12 @@ var render = function() {
               }
             ],
             staticClass: "cp-TextBox_Tag form-control",
-            attrs: { type: "text", name: "tag", disabled: _vm.tagState },
+            attrs: {
+              id: "tag",
+              type: "text",
+              name: "tag",
+              disabled: _vm.tagState
+            },
             domProps: { value: _vm.tag },
             on: {
               keyup: function($event) {
@@ -45424,12 +45437,14 @@ var render = function() {
                 _vm.tag = $event.target.value
               }
             }
-          }),
-          _vm._v(" "),
+          })
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-xs-3" }, [
           _c(
             "button",
             {
-              staticClass: "st-Button cp-Tag_Button",
+              staticClass: "st-Button cp-Add_Button",
               attrs: { type: "button", disabled: _vm.addState },
               on: {
                 click: function($event) {
@@ -45443,7 +45458,7 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "st-Button cp-Tag_Button",
+              staticClass: "st-Button cp-Delete_Button",
               attrs: { type: "button", disabled: _vm.deleteState },
               on: {
                 click: function($event) {
@@ -45452,86 +45467,88 @@ var render = function() {
               }
             },
             [_vm._v("削除")]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "cp-Tag_Area" },
-            _vm._l(_vm.tags, function(tag) {
-              return _c("span", { staticClass: "st-Tag" }, [
-                _vm._v(_vm._s(tag))
-              ])
-            })
           )
-        ]),
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "cp-Tag_Area" },
+        _vm._l(_vm.tags, function(tag) {
+          return _c("span", { staticClass: "st-Tag" }, [_vm._v(_vm._s(tag))])
+        })
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "cp-Item_Area" }, [
+        _c("label", { staticClass: "cp-Item_Title" }, [_vm._v("公開設定")]),
         _vm._v(" "),
-        _c("div", { staticClass: "cp-Item_Title" }, [_vm._v("公開設定")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "cp-Public_Area" }, [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.publish,
-                expression: "publish"
+        _c("div", { staticClass: "cp-RadioBox_Area" }, [
+          _c("div", { staticClass: "cp-Public_Area" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.publish,
+                  expression: "publish"
+                }
+              ],
+              staticClass: "cp-RadioBox_Public",
+              attrs: {
+                type: "radio",
+                name: "publish",
+                id: "public",
+                value: "public",
+                checked: "",
+                required: ""
+              },
+              domProps: { checked: _vm._q(_vm.publish, "public") },
+              on: {
+                change: function($event) {
+                  _vm.publish = "public"
+                }
               }
-            ],
-            staticClass: "cp-RadioBox_Public",
-            attrs: {
-              type: "radio",
-              name: "publish",
-              id: "public",
-              value: "public",
-              checked: "",
-              required: ""
-            },
-            domProps: { checked: _vm._q(_vm.publish, "public") },
-            on: {
-              change: function($event) {
-                _vm.publish = "public"
-              }
-            }
-          }),
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              { staticClass: "cp-ChatRoom_Public", attrs: { for: "public" } },
+              [_vm._v("公開")]
+            )
+          ]),
           _vm._v(" "),
-          _c(
-            "label",
-            { staticClass: "cp-Chatroom_public", attrs: { for: "public" } },
-            [_vm._v("公開")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "cp-Private_Area" }, [
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.publish,
-                expression: "publish"
+          _c("div", { staticClass: "cp-Private_Area" }, [
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.publish,
+                  expression: "publish"
+                }
+              ],
+              staticClass: "cp-RadioBox_Private",
+              attrs: {
+                type: "radio",
+                name: "publish",
+                id: "private",
+                value: "private",
+                required: ""
+              },
+              domProps: { checked: _vm._q(_vm.publish, "private") },
+              on: {
+                change: function($event) {
+                  _vm.publish = "private"
+                }
               }
-            ],
-            staticClass: "cp-RadioBox_Private",
-            attrs: {
-              type: "radio",
-              name: "publish",
-              id: "private",
-              value: "private",
-              required: ""
-            },
-            domProps: { checked: _vm._q(_vm.publish, "private") },
-            on: {
-              change: function($event) {
-                _vm.publish = "private"
-              }
-            }
-          }),
-          _vm._v(" "),
-          _c(
-            "label",
-            { staticClass: "cp-Chatroom_private", attrs: { for: "private" } },
-            [_vm._v("非公開")]
-          )
+            }),
+            _vm._v(" "),
+            _c(
+              "label",
+              { staticClass: "cp-ChatRoom_Private", attrs: { for: "private" } },
+              [_vm._v("非公開")]
+            )
+          ])
         ])
       ]),
       _vm._v(" "),

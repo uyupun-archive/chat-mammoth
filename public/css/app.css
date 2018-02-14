@@ -9005,57 +9005,85 @@ button.close {
 }
 
 .cp-Create_ChatRoom .cp-Item_Area {
-  margin: 20px 0;
+  margin: 20px 0 0 0;
 }
 
 .cp-Create_ChatRoom .cp-Item_Area .cp-Item_Title {
   font-weight: normal;
   margin-bottom: 10px;
+  display: block;
 }
 
 .cp-Create_ChatRoom .cp-Item_Area .cp-TextBox_Name {
-  width: 90%;
-  margin: 0 5%;
+  margin: 0;
   font-size: 14px;
 }
 
 .cp-Create_ChatRoom .cp-Item_Area .cp-TextArea_Description {
   height: 100px;
-  width: 90%;
-  margin: 0 5%;
   font-size: 14px;
   resize: none;
 }
 
-.cp-Create_ChatRoom .cp-Item_Area .cp-TextBox_Tag {
+.cp-Create_ChatRoom .cp-Item_Area .cp-RadioBox_Area {
+  text-align: left;
+}
+
+.cp-Create_ChatRoom .cp-Item_Area .cp-RadioBox_Area .cp-Public_Area {
+  margin: 0 50px 0 0;
   display: inline-block;
-  width: 60%;
-  margin-left: 5%;
+}
+
+.cp-Create_ChatRoom .cp-Item_Area .cp-RadioBox_Area .cp-Public_Area .cp-ChatRoom_Public {
+  font-weight: normal;
+}
+
+.cp-Create_ChatRoom .cp-Item_Area .cp-RadioBox_Area .cp-Private_Area {
+  margin: 0 0 0 0;
+  display: inline-block;
+}
+
+.cp-Create_ChatRoom .cp-Item_Area .cp-RadioBox_Area .cp-Private_Area .cp-ChatRoom_Private {
+  font-weight: normal;
+}
+
+.cp-Create_ChatRoom .cp-Tag_Add {
+  margin: 20px 0 0 0;
+}
+
+.cp-Create_ChatRoom .cp-Tag_Add .col-xs-9 {
+  padding: 0;
+}
+
+.cp-Create_ChatRoom .cp-Tag_Add .col-xs-3 {
+  padding: 0;
+  margin-top: 3px;
+  text-align: right;
+}
+
+.cp-Create_ChatRoom .cp-Tag_Add .cp-Tag_Title {
+  font-weight: normal;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.cp-Create_ChatRoom .cp-Tag_Add .cp-TextBox_Tag {
   font-size: 14px;
 }
 
-.cp-Create_ChatRoom .cp-Item_Area .cp-Tag_Button {
+.cp-Create_ChatRoom .cp-Tag_Add .cp-Add_Button {
   padding: 3px 10px;
   margin-left: 15px;
 }
 
-.cp-Create_ChatRoom .cp-Item_Area .cp-Tag_Area {
-  margin: 10px 0 0 5%;
-}
-
-.cp-Create_ChatRoom .cp-Item_Area .cp-Public_Area {
-  margin: 10px 0 0 5%;
-}
-
-.cp-Create_ChatRoom .cp-Item_Area .cp-Private_Area {
-  margin: 0 0 0 5%;
-}
-
-.cp-Create_ChatRoom .cp-Item_Area .cp-Private_Area .cp-RadioBox_Secret {
-  display: inline-block;
-  width: 50%;
+.cp-Create_ChatRoom .cp-Tag_Add .cp-Delete_Button {
+  padding: 3px 10px;
   margin-left: 15px;
-  font-size: 14px;
+  background-color: #EC605B;
+}
+
+.cp-Create_ChatRoom .cp-Tag_Area {
+  margin: 10px 5px 0 0;
 }
 
 .cp-Create_ChatRoom .cp-Button_Area {
@@ -9064,8 +9092,20 @@ button.close {
 }
 
 .cp-Create_ChatRoom .cp-Button_Area .cp-Button {
-  margin-right: 5%;
   padding: 5px 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .col-xs-9 {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .col-xs-3 {
+    float: none;
+    width: 100%;
+  }
 }
 
 .rp-Container {
@@ -9623,7 +9663,7 @@ button.close {
 .cf-Form .cf-Self_TextArea {
   font-size: 14px;
   resize: none;
-  height: 200px;
+  height: 100px;
 }
 
 .cf-Form .cf-Button_Area {

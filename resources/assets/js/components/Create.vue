@@ -9,24 +9,30 @@
                 <label for="description" class="cp-Item_Title">ルームの説明</label>
                 <textarea name="description" id="description" class="cp-TextArea_Description form-control" required minlength="1" maxlength="512" v-model="description"></textarea>
             </div>
+            <div class="cp-Tag_Add row">
+                <label class="cp-Tag_Title" for="tag">タグの追加</label>
+                <div class="col-xs-9">
+                    <input id="tag" type="text" name="tag" class="cp-TextBox_Tag form-control" v-model="tag" @keyup="isDisabled()" :disabled="tagState">
+                </div>
+                <div class="col-xs-3">
+                    <button type="button" class="st-Button cp-Add_Button" @click="addTag(tag)" :disabled="addState">追加</button>
+                    <button type="button" class="st-Button cp-Delete_Button" @click="deleteTag()" :disabled="deleteState">削除</button>
+                </div>
+            </div>
+            <div class="cp-Tag_Area">
+                <span class="st-Tag" v-for="tag in tags">{{ tag }}</span>
+            </div>
             <div class="cp-Item_Area">
-                <div class="cp-Item_Area">
-                    <div class="cp-Item_Title">タグの追加</div>
-                    <input type="text" name="tag" class="cp-TextBox_Tag form-control" v-model="tag" @keyup="isDisabled()" :disabled="tagState">
-                    <button type="button" class="st-Button cp-Tag_Button" @click="addTag(tag)" :disabled="addState">追加</button>
-                    <button type="button" class="st-Button cp-Tag_Button" @click="deleteTag()" :disabled="deleteState">削除</button>
-                    <div class="cp-Tag_Area">
-                        <span class="st-Tag" v-for="tag in tags">{{ tag }}</span>
+                <label class="cp-Item_Title">公開設定</label>
+                <div class="cp-RadioBox_Area">
+                    <div class="cp-Public_Area">
+                        <input type="radio" name="publish" id="public" value="public" class="cp-RadioBox_Public" checked required v-model="publish">
+                        <label for="public" class="cp-ChatRoom_Public">公開</label>
                     </div>
-                </div>
-                <div class="cp-Item_Title">公開設定</div>
-                <div class="cp-Public_Area">
-                    <input type="radio" name="publish" id="public" value="public" class="cp-RadioBox_Public" checked required v-model="publish">
-                    <label for="public" class="cp-Chatroom_public">公開</label>
-                </div>
-                <div class="cp-Private_Area">
-                    <input type="radio" name="publish" id="private" value="private" class="cp-RadioBox_Private" required v-model="publish">
-                    <label for="private" class="cp-Chatroom_private">非公開</label>
+                    <div class="cp-Private_Area">
+                        <input type="radio" name="publish" id="private" value="private" class="cp-RadioBox_Private" required v-model="publish">
+                        <label for="private" class="cp-ChatRoom_Private">非公開</label>
+                    </div>
                 </div>
             </div>
             <div class="cp-Button_Area">
