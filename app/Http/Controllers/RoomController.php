@@ -15,6 +15,12 @@ class RoomController extends Controller {
 
         $room_id = explode('/', \Request::decodedPath());
 
+        // 存在しないルームが指定されたときにリダイレクトする
+        $room = DB::table('rooms')->where('room_id', $room_id[1])->first();
+        if (!isset($room)) {
+            return redirect('/404');
+        }
+
         $posts = DB::table('users')
                         ->join('posts', 'users.user_id', '=', 'posts.user_id')
                         ->select('users.user_id', 'users.avatar', 'users.default_avatar', 'users.screen_name', 'posts.comment', 'posts.markdown', 'posts.created_at', 'posts.image', 'posts.gif', 'posts.draw')
