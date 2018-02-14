@@ -44415,8 +44415,8 @@ var render = function() {
       _vm._l(_vm.rooms, function(room, index) {
         return _vm.rooms
           ? _c("div", [
-              _c("div", { staticClass: "mp-Chatroom" }, [
-                _c("div", { staticClass: "mp-Chatroom_Name" }, [
+              _c("div", { staticClass: "mp-ChatRoom" }, [
+                _c("div", { staticClass: "mp-ChatRoom_Name" }, [
                   _vm._v("ルーム名: " + _vm._s(room.name))
                 ]),
                 _vm._v(" "),
@@ -44452,7 +44452,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "mp-Chatroom_Tag" },
+                  { staticClass: "mp-ChatRoom_Tag" },
                   _vm._l(_vm.tags[index], function(tag) {
                     return _c("span", { staticClass: "st-Tag" }, [
                       _vm._v(_vm._s(tag))
@@ -44460,15 +44460,15 @@ var render = function() {
                   })
                 ),
                 _vm._v(" "),
-                _c("div", { staticClass: "mp-Chatroom_Description" }, [
+                _c("div", { staticClass: "mp-ChatRoom_Description" }, [
                   _c("p", [_vm._v(_vm._s(room.description))])
                 ]),
                 _vm._v(" "),
-                _c("div", { staticClass: "mp-Chatroom_LinkBox" }, [
+                _c("div", { staticClass: "mp-ChatRoom_LinkBox" }, [
                   _c(
                     "a",
                     {
-                      staticClass: "tp-Chatroom_Link",
+                      staticClass: "mp-ChatRoom_Link",
                       attrs: { href: "/room/" + room.room_id }
                     },
                     [_vm._v("チャットルームへ")]
