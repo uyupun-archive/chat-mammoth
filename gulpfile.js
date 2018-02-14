@@ -1,8 +1,11 @@
 const gulp = require('gulp');
 const axios = require('axios');
+const env = require('node-env-file');
 
-const url = 'http://127.0.0.1:8000/api/comment/bot'
-const room_id = '8400a9016eb098fdc3b33fff27bdc2af'
+env('.env')
+
+const url = process.env.BOT_POST_URL
+const room_id = process.env.BOT_ROOM_ID
 
 gulp.task('default', () => {
     setInterval(() => {
@@ -10,7 +13,7 @@ gulp.task('default', () => {
             room_id: room_id,
             user_id: 'anonymous',
             screen_name: 'Anonymous',
-            comment: 'わーい、たかし！',
+            comment: 'ほげほげ',
             markdown: 0
         })
     }, 5000)

@@ -20,6 +20,7 @@
         "vue": "^2.5.13"
     },
     "dependencies": {
-        "clipboard": "^1.7.1"
+        "clipboard": "^1.7.1",
+        "node-env-file": "^0.1.8"
     }
 }
