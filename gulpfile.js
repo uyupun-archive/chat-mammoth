@@ -11,8 +11,8 @@ gulp.task('default', () => {
     setInterval(() => {
         axios.post(url, {
             room_id: room_id,
-            user_id: 'anonymous',
-            screen_name: 'Anonymous',
+            user_id: 'bot',
+            screen_name: 'Bot',
             comment: 'ほげほげ',
             markdown: 0
         })

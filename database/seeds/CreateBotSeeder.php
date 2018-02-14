@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class CreateAnonymousSeeder extends Seeder
+class CreateBotSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,8 +11,9 @@ class CreateAnonymousSeeder extends Seeder
      */
     public function run() {
         DB::table('users')->insert([
-            'screen_name' => 'Anonymous',
-            'user_id' => 'anonymous',
+            'screen_name' => 'Bot',
+            'user_id' => 'bot',
+            'avatar' => '/avatar/bot.png'
         ]);
     }
 }

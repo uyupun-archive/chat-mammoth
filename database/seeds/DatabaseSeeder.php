@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
          $this->call(CreateRoomsSeeder::class);
          $this->call(CreateAnonymousSeeder::class);
+         $this->call(CreateBotSeeder::class);
     }
 }
