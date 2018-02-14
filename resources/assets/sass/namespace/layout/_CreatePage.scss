@@ -1,55 +1,87 @@
 .cp-Create_ChatRoom {
   padding-left: 5px;
   .cp-Item_Area {
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     .cp-Item_Title {
       font-weight: normal;
       margin-bottom: 10px;
+      display: block;
     }
     .cp-TextBox_Name {
-      width: 90%;
-      margin: 0 5%;
+      margin: 0;
       font-size: 14px;
     }
     .cp-TextArea_Description {
       height: 100px;
-      width: 90%;
-      margin: 0 5%;
       font-size: 14px;
       resize: none;
     }
+    .cp-RadioBox_Area {
+      text-align: left;
+      .cp-Public_Area {
+        margin: 0 50px 0 0;
+        display: inline-block;
+        .cp-ChatRoom_Public {
+          font-weight: normal;
+        }
+      }
+      .cp-Private_Area {
+        margin: 0 0 0 0;
+        display: inline-block;
+        .cp-ChatRoom_Private {
+          font-weight: normal;
+        }
+      }
+    }
+  }
+  .cp-Tag_Add {
+    margin: 20px 0 0 0;
+    .col-xs-9 {
+      padding: 0;
+    }
+    .col-xs-3 {
+      padding: 0;
+      margin-top: 3px;
+      text-align: right;
+    }
+    .cp-Tag_Title {
+      font-weight: normal;
+      margin-bottom: 10px;
+      display: block;
+    }
     .cp-TextBox_Tag {
-      display: inline-block;
-      width: 60%;
-      margin-left: 5%;
       font-size: 14px;
     }
-    .cp-Tag_Button {
+    .cp-Add_Button {
       padding: 3px 10px;
       margin-left: 15px;
     }
-    .cp-Tag_Area {
-      margin: 10px 0 0 5%;
+    .cp-Delete_Button {
+      padding: 3px 10px;
+      margin-left: 15px;
+      background-color: $red;
     }
-    .cp-Public_Area {
-      margin: 10px 0 0 5%;
-    }
-    .cp-Private_Area {
-      margin: 0 0 0 5%;
-      .cp-RadioBox_Secret {
-        display: inline-block;
-        width: 50%;
-        margin-left: 15px;
-        font-size: 14px;
-      }
-    }
+  }
+  .cp-Tag_Area {
+    margin: 10px 5px 0 0;
   }
   .cp-Button_Area {
     margin: 20px 0;
     text-align: right;
     .cp-Button {
-      margin-right: 5%;
       padding: 5px 30px;
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .col-xs-9 {
+    float: none;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .col-xs-3 {
+    float: none;
+    width: 100%;
   }
 }
