@@ -12,7 +12,7 @@
             <div class="cp-Tag_Add row">
                 <label class="cp-Tag_Title" for="tag">タグの追加</label>
                 <div class="col-xs-9">
-                    <input id="tag" type="text" name="tag" class="cp-TextBox_Tag form-control" v-model="tag" @keyup="isDisabled()" :disabled="tagState">
+                    <input id="tag" type="text" name="tag" class="cp-TextBox_Tag form-control" minlength="1" maxlength="10" v-model="tag" @keyup="isDisabled()" :disabled="tagState">
                 </div>
                 <div class="col-xs-3">
                     <button type="button" class="st-Button cp-Tag_Button cp-Add" @click="addTag(tag)" :disabled="addState">追加</button>
@@ -74,6 +74,10 @@
             },
             deleteTag() {
                 this.tags.pop()
+
+                if (this.tags.length <= 5) {
+                    this.tagState = false
+                }
 
                 if (this.tags.length > 0) {
                     this.deleteState = false
