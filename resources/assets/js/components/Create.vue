@@ -15,8 +15,8 @@
                     <input id="tag" type="text" name="tag" class="cp-TextBox_Tag form-control" v-model="tag" @keyup="isDisabled()" :disabled="tagState">
                 </div>
                 <div class="col-xs-3">
-                    <button type="button" class="st-Button cp-Add_Button" @click="addTag(tag)" :disabled="addState">追加</button>
-                    <button type="button" class="st-Button cp-Delete_Button" @click="deleteTag()" :disabled="deleteState">削除</button>
+                    <button type="button" class="st-Button cp-Tag_Button cp-Add" @click="addTag(tag)" :disabled="addState">追加</button>
+                    <button type="button" class="st-Button cp-Tag_Button cp-Delete" @click="deleteTag()" :disabled="deleteState">削除</button>
                 </div>
             </div>
             <div class="cp-Tag_Area">
@@ -104,21 +104,3 @@
         }
     }
 </script>
-
-<style lang="scss">
-    .cp-Tag_Button {
-        cursor: pointer;
-        
-        &:disabled {
-            cursor: not-allowed;
-        }
-    }
-
-    .st-Tag {
-        display: inline-block;
-
-        &:not(:last-child) {
-            margin-right: 5px;
-        }
-    }
-</style>
