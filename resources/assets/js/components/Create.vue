@@ -13,7 +13,8 @@
                 <div class="cp-Item_Area">
                     <div class="cp-Item_Title">タグの追加</div>
                     <input type="text" name="tag" class="cp-TextBox_Tag form-control" v-model="tag" @keyup="isDisabled()" :disabled="tagState">
-                    <button type="button" class="st-Button cp-Tag_Button" @click="addTag(tag)" :disabled="btnState">追加</button>
+                    <button type="button" class="st-Button cp-Tag_Button" @click="addTag(tag)" :disabled="addState">追加</button>
+                    <button type="button" class="st-Button cp-Tag_Button" @click="deleteTag()" :disabled="deleteState">削除</button>
                     <div class="cp-Tag_Area">
                         <span class="st-Tag" v-for="tag in tags">{{ tag }}</span>
                     </div>
@@ -44,7 +45,8 @@
                 publish: '',
                 tags: [],
                 tag: '',
-                btnState: true,
+                addState: true,
+                deleteState: true,
                 tagState: false,
             }
         },
@@ -52,18 +54,35 @@
             addTag(tag) {
                 this.tags.push(tag)
                 this.tag = ''
-                this.btnState = true
+                this.addState = true
 
                 if (this.tags.length > 4) {
                     this.tagState = true
                 }
+
+                if (this.tags.length > 0) {
+                    this.deleteState = false
+                } else {
+                    this.deleteState = true
+                }
+            },
+            deleteTag() {
+                this.tags.pop()
+
+                if (this.tags.length > 0) {
+                    this.deleteState = false
+                } else {
+                    this.deleteState = true
+                }
             },
             isDisabled() {
                 if (this.tag.length > 0) {
-                    this.btnState = false
+                    this.addState = false
                 } else {
-                    this.btnState = true
+                    this.addState = true
                 }
+
+                console.log(this.tags.length)
             },
             send() {
                 axios.post('/api/room/store', {

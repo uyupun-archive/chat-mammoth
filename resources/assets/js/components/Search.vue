@@ -4,7 +4,7 @@
             <div class="st-Container">
                 <h2 class="st-Title">チャットルーム検索</h2>
                 <div class="sp-Search">
-                    <input type="text" class="sp-Search_Textbox form-control" v-model="room_id" placeholder="Please room id here!" minlength="32" maxlength="32" required autofocus>
+                    <input type="text" class="sp-Search_Textbox form-control" v-model="room_id" placeholder="Please room id here!" required autofocus>
                     <button class="st-Button sp-Search_Button" @click="postRoomId()">検索</button>
                 </div>
                 <div v-if="state" class="sp-Results">
