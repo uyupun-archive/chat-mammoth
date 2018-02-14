@@ -8,7 +8,9 @@
                     <div class="rp-List">
                         <div class="rp-Message">
                             <div class="rp-Message_User">
-                                @if(isset($post->avatar))
+                                @if($post->user_id === 'bot')
+                                    <img class="rp-Message_UserIcon" src="{{  $post->avatar }}" alt="">
+                                @elseif(isset($post->avatar))
                                     <img class="rp-Message_UserIcon" src="{{ $post->avatar }}" alt="">
                                 @elseif((isset($post->default_avatar)))
                                     <img class="rp-Message_UserIcon" src="{{ $post->default_avatar }}" alt="">

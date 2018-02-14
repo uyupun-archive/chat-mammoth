@@ -50,6 +50,7 @@ $ php artisan serve
 ```
 ...
 BOT_POST_URL=http://127.0.0.1:8000/api/comment/bot
+BOT_GET_URL=http://127.0.0.1:8000/api/word/get
 BOT_ROOM_ID=:room_id
 ...
 ```

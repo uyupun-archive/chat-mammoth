@@ -4,17 +4,29 @@ const env = require('node-env-file');
 
 env('.env')
 
-const url = process.env.BOT_POST_URL
+const post_url = process.env.BOT_POST_URL
+const get_url = process.env.BOT_GET_URL
 const room_id = process.env.BOT_ROOM_ID
+let word
 
 gulp.task('default', () => {
     setInterval(() => {
-        axios.post(url, {
-            room_id: room_id,
-            user_id: 'anonymous',
-            screen_name: 'Anonymous',
-            comment: 'ほげほげ',
-            markdown: 0
-        })
-    }, 5000)
+
+        Promise.resolve()
+            .then(() => {
+                axios.get(get_url)
+                    .then(response => {
+                        word = response.data.query.random[0].title
+                    })
+            })
+            .then(() => {
+                axios.post(post_url, {
+                    room_id: room_id,
+                    user_id: 'bot',
+                    screen_name: 'Bot',
+                    comment: word,
+                    markdown: 0
+                })
+            })
+    }, Math.floor(Math.random() * (10000 - 1000) + 1000))
 })
