@@ -1,8 +1,8 @@
 <template>
     <div>
         <div v-if="rooms" v-for="(room, index) in rooms">
-            <div class="mp-Chatroom">
-                <div class="mp-Chatroom_Name">ルーム名: {{ room.name }}</div>
+            <div class="mp-ChatRoom">
+                <div class="mp-ChatRoom_Name">ルーム名: {{ room.name }}</div>
                 <div>
                     <span>ルームID: </span>
                     <input type="text" :value="room.room_id " :id="'copy' + index + 'mp'">
@@ -13,14 +13,14 @@
                     <i v-if="room.publish === 'private'" class="fas fa-unlock-alt"></i>
                 </div>
                 <div>作成者: {{ room.creator }}</div>
-                <div class="mp-Chatroom_Tag">
+                <div class="mp-ChatRoom_Tag">
                     <span class="st-Tag" v-for="(tag) in tags[index]">{{ tag }}</span>
                 </div>
-                <div class="mp-Chatroom_Description">
+                <div class="mp-ChatRoom_Description">
                     <p>{{ room.description }}</p>
                 </div>
-                <div class="mp-Chatroom_LinkBox">
-                    <a :href="'/room/' + room.room_id" class="tp-Chatroom_Link">チャットルームへ</a>
+                <div class="mp-ChatRoom_LinkBox">
+                    <a :href="'/room/' + room.room_id" class="mp-ChatRoom_Link">チャットルームへ</a>
                 </div>
             </div>
         </div>
