@@ -44665,8 +44665,6 @@ var render = function() {
             attrs: {
               type: "text",
               placeholder: "Please room id here!",
-              minlength: "32",
-              maxlength: "32",
               required: "",
               autofocus: ""
             },
