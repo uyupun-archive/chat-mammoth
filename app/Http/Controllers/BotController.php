@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Post;
 
 class BotController extends Controller {
-    public function bot(Request $request) {
+    public function postComment(Request $request) {
 
         $post = new Post();
         $post->room_id = $request->room_id;
@@ -15,5 +15,11 @@ class BotController extends Controller {
         $post->comment = $request->comment;
         $post->markdown = $request->markdown;
         $post->save();
+    }
+
+    public function getWord() {
+        $word = file_get_contents('http://ja.wikipedia.org/w/api.php?format=json&action=query&list=random&rnlimit=1&rnnamespace=0');
+
+        return $word;
     }
 }
