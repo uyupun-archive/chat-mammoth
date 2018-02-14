@@ -16,5 +16,5 @@ gulp.task('default', () => {
             comment: 'ほげほげ',
             markdown: 0
         })
-    }, 5000)
+    }, Math.floor(Math.random() * (10000 - 1000) + 1000))
 })
