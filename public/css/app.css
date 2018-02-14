@@ -9109,6 +9109,10 @@ button.close {
   cursor: not-allowed;
 }
 
+.cp-Response_Msg {
+  color: #323232;
+}
+
 @media screen and (max-width: 600px) {
   .col-xs-9 {
     float: none;
@@ -9691,5 +9695,9 @@ button.close {
 
 .cf-Form .cf-Button_Area .cf-Button {
   padding: 5px 10px;
+}
+
+.cf-Response_Msg {
+  color: #323232;
 }
 

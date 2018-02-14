@@ -8,7 +8,7 @@
                 <create></create>
             </div>
             @if(session('response'))
-                <span>{{ session('response') }}</span>
+                <span class="cp-Response_Msg">{{ session('response') }}</span>
             @endif
         </div>
     </div>
