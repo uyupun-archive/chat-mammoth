@@ -9352,6 +9352,10 @@ button.close {
   margin: 0 25px 0 5px;
 }
 
+.rp-Markdown {
+  color: #fff;
+}
+
 .rp-Button {
   padding: 5px 10px;
   background-color: #EC605B;

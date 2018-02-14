@@ -45706,7 +45706,9 @@ var render = function() {
         attrs: { type: "checkbox", id: "markdown", name: "markdown" }
       }),
       _vm._v(" "),
-      _c("label", { attrs: { for: "markdown" } }, [_vm._v("マークダウン")]),
+      _c("label", { staticClass: "rp-Markdown", attrs: { for: "markdown" } }, [
+        _vm._v("マークダウン")
+      ]),
       _vm._v(" "),
       _c(
         "button",
