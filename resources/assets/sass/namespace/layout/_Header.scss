@@ -18,6 +18,8 @@
   }
   .navbar-default {
     background-color: #ffffff;
+    border: none;
+    border-bottom: solid 1px $border-gray;
     .navbar-brand {
       color: $black;
     }

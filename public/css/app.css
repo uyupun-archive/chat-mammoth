@@ -8482,6 +8482,8 @@ button.close {
 
 .h-Header .navbar-default {
   background-color: #ffffff;
+  border: none;
+  border-bottom: solid 1px #e7e7e7;
 }
 
 .h-Header .navbar-default .navbar-brand {
