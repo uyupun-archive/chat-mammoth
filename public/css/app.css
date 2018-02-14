@@ -8457,7 +8457,6 @@ button.close {
 }
 
 .h-Header {
-  height: 60px;
   width: 100vw;
   position: fixed;
   top: 0;
@@ -8466,6 +8465,10 @@ button.close {
 
 .h-Header .navbar {
   border-radius: 0;
+}
+
+.h-Header .navbar-header {
+  height: 60px;
 }
 
 .h-Header .navbar-brand {
@@ -8496,11 +8499,13 @@ button.close {
 
 .h-Title {
   font-size: 26px;
+  line-height: 60px;
+  padding: 0 15px 0 15px;
 }
 
 .h-Logo {
   width: 50px;
-  margin: 5px 0;
+  margin: 0 0 10px 0;
   height: auto;
   -o-object-fit: contain;
      object-fit: contain;
