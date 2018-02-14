@@ -82,6 +82,10 @@
   }
 }
 
+.cp-Response_Msg {
+  color: $black;
+}
+
 @media screen and (max-width: 600px) {
   .col-xs-9 {
     float: none;
