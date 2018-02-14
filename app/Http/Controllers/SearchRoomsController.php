@@ -14,7 +14,7 @@ class SearchRoomsController extends Controller {
 
     public function search(Request $request) {
 
-        $room_id = trim($request->room_id);
+        $room_id = preg_replace('/( |　)/', '', $request->room_id);
 
         $room = DB::table('rooms')->select('name', 'room_id', 'description', 'creator', 'publish')->where('room_id', $room_id)->first();
 
