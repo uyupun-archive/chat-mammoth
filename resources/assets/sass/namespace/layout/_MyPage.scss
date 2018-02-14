@@ -9,13 +9,19 @@
   }
   .mp-Information_Sub {
     display: inline-block;
+    vertical-align: middle;
     .mp-Information_Name {
       margin: 10px 0;
-      font-size: 24px;
+      font-size: 26px;
     }
     .mp-Information_UserId {
       margin: 10px 0;
+      font-size: 18px;
     }
+  }
+  .mp-Information_Description {
+    word-break: break-all;
+    font-size: 18px;
   }
 }
 

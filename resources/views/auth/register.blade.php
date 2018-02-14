@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="su-Id row">
-                <label for="user_id" class="su-Id_Title">ユーザID<span class="st-Required">*</span></label>
+                <label for="user_id" class="su-Id_Title">ユーザID<span class="st-Required">*</span>（後から変更できません）</label>
                 <div class="col">
                     <input id="user_id" type="text" name="user_id" value="{{ old('user_id') }}" class="su-Id_Textbox form-control" required minlength="1" maxlength="16">
                     @if ($errors->has('user_id'))
