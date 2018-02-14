@@ -9610,9 +9610,24 @@ button.close {
   font-size: 14px;
 }
 
+.cf-Form .cf-Self {
+  margin: 0 0 30px 0;
+}
+
+.cf-Form .cf-Self_Title {
+  font-weight: normal;
+  margin: 0;
+}
+
+.cf-Form .cf-Self_TextArea {
+  font-size: 14px;
+  resize: none;
+  height: 200px;
+}
+
 .cf-Form .cf-Button_Area {
   text-align: right;
-  margin: 10px 0;
+  margin: 0 0 30px 0;
 }
 
 .cf-Form .cf-Button_Area .cf-Button {

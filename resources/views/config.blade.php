@@ -41,10 +41,10 @@
                         <input id="password-confirm" type="password" name="password_confirm" class="cf-Confirm_Textbox form-control" required minlength="8" maxlength="32">
                     </div>
                 </div>
-                <div class="row">
+                <div class="cf-Self row">
+                    <label class="cf-Self_Title" for="bio">自己紹介</label>
                     <div class="col">
-                        <label for="bio">自己紹介</label>
-                        <textarea name="bio" id="bio" maxlength="512">{{ Auth::user()->bio }}</textarea>
+                        <textarea class="cf-Self_TextArea form-control" name="bio" id="bio" maxlength="512">{{ Auth::user()->bio }}</textarea>
                     </div>
                 </div>
                 <div class="cf-Button_Area">
