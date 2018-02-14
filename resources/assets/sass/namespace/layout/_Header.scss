@@ -1,11 +1,13 @@
 .h-Header {
-  height: 60px;
   width: 100vw;
   position: fixed;
   top: 0;
   z-index: 1001;
   .navbar {
     border-radius: 0;
+  }
+  .navbar-header {
+    height: 60px;
   }
   .navbar-brand {
     float: none;
@@ -30,11 +32,13 @@
 
 .h-Title {
   font-size: 26px;
+  line-height: 60px;
+  padding: 0 15px 0 15px;
 }
 
 .h-Logo {
   width: 50px;
-  margin: 5px 0;
+  margin: 0 0 10px 0;
   height: auto;
   object-fit: contain;
 }
