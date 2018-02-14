@@ -8375,6 +8375,12 @@ button.close {
   padding: 3px;
   background-color: #489E7C;
   color: #fff;
+  display: inline-block;
+  word-break: break-all;
+}
+
+.st-Tag:not(:last-child) {
+  margin-right: 5px;
 }
 
 .st-Title {
@@ -9071,12 +9077,12 @@ button.close {
   font-size: 14px;
 }
 
-.cp-Create_ChatRoom .cp-Tag_Add .cp-Add_Button {
+.cp-Create_ChatRoom .cp-Tag_Add .cp-Add {
   padding: 3px 10px;
   margin-left: 15px;
 }
 
-.cp-Create_ChatRoom .cp-Tag_Add .cp-Delete_Button {
+.cp-Create_ChatRoom .cp-Tag_Add .cp-Delete {
   padding: 3px 10px;
   margin-left: 15px;
   background-color: #EC605B;
@@ -9093,6 +9099,18 @@ button.close {
 
 .cp-Create_ChatRoom .cp-Button_Area .cp-Button {
   padding: 5px 30px;
+}
+
+.cp-Tag_Button {
+  cursor: pointer;
+}
+
+.cp-Tag_Button:disabled {
+  cursor: not-allowed;
+}
+
+.cp-Response_Msg {
+  color: #323232;
 }
 
 @media screen and (max-width: 600px) {
@@ -9350,6 +9368,10 @@ button.close {
 
 .rp-Form_Other .rp-CheckBox_Text {
   margin: 0 25px 0 5px;
+}
+
+.rp-Markdown {
+  color: #fff;
 }
 
 .rp-Button {
@@ -9673,5 +9695,9 @@ button.close {
 
 .cf-Form .cf-Button_Area .cf-Button {
   padding: 5px 10px;
+}
+
+.cf-Response_Msg {
+  color: #323232;
 }
 

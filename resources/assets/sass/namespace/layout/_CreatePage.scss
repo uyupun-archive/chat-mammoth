@@ -52,11 +52,11 @@
     .cp-TextBox_Tag {
       font-size: 14px;
     }
-    .cp-Add_Button {
+    .cp-Add {
       padding: 3px 10px;
       margin-left: 15px;
     }
-    .cp-Delete_Button {
+    .cp-Delete {
       padding: 3px 10px;
       margin-left: 15px;
       background-color: $red;
@@ -72,6 +72,18 @@
       padding: 5px 30px;
     }
   }
+}
+
+.cp-Tag_Button {
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.cp-Response_Msg {
+  color: $black;
 }
 
 @media screen and (max-width: 600px) {

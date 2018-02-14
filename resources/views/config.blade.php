@@ -52,7 +52,7 @@
                 </div>
             </form>
             @if(session('response'))
-                <span>{{ session('response') }}</span>
+                <span class="cf-Response_Msg">{{ session('response') }}</span>
             @endif
         </div>
     </div>
