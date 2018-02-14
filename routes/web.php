@@ -21,6 +21,7 @@ Route::post('/api/comment/text', 'RoomController@text');
 Route::post('/api/comment/image', 'RoomController@image');
 Route::post('/api/comment/gif', 'RoomController@gif');
 Route::post('/api/comment/draw', 'RoomController@draw');
+Route::post('/api/comment/bot', 'RoomController@bot');
 
 /** チャットルーム作成 */
 Route::get('/create', 'CreateRoomsController@index');

@@ -140,4 +140,15 @@ class RoomController extends Controller {
 
         return redirect('/room/' . $room_id[1]);
     }
+
+    public function bot(Request $request) {
+
+        $post = new Post();
+        $post->room_id = $request->room_id;
+        $post->user_id = $request->user_id;
+        $post->screen_name = $request->screen_name;
+        $post->comment = $request->comment;
+        $post->markdown = $request->markdown;
+        $post->save();
+    }
 }
