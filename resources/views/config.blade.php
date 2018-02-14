@@ -25,9 +25,7 @@
                 </div>
                 <div class="cf-Id row">
                     <label for="user_id" class="cf-Id_Title">ユーザID</label>
-                    <div class="col">
-                        <input id="user_id" type="text" name="user_id" value="{{ Auth::user()->user_id }}" class="cf-Id_Textbox form-control" required minlength="1" maxlength="16">
-                    </div>
+                    <div class="col">{{ Auth::user()->user_id }}</div>
                 </div>
                 <div class="cf-Password row">
                     <label for="password" class="cf-Password_Title">パスワード</label>
