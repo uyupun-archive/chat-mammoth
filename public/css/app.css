@@ -8545,6 +8545,12 @@ button.close {
   padding: 20px 15px;
 }
 
+@media screen and (max-width: 450px) {
+  .h-Title {
+    padding-left: 0;
+  }
+}
+
 .su-Form {
   padding-left: 5px;
 }
@@ -9546,6 +9552,11 @@ button.close {
 .mp-ChatRoom_LinkBox .mp-ChatRoom_Link {
   text-decoration: none;
   color: #EC605B;
+}
+
+.mp-ChatRoom .mp-Copy_Area {
+  padding: 0;
+  border: none;
 }
 
 .mp-Not_CreateRoom {
