@@ -44876,6 +44876,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -44885,7 +44886,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             publish: '',
             tags: [],
             tag: '',
-            btnState: true,
+            addState: true,
+            deleteState: true,
             tagState: false
         };
     },
@@ -44894,18 +44896,35 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         addTag: function addTag(tag) {
             this.tags.push(tag);
             this.tag = '';
-            this.btnState = true;
+            this.addState = true;
 
             if (this.tags.length > 4) {
                 this.tagState = true;
             }
+
+            if (this.tags.length > 0) {
+                this.deleteState = false;
+            } else {
+                this.deleteState = true;
+            }
+        },
+        deleteTag: function deleteTag() {
+            this.tags.pop();
+
+            if (this.tags.length > 0) {
+                this.deleteState = false;
+            } else {
+                this.deleteState = true;
+            }
         },
         isDisabled: function isDisabled() {
             if (this.tag.length > 0) {
-                this.btnState = false;
+                this.addState = false;
             } else {
-                this.btnState = true;
+                this.addState = true;
             }
+
+            console.log(this.tags.length);
         },
         send: function send() {
             axios.post('/api/room/store', {
@@ -45035,7 +45054,7 @@ var render = function() {
             "button",
             {
               staticClass: "st-Button cp-Tag_Button",
-              attrs: { type: "button", disabled: _vm.btnState },
+              attrs: { type: "button", disabled: _vm.addState },
               on: {
                 click: function($event) {
                   _vm.addTag(_vm.tag)
@@ -45043,6 +45062,20 @@ var render = function() {
               }
             },
             [_vm._v("追加")]
+          ),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "st-Button cp-Tag_Button",
+              attrs: { type: "button", disabled: _vm.deleteState },
+              on: {
+                click: function($event) {
+                  _vm.deleteTag()
+                }
+              }
+            },
+            [_vm._v("削除")]
           ),
           _vm._v(" "),
           _c(
