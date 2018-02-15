@@ -46,7 +46,8 @@ $ php artisan serve
 # Optimize deployment to Heroku 
 
 ```
-$ php artisan dump-autoload --optimize
+$ composer dump-autoload --optimize
+$ gulp
 $ heroku run php artisan route:cache
 $ heroku run php artisan config:cache
 ```
