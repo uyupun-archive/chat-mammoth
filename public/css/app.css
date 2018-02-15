@@ -9588,6 +9588,13 @@ button.close {
   margin-top: 50px;
 }
 
+@media screen and (max-width: 450px) {
+  .nav-item .mp-Nav_Link {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
 .sp-Search {
   margin: 50px 0;
   text-align: center;
