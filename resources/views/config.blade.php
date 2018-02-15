@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="cf-ScreenName row">
-                    <label for="screen-name" class="cf-ScreenName_Title">スクリーンネーム</label>
+                    <label for="screen-name" class="cf-ScreenName_Title">スクリーンネーム<span class="st-Required">*</span></label>
                     <div class="col">
                         <input id="screen-name" type="text" name="screen_name" value="{{ Auth::user()->screen_name }}" class="cf-ScreenName_Textbox form-control" required autofocus minlength="1" maxlength="16">
                     </div>
@@ -28,7 +28,7 @@
                     <div class="col">{{ Auth::user()->user_id }}</div>
                 </div>
                 <div class="cf-Password row">
-                    <label for="password" class="cf-Password_Title">現在のパスワード</label>
+                    <label for="password" class="cf-Password_Title">現在のパスワード<span class="st-Required">*</span></label>
                     <div class="col">
                         <input id="password" type="password" name="password" class="cf-Password_Textbox form-control" required minlength="8" maxlength="32">
                     </div>
