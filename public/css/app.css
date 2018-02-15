@@ -9219,6 +9219,13 @@ button.close {
      object-fit: scale-down;
 }
 
+.rp-List .rp-Message .rp-Draw {
+  width: 300px;
+  height: auto;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
 .rp-User_Comment {
   word-break: break-all;
   margin: 10px;
