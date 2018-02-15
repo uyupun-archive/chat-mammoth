@@ -43305,9 +43305,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         return {
             rooms: {},
             tags: [],
-            visible: Array.from(new Array(10)).map(function (v, i) {
-                return true;
-            })
+            favorite: {
+                icon: Array.from(new Array(10)).map(function (v, i) {
+                    return true;
+                }),
+                count: Array.from(new Array(10)).map(function (v, i) {
+                    return 0;
+                })
+            }
         };
     },
 
@@ -43329,7 +43334,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         },
         toggleFavorite: function toggleFavorite(i) {
-            this.$set(this.visible, i, !this.visible[i]);
+            this.$set(this.favorite.icon, i, !this.favorite.icon[i]);
+
+            if (this.favorite.icon[i] === true) {
+                this.$set(this.favorite.count, i, this.favorite.count[i] - 1);
+            } else {
+                this.$set(this.favorite.count, i, this.favorite.count[i] + 1);
+            }
         }
     },
     created: function created() {
@@ -44015,7 +44026,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm.visible[i]
+            _vm.favorite.icon[i]
               ? _c("i", {
                   staticClass: "far fa-heart",
                   on: {
@@ -44026,7 +44037,7 @@ var render = function() {
                 })
               : _vm._e(),
             _vm._v(" "),
-            !_vm.visible[i]
+            !_vm.favorite.icon[i]
               ? _c("i", {
                   staticClass: "fas fa-heart",
                   on: {
@@ -44037,7 +44048,7 @@ var render = function() {
                 })
               : _vm._e(),
             _vm._v(" "),
-            _c("span", [_vm._v(_vm._s(room.favorite))])
+            _c("span", [_vm._v(_vm._s(_vm.favorite.count[i]))])
           ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),

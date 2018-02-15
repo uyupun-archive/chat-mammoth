@@ -34,7 +34,9 @@ Route::post('/api/room/store', 'CreateRoomsController@store');
 Route::get('/config', 'ConfigController@index');
 Route::post('/api/user/update', 'ConfigController@update');
 
+/** お気に入り */
 Route::post('/api/favorite/post', 'FavoriteController@post');
+//Route::get('/api/favorite/get', 'FavoriteController@get');
 
 /** エラー */
 Route::get('/404',function() {

@@ -10,9 +10,9 @@
                         <span class="st-Tooltip">Copy</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
-                    <i class="far fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="visible[i]"></i>
-                    <i class="fas fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="!visible[i]"></i>
-                    <span>{{ room.favorite }}</span>
+                    <i class="far fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="favorite.icon[i]"></i>
+                    <i class="fas fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="!favorite.icon[i]"></i>
+                    <span>{{ favorite.count[i] }}</span>
                 </div>
                 <div>作成者: {{ room.creator }}</div>
                 <div class="tp-ChatRoom_Tag">
@@ -38,7 +38,10 @@
             return {
                 rooms: {},
                 tags: [],
-                visible: Array.from(new Array(10)).map((v, i) => true)
+                favorite: {
+                    icon: Array.from(new Array(10)).map((v, i) => true),
+                    count: Array.from(new Array(10)).map((v, i) => 0),
+                },
             }
         },
         methods: {
@@ -58,7 +61,13 @@
                 })
             },
             toggleFavorite(i) {
-                this.$set(this.visible, i, !this.visible[i])
+                this.$set(this.favorite.icon, i, !this.favorite.icon[i])
+
+                if (this.favorite.icon[i] === true) {
+                    this.$set(this.favorite.count, i, this.favorite.count[i] - 1)
+                } else {
+                    this.$set(this.favorite.count, i, this.favorite.count[i] + 1)
+                }
             }
         },
         created() {

@@ -9,6 +9,10 @@ use App\Favorite;
 
 class FavoriteController extends Controller {
 
+//    public function get() {
+//        $favorited = Favorite::where('user_id', Auth::user()->user_id)->get();
+//    }
+
     public function post(Request $request) {
 
         $room_id = $request->room_id;
