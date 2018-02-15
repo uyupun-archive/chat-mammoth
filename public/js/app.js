@@ -43309,9 +43309,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 icon: Array.from(new Array(10)).map(function (v, i) {
                     return true;
                 }),
-                count: Array.from(new Array(10)).map(function (v, i) {
-                    return 0;
-                })
+                count: []
             }
         };
     },
@@ -43325,6 +43323,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 for (var i = 0; i < response.data.length; i++) {
                     _this.tags.push(JSON.parse(response.data[i].tags));
+                    _this.favorite.count.push(JSON.parse(response.data[i].favorite));
                 }
             });
         },

@@ -40,7 +40,7 @@
                 tags: [],
                 favorite: {
                     icon: Array.from(new Array(10)).map((v, i) => true),
-                    count: Array.from(new Array(10)).map((v, i) => 0),
+                    count: []
                 },
             }
         },
@@ -52,6 +52,7 @@
 
                         for (let i = 0; i < response.data.length; i++) {
                             this.tags.push(JSON.parse(response.data[i].tags))
+                            this.favorite.count.push(JSON.parse(response.data[i].favorite))
                         }
                     })
             },
