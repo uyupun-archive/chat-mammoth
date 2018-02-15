@@ -10,8 +10,8 @@
                         <span class="st-Tooltip">Copy</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
-                    <i class="far fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="favorite.icon[i]"></i>
-                    <i class="fas fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="!favorite.icon[i]"></i>
+                    <i class="far fa-heart tp-NotFavorite_Heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="favorite.icon[i]"></i>
+                    <i class="fas fa-heart tp-Favorite_Heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="!favorite.icon[i]"></i>
                     <span>{{ favorite.count[i] }}</span>
                 </div>
                 <div>作成者: {{ room.creator }}</div>

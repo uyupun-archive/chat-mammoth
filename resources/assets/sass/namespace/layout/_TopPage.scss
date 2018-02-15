@@ -132,6 +132,12 @@
         color: $red;
       }
     }
+    .tp-NotFavorite_Heart:hover {
+      color: $heart;
+    }
+    .tp-Favorite_Heart {
+      color: $heart;
+    }
   }
   .tp-Search {
     text-align: right;
