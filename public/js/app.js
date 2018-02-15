@@ -43310,7 +43310,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     return true;
                 }),
                 count: []
-            }
+            },
+            favorited: {}
         };
     },
 
@@ -43326,6 +43327,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                     _this.favorite.count.push(JSON.parse(response.data[i].favorite));
                 }
             });
+        },
+        getFavorited: function getFavorited() {
+            var _this2 = this;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/favorite/get').then(function (response) {
+                _this2.favorited = response.data;
+            });
+        },
+        initFavorite: function initFavorite() {
+            for (var i = 0; i < this.rooms.length; i++) {
+                for (var j = 0; j < this.favorited.length; i++) {
+                    if (this.rooms[i].room_id === this.favorited[j].room_id) {
+                        this.$set(this.favorite.icon, i, false);
+                    }
+                }
+            }
         },
         postFavorite: function postFavorite(room_id) {
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/favorite/post', {
@@ -43344,6 +43361,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     },
     created: function created() {
         this.getRooms();
+        this.getFavorited();
 
         var clipboard = new __WEBPACK_IMPORTED_MODULE_1_clipboard___default.a('.btn');
     }

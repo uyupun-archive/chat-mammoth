@@ -42,6 +42,7 @@
                     icon: Array.from(new Array(10)).map((v, i) => true),
                     count: []
                 },
+                favorited: {}
             }
         },
         methods: {
@@ -55,6 +56,21 @@
                             this.favorite.count.push(JSON.parse(response.data[i].favorite))
                         }
                     })
+            },
+            getFavorited() {
+                axios.get('/api/favorite/get')
+                    .then(response => {
+                        this.favorited = response.data
+                    })
+            },
+            initFavorite() {
+                for (let i = 0; i < this.rooms.length; i++) {
+                    for (let j = 0; j < this.favorited.length; i++) {
+                        if (this.rooms[i].room_id === this.favorited[j].room_id) {
+                            this.$set(this.favorite.icon, i, false)
+                        }
+                    }
+                }
             },
             postFavorite(room_id) {
                 axios.post('/api/favorite/post', {
@@ -73,6 +89,7 @@
         },
         created() {
             this.getRooms()
+            this.getFavorited()
 
             const clipboard = new Clipboard('.btn');
         }
