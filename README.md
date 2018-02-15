@@ -42,3 +42,12 @@ $ php artisan db:seed
 ```
 $ php artisan serve
 ```
+
+# Optimize deployment to Heroku 
+
+```
+$ composer dump-autoload --optimize
+$ gulp
+$ heroku run php artisan route:cache
+$ heroku run php artisan config:cache
+```
