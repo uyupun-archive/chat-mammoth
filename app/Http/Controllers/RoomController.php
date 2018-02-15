@@ -81,7 +81,7 @@ class RoomController extends Controller {
         $request->markdown === 'on' ? $post->markdown = true : $post->markdown = false;
         if ($request->markdown === 'on') {
             $parser = new \cebe\markdown\Markdown();
-            $post->comment = $parser->parse($request->comment);
+            $post->comment = $parser->parse(htmlspecialchars($request->comment));
         } else {
             $post->comment = $request->comment;
         }
