@@ -9218,6 +9218,7 @@ button.close {
 .rp-List .rp-Message .rp-Image_Link {
   display: block;
   text-decoration: none;
+  width: 100px;
 }
 
 .rp-List .rp-Message .rp-Gif {
