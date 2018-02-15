@@ -1293,7 +1293,7 @@ module.exports = Cancel;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(13);
-module.exports = __webpack_require__(71);
+module.exports = __webpack_require__(76);
 
 
 /***/ }),
@@ -43304,7 +43304,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             rooms: {},
-            tags: []
+            tags: [],
+            favorite: {
+                icon: Array.from(new Array(10)).map(function (v, i) {
+                    return true;
+                }),
+                count: []
+            },
+            favorited: {}
         };
     },
 
@@ -43317,17 +43324,44 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
                 for (var i = 0; i < response.data.length; i++) {
                     _this.tags.push(JSON.parse(response.data[i].tags));
+                    _this.favorite.count.push(JSON.parse(response.data[i].favorite));
                 }
             });
+        },
+        getFavorited: function getFavorited() {
+            var _this2 = this;
+
+            __WEBPACK_IMPORTED_MODULE_0_axios___default.a.get('/api/favorite/get').then(function (response) {
+                _this2.favorited = response.data;
+            });
+        },
+        initFavorite: function initFavorite() {
+            for (var i = 0; i < this.rooms.length; i++) {
+                for (var j = 0; j < this.favorited.length; i++) {
+                    if (this.rooms[i].room_id === this.favorited[j].room_id) {
+                        this.$set(this.favorite.icon, i, false);
+                    }
+                }
+            }
         },
         postFavorite: function postFavorite(room_id) {
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/favorite/post', {
                 room_id: room_id
             });
+        },
+        toggleFavorite: function toggleFavorite(i) {
+            this.$set(this.favorite.icon, i, !this.favorite.icon[i]);
+
+            if (this.favorite.icon[i] === true) {
+                this.$set(this.favorite.count, i, this.favorite.count[i] - 1);
+            } else {
+                this.$set(this.favorite.count, i, this.favorite.count[i] + 1);
+            }
         }
     },
     created: function created() {
         this.getRooms();
+        this.getFavorited();
 
         var clipboard = new __WEBPACK_IMPORTED_MODULE_1_clipboard___default.a('.btn');
     }
@@ -44009,16 +44043,29 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("i", {
-              staticClass: "far fa-heart",
-              on: {
-                click: function($event) {
-                  _vm.postFavorite(room.room_id)
-                }
-              }
-            }),
+            _vm.favorite.icon[i]
+              ? _c("i", {
+                  staticClass: "far fa-heart",
+                  on: {
+                    click: function($event) {
+                      _vm.postFavorite(room.room_id) + _vm.toggleFavorite(i)
+                    }
+                  }
+                })
+              : _vm._e(),
             _vm._v(" "),
-            _c("span", [_vm._v(_vm._s(room.favorite))])
+            !_vm.favorite.icon[i]
+              ? _c("i", {
+                  staticClass: "fas fa-heart",
+                  on: {
+                    click: function($event) {
+                      _vm.postFavorite(room.room_id) + _vm.toggleFavorite(i)
+                    }
+                  }
+                })
+              : _vm._e(),
+            _vm._v(" "),
+            _c("span", [_vm._v(_vm._s(_vm.favorite.count[i]))])
           ]),
           _vm._v(" "),
           _c("div", [_vm._v("作成者: " + _vm._s(room.creator))]),
@@ -45501,9 +45548,9 @@ if (false) {
 var disposed = false
 var normalizeComponent = __webpack_require__(1)
 /* script */
-var __vue_script__ = __webpack_require__(69)
+var __vue_script__ = __webpack_require__(74)
 /* template */
-var __vue_template__ = __webpack_require__(70)
+var __vue_template__ = __webpack_require__(88)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -45542,7 +45589,12 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 69 */
+/* 69 */,
+/* 70 */,
+/* 71 */,
+/* 72 */,
+/* 73 */,
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -45687,7 +45739,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 70 */
+/* 75 */,
+/* 76 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 77 */,
+/* 78 */,
+/* 79 */,
+/* 80 */,
+/* 81 */,
+/* 82 */,
+/* 83 */,
+/* 84 */,
+/* 85 */,
+/* 86 */,
+/* 87 */,
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -45737,12 +45807,6 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-8cdb3f9a", module.exports)
   }
 }
-
-/***/ }),
-/* 71 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
