@@ -44045,7 +44045,7 @@ var render = function() {
             _vm._v(" "),
             _vm.favorite.icon[i]
               ? _c("i", {
-                  staticClass: "far fa-heart",
+                  staticClass: "far fa-heart tp-NotFavorite_Heart",
                   on: {
                     click: function($event) {
                       _vm.postFavorite(room.room_id) + _vm.toggleFavorite(i)
@@ -44056,7 +44056,7 @@ var render = function() {
             _vm._v(" "),
             !_vm.favorite.icon[i]
               ? _c("i", {
-                  staticClass: "fas fa-heart",
+                  staticClass: "fas fa-heart tp-Favorite_Heart",
                   on: {
                     click: function($event) {
                       _vm.postFavorite(room.room_id) + _vm.toggleFavorite(i)

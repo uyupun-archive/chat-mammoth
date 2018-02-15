@@ -8930,6 +8930,14 @@ button.close {
   color: #EC605B;
 }
 
+.tp-ChatRoom_Container .tp-ChatRoom .tp-NotFavorite_Heart:hover {
+  color: #DC565B;
+}
+
+.tp-ChatRoom_Container .tp-ChatRoom .tp-Favorite_Heart {
+  color: #DC565B;
+}
+
 .tp-ChatRoom_Container .tp-Search {
   text-align: right;
 }
