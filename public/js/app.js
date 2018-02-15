@@ -43304,7 +43304,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     data: function data() {
         return {
             rooms: {},
-            tags: []
+            tags: [],
+            visible: Array.from(new Array(10)).map(function (v, i) {
+                return true;
+            })
         };
     },
 
@@ -43324,6 +43327,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             __WEBPACK_IMPORTED_MODULE_0_axios___default.a.post('/api/favorite/post', {
                 room_id: room_id
             });
+        },
+        toggleFavorite: function toggleFavorite(i) {
+            this.$set(this.visible, i, !this.visible[i]);
         }
     },
     created: function created() {
@@ -44009,14 +44015,27 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("i", {
-              staticClass: "far fa-heart",
-              on: {
-                click: function($event) {
-                  _vm.postFavorite(room.room_id)
-                }
-              }
-            }),
+            _vm.visible[i]
+              ? _c("i", {
+                  staticClass: "far fa-heart",
+                  on: {
+                    click: function($event) {
+                      _vm.postFavorite(room.room_id) + _vm.toggleFavorite(i)
+                    }
+                  }
+                })
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.visible[i]
+              ? _c("i", {
+                  staticClass: "fas fa-heart",
+                  on: {
+                    click: function($event) {
+                      _vm.postFavorite(room.room_id) + _vm.toggleFavorite(i)
+                    }
+                  }
+                })
+              : _vm._e(),
             _vm._v(" "),
             _c("span", [_vm._v(_vm._s(room.favorite))])
           ]),

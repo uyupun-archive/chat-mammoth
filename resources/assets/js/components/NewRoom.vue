@@ -10,9 +10,9 @@
                         <span class="st-Tooltip">Copy</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
-                    <i class="far fa-heart" @click="postFavorite(room.room_id)"></i>
+                    <i class="far fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="visible[i]"></i>
+                    <i class="fas fa-heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="!visible[i]"></i>
                     <span>{{ room.favorite }}</span>
-                    <!--<i class="fas fa-heart" @click="postFavorite(room.room_id)"></i>-->
                 </div>
                 <div>作成者: {{ room.creator }}</div>
                 <div class="tp-ChatRoom_Tag">
@@ -37,7 +37,8 @@
         data() {
             return {
                 rooms: {},
-                tags: []
+                tags: [],
+                visible: Array.from(new Array(10)).map((v, i) => true)
             }
         },
         methods: {
@@ -56,6 +57,9 @@
                     room_id: room_id
                 })
             },
+            toggleFavorite(i) {
+                this.$set(this.visible, i, !this.visible[i])
+            }
         },
         created() {
             this.getRooms()
