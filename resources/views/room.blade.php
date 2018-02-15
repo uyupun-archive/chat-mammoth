@@ -34,7 +34,7 @@
                             @elseif(isset($post->gif))
                                 <img class="rp-Gif" src="{{ url('/gif/' . $post->gif . '.gif') }}" alt="">
                             @elseif(isset($post->draw))
-                                <img class="rp-Image" src="{{ $post->draw }}" alt="">
+                                <img class="rp-Draw" src="{{ $post->draw }}" alt="">
                             @endif
                         </div>
                     </div>

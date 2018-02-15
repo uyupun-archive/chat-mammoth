@@ -8545,6 +8545,12 @@ button.close {
   padding: 20px 15px;
 }
 
+@media screen and (max-width: 450px) {
+  .h-Title {
+    padding-left: 0;
+  }
+}
+
 .su-Form {
   padding-left: 5px;
 }
@@ -9213,6 +9219,13 @@ button.close {
      object-fit: scale-down;
 }
 
+.rp-List .rp-Message .rp-Draw {
+  width: 300px;
+  height: auto;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
 .rp-User_Comment {
   word-break: break-all;
   margin: 10px;
@@ -9546,6 +9559,11 @@ button.close {
 .mp-ChatRoom_LinkBox .mp-ChatRoom_Link {
   text-decoration: none;
   color: #EC605B;
+}
+
+.mp-ChatRoom .mp-Copy_Area {
+  padding: 0;
+  border: none;
 }
 
 .mp-Not_CreateRoom {
