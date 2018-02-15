@@ -39,6 +39,4 @@ Route::post('/api/favorite/post', 'FavoriteController@post');
 Route::get('/api/favorite/get', 'FavoriteController@get');
 
 /** エラー */
-Route::get('/404',function() {
-    return view('errors.404');
-});
+Route::get('/404', 'ErrorsController@status404');
