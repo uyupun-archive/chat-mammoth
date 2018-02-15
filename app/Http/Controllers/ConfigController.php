@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use DB;
 use Validator;
+use Hash;
 use App\User;
 
 class ConfigController extends Controller {
@@ -15,15 +16,16 @@ class ConfigController extends Controller {
     }
 
     public function update(Request $request) {
-        $user = User::where('user_id', Auth::user()->user_id)->first();
 
-        $isUser_id = DB::table('users')->where('user_id', $request->user_id)->first();
-        if (isset($isUser_id) && $request->user_id !== Auth::user()->user_id) {
-            return redirect('/config')->with('response', '指定されたユーザIDはすでに使用されています。');
+        if (Hash::check($request->password, Auth::user()->password)) {
+            return redirect('/config')->with('response', 'パスワードが間違っています。');
         }
 
-        if ($request->password_confirm !== $request->password) {
-            return redirect('/config')->with('response', 'パスワードが一致しませんでした。');
+
+        if (isset($request->new_password)) {
+            if ($request->password_confirm !== $request->new_password) {
+                return redirect('/config')->with('response', 'パスワードが一致しませんでした。');
+            }
         }
 
         $validator = Validator::make($request->all(), [
@@ -37,6 +39,7 @@ class ConfigController extends Controller {
             return redirect('/config')->with('response', '使用不可能な文字列が含まれています。');
         }
 
+        $user = User::where('user_id', Auth::user()->user_id)->first();
         if (isset($request->avatar)) {
             $user->avatar = 'data:image/jpg;base64,' . base64_encode(file_get_contents($request->avatar));
         }
