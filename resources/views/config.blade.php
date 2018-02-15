@@ -28,15 +28,21 @@
                     <div class="col">{{ Auth::user()->user_id }}</div>
                 </div>
                 <div class="cf-Password row">
-                    <label for="password" class="cf-Password_Title">パスワード</label>
+                    <label for="password" class="cf-Password_Title">現在のパスワード</label>
                     <div class="col">
                         <input id="password" type="password" name="password" class="cf-Password_Textbox form-control" required minlength="8" maxlength="32">
                     </div>
                 </div>
-                <div class="cf-Confirm row">
-                    <label for="password-confirm" class="cf-Confirm_Title">パスワード（確認）</label>
+                <div class="cf-Password row">
+                    <label for="password" class="cf-Password_Title">新しいパスワード</label>
                     <div class="col">
-                        <input id="password-confirm" type="password" name="password_confirm" class="cf-Confirm_Textbox form-control" required minlength="8" maxlength="32">
+                        <input id="password" type="password" name="new_password" class="cf-Password_Textbox form-control" minlength="8" maxlength="32">
+                    </div>
+                </div>
+                <div class="cf-Confirm row">
+                    <label for="password-confirm" class="cf-Confirm_Title">新しいパスワード（確認）</label>
+                    <div class="col">
+                        <input id="password-confirm" type="password" name="password_confirm" class="cf-Confirm_Textbox form-control" minlength="8" maxlength="32">
                     </div>
                 </div>
                 <div class="cf-Self row">
