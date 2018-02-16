@@ -42,9 +42,14 @@
     &_Name {
       font-weight: 600;
       font-size: 20px;
+      margin-left: 10px;
     }
     &_Id {
       font-weight: 600;
+      margin-left: 10px;
+    }
+    i {
+      margin-left: 10px;
     }
     &_Time {
       margin-left: 10px;
@@ -298,6 +303,25 @@
   .rp-Container {
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .rp-List {
+    .rp-Message {
+      &_Name {
+        margin-left: 5px;
+      }
+      &_Id {
+        margin-left: 5px;
+      }
+      i {
+        margin-left: 5px;
+      }
+      &_Time {
+        display: block;
+      }
+    }
   }
 }
 

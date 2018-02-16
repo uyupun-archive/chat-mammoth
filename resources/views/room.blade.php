@@ -121,25 +121,25 @@
                     </div>
                     <ul class="nav nav-tabs rp-Nav_Tabs" id="myTab" role="tablist">
                         <li class="nav-item active rp-Nav_Tab">
-                            <a class="nav-link rp-normal" data-toggle="tab" href="#normal" role="tab" aria-controls="normal" aria-expanded="true">
+                            <a class="nav-link rp-normal" data-toggle="tab" href="#normal" role="tab" aria-controls="normal" aria-expanded="true" ontouchstart="">
                                 <span class="rp-Nav_Text">テキスト</span>
                                 <i class="fas fa-keyboard"></i>
                             </a>
                         </li>
                         <li class="nav-item rp-Nav_Tab">
-                            <a class="nav-link rp-file" data-toggle="tab" href="#file" role="tab" aria-controls="file" aria-expanded="false">
+                            <a class="nav-link rp-file" data-toggle="tab" href="#file" role="tab" aria-controls="file" aria-expanded="false" ontouchstart="">
                                 <span class="rp-Nav_Text">画像</span>
                                 <i class="fas fa-images"></i>
                             </a>
                         </li>
                         <li class="nav-item rp-Nav_Tab">
-                            <a class="nav-link rp-gif" data-toggle="tab" href="#gif" role="tab" aria-controls="gif" aria-expanded="false">
+                            <a class="nav-link rp-gif" data-toggle="tab" href="#gif" role="tab" aria-controls="gif" aria-expanded="false" ontouchstart="">
                                 <span class="rp-Nav_Text">GIF</span>
                                 <i class="fas fa-film"></i>
                             </a>
                         </li>
                         <li class="nav-item rp-Nav_Tab">
-                            <a class="nav-link rp-write" data-toggle="tab" href="#write" role="tab" aria-controls="write" aria-expanded="false">
+                            <a class="nav-link rp-write" data-toggle="tab" href="#write" role="tab" aria-controls="write" aria-expanded="false" ontouchstart="">
                                 <span class="rp-Nav_Text">手書き</span>
                                 <i class="fas fa-pencil-alt"></i>
                             </a>

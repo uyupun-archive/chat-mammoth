@@ -6,12 +6,12 @@
                 <div>
                     <span>ルームID: </span>
                     <input class="tp-Copy_Area" type="text" :value="room.room_id " :id="'copy' + i + 'nr'">
-                    <button class="btn tp-Copy_Button st-Tooltip_Button" :data-clipboard-target="'#copy' + i + 'nr'">
+                    <button class="btn tp-Copy_Button st-Tooltip_Button" ontouchstart="" :data-clipboard-target="'#copy' + i + 'nr'">
                         <span class="st-Tooltip">Copy</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
-                    <i class="far fa-heart tp-NotFavorite_Heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="favorite.icon[i]"></i>
-                    <i class="fas fa-heart tp-Favorite_Heart" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="!favorite.icon[i]"></i>
+                    <i class="far fa-heart tp-NotFavorite_Heart" ontouchstart="" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="favorite.icon[i]"></i>
+                    <i class="fas fa-heart tp-Favorite_Heart" ontouchstart="" @click="postFavorite(room.room_id) + toggleFavorite(i)" v-if="!favorite.icon[i]"></i>
                     <span>{{ favorite.count[i] }}</span>
                 </div>
                 <div>作成者: {{ room.creator }}</div>
