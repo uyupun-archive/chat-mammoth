@@ -4,7 +4,7 @@
         <div class="rp-Form_Other">
             <button type="button" @click="clearCanvas()" class="st-Button rp-Button" :disabled="state">やり直す</button>
             <input type="hidden" :value="image" name="draw">
-            <button type="submit" class="st-Button rp-Button" :disabled="state">投稿する</button>
+            <button type="submit" class="st-Button rp-Button" :disabled="state" @click="state = !state">マサカる</button>
         </div>
     </div>
 </template>

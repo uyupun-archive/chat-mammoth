@@ -23,7 +23,7 @@ class CreateRoomsController extends Controller {
         ]);
 
         if ($validator->fails()) {
-            return redirect('/config')->with('response', '使用不可能な文字列が含まれています。');
+            return response('Bad Request', 400);
         }
 
         $rooms = new Room;
@@ -34,6 +34,8 @@ class CreateRoomsController extends Controller {
         $rooms->room_id = hash('md5', mt_rand());
         if(isset($request->tags))   $rooms->tags = json_encode($request->tags);
         $rooms->save();
+
+        return response('OK', 200)->header('Content-Type', 'application/json');
     }
 
     public function __construct() {

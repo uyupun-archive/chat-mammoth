@@ -40,7 +40,7 @@
                     </div>
                 @endforeach
             @else
-                <div class="rp-NotComment">このルームはまだ誰も投稿していません！</div>
+                <div class="rp-NotComment">このルームはまだ誰もマサカリを投げていません。</div>
             @endif
             <div class="rp-pagination">{{ $posts->links() }}</div>
         </div>
@@ -56,7 +56,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/text') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <div class="app">
+                                                    <div id="app">
                                                         <keyboard></keyboard>
                                                     </div>
                                                     <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
@@ -69,7 +69,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/image') }}" method="POST" class="rp-Form_File">
                                                     {{ csrf_field() }}
-                                                    <div class="app">
+                                                    <div id="app">
                                                         <photo></photo>
                                                     </div>
                                                     <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
@@ -94,10 +94,10 @@
                                                             </label>
                                                         @endfor
                                                     </div>
-                                                    <div class="rp-Form_Other d-flex">
-                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
-                                                        <button type="submit" class="st-Button rp-Button">投稿する</button>
+                                                    <div id="app">
+                                                        <gif></gif>
                                                     </div>
+                                                    <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                 </form>
                                             </div>
                                         </div>
@@ -107,7 +107,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/draw') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <div class="app">
+                                                    <div id="app">
                                                         <hand-write></hand-write>
                                                     </div>
                                                     <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
