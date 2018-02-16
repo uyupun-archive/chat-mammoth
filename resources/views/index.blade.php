@@ -7,7 +7,7 @@
         <div class="tp-Catchphrase_Text">投げろマサカリ⛏️</div>
     </div>
     <div class="tp-Rotation">
-        <img src="{{ asset('/images/logo2.png') }}" alt="" class="tp-Rotation_img">
+        <img src="{{ asset('/images/logo2.png') }}" alt="" class="tp-Rotation_img" ontouchstart="">
     </div>
     <div class="tp-Container">
         <h2 class="st-Title">新着のチャットルーム</h2>

@@ -1,8 +1,13 @@
 .st-Tooltip_Button{
   display: inline-block;
+  background-color: transparent;
   .st-Tooltip {
     display: none;
   }
+}
+
+.st-Tooltip_Button:active {
+  box-shadow: none;
 }
 
 .st-Tooltip_Button:hover {

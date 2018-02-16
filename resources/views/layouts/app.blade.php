@@ -22,21 +22,21 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <img src="{{ asset('/images/logo3.png') }}" alt="" class="h-Logo">
+                                <img src="{{ asset('/images/logo3.png') }}" alt="" class="h-Logo" ontouchstart="">
                                 <a class="navbar-brand h-Title" href="{{ url('/') }}">chat mammoth</a>
                             </div>
                             <div id="navbar" class="navbar-collapse collapse h-Navbar-Collapse">
                                 <ul class="nav navbar-nav navbar-right h-Menu">
                                     <li class="h-Menu_List"><a href="{{ url('/search') }}" class="h-Search">ルーム検索</a></li>
                                     @guest
-                                        <li class="h-Menu_List"><a href="{{ route('login') }}" class="h-SignIn">サインイン</a></li>
-                                        <li class="h-Menu_List"><a href="{{ route('register') }}" class="h-SignUp">サインアップ</a></li>
+                                        <li class="h-Menu_List"><a href="{{ route('login') }}" class="h-SignIn" ontouchstart="">サインイン</a></li>
+                                        <li class="h-Menu_List"><a href="{{ route('register') }}" class="h-SignUp" ontouchstart="">サインアップ</a></li>
                                     @else
-                                        <li class="h-Menu_List"><a href="{{ url('/create') }}" class="h-Create">ルーム作成</a></li>
-                                        <li class="h-Menu_List"><a href="{{ url('/mypage') }}" class="h-Mypage">マイページ</a></li>
-                                        <li class="h-Menu_List"><a href="{{ route('logout') }}" class="h-SignOut" onclick="event.preventDefault();document.getElementById('logout-form').submit();">サインアウト</a></li>
+                                        <li class="h-Menu_List"><a href="{{ url('/create') }}" class="h-Create" ontouchstart="">ルーム作成</a></li>
+                                        <li class="h-Menu_List"><a href="{{ url('/mypage') }}" class="h-Mypage" ontouchstart="">マイページ</a></li>
+                                        <li class="h-Menu_List"><a href="{{ route('logout') }}" class="h-SignOut" ontouchstart="" onclick="event.preventDefault();document.getElementById('logout-form').submit();">サインアウト</a></li>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
-                                        <li class="h-Menu_List"><a href="{{ url('/config') }}" class="h-Icon"><i class="fas fa-cog"></i></a></li>
+                                        <li class="h-Menu_List"><a href="{{ url('/config') }}" class="h-Icon" ontouchstart=""><i class="fas fa-cog"></i></a></li>
                                     @endguest
                                 </ul>
                             </div>
