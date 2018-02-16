@@ -4,7 +4,7 @@
     <div class="st-Wrapper">
         <div class="st-Container">
             <h2 class="st-Title">チャットルーム作成</h2>
-            <div id="app">
+            <div class="app">
                 <create></create>
             </div>
             @if(session('response'))

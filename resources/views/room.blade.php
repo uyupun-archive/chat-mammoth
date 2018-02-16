@@ -56,7 +56,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/text') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <div id="app">
+                                                    <div class="app">
                                                         <keyboard></keyboard>
                                                     </div>
                                                     <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
@@ -69,7 +69,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/image') }}" method="POST" class="rp-Form_File">
                                                     {{ csrf_field() }}
-                                                    <div id="app">
+                                                    <div class="app">
                                                         <photo></photo>
                                                     </div>
                                                     <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
@@ -107,7 +107,7 @@
                                             <div class="rp-Post_Container">
                                                 <form enctype="multipart/form-data" action="{{ url('/api/comment/draw') }}" method="POST" class="rp-Form">
                                                     {{ csrf_field() }}
-                                                    <div id="app">
+                                                    <div class="app">
                                                         <hand-write></hand-write>
                                                     </div>
                                                     <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
