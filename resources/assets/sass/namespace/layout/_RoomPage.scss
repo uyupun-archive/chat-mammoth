@@ -135,6 +135,8 @@
   top: 5px;
   right: 10px;
   color: $red;
+  box-sizing: content-box;
+  margin-right: 5px;
 }
 
 .rp-NavText:hover {
@@ -164,11 +166,9 @@
   background-color: $garnet;
   border: 0;
   .rp-Nav_Tab {
-
     a {
       margin: 0;
       color: $white;
-      box-sizing: border-box;
       border: none;
     }
   }
@@ -290,6 +290,10 @@
 
 .rp-Gif_RadioButton:checked + .rp-Gif_Select {
   border: 3px solid $red;
+}
+
+.rp-Nav_Text {
+  margin-right: 5px;
 }
 
 @media screen and (max-width: 1200px) {
