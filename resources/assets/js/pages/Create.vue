@@ -91,8 +91,6 @@
                 } else {
                     this.addState = true
                 }
-
-                console.log(this.tags.length)
             },
             send() {
                 axios.post('/api/room/store', {
@@ -102,7 +100,12 @@
                     tags: this.tags
                 })
                     .then(response => {
-                        location = '/mypage'
+                        console.log(response.data)
+                        if (response.data === 'OK') {
+                            location = '/mypage'
+                        } else {
+                            location = '/create'
+                        }
                     })
             }
         }
