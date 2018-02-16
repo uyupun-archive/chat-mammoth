@@ -248,23 +248,25 @@
 
 .rp-Form_File {
   .rp-File_Area {
-    width: 100%;
-    margin-top: 20px;
     text-align: center;
-    .rp-Cloud_Upload {
-      color: $white;
+    .rp-File_Icon {
+      margin-top: 20px;
+      cursor: pointer;
+      .rp-Cloud_Upload {
+        color: $white;
+      }
+      .rp-File_Text {
+        color: $white;
+        margin-bottom: 0;
+      }
+      .rp-File_Input {
+        display: none;
+      }
     }
-    .rp-File_Text {
-      color: $white;
-      margin-bottom: 0;
+    .rp-Form_Other {
+      margin-top: 20px;
+      text-align: center;
     }
-    .rp-File_Input {
-      display: none;
-    }
-  }
-  .rp-Form_Other {
-    margin-top: 20px;
-    text-align: center;
   }
 }
 
