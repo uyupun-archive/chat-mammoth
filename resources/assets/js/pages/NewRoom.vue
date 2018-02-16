@@ -6,7 +6,7 @@
                 <div>
                     <span>ルームID: </span>
                     <input class="tp-Copy_Area" type="text" :value="room.room_id " :id="'copy' + i + 'nr'">
-                    <button class="btn tp-Copy_Button st-Tooltip_Button" ontouchstart="" :data-clipboard-target="'#copy' + i + 'nr'">
+                    <button class="btn st-Tooltip_Button" ontouchstart="" :data-clipboard-target="'#copy' + i + 'nr'">
                         <span class="st-Tooltip">Copy</span>
                         <i class="fas fa-clipboard"></i>
                     </button>
