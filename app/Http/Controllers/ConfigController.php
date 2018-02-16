@@ -17,10 +17,9 @@ class ConfigController extends Controller {
 
     public function update(Request $request) {
 
-        if (Hash::check($request->password, Auth::user()->password)) {
+        if (!Hash::check($request->password, Auth::user()->password)) {
             return redirect('/config')->with('response', 'パスワードが間違っています。');
         }
-
 
         if (isset($request->new_password)) {
             if ($request->password_confirm !== $request->new_password) {
