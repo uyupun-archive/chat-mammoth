@@ -10,5 +10,5 @@ Vue.component('photo', require('./pages/room/Photo.vue'));
 Vue.component('handWrite', require('./pages/room/HandWrite.vue'));
 
 const app = new Vue({
-    el: '.app'
+    el: '#app'
 });

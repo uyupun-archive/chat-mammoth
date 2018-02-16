@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="app">
+    <div id="app">
         <search></search>
     </div>
 @endsection
