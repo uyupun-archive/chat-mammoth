@@ -26,7 +26,7 @@
 }
 
 .mp-Nav_Area {
-  padding: 0 5px;
+  padding: 0;
   .nav-tabs {
     border-bottom-color: $red;
     .nav-item {
@@ -64,7 +64,10 @@
     margin: 4px 4px 0 0;
   }
   &_Description {
-    word-break: break-all;
+    p {
+      word-break: break-all;
+      margin: 10px 0;
+    }
   }
   &_LinkBox {
     text-align: right;
@@ -76,6 +79,10 @@
   .mp-Copy_Area {
     padding: 0;
     border: none;
+    width: 150px;
+  }
+  .mp-Copy_Area:focus {
+    outline: none;
   }
   .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
     outline: none;
@@ -101,5 +108,8 @@
       padding-left: 5px;
       padding-right: 5px;
     }
+  }
+  .mp-ChatRoom {
+    margin: 20px 5px;
   }
 }

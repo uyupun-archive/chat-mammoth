@@ -1,39 +1,55 @@
 .sp-Search {
   margin: 50px 0;
-  text-align: center;
-  .sp-Search_Textbox {
-    display: inline-block;
-    width: 50%;
+  .col-xs-10 {
+    padding: 0;
   }
   .sp-Search_Button {
-    padding: 3px 10px;
-    margin-left: 15px;
+    padding: 0;
+    text-align: right;
+    button {
+      padding: 3px 10px;
+    }
   }
 }
 
 .sp-Results {
-  padding: 0 30px;
   margin-bottom: 30px;
-  .sp-Chatroom {
+  .sp-ChatRoom {
     border: solid 1px $gray;
     border-radius: 4px;
     margin: 20px 0;
     padding: 5px;
     &_Name {
       font-size: 26px;
+      word-break: break-all;
     }
     &_Tag {
       margin: 4px 4px 0 0;
     }
     &_Description {
-
+      p {
+        word-break: break-all;
+        margin: 10px 0;
+      }
     }
     &_LinkBox {
       text-align: right;
-      .sp-Chatroom_Link {
+      .sp-ChatRoom_Link {
         text-decoration: none;
         color: $red;
       }
+    }
+    .sp-Copy_Area {
+      border: none;
+      padding: 0;
+      width: 150px;
+    }
+    .sp-Copy_Area:focus {
+      outline: none;
+    }
+    .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
+      outline: none;
+      outline-offset: 0;
     }
   }
 }
@@ -46,4 +62,15 @@
 .sp-Message_Area {
   text-align: center;
   color: $black;
+}
+
+@media screen and (max-width: 450px) {
+  .sp-Search {
+    .col-xs-10 {
+      width: 79.99999999%;
+    }
+    .sp-Search_Button {
+      width: 20.00000001%;
+    }
+  }
 }
