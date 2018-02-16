@@ -94,10 +94,10 @@
                                                             </label>
                                                         @endfor
                                                     </div>
-                                                    <div class="rp-Form_Other d-flex">
-                                                        <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
-                                                        <button type="submit" class="st-Button rp-Button">マサカる</button>
+                                                    <div id="app">
+                                                        <gif></gif>
                                                     </div>
+                                                    <input type="hidden" value="{{ Request::decodedPath() }}" name="room_id">
                                                 </form>
                                             </div>
                                         </div>

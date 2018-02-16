@@ -4,7 +4,7 @@
         <div class="rp-Form_Other d-flex">
             <input type="checkbox" id="markdown" name="markdown">
             <label class="rp-Markdown" for="markdown">マークダウン</label>
-            <button type="submit" class="st-Button rp-Button" :disabled="state">マサカる</button>
+            <button type="submit" class="st-Button rp-Button" :disabled="state" @click="state = !state">マサカる</button>
         </div>
     </div>
 </template>
