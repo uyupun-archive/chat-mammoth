@@ -29,12 +29,12 @@
                 </ul>
                 <div class="tab-content" id="myTabContent">
                     <div class="tab-pane active" id="create" role="tabpanel">
-                        <div id="app">
+                        <div class="app">
                             <my-create></my-create>
                         </div>
                     </div>
                     <div class="tab-pane" id="favorite" role="tabpanel">
-                        <div id="app">
+                        <div class="app">
                             <my-favorite></my-favorite>
                         </div>
                     </div>
