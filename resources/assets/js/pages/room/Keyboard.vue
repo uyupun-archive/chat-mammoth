@@ -1,6 +1,6 @@
 <template>
     <div>
-        <textarea name="comment" placeholder="Please write here." class="rp-TextArea" autofocus required minlength="1" maxlength="1000" v-model="text" @keyup="changeState()"></textarea>
+        <textarea name="comment" placeholder="Please write here." class="rp-TextArea" id="rp-TextArea" autofocus required minlength="1" maxlength="1000" v-model="text" @input="changeState()"></textarea>
         <div class="rp-Form_Other d-flex">
             <input type="checkbox" id="markdown" name="markdown">
             <label class="rp-Markdown" for="markdown">マークダウン</label>
@@ -20,7 +20,7 @@
         methods: {
             changeState() {
                 this.text.length > 0 ? this.state = false : this.state = true
-            }
-        }
+            },
+        },
     }
 </script>
