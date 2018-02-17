@@ -24,10 +24,8 @@
                             <i v-if="room.publish === 'private'" class="fas fa-unlock-alt"></i>
                         </div>
                         <div>作成者: {{ room.creator }}</div>
-                        <div class="sp-ChatRoom_Tag">
-                            <span class="st-Tag">タグ</span>
-                            <span class="st-Tag">タグ</span>
-                            <span class="st-Tag">タグ</span>
+                        <div class="tp-ChatRoom_Tag">
+                            <span class="st-Tag" v-for="tag in tags">{{ tag }}</span>
                         </div>
                         <div class="sp-ChatRoom_Description">
                             <p>{{ room.description }}</p>
@@ -59,7 +57,8 @@
                 state: false,
                 room: {},
                 message: 'ルームIDを検索してください！',
-                error: ''
+                error: '',
+                tags: []
             }
         },
         methods: {
@@ -70,6 +69,8 @@
                     .then(response => {
                         this.state = true
                         this.room = response.data
+
+                        this.tags = JSON.parse(response.data.tags)
                     })
                     .catch(error => {
                         this.state = false

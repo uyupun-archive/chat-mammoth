@@ -16,7 +16,10 @@ class SearchRoomsController extends Controller {
 
         $room_id = preg_replace('/( |　)/', '', $request->room_id);
 
-        $room = DB::table('rooms')->select('name', 'room_id', 'description', 'creator', 'publish')->where('room_id', $room_id)->first();
+        $room = DB::table('rooms')
+                    ->select('name', 'room_id', 'description', 'creator', 'publish', 'tags')
+                    ->where('room_id', $room_id)
+                    ->first();
 
         if (!isset($room)) {
             return response('404 Not Found', 404);
